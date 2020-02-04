@@ -1,0 +1,25 @@
+.bar47 {
+    height: 100%;
+    width: 94%;
+    background-color: #FFA80B;
+}
+.bar03 {
+    height: 100%;
+    width: 6%;
+    background-color: #FFA80B;
+}
+.no-bullets {
+    list-style-type: none;
+}
+a.card-link {
+    font-size: 1.5rem;
+    color: #FFA80B !important;
+}
+.card .card-link::after {
+    font-family: 'FontAwesome';
+    content: "\f139";
+    float: right;
+}
+.card .card-link.collapsed::after {
+    content: "\f13a";
+}
