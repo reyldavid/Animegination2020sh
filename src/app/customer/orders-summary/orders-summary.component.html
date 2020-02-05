@@ -15,11 +15,15 @@
           <div class="col-3 text-center">
             ${{ subTotal }}
           </div>
-          <div class="col-3 text-center">
-            {{ orderStatus }}
-          </div>
-          <div class="col-3 text-right">
-            <a class="anchor" (click)="seeDetails()">See Details ></a> 
+          <div class="col-6">
+            <div class="row">
+              <div class="col-12 col-sm-6 text-center">
+                {{ orderStatus }}
+              </div>
+              <div class="col-12 col-sm-6 text-right">
+                <a class="anchor" (click)="seeDetails()">See Details ></a> 
+              </div>
+            </div>
           </div>
       </div>
     </div>
