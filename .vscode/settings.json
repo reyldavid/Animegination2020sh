@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/640f218a-cbcc-4606-9cb6-72a315073d5d/resourceGroups/Default-Web-WestUS/providers/Microsoft.Web/sites/Animegination",
+    "appService.deploySubpath": "dist\\animegination"
+}
