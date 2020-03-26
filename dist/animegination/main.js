@@ -267,17 +267,15 @@ var map = {
 
 function webpackContext(req) {
 	var id = webpackContextResolve(req);
-	var module = __webpack_require__(id);
-	return module;
+	return __webpack_require__(id);
 }
 function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) { // check for number or string
+	if(!__webpack_require__.o(map, req)) {
 		var e = new Error("Cannot find module '" + req + "'");
 		e.code = 'MODULE_NOT_FOUND';
 		throw e;
 	}
-	return id;
+	return map[req];
 }
 webpackContext.keys = function webpackContextKeys() {
 	return Object.keys(map);
@@ -285,6 +283,1007 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/about-us/about-us.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/about-us/about-us.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"pb-3\">About Animegination</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>\n        Animegination is a demo website written by \n        <span class=\"p6\" (click)=\"reydavid()\">Rey David</span> \n        to apply new learned technologies. \n        The website is an online retail site that specializes in Japanese animation (Anime) \n        titles and American live-action titles. The entire product inventory in the website \n        represents Rey's own private collection of entertainment media. \n        Every item found in the website exists in Rey's own library, and is not for sale. \n    </p>\n    <h4 class=\"bold\">History of Animation</h4>\n    <p>\n        The Animegination website is a Node.js application written in Angular 6, \n        Typescript and Bootstrap. The REST APIs run as an Azure App, \n        the backend database resides in Azure SQL Server, \n        and other services are hosted in Microsoft Azure. \n        In years past, <span class=\"p6\" (click)=\"reydavid()\">Rey David</span> \n        has built earlier versions of the Animegination website \n        using the latest Microsoft technologies of the time. \n        The first version was written in 2002 using Microsoft ASP.NET 2.0 technology. \n        In 2005, the website was upgraded with Silverlight technology. In 2008, \n        the website was replaced with Microsoft ASP.NET 3.5 technology. In 2012, \n        the website was rewritten with ASP.NET MVC 4 technology.  And in 2019, \n        it was repaced yet again with Angular 6, Typescript and Azure technologies. \n    </p>\n    <h4 class=\"bold\">Future of Animegination</h4>\n    <p>\n        In December 2019, <span class=\"p6\" (click)=\"reydavid()\">Rey David</span> \n        published a Hybrid Mobile App version of Animegination.  \n        Using essentially the same code base as the website (write once deploy everywhere), \n        he deployed the mobile app in both the Android and the iOS operating systems. \n        The Animegination mobile app is now available to download for free in both \n        the Google Play Store (for Android phones) and the Apple App Store (for iOS phones).  \n        Just search for the app named ANIMEGINATION.\n    </p>\n    <p> \n        In February 2013, Rey David  \n        also published a Windows 8 Application version of Animegination.  \n        The Windows 8 App may be downloaded for free from the Microsoft Store.  \n        For as long as web media and mobile media technologies evolve, \n        Animegination will continue to evolve with it. \n        <span class=\"p6\" (click)=\"reydavid()\">Rey David</span> \n        will make sure of that. \n        We look forward to the future, and the exciting new technologies that it will bring.\n    </p>\n    <h4 class=\"bold\">Disclaimer</h4>\n    <p>\n        We remind you that this is only a Demo website. \n        None of the items in the website is actually available for purchase. \n        We do not use the user information for any purpose other than demonstration. \n        Nevertheless, when entering user information, please do not enter any sensitive data.\n    </p>\n    <div class=\"pb-3\"></div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/customer-note/customer-note.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/customer-note/customer-note.component.html ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1 pb-3\">\n        <h2>Customer Communications</h2>\n        <div class=\"pb-3\"></div>\n        <ng-container *ngFor=\"let userNote of userNotes\">\n          <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-8 order-1 col-md-3 order-md-1\">\n              <strong>{{userNote?.firstName}} {{userNote?.lastName}}</strong> - {{userNote?.created | date: 'MMM d, y'}}<br />\n              {{userNote?.email}}<br />\n              {{helper.SplitCamelCase(userNote?.correspondenceType)}}\n            </div>\n            <div class=\"col-12 order-3 col-md-7 order-md-2\">\n              <strong>{{userNote?.title}}</strong><br />\n              {{userNote?.note}}\n            </div>\n            <div class=\"col-4 order-2 col-md-2 order-md-3 d-flex justify-content-end align-items-center\">\n              <span class=\"p6 px-3\" (click)=\"OnDeleteUserNote(userNote)\">Delete</span> \n            </div>\n          </div>\n        </ng-container>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/genre-add/genre-add.component.html":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/genre-add/genre-add.component.html ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Add New</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit(); genreForm.reset()\" #genreForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"genreName\">Genre Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"genreName\"\n                  class=\"form-control\" id=\"genreName\" \n                  [(ngModel)]=\"genreModel.CategoryName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"genreModel.Description\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"genreImage\">Image File <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"genreImage\"\n                  class=\"form-control\" id=\"genreImage\" \n                  [(ngModel)]=\"genreModel.ImageFile\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!genreForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Genre Model</div>\n      {{ genreForm.value | json }}\n      {{ genreForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !genreForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/genre-edit/genre-edit.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/genre-edit/genre-edit.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Edit {{ genreModel?.CategoryName }}</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit()\" #genreForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"genreName\">Genre Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"genreName\"\n                  class=\"form-control\" id=\"genreName\" \n                  [(ngModel)]=\"genreModel.CategoryName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"genreModel.Description\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"imageFile\">Image File <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"imageFile\"\n                  class=\"form-control\" id=\"imageFile\" \n                  [(ngModel)]=\"genreModel.ImageFile\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!genreForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Genre Model</div>\n      {{ genreForm.value | json }}\n      {{ genreForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !genreForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/genre/genre.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/genre/genre.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1 pb-3\">\n        <h2>Genres</h2>\n        <div class=\"row pt-3 pb-2\">\n          <div class=\"col-6\">\n            <span class=\"p6 py-3\" [routerLink]=\"['/genre-add']\">Create New</span>\n          </div>\n        </div>\n        <ng-container *ngFor=\"let genre of genres\">\n          <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-6 order-1 col-md-3 order-md-1\">{{genre?.CategoryName}}</div>\n            <div class=\"col-8 order-3 col-md-4 order-md-2\">{{genre?.Description}}</div>\n            <div class=\"col-6 order-2 col-md-3 order-md-3\">{{genre?.ImageFile}}</div>\n            <div class=\"col-4 order-4 col-md-2 order-md-4 d-flex justify-content-end\">\n                <span class=\"p6 px-3\" [routerLink]=\"['/genre-edit']\" \n                  [queryParams]=\"{ categoryID: genre?.CategoryID }\">Edit</span> | \n                <span class=\"p6 px-3\" (click)=\"OnDeleteGenre(genre)\">Delete</span> \n            </div>\n          </div>\n        </ng-container>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/list-type/list-type.component.html":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/list-type/list-type.component.html ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1 pb-3\">\n      <h2>List Types</h2>\n      <div class=\"pb-3\"></div>\n      <ng-container *ngFor=\"let listType of listTypes\">\n        <div class=\"row p-2 my-2 all-borders-black\">\n          <div class=\"col-2\">{{listType?.ListTypeID}}</div>\n          <div class=\"col-3\">{{listType?.ListTypeName}}</div>\n          <div class=\"col-5\">{{listType?.Description}}</div>\n          <div class=\"col-2 d-flex justify-content-end\">\n              <span class=\"p6 px-3\" [routerLink]=\"['/list-type-edit']\" \n                [queryParams]=\"{ listTypeID: listType?.listTypeID }\">Edit</span> \n          </div>\n        </div>\n      </ng-container>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/listing-add/listing-add.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/listing-add/listing-add.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1\">\n\n  <h2>Add New</h2>\n  <div class=\"py-1\"></div>\n\n  <form (submit)=\"onSubmit(); listingForm.reset()\" #listingForm=\"ngForm\">\n\n      <div class=\"form-group\">\n          <label for=\"listType\">List Type</label>\n          <!-- <select (change)=\"selectListType($event.target.value)\"  -->\n          <select [(ngModel)]=\"listing.ListTypeID\" \n            class=\"form-control\" id=\"listType\" name=\"listType\">\n              <option *ngFor=\"let listType of listTypes\" \n                  value={{listType.ListTypeID}} \n                  [selected]=\"listing.ListingTypeID == listType.ListTypeID\">\n                      {{listType.Description}}\n              </option>\n          </select>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"rank\">Position <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"1\" max=\"20\" step=\"1\" required\n              name=\"rank\"\n              class=\"form-control\" id=\"rank\" \n              [(ngModel)]=\"listing.Rank\" />\n      </div>\n\n      <div class=\"form-group\">\n          <label for=\"product\">Product</label>\n          <!-- <select (change)=\"selectProduct($event.target.value)\"  -->\n          <select [(ngModel)]=\"listing.ProductID\" \n            class=\"form-control\" id=\"product\" name=\"product\">\n              <option *ngFor=\"let product of products\" \n                  value={{product.ProductID}} \n                  [selected]=\"listing.ProductID == product.ProductID\">\n                      {{product.ProductTitle}}\n              </option>\n          </select>\n      </div>\n\n      <!-- <div class=\"form-group\">\n          <div class=\"control-mb\">Effective Date <span class=\"anime-color\">*</span></div>\n          <div>\n            <dp-date-picker #effectiveDatePicker \n              name=\"effectiveDatePicker\" [mode]=\"'day'\"\n              [config]=\"datePickerConfig\" \n              (onChange)=\"onEffectiveDateChange($event)\" \n              required>\n            </dp-date-picker>\n            <button class=\"hidden\" (click)=\"open()\"></button> \n            <button class=\"hidden\" (click)=\"close()\"></button>\n          </div>\n      </div> -->\n\n      <div class=\"form-group\">\n        <label for=\"effectivDatePicker\">Effective Date <span class=\"anime-color\">*</span></label>\n        <input name=\"effectivDatePicker\" required \n              class=\"form-control\" id=\"effectivDatePicker\" \n              [theme]=\"'dp-material'\" \n              [dpDayPicker]=\"datePickerConfig\"\n              [(ngModel)]=\"dateEffective\" />\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"expirationDatePicker\">Expiration Date <span class=\"anime-color\">*</span></label>\n        <input name=\"expirationDatePicker\" required \n              class=\"form-control\" id=\"expirationDatePicker\" \n              [theme]=\"'dp-material'\" \n              [dpDayPicker]=\"datePickerConfig\"\n              [(ngModel)]=\"dateExpiration\" />\n      </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!listingForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Listing Model</div>\n      {{ listingForm.value | json }}\n      {{ listingForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !listingForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/listing-edit/listing-edit.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/listing-edit/listing-edit.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n  \n    <h2>\n      <img src=\"https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg\"\n        alt=\"{{product?.ProductCode}}\" class=\"image-min mr-4\" />\n      Editing {{product?.ProductTitle}} </h2>\n    <div class=\"py-1\"></div>\n    \n    <form (submit)=\"onSubmit(); listingForm.reset()\" #listingForm=\"ngForm\">\n  \n        <div class=\"form-group\">\n            <label for=\"listType\">List Type</label>\n            <!-- <select (change)=\"selectListType($event.target.value)\"  -->\n            <select [(ngModel)]=\"listing.ListTypeID\" \n              class=\"form-control\" id=\"listType\" name=\"listType\">\n                <option *ngFor=\"let listType of listTypes\" \n                    value={{listType.ListTypeID}} \n                    [selected]=\"listing.ListingTypeID == listType.ListTypeID\">\n                        {{listType.Description}}\n                </option>\n            </select>\n        </div>\n  \n        <div class=\"form-group\">\n          <label for=\"rank\">Position <span class=\"anime-color\">*</span></label>\n          <input type=\"number\" min=\"1\" max=\"20\" step=\"1\" required\n                name=\"rank\"\n                class=\"form-control\" id=\"rank\" \n                [(ngModel)]=\"listing.Rank\" />\n        </div>\n  \n        <div class=\"form-group\">\n            <label for=\"product\">Product</label>\n            <!-- <select (change)=\"selectProduct($event.target.value)\"  -->\n            <select [(ngModel)]=\"listing.ProductID\" \n              class=\"form-control\" id=\"product\" name=\"product\">\n                <option *ngFor=\"let product of products\" \n                    value={{product.ProductID}} \n                    [selected]=\"listing.ProductID == product.ProductID\">\n                        {{product.ProductTitle}}\n                </option>\n            </select>\n        </div>\n \n        <!-- <div class=\"form-group\">\n            <div class=\"control-mb\">Effective Date <span class=\"anime-color\">*</span></div>\n            <div>\n              <dp-date-picker #effectiveDatePicker \n                name=\"effectiveDatePicker\" [mode]=\"'day'\"\n                [config]=\"datePickerConfig\" \n                (onChange)=\"onEffectiveDateChange($event)\" \n                required>\n              </dp-date-picker>\n              <button class=\"hidden\" (click)=\"open()\"></button> \n              <button class=\"hidden\" (click)=\"close()\"></button>\n            </div>\n        </div> -->\n  \n        <div class=\"form-group\">\n          <label for=\"effectivDatePicker\">Effective Date <span class=\"anime-color\">*</span></label>\n          <input name=\"effectivDatePicker\" required \n                class=\"form-control\" id=\"effectivDatePicker\" \n                [theme]=\"'dp-material'\" \n                [dpDayPicker]=\"datePickerConfig\"\n                [(ngModel)]=\"listing.Effective\" />\n        </div>\n  \n        <div class=\"form-group\">\n          <label for=\"expirationDatePicker\">Expiration Date <span class=\"anime-color\">*</span></label>\n          <input name=\"expirationDatePicker\" required \n                class=\"form-control\" id=\"expirationDatePicker\" \n                [theme]=\"'dp-material'\" \n                [dpDayPicker]=\"datePickerConfig\"\n                [(ngModel)]=\"listing.Expiration\" />\n        </div>\n  \n        <div class=\"py-3\">\n            <button class=\"btn btn-block anime-button-lg font-em-10\" \n              type=\"submit\"\n              [disabled]=\"!listingForm.valid\">Submit\n            </button>\n        </div>\n  \n        <div>Listing Model</div>\n          {{ listingForm.value | json }}\n          {{ listingForm.valid }}\n    \n        <div class=\"pb-3\"></div>\n        <div *ngIf=\"submitted && !listingForm.valid\" class=\"alert alert-success pb-3\">\n            Your message was successfully submitted.  Thank you.\n        </div>\n   </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/listing/listing.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/listing/listing.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1 pb-3\">\n      <h2>Listings</h2>\n      <div class=\"row pt-3 pb-2\">\n        <div class=\"col-6\">\n          <span class=\"p6 py-3\" [routerLink]=\"['/listing-add']\">Create New</span>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let listing of listings\">\n        <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-8\">\n                <img src=\"https://reydavid.blob.core.windows.net/anime/{{listing?.ProductCode}}.jpg\"\n                  alt=\"{{listing?.ProductCode}}\" class=\"float-left image-min mr-4\" />\n\n                <div>List: <strong class=\"anime-color\">{{listing?.ListingTypeDescription}}</strong></div>\n                <div>Position: <strong>{{listing?.Rank}}</strong></div>\n                <div>From: <strong class=\"pr-3\">{{listing?.EffectiveDate | date: 'MMM d, y'}}</strong> \n                  To: <strong>{{listing?.Expiration | date: 'MMM d, y'}}</strong></div>\n                <div>Title: <strong>{{listing.ProductTitle}}</strong></div>\n            </div>\n            <div class=\"col-4 d-flex justify-content-end align-items-center\">\n              <span class=\"p6 px-3\" [routerLink]=\"['/listing-edit']\" \n                [queryParams]=\"{ listingID: listing?.ListingID }\">Edit</span> | \n              <span class=\"p6 px-3\" (click)=\"OnDeleteListing(listing)\">Delete</span> \n            </div>\n          </div>\n      </ng-container>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/medium-add/medium-add.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/medium-add/medium-add.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Add New</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit(); mediumForm.reset()\" #mediumForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"mediumName\">Medium Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"mediumName\"\n                  class=\"form-control\" id=\"mediumName\" \n                  [(ngModel)]=\"mediumModel.MediumName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"mediumModel.Description\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!mediumForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Medium Model</div>\n      {{ mediumForm.value | json }}\n      {{ mediumForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !mediumForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/medium-edit/medium-edit.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/medium-edit/medium-edit.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Edit {{ mediumModel?.MediumName }}</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit()\" #mediumForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"mediumName\">Medium Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"mediumName\"\n                  class=\"form-control\" id=\"mediumName\" \n                  [(ngModel)]=\"mediumModel.MediumName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"mediumModel.Description\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!mediumForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Medium Model</div>\n      {{ mediumForm.value | json }}\n      {{ mediumForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !mediumForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/medium/medium.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/medium/medium.component.html ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1 pb-3\">\n        <h2>Media Types</h2>\n        <div class=\"row pt-3 pb-2\">\n          <div class=\"col-6\">\n            <span class=\"p6 py-3\" [routerLink]=\"['/medium-add']\">Create New</span>\n          </div>\n        </div>\n        <ng-container *ngFor=\"let medium of media\">\n          <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-3\">{{medium?.MediumName}}</div>\n            <div class=\"col-6\">{{medium?.Description}}</div>\n            <div class=\"col-3 d-flex justify-content-end\">\n                <span class=\"p6 px-3\" [routerLink]=\"['/medium-edit']\" \n                  [queryParams]=\"{ mediumID: medium?.MediumID }\">Edit</span> | \n                <span class=\"p6 px-3\" (click)=\"OnDeleteMedium(medium)\">Delete</span> \n            </div>\n          </div>\n        </ng-container>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/product-info-add/product-info-add.component.html":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/product-info-add/product-info-add.component.html ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1\">\n\n  <h2>Add New</h2>\n  <div class=\"py-1\"></div>\n\n  <form (submit)=\"onSubmit()\" #productForm=\"ngForm\">\n      <div class=\"form-group\">\n          <label for=\"productcode\">Code <span class=\"anime-color\">*</span></label>\n          <input type=\"text\" required\n                name=\"productcode\"\n                class=\"form-control\" id=\"productcode\" \n                [(ngModel)]=\"product.productcode\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"producttitle\">Title <span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"producttitle\"\n              class=\"form-control\" id=\"producttitle\" \n              [(ngModel)]=\"product.producttitle\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productdescription\">Description <span class=\"anime-color\">*</span></label>\n        <textarea rows=\"5\" required\n              name=\"productdescription\"\n              class=\"form-control\" id=\"productdescription\" \n              [(ngModel)]=\"product.productdescription\">\n        </textarea>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"unitprice\">Unit Price <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"1000\" required\n              name=\"unitprice\"\n              class=\"form-control\" id=\"unitprice\" \n              [(ngModel)]=\"product.unitprice\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"yourprice\">Your Price <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"1000\" required\n              name=\"yourprice\"\n              class=\"form-control\" id=\"yourprice\" \n              [(ngModel)]=\"product.yourprice\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"genre\">Genre</label>\n        <select (change)=\"selectGenre($event.target.value)\" \n          class=\"form-control\" id=\"genre\" name=\"genre\">\n            <option *ngFor=\"let genre of genres\" \n                value={{genre.CategoryID}} \n                [selected]=\"genre.CategoryID == product.categoryid\">\n                    {{genre.CategoryName}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productagerating\">Age Rating <span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"productagerating\"\n              class=\"form-control\" id=\"productagerating\" \n              [(ngModel)]=\"product.productagerating\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productlength\">Length <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"1\" max=\"600\" required\n              name=\"productlength\"\n              class=\"form-control\" id=\"productlength\" \n              [(ngModel)]=\"product.productlength\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productyearcreated\">Year Created <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"1950\" max=\"2050\" required\n              name=\"productyearcreated\"\n              class=\"form-control\" id=\"productyearcreated\" \n              [(ngModel)]=\"product.productyearcreated\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"medium\">Medium</label>\n        <select (change)=\"selectMedium($event.target.value)\" \n          class=\"form-control\" id=\"medium\" name=\"medium\">\n            <option *ngFor=\"let medium of media\" \n                value={{medium.MediumID}} \n                [selected]=\"medium.MediumID == product.mediumid\">\n                    {{medium.Description}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"publisher\">Publisher</label>\n        <select (change)=\"selectPublisher($event.target.value)\" \n          class=\"form-control\" id=\"publisher\" name=\"publisher\">\n            <option *ngFor=\"let publisher of publishers\" \n                value={{publisher.PublisherID}} \n                [selected]=\"publisher.PublisherID == product.publisherid\">\n                    {{publisher.PublisherName}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productimageurl\">Image URL <span class=\"anime-color\">*</span></label>\n        <input type=\"text\" \n              name=\"productimageurl\"\n              class=\"form-control\" id=\"productimageurl\" \n              [(ngModel)]=\"product.productimageurl\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"ratingid\">Rating <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"5\" step=\"1\" required\n              name=\"ratingid\"\n              class=\"form-control\" id=\"ratingid\" \n              [(ngModel)]=\"product.ratingid\" />\n      </div>\n\n      <div class=\"py-3\">\n        <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!productForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Product Model</div>\n      {{ productForm.value | json }}\n      {{ productForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !productForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/product-info-edit/product-info-edit.component.html":
+/*!****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/product-info-edit/product-info-edit.component.html ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1\">\n\n  <h2>Edit product: {{ product.productcode }}</h2>\n  <div class=\"py-1\"></div>\n\n  <form (submit)=\"onSubmit()\" #productForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"productcode\">Code <span class=\"anime-color\">*</span></label>\n      <input type=\"text\" required\n            name=\"productcode\"\n            class=\"form-control\" id=\"productcode\" \n            [(ngModel)]=\"product.productcode\" />\n    </div>\n    <div class=\"form-group\">\n          <label for=\"producttitle\">Title <span class=\"anime-color\">*</span></label>\n          <input type=\"text\" required\n                name=\"producttitle\"\n                class=\"form-control\" id=\"producttitle\" \n                [(ngModel)]=\"product.producttitle\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productdescription\">Description <span class=\"anime-color\">*</span></label>\n        <textarea rows=\"10\" required\n              name=\"productdescription\"\n              class=\"form-control\" id=\"productdescription\" \n              [(ngModel)]=\"product.productdescription\">\n        </textarea>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"unitprice\">Unit Price <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"1000\" required\n              name=\"unitprice\"\n              class=\"form-control\" id=\"unitprice\" \n              [(ngModel)]=\"product.unitprice\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"yourprice\">Your Price <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"1000\" required\n              name=\"yourprice\"\n              class=\"form-control\" id=\"yourprice\" \n              [(ngModel)]=\"product.yourprice\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"genre\">Genre</label>\n        <select (change)=\"selectGenre($event.target.value)\" \n          class=\"form-control\" id=\"genre\" name=\"genre\">\n            <option *ngFor=\"let genre of genres\" \n                value={{genre.CategoryID}} \n                [selected]=\"genre.CategoryID == product.categoryid\">\n                    {{genre.CategoryName}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productagerating\">Age Rating <span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"productagerating\"\n              class=\"form-control\" id=\"productagerating\" \n              [(ngModel)]=\"product.productagerating\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productlength\">Length <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"1\" max=\"600\" required\n              name=\"productlength\"\n              class=\"form-control\" id=\"productlength\" \n              [(ngModel)]=\"product.productlength\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productyearcreated\">Year Created <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"1950\" max=\"2050\" required\n              name=\"productyearcreated\"\n              class=\"form-control\" id=\"productyearcreated\" \n              [(ngModel)]=\"product.productyearcreated\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"medium\">Medium</label>\n        <select (change)=\"selectMedium($event.target.value)\" \n          class=\"form-control\" id=\"medium\" name=\"medium\">\n            <option *ngFor=\"let medium of media\" \n                value={{medium.MediumID}} \n                [selected]=\"medium.MediumID == product.mediumid\">\n                    {{medium.Description}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"publisher\">Publisher</label>\n        <select (change)=\"selectPublisher($event.target.value)\" \n          class=\"form-control\" id=\"publisher\" name=\"publisher\">\n            <option *ngFor=\"let publisher of publishers\" \n                value={{publisher.PublisherID}} \n                [selected]=\"publisher.PublisherID == product.publisherid\">\n                    {{publisher.PublisherName}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"ratingid\">Rating <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"5\" step=\"1\" required\n              name=\"ratingid\"\n              class=\"form-control\" id=\"ratingid\" \n              [(ngModel)]=\"product.ratingid\" />\n      </div>\n\n      <div class=\"py-3\">\n        <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!productForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Product Model</div>\n      {{ productForm.value | json }}\n      {{ productForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !productForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/product-info/product-info.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/product-info/product-info.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"bgc-gray vertical-scroll\">\n  <h2 class=\"child anime-orig-color\">Products</h2>\n  <div class=\"row pt-3 pb-2\">\n    <div class=\"col-6\">\n      <span class=\"p6 py-3\" [routerLink]=\"['/product-info-add']\">Create New</span>\n    </div>\n  </div>\n  <ul class=\"list-inline\">\n      <li *ngFor=\"let product of products\" class=\"li-child\"\n        [routerLink]=\"['/product-info-edit']\" [queryParams]=\"{ productID: product?.ProductID }\">\n          <a>\n              <div class=\"card frame card-max\">\n                  <img class=\"card-img-top image-max\" \n                       src=\"https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg\"\n                       alt=\"{{product?.ProductCode}}\" />\n                  <div class=\"card-body\">\n                      <div class=\"card-title bold anime-color\">{{product?.ProductTitle}}</div>\n                      <div>{{product?.MediumName}} ({{product?.ProductYearCreated}})</div>\n                      <div>{{product?.ProductLength}} minutes</div>\n                      <div class=\"tiny-gray\">Item: {{product?.ProductCode}}</div>\n                      <div class=\"p6 pt-2\" (click)=\"OnDeleteProduct(product)\">Delete</div>\n                  </div>\n              </div>\n          </a>\n      </li>\n  </ul>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/publisher-add/publisher-add.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/publisher-add/publisher-add.component.html ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Add New</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit(); publisherForm.reset()\" #publisherForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"publisherName\">Publisher Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"publisherName\"\n                  class=\"form-control\" id=\"publisherName\" \n                  [(ngModel)]=\"publisherModel.PublisherName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"publisherModel.Description\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!publisherForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Publisher Model</div>\n      {{ publisherForm.value | json }}\n      {{ publisherForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !publisherForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/publisher-edit/publisher-edit.component.html":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/publisher-edit/publisher-edit.component.html ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Edit {{ publisherModel?.PublisherName }}</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit()\" #publisherForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"publisherName\">Publisher Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"publisherName\"\n                  class=\"form-control\" id=\"publisherName\" \n                  [(ngModel)]=\"publisherModel.PublisherName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"publisherModel.Description\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!publisherForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Publisher Model</div>\n      {{ publisherForm.value | json }}\n      {{ publisherForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !publisherForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/publisher/publisher.component.html":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/publisher/publisher.component.html ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1 pb-3\">\n        <h2>Publishers</h2>\n        <div class=\"row pt-3 pb-2\">\n          <div class=\"col-6\">\n            <span class=\"p6 py-3\" [routerLink]=\"['/publisher-add']\">Create New</span>\n          </div>\n        </div>\n        <ng-container *ngFor=\"let publisher of publishers\">\n          <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-3\">{{publisher?.PublisherName}}</div>\n            <div class=\"col-6\">{{publisher?.Description}}</div>\n            <div class=\"col-3 d-flex justify-content-end\">\n                <span class=\"p6 px-3\" [routerLink]=\"['/publisher-edit']\" \n                  [queryParams]=\"{ publisherID: publisher?.PublisherID }\">Edit</span> | \n                <span class=\"p6 px-3\" (click)=\"OnDeletePublisher(publisher)\">Delete</span> \n            </div>\n          </div>\n        </ng-container>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/recommend-add/recommend-add.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/recommend-add/recommend-add.component.html ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Add New</h2>\n    <div class=\"py-1\"></div>\n\n    <!-- <form (submit)=\"onSubmit(); recommendForm.reset()\" #recommendForm=\"ngForm\"> -->\n    <form (submit)=\"onSubmit(); recommendForm.reset()\" #recommendForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"title\">Title <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"title\"\n                  class=\"form-control\" id=\"title\" \n                  [(ngModel)]=\"recommendModel.title\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"ratingId\">Rating <span class=\"anime-color\">*</span></label>\n            <input type=\"number\" required min=\"1\" max=\"5\" step=\"1\"\n                  name=\"ratingId\"\n                  class=\"form-control\" id=\"ratingId\" \n                  [(ngModel)]=\"recommendModel.ratingId\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"recommendation\">Recommendation <span class=\"anime-color\">*</span></label>\n            <textarea rows=\"5\" required\n                name=\"recommendation\"\n                class=\"form-control\" id=\"recommendation\" \n                [(ngModel)]=\"recommendModel.recommendation\">\n            </textarea>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"reviewer\">Reviewer <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"reviewer\"\n                  class=\"form-control\" id=\"reviewer\" \n                  [(ngModel)]=\"recommendModel.reviewer\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"reviewerEmployer\">Reviewer's Employer </label>\n            <input type=\"text\" \n                  name=\"reviewerEmployer\"\n                  class=\"form-control\" id=\"reviewerEmployer\" \n                  [(ngModel)]=\"recommendModel.reviewerEmployer\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"employerUrl\">Employer URL </label>\n            <input type=\"text\" \n                  name=\"employerUrl\"\n                  class=\"form-control\" id=\"employerUrl\" \n                  [(ngModel)]=\"recommendModel.employerUrl\" />\n        </div>\n\n      <div class=\"form-group\">\n        <label for=\"reviewDatePicker\">Review Date <span class=\"anime-color\">*</span></label>\n        <input name=\"reviewDatePicker\" required \n              class=\"form-control\" id=\"reviewDatePicker\" \n              [theme]=\"'dp-material'\" \n              [dpDayPicker]=\"datePickerConfig\"\n              [(ngModel)]=\"reviewDate\" />\n      </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!recommendForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Recommendation Model</div>\n      {{ recommendForm.value | json }}\n      {{ recommendForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !recommendForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/recommend-edit/recommend-edit.component.html":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/recommend-edit/recommend-edit.component.html ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>\n  recommend-edit works!\n</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/recommendations/recommendations.component.html":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/recommendations/recommendations.component.html ***!
+  \************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1 pb-3\">\n        <h2>Recommendations</h2>\n        <div class=\"row pt-3 pb-2\">\n          <div class=\"col-6\">\n            <span class=\"p6 py-3\" [routerLink]=\"['/recommend-add']\">Create New</span>\n          </div>\n        </div>\n        <ng-container *ngFor=\"let recommend of recommends\">\n          <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-9 bold\">{{recommend?.title}}</div>\n            <div class=\"col-3 bold\">{{recommend?.ratingId}} stars</div>\n            <div class=\"col-12 font-italic\">{{recommend?.recommendation}}</div>\n            <div class=\"col-4\">by {{recommend?.reviewer}}</div>\n            <div class=\"col-8\">{{recommend?.reviewerEmployer}}</div>\n            <!-- <div class=\"col-3 d-flex justify-content-end\">\n                <span class=\"p6 px-3\" [routerLink]=\"['/recommend-edit']\" \n                  [queryParams]=\"{ recommendID: recommend?.RecommendID }\">Edit</span> | \n                <span class=\"p6 px-3\" (click)=\"OnDeleteRecommend(recommend)\">Delete</span> \n            </div> -->\n          </div>\n        </ng-container>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user-feedback/user-feedback.component.html":
+/*!********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user-feedback/user-feedback.component.html ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1 pb-3\">\n      <h2>Customer Reviews</h2>\n      <div class=\"pb-3\"></div>\n      <ng-container *ngFor=\"let feedback of feedbacks\">\n        <div class=\"row p-2 my-2 all-borders-black\">\n          <div class=\"col-8\">\n              <img src=\"https://reydavid.blob.core.windows.net/anime/{{feedback?.productCode}}.jpg\"\n                alt=\"{{feedback?.productCode}}\" class=\"float-left image-min mr-4\" />\n\n              <strong>{{feedback.productTitle}}</strong><br />\n              <strong>{{feedback?.firstName}} {{feedback?.lastName}}</strong> - {{feedback?.created | date: 'MMM d, y'}}<br />\n              {{feedback?.email}}<br />\n\n              <div *ngIf=\"feedback?.feedbackType != 'ProductReview'\">\n                Type: {{helper.SplitCamelCase(feedback?.feedbackType)}}</div>\n\n              <img *ngIf=\"feedback?.feedbackType == 'ProductReview'\" \n                src=\"https://reydavid.blob.core.windows.net/assets/Rating {{feedback?.rating}} Stars.png\"\n                alt=\"{{feedback?.rating}} stars\" class=\"img-responsive\" />\n          </div>\n          <div class=\"col-4 d-flex justify-content-end align-items-center\">\n            <span class=\"p6 px-3\" (click)=\"OnDeleteUserFeedback(feedback)\">Delete</span> \n          </div>\n          <div class=\"col-12\">\n            <strong>{{feedback?.title}}</strong><br />\n            {{feedback?.feedback}}\n          </div>\n        </div>\n      </ng-container>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user-info-edit/user-info-edit.component.html":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user-info-edit/user-info-edit.component.html ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1\">\n\n  <h2>Edit user: {{ userAccount?.userName }}</h2>\n  <h3>{{ userAccount?.email }}</h3>\n  <div class=\"py-1\"></div>\n\n  <form (submit)=\"onSubmit()\" #userForm=\"ngForm\">\n      <div class=\"form-group\">\n          <label for=\"userFirstName\">First Name <span class=\"anime-color\">*</span></label>\n          <input type=\"text\" required\n                name=\"userFirstName\"\n                class=\"form-control\" id=\"userFirstName\" \n                [(ngModel)]=\"userAccount.firstName\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"userLastName\">Last Name <span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"userLastName\"\n              class=\"form-control\" id=\"userLastName\" \n              [(ngModel)]=\"userAccount.lastName\" />\n      </div>\n      <div class=\"form-group\">\n          <label for=\"address\">Address <span class=\"anime-color\">*</span></label>\n          <input type=\"text\" required\n                name=\"address\"\n                class=\"form-control\" id=\"address\" \n                [(ngModel)]=\"userAccount.address\" />\n      </div>\n      <div class=\"form-group\">\n          <label for=\"city\">City <span class=\"anime-color\">*</span></label>\n          <input type=\"text\" required\n                name=\"city\"\n                class=\"form-control\" id=\"city\" \n                [(ngModel)]=\"userAccount.city\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"zipCode\">Zip Code<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"zipCode\"\n              class=\"form-control\" id=\"zipCode\" \n              [(ngModel)]=\"userAccount.zipCode\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"state\">State</label>\n        <select (change)=\"selectState($event.target.value)\" \n          class=\"form-control\" id=\"state\" name=\"state\">\n            <option *ngFor=\"let state of states\" \n                value={{state.StateID}} \n                [selected]=\"state.StateID == userAccount.stateId\">\n                    {{state.StateName}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"cellPhone\">Cell Phone<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"cellPhone\"\n              class=\"form-control\" id=\"cellPhone\" \n              [(ngModel)]=\"userAccount.cellPhone\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"homePhone\">Home Phone<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"homePhone\"\n              class=\"form-control\" id=\"homePhone\" \n              [(ngModel)]=\"userAccount.homePhone\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"creditCardType\">Credit Card Type<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"creditCardType\"\n              class=\"form-control\" id=\"creditCardType\" \n              [(ngModel)]=\"userAccount.creditCardType\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"creditCardExpiration\">Credit Card Expiration<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"creditCardExpiration\"\n              class=\"form-control\" id=\"creditCardExpiration\" \n              [(ngModel)]=\"userAccount.creditCardExpiration\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"creditCardNumber\">Credit Card Number<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"creditCardNumber\"\n              class=\"form-control\" id=\"creditCardNumber\" \n              [(ngModel)]=\"userAccount.creditCardNumber\" />\n      </div>\n\n      <div class=\"py-3\">\n        <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!userForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>User Account Model</div>\n      {{ userForm.value | json }}\n      {{ userForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !userForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user-info/user-info.component.html":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user-info/user-info.component.html ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1 pb-3\">\n      <h2>Users</h2>\n      <div class=\"pb-3\"></div>\n      <ng-container *ngFor=\"let user of userAccounts\">\n        <div class=\"row p-2 my-2 all-borders-black\">\n          <div class=\"col-5\">\n            Name: <strong>{{user?.firstName}} {{user?.lastName}}</strong><br />\n            Street: <strong>{{user?.address}}</strong><br />\n            Cell: <strong>{{user?.cellPhone}}</strong>\n          </div>\n          <div class=\"col-5\">\n            Email: <strong>{{user?.email}}</strong><br />\n            City: <strong>{{user?.city}}, {{user?.state}} {{user?.zipCode}}</strong><br />\n            Home: <strong>{{user?.homePhone}}</strong>\n          </div>\n          <div class=\"col-2 d-flex justify-content-end align-items-center\">\n            <span class=\"p6 px-3\" (click)=\"OnEditUserAccount(user)\">Edit</span> \n          </div>\n        </div>\n      </ng-container>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html":
+/*!**************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<app-navigation></app-navigation>\r\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/auto-generated/auto-generated.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/auto-generated/auto-generated.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>auto-generated works!</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/cards-carousel/cards-carousel.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/cards-carousel/cards-carousel.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <div class=\"row wider\">\n    <div id=\"carousel\" class=\"carousel slide\" data-ride=\"carousel\">\n      <ol class=\"carousel-indicators\">\n        <li data-target=\"#carousel\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#carousel\" data-slide-to=\"1\"></li>\n        <li data-target=\"#carousel\" data-slide-to=\"2\"></li>\n      </ol>\n      <div class=\"carousel-inner\">\n        <div class=\"carousel-item active\">\n          <div class=\"d-none d-lg-block\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n                    alt=\"Haruhi Suzumiya\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto17.jpg\"\n                    alt=\"K-ON\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto22.jpg\"\n                    alt=\"Avengers\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n                    alt=\"Namae\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-none d-md-block d-lg-none\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n                    alt=\"Haruhi Suzumiya\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto17.jpg\"\n                    alt=\"K-ON\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto22.jpg\"\n                    alt=\"Avengers\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-none d-sm-block d-md-none\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n                    alt=\"Haruhi Suzumiya\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto17.jpg\"\n                    alt=\"K-ON\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-block d-sm-none\">\n            <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n                alt=\"Haruhi Suzumiya\" class=\"d-block w-100\" />\n          </div>\n        </div>\n\n        <div class=\"carousel-item\">\n          <div class=\"d-none d-lg-block\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto27.jpg\"\n                    alt=\"Miku Hatsune\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto15.png\"\n                    alt=\"K-ON\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto11.png\"\n                    alt=\"Cosplay\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto20.jpg\"\n                    alt=\"Love Hina\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-none d-md-block d-lg-none\">\n            <div class=\"slide-box\">\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n                  alt=\"Namae\" height=\"220px\" class=\"pr-2\" />\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto27.jpg\"\n                alt=\"Miku Hatsune\" height=\"220px\" class=\"pr-2\" />\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto15.png\"\n                alt=\"K-ON\" height=\"220px\" />\n          </div>\n          </div>\n          <div class=\"d-none d-sm-block d-md-none\">\n            <div class=\"slide-box\">\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto22.jpg\"\n                  alt=\"Avengers\" height=\"220px\" class=\"pr-2\" />\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n                  alt=\"Namae\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-block d-sm-none\">\n            <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto17.jpg\"\n              alt=\"K-ON\" class=\"d-block w-100\" />\n          </div>\n        </div>\n\n        <div class=\"carousel-item\">\n          <div class=\"d-none d-lg-block\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto22.jpg\"\n                    alt=\"Avengers\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n                    alt=\"Namae\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto27.jpg\"\n                    alt=\"Miku Hatsune\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto15.png\"\n                    alt=\"K-ON\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-none d-md-block d-lg-none\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto11.png\"\n                alt=\"Cosplay\" height=\"220px\" class=\"pr-2\" />\n            <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto20.jpg\"\n                alt=\"Love Hina\" height=\"220px\" class=\"pr-2\" />\n            <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n                alt=\"Haruhi Suzumiya\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-none d-sm-block d-md-none\">\n            <div class=\"slide-box\">\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto27.jpg\"\n                alt=\"Miku Hatsune\" height=\"220px\" class=\"pr-2\" />\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto15.png\"\n                alt=\"K-ON\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-block d-sm-none\">\n            <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n                alt=\"Namae\" class=\"d-block w-100\" />\n          </div>\n      </div>\n    </div>\n    <a class=\"carousel-control-prev\" href=\"#carousel\" role=\"button\" data-slide=\"prev\">\n        <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n      </a>\n      <a class=\"carousel-control-next\" href=\"#carousel\" role=\"button\" data-slide=\"next\">\n        <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n      </a>\n  </div>\n</div>\n\n<!-- \n<div class=\"col-md-10 offset-md-1\">\n  <div id=\"homeCarousel\" class=\"carousel slide multi-item-carousel\" data-ride=\"carousel\">\n    <ol class=\"carousel-indicators\">\n      <li data-target=\"#homeCarousel\" data-slide-to=\"0\" class=\"active\"></li>\n      <li data-target=\"#homeCarousel\" data-slide-to=\"1\"></li>\n      <li data-target=\"#homeCarousel\" data-slide-to=\"2\"></li>\n      <li data-target=\"#homeCarousel\" data-slide-to=\"3\"></li>\n      <li data-target=\"#homeCarousel\" data-slide-to=\"4\"></li>\n      <li data-target=\"#homeCarousel\" data-slide-to=\"5\"></li>\n    </ol>\n    <div class=\"carousel-inner\">\n      <div class=\"carousel-item active\">\n        <div class=\"col-xs-4\">\n            <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n          class=\"card-img-top mx-auto\" alt=\"Haruhi Suzumiya\" />\n        </div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"col-xs-4\">\n            <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto17.jpg\"\n              class=\"card-img-top mx-auto\" alt=\"K-ON\" />\n          </div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"col-xs-4\">\n          <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto22.jpg\"\n            class=\"card-img-top mx-auto\" alt=\"Avengers\" />\n        </div>\n      </div>\n      <div class=\"carousel-item\">\n          <div class=\"col-xs-4\">\n            <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n              class=\"card-img-top mx-auto\" alt=\"Namae\" />\n          </div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"col-xs-4\">\n            <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto27.jpg\"\n            class=\"card-img-top mx-auto\" alt=\"Miku Hatsuna\" />\n        </div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"col-xs-4\">\n            <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto11.png\"\n            class=\"card-img-top mx-auto\" alt=\"Cosplay\" />\n        </div>\n      </div>\n    </div>\n    <a class=\"carousel-control-prev\" href=\"#homeCarousel\" role=\"button\" data-slide=\"prev\">\n      <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n      <span class=\"sr-only\">Previous</span>\n    </a>\n    <a class=\"carousel-control-next\" href=\"#homeCarousel\" role=\"button\" data-slide=\"next\">\n      <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n      <span class=\"sr-only\">Next</span>\n    </a>\n  </div>\n</div> -->\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/categories/categories.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/categories/categories.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"bgc-gray\">\n  <h2 class=\"child anime-orig-color\">Shop by Category</h2>\n  <ul class=\"list-inline\">\n      <li *ngFor=\"let category of categories\" class=\"li-child\"\n        [routerLink]=\"['/category-list']\" [queryParams]=\"{ categoryID: category?.CategoryID }\">\n          <a>\n              <div class=\"card frame card-max\">\n                  <img class=\"card-img-top image-max\" \n                       src=\"https://reydavid.blob.core.windows.net/genres/{{category?.ImageFile}}\"\n                       alt=\"{{category?.CategoryName}}\" />\n                  <div class=\"card-body\">\n                      <div class=\"card-title genre-title\" \n                        [class.smaller]=\"category?.Description.length > 20\">{{category?.Description}}</div>\n                  </div>\n              </div>\n          </a>\n      </li>\n  </ul>\n</div>\n<!-- (click)=\"OnSelectCategory(category)\"> -->\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/category-list/category-list.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/category-list/category-list.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"bgc-gray\">\n  <h2 class=\"child\"><span class=\"h4\">Category:  </span>{{category}}</h2>\n\n  <ul class=\"list-inline\">\n      <li *ngFor=\"let prod of products\" class=\"li-child\" (click)=\"OnSelectProduct(prod)\">\n        <!-- [routerLink]=\"['/detail']\" [queryParams]=\"{ productID: prod?.ProductID }\"> -->\n          <a>\n            <div class=\"card frame card-max\">\n              <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                    class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n              <div class=\"card-body\">\n                  <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                  <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                        alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n                  <div>\n                    <table>\n                      <tr>\n                        <td>List Price: </td>\n                        <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                      </tr>\n                      <tr>\n                        <td>Your Price: </td>\n                        <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                      </tr>\n                    </table>\n                  </div>\n              </div>\n            </div>\n          </a>\n      </li>\n  </ul>\n\n  <!-- <div class=\"row flex-row\">\n    <ng-container *ngFor=\"let prod of products\">\n      <div class=\"col-6 col-sm-4 col-md-3 col-lg-2\">\n          <a (click)=\"OnSelectProduct(prod)\">\n              <div class=\"card card-max\">\n                  <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                        class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n                  <div class=\"card-body\">\n                      <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                      <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                            alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n                      <div>\n                        <table>\n                          <tr>\n                            <td>List Price: </td>\n                            <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                          </tr>\n                          <tr>\n                            <td>Your Price: </td>\n                            <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                          </tr>\n                        </table>\n                      </div>\n                  </div>\n              </div>\n          </a>\n        </div>\n    </ng-container>\n  </div> -->\n</div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/contact-us/contact-us.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/contact-us/contact-us.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"pb-3\">Contact Us</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>\n        Our offices are open Monday through Friday 8:00am to 5:00pm Pacific Standard Time. \n        Of course, you can browse and order through our \n        <span class=\"p6\" (click)=\"shopping()\">online store</span>\n        24 hours a day, 7 days a week.\n    </p>\n    <p>\n        If you have a concern about an order or item in your order, or if you need to request \n        a return authorization number, we have an \n        <span class=\"p6\" (click)=\"newNote()\">online form</span>\n        that you may use for your request. \n        If you do not have an account, please create a new account with us through the Sign Up or Registration page.  \n        User accounts allow us to better serve you. \n        If you have another type of question, would like more information on an order you have placed \n        or would like to offer feedback or say thanks - please use the \n        <span class=\"p6\" (click)=\"newNote()\">contact form</span>.\n        We try to answer all questions received within 48 hours excluding weekends and holidays.\n    </p>\n    <p>\n        You will need to be logged in to use the online form. If you are already logged in, \n        you may proceed to the \n        <span class=\"p6\" (click)=\"newNote()\">contact form</span>.  Otherwise, you may \n        <span class=\"p6\" (click)=\"login()\">log in here</span>.\n    </p>\n    <p>\n      We can also be reached through the following methods:\n    </p>\n    <h5 class=\"bold\">Phone</h5>\n    <p>\n      <span class=\"pl-4\">Customer Service: (925)915-0230</span>\n    </p>\n    <h5 class=\"bold\">Email</h5>\n    <p>\n      <span class=\"pl-4\">Support: <a href=\"mailto:techSupport@animegination.net\">\n        techSupport@animegination.net</a><br/></span> \n      <span class=\"pl-4\">Marketing: <a href=\"mailto:marketing@animegination.net\">\n          marketing@animegination.net</a><br/></span> \n      <span class=\"pl-4\">General: <a href=\"mailto:info@animegination.net\">\n          info@animegination.net</a><br/></span> \n    </p>\n\n    <h5 class=\"bold\">Snail Mail</h5>\n    <p>\n      <span class=\"pl-4\">60 Windsor Court<br/></span>\n      <span class=\"pl-4\">Danville, CA 94506</span>\n    </p>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/account-info/account-info.component.html":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/account-info/account-info.component.html ***!
+  \*********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!--<div>\n    <div class=\"home jumbotron centered\">\n        <h2>Account Info</h2>\n        <h3 *ngIf=\"jwt\">Your JWT is:</h3>\n        <pre *ngIf=\"jwt\" class=\"jwt\"><code>{{jwt}}</code></pre>\n        <pre *ngIf=\"jwt\" class=\"jwt\"><code>{{decodedJwt | json}}</code></pre>\n        <p>Click any of the buttons to call an API and get a response</p>\n        <p><a class=\"btn btn-primary btn-lg\" role=\"button\" (click)=\"callAnonymousApi()\">Call Anonymous API</a></p>\n        <p><a class=\"btn btn-primary btn-lg\" role=\"button\" (click)=\"callSecuredApi()\">Call Secure API</a></p>\n        <p><a class=\"btn btn-primary btn-lg\" role=\"button\" (click)=\"logout()\">Logout</a></p>\n        <h2 *ngIf=\"response\">The response of calling the <span class=\"red\"></span> API is:</h2>\n        <h3 *ngIf=\"response\">{{response}}</h3>\n    </div>\n</div>-->\n<div class=\"row\">\n    <div class=\"col-sm-12 col-md-10 offset-md-1\">\n        <h2>Your Account</h2>\n        <div class=\"row\">\n            <div class=\"col-sm-12 col-md-4\">\n                <div class=\"card\">\n                      <h3 class=\"card-header\">Orders</h3>\n                    <div class=\"card-body\">\n                        <div class=\"card-tall\">\n                            <p>{{recentPurchases}}</p>\n                        </div>\n                        <button type=\"button\" class=\"btn btn-default anime-button\" \n                                (click)=\"goOrders()\">View Recent Orders</button>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-sm-12 col-md-4\">\n                <div class=\"card\">\n                    <h3 class=\"card-header\">Profile Settings</h3>\n                    <div class=\"card-body\">\n                        <div class=\"card-tall\">\n                            <strong>{{userAccount.firstName}} {{userAccount.lastName}}</strong>\n                            <div>{{userAccount.email}}</div>\n                            <div *ngIf=\"userAccount.cellPhone\">{{userAccount.cellPhone}} (Cell)</div>\n                            <div *ngIf=\"userAccount.homePhone\">{{userAccount.homePhone}} (Other)</div>\n                            <p></p>\n                        </div>\n                        <button type=\"button\" class=\"btn btn-default anime-button\" \n                                (click)=\"goProfile()\">Edit</button>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-sm-12 col-md-4\">\n                <div class=\"card\">\n                    <h3 class=\"card-header\">Address Book</h3>\n                    <div class=\"card-body\">\n                        <div class=\"card-tall\">\n                            <div *ngIf=\"userAccount.address && userAccount.city && userAccount.zipCode\">\n                                <div>{{userAccount.address}}</div>\n                                <div>{{userAccount.city}}</div>\n                                <div>{{userAccount.state}} {{userAccount.zipCode}}</div>\n                                <div>United States</div>\n                                <p></p>\n                            </div>\n                            <div *ngIf=\"!userAccount.address && !userAccount.city && !userAccount.zipCode\">\n                                <p>{{missingAddressBook}}</p>\n                            </div>\n                            <div *ngIf=\"!userAccount.address || !userAccount.city || !userAccount.zipCode\">\n                                <div *ngIf=\"userAccount.address || userAccount.city || userAccount.zipCode\">\n                                    <p>{{incompleteAddressBook}}</p>\n                                </div>\n                            </div>\n                        </div>\n                        <button type=\"button\" class=\"btn btn-default anime-button\" \n                                (click)=\"goAddress()\">Edit</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/account-settings/account-settings.component.html":
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/account-settings/account-settings.component.html ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2>Account Settings</h2>\n<p>Please review your account settings.  You can change them if you wish.</p>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/address-settings/address-settings.component.html":
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/address-settings/address-settings.component.html ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n        <h2>Edit Address</h2>\n        <form #addressForm=\"ngForm\" role=\"form\" \n            (submit)=\"Update(addressForm.value, addressForm.valid)\">\n            <div class=\"form-group\">\n                <label for=\"username\">Full Name</label>\n                <label class=\"form-control\" id=\"username\">\n                    {{addressInput.firstName}} {{addressInput.lastName}}\n                </label>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"address\">Street Address <span class=\"anime-color\">*</span></label>\n                <input type=\"text\" ngControl=\"Address\" required\n                       [(ngModel)]=\"addressInput.address\"\n                       class=\"form-control\" id=\"address\" name=\"address\" />\n            </div>\n            <div class=\"form-group\">\n                <label for=\"city\">City <span class=\"anime-color\">*</span></label>\n                <input type=\"text\" ngControl=\"City\" required\n                       [(ngModel)]=\"addressInput.city\"\n                       class=\"form-control\" id=\"city\" name=\"city\" />\n            </div>\n            <div class=\"form-group\">\n                <label for=\"state\">State</label>\n                <!-- <states [defaultState]=\"currentState\" (select)=\"selectState($event)\"></states> -->\n                <select (change)=\"selectState($event.target.value)\" \n                  class=\"form-control\" id=\"state\" name=\"state\">\n                    <option *ngFor=\"let state of states\" \n                        value={{state.StateID}} \n                        [selected]=\"state.StateName == _sessionService.UserAccount.state\">\n                            {{state.StateName}}\n                    </option>\n                </select>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"zipcode\">Zip Code <span class=\"anime-color\">*</span></label>\n                <input type=\"text\" ngControl=\"ZipCode\" required \n                       pattern=\"[0-9]{5}\" maxlength=\"5\" title=\"hint: 5-digit Zip Code\"\n                       [(ngModel)]=\"addressInput.zipCode\"\n                       class=\"form-control\" id=\"zipcode\" name=\"zipcode\" />\n            </div>\n            <div>\n                <button class=\"btn btn-default anime-button-lg\" type=\"submit\" \n                    [disabled]=\"addressForm.invalid || addressForm.pristine && !isDirty\">Update</button>\n            </div>\n            <div class=\"pb-3\"></div>\n            <div *ngIf=\"isSuccess\" class=\"alert alert-success\">\n                <strong>Success! </strong> Your Address has been Updated.\n            </div>\n            <div *ngIf=\"isFailure\" class=\"alert alert-danger\">\n                <strong>There was a problem: </strong> Your Address Update failed.\n            </div>\n        </form>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/buy-list/buy-list.component.html":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/buy-list/buy-list.component.html ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"inline pr-3\">Shopping Cart</h2>\n<div *ngIf=\"!isEmpty\" class=\"inline\">\n    {{order?.productQuantity}} Product<span *ngIf=\"order?.productQuantity != 1\">s</span>, \n    {{order?.itemQuantity}} Item<span *ngIf=\"order?.itemQuantity != 1\">s</span>\n</div>\n\n<div *ngIf=\"isEmpty\">\n    <div class=\"pt-3\"></div>\n    <h3>Your Shopping Cart is Empty</h3>\n    <div class=\"pb-3\"></div>\n</div>\n<div *ngIf=\"!isEmpty\">\n    <div class=\"row pt-3\">\n        <div class=\"col-12 col-sm-6 order-sm-2 col-md-5 order-md-2 col-lg-3\">\n            <div class=\"row\">\n                <div class=\"col-10 offset-1 col-lg-11 offset-lg-0\">\n                    <app-subtotals [actionButton]=\"true\" [marketing]=\"true\"></app-subtotals>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"col-12 col-sm-6 order-sm-1 col-md-7 order-md-1 col-lg-9\">\n            <ul class=\"list-no-bullets\">\n                <li *ngFor=\"let product of cartProducts\">\n                    <app-cart-item [cartItem]=\"product\" [cartType]=\"cartType\"></app-cart-item>\n                </li>\n            </ul>\n\n            <!--<ul class=\"list-no-bullets\">\n            <li *ngFor=\"let prod of cartProducts\"\n                (click)=\"OnSelectProduct(prod)\">\n                <cartItem [product]=\"prod\"></cartItem>\n            </li>\n            </ul>-->\n\n            <!-- <ul class=\"list-no-bullets\">\n                <li *ngFor=\"let prod of cartProducts\">\n                    <cartItem [product]=\"prod\" (selectItem)=\"OnSelectProduct($event)\"></cartItem>\n                </li>\n            </ul> -->\n        </div>\n    </div>\n</div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/cart-item/cart-item.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/cart-item/cart-item.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-11 col-lg-6\">\n        <div class=\"row\">\n            <div class=\"col-4 col-sm-12 col-md-5 col-xl-4\">\n                <div (click)=\"OnSelectProduct(cartItem)\" class=\"panel-body panel-default pointer\">\n                    <img src=\"https://reydavid.blob.core.windows.net/anime/{{cartItem?.productCode}}.jpg\"\n                        alt=\"{{cartItem?.productCode}}\" class=\"card-max-cart img-responsive\" />\n                </div>\n            </div>\n            <div class=\"col-8 col-sm-12 col-md-7 col-xl-8\">\n                <h5 (click)=\"OnSelectProduct(cartItem)\" class=\"pointer nowrap\">{{cartItem?.productTitle}}</h5>\n                <div>{{cartItem?.mediumName}}</div>\n                <div>{{cartItem?.categoryName}}</div>\n                <div>from {{cartItem?.publisherName}} in {{cartItem?.productYearCreated}}</div>\n                <div>{{cartItem?.productLength}} minutes</div>\n                <div class=\"tiny-gray\">Item: {{cartItem?.productCode}}</div>\n\n            </div>\n        </div>\n    </div>\n    <div class=\"col-11 col-lg-5\">\n        <div class=\"row d-none d-lg-block pt-4\"></div>\n        <div class=\"row\">\n            <div class=\"col-6\">\n                <div>List Price: <s>{{cartItem?.unitPrice | currency: 'USD':true }} </s></div>\n                <div>Your Price: <strong><span class=\"text-danger font-em-10\">\n                    {{cartItem?.yourPrice | currency:'USD':'symbol' }} </span></strong>\n                </div>\n            </div>\n            <div class=\"col-6\">\n                <div>\n                    <i class=\"fa fa-check-circle\"></i>\n                    <span class=\"alert-content pb-2 pl-2\">In Stock</span>\n                </div>\n                <div>Quantity: \n                    <input type=\"number\" min=\"1\" max=\"10\" step=\"1\" \n                        value={{cartItem?.quantity}} \n                        (change)=\"updateQuantity($event.target.value, cartItem)\" \n                    >\n                </div>\n            </div>\n        </div>\n        <div class=\"d-flex justify-content-center pt-2\">\n            <div class=\"px-2\">\n                <a class=\"anchor\" (click)=\"moveItem(cartItem)\">{{moveLabel}}</a> \n            </div>\n            <div class=\"px-2\">|</div>\n            <div class=\"px-2\">\n                <a class=\"anchor\" (click)=\"deleteItem(cartItem)\">Delete</a>\n            </div>\n        </div>\n        <div class=\"row d-block d-lg-none pb-4\"></div>\n    </div>\n    <div class=\"col-12 partition\"></div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/checkout-address/checkout-address.component.html":
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/checkout-address/checkout-address.component.html ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row pt-3\">\n    <div class=\"col-12 col-sm-6 order-sm-2 col-md-6 order-md-2 col-xl-4\">\n        <div class=\"row\">\n            <div class=\"col-10 offset-1 col-lg-11 offset-lg-0\">\n                <app-subtotals [actionButton]=\"false\" [marketing]=\"true\"></app-subtotals>\n            </div>\n        </div> \n    </div>\n\n    <div class=\"col-12 col-sm-6 order-sm-1 col-md-6 order-md-1 col-xl-8\">\n        <div class=\"row\">\n            <div class=\"col-sm-12 col-md-10 offset-md-1\">\n                <h2>Confirm Shipping Address</h2>\n                <div class=\"row\">\n                    <div class=\"col-12 col-md-10 col-xl-6\">\n                        <div class=\"card\">\n                            <!-- <h3 class=\"card-header\">Address Book</h3> -->\n                            <div class=\"pt-3 px-3 bottom-border\">\n                                <input type=\"radio\" checked>\n                                <label class=\"pl-3 bold\">Selected</label>\n                            </div>\n                            <div class=\"card-body\">\n                                <div class=\"card-tall\">\n                                    <div *ngIf=\"userAccount.address && userAccount.city && userAccount.zipCode\">\n                                        <strong>{{userAccount.firstName}} {{userAccount.lastName}}</strong>\n                                        <div>{{userAccount.address}}</div>\n                                        <div>{{userAccount.city}}</div>\n                                        <div>{{userAccount.state}} {{userAccount.zipCode}}</div>\n                                        <div>United States</div>\n                                        <p></p>\n                                    </div>\n                                    <div *ngIf=\"!userAccount.address && !userAccount.city && !userAccount.zipCode\">\n                                        <p>{{missingAddressBook}}</p>\n                                    </div>\n                                    <div *ngIf=\"!userAccount.address || !userAccount.city || !userAccount.zipCode\">\n                                        <div *ngIf=\"userAccount.address || userAccount.city || userAccount.zipCode\">\n                                            <p>{{incompleteAddressBook}}</p>\n                                        </div>\n                                    </div>\n                                </div>\n                                <button type=\"button\" class=\"btn btn-default anime-button\" \n                                        (click)=\"goAddress()\">Edit</button>\n                            </div>\n                        </div>\n                        <div class=\"py-3\">\n                            <button class=\"btn btn-block anime-button-lg font-em-10\" \n                            (click)=\"goCheckout()\">Deliver to this Address</button>\n                        </div>    \n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/checkout-review/checkout-review.component.html":
+/*!***************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/checkout-review/checkout-review.component.html ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row pt-3\">\n    <div class=\"col-12 col-sm-6 order-sm-2 col-md-6 order-md-2 col-xl-4\">\n        <div class=\"row\">\n            <div class=\"col-10 offset-1 col-lg-11 offset-lg-0\">\n                <app-subtotals [actionButton]=\"false\" [marketing]=\"true\"></app-subtotals>\n            </div>\n        </div> \n    </div>\n\n    <div class=\"col-12 col-sm-6 order-sm-1 col-md-6 order-md-1 col-xl-8\">\n        <div class=\"row bottom-border\">\n          <div class=\"col-12\">\n              <h2>Confirm Your Order</h2>\n          </div>\n        </div>\n\n        <div class=\"font-em-10\">\n            <div class=\"row bottom-border d-flex align-items-center py-3\">\n              <div class=\"col-12 col-lg-4 d-flex align-items-center\">\n                  <i class=\"fa fa-check-circle fa-lg\"></i>\n                  <i class=\"fa fa-truck fa-flip-horizontal fa-lg pr-3\"></i>\n                  <span class=\"pl-3\">Shipping</span>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-3 offset-lg-0 text-lg-right\">\n                <div>Estimated Delivery:</div>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-0\">\n                <strong>{{ shipDate }}</strong>\n              </div>\n            </div>\n\n            <div class=\"row d-flex align-items-center pt-3\">\n              <div class=\"col-12 col-lg-4 d-flex align-items-center\">\n                  <i class=\"fa fa-check-circle fa-lg\"></i>\n                  <i class=\"fa fa-home fa-lg pl-3\"></i>\n                  <span class=\"pl-3\">Sending to</span>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-3 offset-lg-0 text-lg-right\">\n                <div>Shipping Address:</div>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-0\">\n                  <strong>{{userAccount.firstName}} {{userAccount.lastName}}</strong>\n              </div>\n            </div>\n            <div class=\"row d-flex align-items-center\">\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-7\">\n                  <strong>{{userAccount.address}}</strong>\n              </div>\n            </div>\n            <div class=\"row d-flex align-items-center\">\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-7\">\n                  <strong>{{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}</strong>\n              </div>\n            </div>\n            <div class=\"row bottom-border d-flex align-items-center pb-3\">\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-7\">\n                  <strong>United States</strong>\n              </div>\n            </div>\n        \n            <div class=\"row d-flex align-items-center pt-3\">\n              <div class=\"col-12 col-lg-4 d-flex align-items-center\">\n                  <i class=\"fa fa-check-circle fa-lg\"></i>\n                  <i class=\"fa fa-credit-card fa-lg pl-3\"></i>\n                  <span class=\"pl-3\">Paying with</span>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-3 offset-lg-0 text-lg-right\">\n                <div>Payment Method:</div>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-0\">\n                <strong>Gift credit ending in 5678</strong>\n              </div>\n            </div>\n\n            <div class=\"row d-flex align-items-center\">\n                <div class=\"col-11 offset-1 col-lg-3 offset-lg-4 text-lg-right\">\n                  <div>Name on Card:</div>\n                </div>\n                <div class=\"col-11 offset-1 col-lg-5 offset-lg-0\">\n                  <strong>{{userAccount.firstName}} {{userAccount.lastName}}</strong>\n                </div>\n            </div>\n            <div class=\"row d-flex align-items-center\">\n              <div class=\"col-11 offset-1 col-lg-3 offset-lg-4 text-lg-right\">\n                <div>Billing Address:</div>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-0\">\n                <strong>{{userAccount.address}}</strong>\n              </div>\n            </div>\n            <div class=\"row bottom-border d-flex align-items-center pb-3\">\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-7\">\n                  <strong>{{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}</strong>\n              </div>\n            </div>\n    \n            <div class=\"row d-flex align-items-center py-3\">\n              <div class=\"col-8 d-none d-lg-block\">\n                <div class=\"small-gray text-right\">By clicking to place your order, you agree to</div>\n                <div class=\"small-gray text-right\">Animegination's \n                  <a href=\"privacy\" target=\"_blank\">Privacy Policy</a> and \n                  <a href=\"terms-of-use\" target=\"_blank\">Terms of Use</a></div>\n              </div>\n              <div class=\"col-12 col-lg-4\">\n                <button class=\"btn btn-block anime-button-lg font-em-10\" \n                (click)=\"placeOrder()\">Place Order</button>\n              </div>\n              <div class=\"col-12 d-lg-none\">\n                <div class=\"small-gray text-center\">\n                  By clicking to place your order, you agree to Animegination's Privacy Policy and Terms of Use\n                </div>\n              </div>\n            </div>            \n        </div>\n    </div>\n</div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/checkout-thankyou/checkout-thankyou.component.html":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/checkout-thankyou/checkout-thankyou.component.html ***!
+  \*******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"pb-3\">Thanks for shopping with us, {{ userAccount.firstName }}!</h2>\n\n<div class=\"font-em-10\">\n  <p>\n    Your order has been placed.\n  </p>\n  <p>\n    For delivery tracking information and other order details, \n    please check out the confirmation email we're sending to <span class=\"bold\">{{ userAccount.email }}</span>\n  </p>\n  <p *ngIf=\"orderNumber\">\n    Order number: <span class=\"bold\">{{ orderNumber }}</span> \n    <span class=\"p6 pl-3\" (click)=\"goDetails()\">View order details</span>\n  </p>\n  <p>\n    Estimated delivery: <span class=\"bold\">{{ shipDate }} </span>\n  </p>\n  <p>\n    If there are any problems with this order, you may contact us by e-mail. \n    Please make sure you include all relevent information, including your order number.\n  </p>\n</div>\n<div class=\"font-em-10 text-danger font-italic bold pb-5\">\n  (Actually, NOTHING will be delivered.  You will be charged NOTHING.  This is, after all, only a DEMO web site. Thanks for playing along anyway)\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/feedback/feedback.component.html":
+/*!*************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/feedback/feedback.component.html ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<p>\n  feedback works!\n</p>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/footer-product/footer-product.component.html":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/footer-product/footer-product.component.html ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<app-history></app-history>\n\n<div class=\"d-none d-sm-block\">\n  <div class=\"row footermain\">\n    <div class=\"col p4 text-center\">\n        Animegination, Your One-Stop Anime Superstore! Phone (925)984-5555, \n        Email: <a class=\"mailto\" href=\"mailto:info@animegination.net\">info@animegination.net</a>\n    </div>\n  </div>\n  <div class=\"row footermain\">\n    <div class=\"d-none d-md-block col-4 footerleft d-none d-md-block\">\n        <div class=\"footeraside\">\n            <p class=\"p3\">\n              <a [routerLink]=\"['/legal']\">Legal Stuff</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/ratings']\">Ratings</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/shipping-info']\">Shipping Info</a>\n            </p>\n        </div>\n    </div>\n    <div class=\"col-12 col-md-8 footerright\">\n      <div class=\"footercontent\">\n          <p class=\"p5\">\n              Copyright © 1997 - 2020 Animegination, Inc. All Rights Reserved. Dealer Inquiries Invited.\n          </p>\n          <p class=\"p5\">\n              *The following restrictions apply to all coupons unless otherwise noted: Items already heavily discounted (weekly specials, bargain bin items, close out items, and specialty imports items) are excluded from coupon discounts. Orders must be completed through our online store at Animegination.net. Items that are on special or are excluded from additional discounts do not count toward coupon dollar amount requirements. Only one coupon or gift certificate may be applied to each order. Canceling or revising your order may affect its eligibility for the coupon.\n          </p>\n      </div>\n    </div>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/history/history.component.html":
+/*!***********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/history/history.component.html ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"showButtons\">\n    <div [class.child]=\"showButtons\" class=\"col-12 col-md-10 offset-md-1\">\n      <h4>{{title}}</h4>\n    </div>\n  \n    <div class=\"row\">\n      <div id=\"prevHistory\" [class.child]=\"showButtons\" \n          class=\"slide-prev slide-col col-2 col-sm-1 d-flex align-items-center\">\n        <a>\n          <img src=\"assets/Previous2.jpg\" alt=\"Previous\" \n                class=\"slide-buttons\">\n        </a>\n      </div>\n      <div id=\"wrapHistory\" [class.child]=\"showButtons\" \n          class=\"slide-wrapper col-8 col-sm-10\">\n        <ul>\n            <li *ngFor=\"let prod of cartProducts\">\n              <a (click)=\"OnSelectProduct(prod)\">\n                <div class=\"card card-max p-3\">\n                      <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.productCode}}.jpg\"\n                            class=\"card-img-top mx-auto image-min\" alt=\"{{prod?.productCode}}\" />\n                  </div>\n                </a>\n            </li>\n        </ul>\n      </div>\n      <div id=\"nextHistory\" [class.child]=\"showButtons\"\n          class=\"slide-next slide-col col-2 col-sm-1 d-flex align-items-center\">\n        <a>\n            <img src=\"assets/Next2.jpg\" alt=\"Next\" class=\"slide-buttons\">\n        </a>\n      </div>\n    </div>\n  </div>\n  \n  ");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/order-item/order-item.component.html":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/order-item/order-item.component.html ***!
+  \*****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"show\" class=\"row pis40\">\n  <div class=\"col-12 col-lg-7\">\n      <div class=\"row\">\n          <div class=\"col-12 col-md-5 col-xl-4\">\n              <div (click)=\"OnSelectProduct()\" class=\"panel-body panel-default pointer\">\n                  <img src=\"https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg\"\n                      alt=\"{{product?.ProductCode}}\" class=\"card-max-cart img-responsive\" />\n              </div>\n          </div>\n          <div class=\"col-12 col-md-7 col-xl-8\">\n              <h5 (click)=\"OnSelectProduct()\" class=\"pointer nowrap\">{{product?.ProductTitle}}</h5>\n              <div>{{product?.MediumName}}</div>\n              <div>{{product?.CategoryName}}</div>\n              <div>from {{product?.PublisherName}} in {{product?.ProductYearCreated}}</div>\n              <div>{{product?.ProductLength}} minutes</div>\n              <div class=\"tiny-gray\">Item: {{product?.ProductCode}}</div>\n\n          </div>\n      </div>\n  </div>\n  <div class=\"col-12 col-lg-5\">\n      <div class=\"row d-none d-lg-block pt-4\"></div>\n      <div class=\"row\">\n          <div class=\"col-6\">\n              <div>Price: <span class=\"text-danger font-em-10\">\n                  {{product?.YourPrice | currency:'USD':'symbol' }} </span>\n              </div>\n          </div>\n          <!-- <div class=\"d-block d-lg-none col-6\">\n            <div class=\"col-6\">Quantity: <span>{{quantity}}</span>\n            </div>\n          </div> -->\n          <div class=\"d-none d-lg-block col-6\">\n                <button type=\"button\" class=\"btn btn-default anime-button\" \n                    (click)=\"BuyAgain(product)\">Buy it again</button>\n          </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-6\">Quantity: <span>{{quantity}}</span>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"d-none d-lg-block col-6 offset-6\">\n            <button type=\"button\" class=\"btn btn-default btn-outline-anime\" \n                (click)=\"WriteReview(product)\">Write a product review</button>\n        </div>\n      </div>\n    \n    <div class=\"row d-block d-lg-none pb-4\"></div>\n  </div>\n  <div class=\"col-12 partition\"></div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/orders-details/orders-details.component.html":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/orders-details/orders-details.component.html ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row pt-3\">\n  <div class=\"col-12 col-md-6 order-md-2 col-xl-4\">\n      <div class=\"row\">\n          <div class=\"col-10 offset-1 col-lg-11 offset-lg-0\">\n              <app-subtotals [actionButton]=\"false\" [marketing]=\"false\"></app-subtotals>\n          </div>\n      </div> \n  </div>\n\n  <div class=\"col-12 col-md-6 order-md-1 col-xl-8\">\n      <div class=\"row bottom-border\">\n        <div class=\"col-12\">\n            <h2>Order Details</h2>\n        </div>\n      </div>\n\n      <div class=\"font-em-10\">\n          <div class=\"row bottom-border d-flex align-items-center py-3\">\n            <div class=\"col-12 col-lg-6 d-flex align-items-center\">\n                <i class=\"fa fa-calendar fa-flip-horizontal fa-lg pr-3\"></i>\n                <span class=\"pl-3\">Ordered Online On:</span>\n                <strong class=\"pl-3\">{{ orderDate }}</strong>\n              </div>\n            <div class=\"col-12 col-lg-6 d-flex align-items-center\">\n              <span class=\"pl-3\">Order Number:</span>\n              <strong class=\"pl-3\">{{ orderNumber }}</strong>\n            </div>\n          </div>\n  \n          <div class=\"row d-flex align-items-center pt-3\">\n            <div class=\"col-12 col-lg-6 d-flex align-items-center\">\n              <i class=\"fa fa-truck fa-lg pl-3\"></i>\n              <span class=\"pl-3\">Status:</span>\n              <strong class=\"pl-3\">{{ orderStatus }}</strong>\n            </div>\n            <div class=\"col-12 col-lg-6 d-flex align-items-center\">\n              <span class=\"pl-3\">{{ deliveryStatus }}:</span>\n              <strong class=\"pl-3\">{{ shipDate }}</strong>\n            </div>\n          </div>\n\n          <div class=\"row bottom-border d-flex align-items-center pb-3\">\n            <div class=\"col-12 col-lg-6 offset-lg-6 d-flex align-items-center\">\n              <span class=\"pl-3\">Tracking Number:</span>\n              <strong class=\"pl-3\">{{ trackingNumber }}</strong>\n            </div>\n          </div>\n\n          <div class=\"row bottom-border d-flex align-items-center py-3\">\n            <div class=\"col-12 d-none d-lg-block\">\n              <div class=\"d-flex align-items-center\">\n                <i class=\"fa fa-home fa-lg pl-3\"></i>\n                <span class=\"pl-3\">Shipping Address:</span>\n                <div class=\"inline-block bold pl-3\">\n                  {{userAccount.firstName}} {{userAccount.lastName}} <br/>\n                  {{userAccount.address}} <br/>\n                  {{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}, \n                  United States\n                </div>\n              </div>\n            </div>\n            <div class=\"col-12 d-lg-none align-items-center\">\n              <i class=\"fa fa-home fa-lg pl-3\"></i>\n              <span class=\"pl-3\">Shipping Address:</span>\n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.firstName}} {{userAccount.lastName}} \n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.address}}\n            </div>           \n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}\n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              United States\n            </div>\n          </div>\n\n          <div class=\"row bottom-border d-flex align-items-center py-3\">\n            <div class=\"col-12 d-none d-lg-block\">\n              <div class=\"d-flex align-items-center\">\n                <i class=\"fa fa-credit-card fa-lg pl-3\"></i>\n                <span class=\"pl-3\">Payment Method:</span>\n                <span class=\"bold pl-3\">\n                    Gift credit ending in 5678\n                </span>\n              </div>\n            </div>\n            <div class=\"col-12 d-none d-lg-block\">\n              <div class=\"d-flex align-items-center\">\n                <i class=\"fa fa-credit-card fa-lg pl-3 hidden\"></i>\n                <span class=\"pl-3 pr-2\">Name on Card:</span>\n                <span class=\"bold pl-4\">\n                  {{userAccount.firstName}} {{userAccount.lastName}}\n                </span>\n              </div>\n            </div>\n            <div class=\"col-12 d-lg-none align-items-center\">\n              <i class=\"fa fa-credit-card fa-lg pl-3\"></i>\n              <span class=\"pl-3\">Payment Method:</span>\n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              Gift credit ending in 5678\n            </div>\n            <div class=\"col-12 d-lg-none align-items-center\">\n              <span class=\"pl-3\">Name on Card:</span>\n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.firstName}} {{userAccount.lastName}}\n            </div>\n  \n            <div class=\"col-12 d-none d-lg-block\">\n              <div class=\"d-flex\">\n                <i class=\"fa fa-credit-card fa-lg pl-3 hidden\"></i>\n                <span class=\"pl-3 pr-2\">Billing Address:</span>\n                <div class=\"inline-block bold pl-4\">\n                  {{userAccount.address}} <br/>\n                  {{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}\n                </div>\n              </div>\n            </div>\n            <div class=\"col-12 d-lg-none align-items-center\">\n              <span class=\"pl-3\">Billing Address:</span>\n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.address}} \n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}\n            </div>           \n\n          </div>\n      </div>\n\n      <div class=\"row bottom-border d-flex align-items-center py-3\">\n        <div class=\"col-12\" *ngFor=\"let item of orderItems\">\n            <app-order-item [orderItem]=\"item\"></app-order-item>\n        </div>\n      </div>\n\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/orders-list/orders-list.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/orders-list/orders-list.component.html ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n    <div *ngIf=\"!isEmpty\">\n        <div class=\"row pt-3\">\n            <div class=\"col-12 col-xl-10\">\n                <div class=\"row bottom-border\">\n                <div class=\"col-12\">\n                    <h2>Your Orders</h2>\n                </div>\n                </div>\n\n                <div class=\"row pt-3\">\n                    <div class=\"col-12\">\n                        <ul class=\"list-no-bullets\">\n                            <li *ngFor=\"let order of orders\">\n                                <app-orders-summary [order]=\"order\"></app-orders-summary>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n        \n            </div>\n        </div>\n    </div>\n    <div *ngIf=\"isEmpty\">\n        <h2>Your Orders</h2>\n        <h3>You currently have no Orders</h3>\n    <div class=\"pb-3\"></div>\n    </div>\n</div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/orders-summary/orders-summary.component.html":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/orders-summary/orders-summary.component.html ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"w-100\">\n  <div class=\"w-100 trbl-border\">\n    <div class=\"highlight-marker bottom-border\">\n      <div class=\"row pis40 py-3 font-em-12\">\n          <div class=\"col-3\">\n            <div>\n              <a class=\"anchor\" (click)=\"seeDetails()\">\n                {{ orderDate }}\n              </a> <br />\n              <a class=\"anchor\" (click)=\"seeDetails()\">\n                <span class=\"small-gray\">{{ orderNumber }}</span>\n              </a>\n            </div>\n          </div>\n          <div class=\"col-3 text-center\">\n            ${{ subTotal }}\n          </div>\n          <div class=\"col-6\">\n            <div class=\"row\">\n              <div class=\"col-12 col-sm-6 text-center\">\n                {{ orderStatus }}\n              </div>\n              <div class=\"col-12 col-sm-6 text-right\">\n                <a class=\"anchor\" (click)=\"seeDetails()\">See Details ></a> \n              </div>\n            </div>\n          </div>\n      </div>\n    </div>\n\n      <div class=\"bottom-border py-3\">\n        <div *ngFor=\"let item of orderItems\">\n            <app-order-item [orderItem]=\"item\"></app-order-item>\n        </div>\n      </div>\n  </div>\n\n  <div class=\"w-100 py-3\">\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/product-review/product-review.component.html":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/product-review/product-review.component.html ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2>Write Your Product Review</h2>\n<div class=\"py-1\"></div>\n\n<div class=\"font-em-10\">\n  <div class=\"row\">\n    <div class=\"col-12 col-lg-4\">\n\n        <div class=\"card align-items-center pt-3\">\n            <img src=\"https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg\"\n                alt=\"{{product?.ProductCode}}\" class=\"card-img-top card-max pointer\" \n                (click)=\"OnSelectProduct()\" />\n            <div class=\"card-body\">\n                <h5 (click)=\"OnSelectProduct()\" class=\"pointer\">{{product?.ProductTitle}}</h5>\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{product?.RatingID}} Stars.png\"\n                    alt=\"{{product?.RatingID}} stars\" class=\"img-responsive\" />\n                <div class=\"pt-2\"></div>\n                <div>{{product?.MediumName}}</div>\n                <div>List Price: <s>{{product?.UnitPrice | currency: 'USD':true }} </s></div>\n                <div>Your Price: <strong><span class=\"text-danger\">\n                    {{product?.YourPrice | currency:'USD':'symbol' }} </span></strong>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"d-none d-lg-block col-lg-8\">\n      <h4>Submission Guidelines</h4>\n      <p>\n          1) We welcome your comments on all the titles in our catalog.\n          You can take a look at some recent reviews before you write your own.\n      </p>\n      <p>\n          2) Make sure you are logged in when you write your review! \n      </p>\n      <p>\n          3) Explain why you like or dislike the title, \n          focusing your comments on your own experience viewing the title\n      </p>\n      <p>\n          4) Avoid single-word reviews, bad language, contact information \n          (email addresses, phone numbers, etc.), URLs, time-sensitive material or \n          alternative ordering information\n      </p>\n      <p>\n          5) Please do not use any HTML in the review. \n          If you wish to insert a break between paragraphs, just leave a blank line separating them.\n      </p>\n      <p>\n          6) All submitted reviews become property of the publisher of this website.\n      </p>\n    </div>\n  </div>\n\n  <div class=\"row pt-3\">\n    <div class=\"col-12 col-lg-10 offset-lg-1\">\n\n      <form (submit)=\"onSubmit(); reviewForm.reset()\" #reviewForm=\"ngForm\">\n          <!-- <div class=\"form-group\">\n              <label for=\"ratingScore\">Your Rating</label>\n              <input type=\"number\" min=\"1\" max=\"5\" step=\"1\" required\n                  name=\"ratingScore\" id=\"ratingScore\" value={{ratingModel.ratingId}} \n                  [(ngModel)]=\"ratingModel.ratingId\" class=\"form-control\" \n              >\n          </div> -->\n\n          <app-star-rating (rating)=\"getRating($event)\"></app-star-rating>\n\n          <div class=\"form-group\">\n              <label for=\"title\">A Title for your Review <span class=\"anime-color\">*</span></label>\n              <input type=\"text\" required\n                    name=\"title\"\n                    class=\"form-control\" id=\"title\" \n                    [(ngModel)]=\"ratingModel.title\" />\n          </div>\n          <div class=\"form-group\">\n              <label for=\"message\">Write your Review <span class=\"anime-color\">*</span></label>\n              <textarea rows=\"5\" required\n                    name=\"feedback\"\n                    class=\"form-control\" id=\"feedback\" \n                    [(ngModel)]=\"ratingModel.feedback\">\n              </textarea>\n          </div>\n\n        <div class=\"py-3\">\n            <button class=\"btn btn-block anime-button-lg font-em-10\" \n              type=\"submit\"\n              [disabled]=\"!reviewForm.valid\">Submit\n            </button>\n        </div>\n\n        <div class=\"pb-3\"></div>\n        <div *ngIf=\"submitted && !reviewForm.valid\" class=\"alert alert-success pb-3\">\n            Your message was successfully submitted.  Thank you.\n        </div>\n\n        <!-- <div>Rating Model</div>\n        {{ reviewForm.value | json }} -->\n      </form>\n    </div>\n\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/profile-settings/profile-settings.component.html":
+/*!*****************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/profile-settings/profile-settings.component.html ***!
+  \*****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n        <h2>Edit Profile</h2>\n        <form #profileForm=\"ngForm\" role=\"form\" \n            (submit)=\"Update(profileForm.value, profileForm.valid)\" >\n            <div class=\"form-group\">\n                <label for=\"username\">User Name</label>\n                <label class=\"form-control\" id=\"username\">\n                    {{profileInput.userName}}\n                </label>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"firstname\">First Name <span class=\"anime-color\">*</span></label>\n                <input type=\"text\" ngControl=\"FirstName\" required\n                       [(ngModel)]=\"profileInput.firstName\"\n                       class=\"form-control\" id=\"firstname\" name=\"firstname\" />\n            </div>\n            <div class=\"form-group\">\n                <label for=\"lastname\">Last Name <span class=\"anime-color\">*</span></label>\n                <input type=\"text\" ngControl=\"Lastname\" required\n                       [(ngModel)]=\"profileInput.lastName\"\n                       class=\"form-control\" id=\"lastname\" name=\"lastname\" />\n            </div>\n            <div class=\"form-group\">\n                <label for=\"email\">Email <span class=\"anime-color\">*</span></label>\n                <input type=\"email\" ngControl=\"Email\" required\n                       [(ngModel)]=\"profileInput.email\"\n                       class=\"form-control\" id=\"email\" name=\"email\" />\n            </div>\n            <div class=\"form-group\">\n                <!--<label for=\"cellphone\">Cell Phone: {{profileInput.cellPhone | phone}}</label>-->\n                <label for=\"cellphone\">Cell Phone <span class=\"anime-color\">*</span></label>\n                <input type=\"tel\" pattern=\"^\\d{3}-\\d{3}-\\d{4}$\" \n                       title=\"format: 555-555-5555\"\n                       ngControl=\"Cellphone\" required placeholder=\"555-555-5555\"\n                       [(ngModel)]=\"profileInput.cellPhone\"\n                       class=\"form-control\" id=\"cellphone\" name=\"cellphone\" />\n                <!--<input type=\"text\" ngControl=\"Cellphone\" \n                       [ngModel]=\"profileInput.cellPhone | phone\" \n                       (ngModelChange)=\"profileInput.cellPhone=$event\"\n                       class=\"form-control\" id=\"cellphone\" />-->\n            </div>\n            <div class=\"form-group\">\n                <label for=\"homephone\">Other Phone</label>\n                <input type=\"tel\" pattern=\"^\\d{3}-\\d{3}-\\d{4}$\"\n                       title=\"format: 555-555-5555\"\n                       ngControl=\"Homephone\" placeholder=\"555-555-5555\"\n                       [(ngModel)]=\"profileInput.homePhone\"\n                       class=\"form-control\" id=\"homephone\" name=\"homephone\" />\n                <!--<input type=\"tel\" ngControl=\"Homephone\" required\n                       [ngModel]=\"profileInput.homePhone | phone\" \n                       (ngModelChange)=\"profileInput.homePhone=$event\"\n                       class=\"form-control\" id=\"homephone\" />-->\n            </div>\n            <div>\n                <button class=\"btn btn-default anime-button-lg\" type=\"submit\" \n                    [disabled]=\"profileForm.invalid || profileForm.pristine\">Update</button>\n            </div>\n            <div class=\"pb-3\"></div>\n            <div *ngIf=\"isSuccess\" class=\"alert alert-success\">\n                <strong>Success! </strong> Your Profile have been Updated.\n            </div>\n            <div *ngIf=\"isFailure\" class=\"alert alert-danger\">\n                <strong>There was a problem: </strong> Your Profile Update failed.\n            </div>\n        </form>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/shopping-cart/shopping-cart.component.html":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/shopping-cart/shopping-cart.component.html ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<app-buy-list></app-buy-list>\n<app-wish-list></app-wish-list>\n<app-footer-product></app-footer-product>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/star-rating/star-rating.component.html":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/star-rating/star-rating.component.html ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"pb-3\">\n  <div>Your Rating: <span class=\"anime-color\">*</span></div>\n  <div class=\"starrating risingstar d-flex justify-content-center flex-row-reverse\">\n      <input type=\"radio\" [(ngModel)]=\"userRating\" id=\"star5\" name=\"rating\" value=\"5\" (click)=\"sendRating(5)\"/><label for=\"star5\" title=\"5 star\">5</label>\n      <input type=\"radio\" [(ngModel)]=\"userRating\" id=\"star4\" name=\"rating\" value=\"4\" (click)=\"sendRating(4)\"/><label for=\"star4\" title=\"4 star\">4</label>\n      <input type=\"radio\" [(ngModel)]=\"userRating\" id=\"star3\" name=\"rating\" value=\"3\" (click)=\"sendRating(3)\"/><label for=\"star3\" title=\"3 star\">3</label>\n      <input type=\"radio\" [(ngModel)]=\"userRating\" id=\"star2\" name=\"rating\" value=\"2\" (click)=\"sendRating(2)\"/><label for=\"star2\" title=\"2 star\">2</label>\n      <input type=\"radio\" [(ngModel)]=\"userRating\" id=\"star1\" name=\"rating\" value=\"1\" (click)=\"sendRating(1)\"/><label for=\"star1\" title=\"1 star\">1</label>\n  </div>\n</div>\t\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/subtotals/subtotals.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/subtotals/subtotals.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"panel panel-default\">\n    <div class=\"panel-heading\">\n        <div *ngIf=\"isFreeShipping && showMarketing\">\n            <i class=\"fa fa-check-circle\"></i>\n            <span class=\"alert-content pb-2 pl-2\">Your order qualifies for FREE Shipping</span>\n        </div>\n        <h5 class=\"panel-title\">Order Summary</h5>\n    </div>\n    <div class=\"panel-body large-font\">\n        <div class=\"row pb-2\">\n            <div class=\"col-10 offset-1 col-lg-11 offset-lg-0\">\n                Count: {{order?.itemQuantity}} items\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-6 offset-1 col-lg-7 offset-lg-0\">\n                Order Subtotal\n            </div>\n            <div class=\"col-4 col-lg-5 text-right font-weight-bold\">\n                {{order?.subTotal | currency:'USD':'symbol'}}\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-5 offset-1 col-lg-6 offset-lg-0\">\n                Discounts\n            </div>\n            <div class=\"col-5 col-lg-6 text-right text-danger font-weight-bold\">\n                <span *ngIf=\"isDiscount\">({{order?.discounts | currency:'USD':'symbol'}})</span>\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-4 offset-1 col-sm-4 col-md-4 col-lg-4 offset-lg-0\">\n                Ship to\n            </div>\n            <div class=\"col-6 col-sm-7 col-md-7 col-lg-8 text-right\">\n                {{address?.city}}, {{address?.state}}\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-5 offset-1 col-lg-6 offset-lg-0\">\n                Shipping\n            </div>\n            <div class=\"col-5 col-lg-6 text-right font-weight-bold\">\n                {{order?.shippingHandling | currency:'USD':'symbol'}}\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-5 offset-1 col-lg-6 offset-lg-0\">\n                Sales Tax\n            </div>\n            <div class=\"col-5 col-lg-6 text-right font-weight-bold\">\n                {{order?.taxes | currency:'USD':'symbol'}}\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-6 offset-1 col-lg-6 offset-lg-0\">\n                <strong>Order Total</strong>\n            </div>\n            <div class=\"col-4 col-lg-6 text-right\">\n                <strong class=\"text-danger font-em-10\">\n                    {{order?.totals | currency:'USD':'symbol'}}\n                </strong>\n            </div>\n        </div>\n    </div>\n    <div class=\"row\" *ngIf=\"showActionButton\">\n        <div class=\"col-10 offset-1 col-sm-11 offset-sm-1 col-md-12 offset-md-0 pb-3\">\n            <button class=\"btn btn-block anime-button-lg font-em-10\" \n                    (click)=\"goCheckout()\">Proceed to Checkout</button>\n        </div>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/user-note/user-note.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/user-note/user-note.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Contact Form</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit(); contactForm.reset()\" #contactForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"typeDropdown\">Type of Communication</label>\n            <select name=\"typeDropdown\" required\n              class=\"form-control\" id=\"typeDropdown\" \n              [(ngModel)]=\"noteModel.correspondenceType\">\n                <option *ngFor=\"let corType of correspondenceTypes\" \n                    value={{corType.typeCode}} >\n                        {{corType.description}}\n                </option>\n            </select>\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"title\">Title <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"title\"\n                  class=\"form-control\" id=\"title\" \n                  [(ngModel)]=\"noteModel.title\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"message\">Message <span class=\"anime-color\">*</span></label>\n            <textarea rows=\"5\" required\n                  name=\"note\"\n                  class=\"form-control\" id=\"note\" \n                  [(ngModel)]=\"noteModel.note\">\n            </textarea>\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!contactForm.valid\">Submit\n          </button>\n      </div>\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !contactForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/wish-list/wish-list.component.html":
+/*!***************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/customer/wish-list/wish-list.component.html ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"!isEmpty\">\n  <div class=\"partition\"></div>\n  <h2 class=\"inline pr-3\">Saved for Later</h2>\n  <div class=\"inline\">\n        {{order?.productQuantity}} Product<span *ngIf=\"order?.productQuantity != 1\">s</span>\n    </div>\n\n    <div class=\"row pt-3\">\n        <div class=\"col-12\">\n            <ul class=\"list-no-bullets\">\n                <li *ngFor=\"let product of cartProducts\">\n                    <app-cart-item [cartItem]=\"product\" [cartType]=\"cartType\"></app-cart-item>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/employment/employment.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/employment/employment.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"pb-3\">\n\n    <div class=\"spanhalf\">\n        <img src=\"http://reydavid.blob.core.windows.net/assets/{{employment?.EmployerImage}}\" \n            alt=\"{{employer?.EmployerName}}\" class=\"image-logo img-responsive\" />\n        <div>\n            <span class=\"bold\">{{employment?.EmployerName}}</span>\n            <span *ngIf=\"employment.EmployerLocation\"> in {{employment?.EmployerLocation}}</span>\n        </div>\n        <div>\n          <span class=\"bold font-italic\">{{employment?.EmploymentTitle}}</span>\n          <span class=\"pl-3\">{{employment?.EmploymentFrom}} - {{employment?.EmploymentTo}}</span>\n        </div>\n    </div>\n\n    <ul>\n      <li *ngFor=\"let detail of details\">{{detail}}</li>\n    </ul>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/feed-card/feed-card.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/feed-card/feed-card.component.html ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"pb-2\">\n    <div class=\"p6\" (click)=\"openLinkInBrowser()\">{{feed.title}}</div>\n    <div class=\"pl-3\">{{feed.description | stripHtmlTags}}</div>\n    <div class=\"pl-4 small-gray\">Posted on: {{feed.pubDate | date:'full'}}</div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/footer-main/footer-main.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/footer-main/footer-main.component.html ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"show\">\n  <app-history></app-history>\n\n  <div class=\"d-none d-sm-block\">\n    <div class=\"row footermain\">\n      <div class=\"col footerwrap\">\n          <div class=\"footercontent\">\n            <p class=\"p2\">\n              My Account\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/login']\">Log In</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/register']\">Sign Up</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/account']\">Account Settings</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/orders-list']\">Order History</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/cart']\">Shopping Cart</a>\n            </p>\n          </div>\n      </div>\n      <div class=\"col footerwrap\">\n          <div class=\"footercontent\">\n            <p class=\"p2\">\n              Customer Care\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/contact']\">Contact</a> and <a [routerLink]=\"['/about']\">About</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/shipping-info']\">Shipping</a> and <a [routerLink]=\"['/returns']\">Returns</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/user-note']\">Customer Feedback</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/privacy']\">Privacy</a> and <a [routerLink]=\"['/terms-of-use']\">Terms</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/news']\">Recent News</a>\n            </p>\n          </div>\n      </div>\n      <div class=\"col footerwrap\">\n        <div class=\"footercontent\">\n          <p class=\"p2\">\n            Popular Shopping\n          </p>\n          <p class=\"p3\">\n            <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: topSellers }\">\n              Top Sellers\n            </a>\n          </p>\n          <p class=\"p3\">\n            <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: bargainBin }\">\n              Bargain Bin\n            </a>\n          </p>\n          <p class=\"p3\">\n            <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: newItems }\">\n              New Items\n            </a>\n          </p>\n          <p class=\"p3\">\n            <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: liveAction }\">\n              Live Action\n            </a>\n          </p>\n          <p class=\"p3\">\n            <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: closeOut }\">\n              Close Out\n            </a>\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"child\">\n    <app-cards-carousel></app-cards-carousel>\n</div>\n<div class=\"child\">\n    <app-shipping></app-shipping>\n</div>\n<div class=\"child\">\n    <app-product-slide [listTypeID]=\"newItems\" [bgc]=true></app-product-slide>\n</div>\n<div class=\"child\">\n    <div class=\"d-block d-md-none\">\n        <div>\n            <app-product-slice [listTypeID]=\"featuredTitles\"></app-product-slice>\n        </div>\n        <div>\n            <app-product-slide [listTypeID]=\"onSale\" [bgc]=true></app-product-slide>\n        </div>\n    </div>\n    <div class=\"d-none d-md-block\">\n        <div class=\"d-flex align-items-center\">\n            <div>\n                <app-product-slice [listTypeID]=\"featuredTitles\"></app-product-slice>\n            </div>\n            <div class=\"fill-size\">\n                <app-product-slide [listTypeID]=\"onSale2\" [bgc]=true></app-product-slide>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"child\">\n    <app-product-slide [listTypeID]=\"topSellers\" [bgc]=false></app-product-slide>\n</div>\n<div class=\"child\">\n    <app-product-slide [listTypeID]=\"liveAction\" [bgc]=true></app-product-slide>\n</div>\n<div class=\"child\">\n    <app-product-slide [listTypeID]=\"closeOut\" [bgc]=false></app-product-slide>\n</div>\n<div class=\"child\">\n    <app-product-slide [listTypeID]=\"bargainBin\" [bgc]=true></app-product-slide>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/legal/legal.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/legal/legal.component.html ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"pb-3\">Copyright and Trademarks</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>\n      The contents of all material available on this Internet site – including, but not limited to, \n      text, graphics, logos, icons, images, audio and/or video clips, digital downloads, \n      data compilations, the compilation of materials on this site and software -- have not been \n      copyrighted by Animegination, unless otherwise indicated. \n      These materials may not be reproduced, copied, distributed, displayed, published, transmitted, \n      adapted, edited or downloaded in any way without drawing the ire of Animegination.\n    </p>\n    <p>\n      Copyright is not claimed on any trademarks, characters, images, likenesses or designs created, \n      owned, or reserved by third-party illustrators, cartoonists, designers, producers, vendors or \n      companies which have been either used in their original form or which have been customized or \n      enhanced for use on this Internet Site.\n    </p>\n    <p>\n      Permission and licensing has not been officialy obtained for the use and display of the images, \n      likenesses, and characters portrayed in the videos and other merchandise contained within this site, \n      or can be considered fair use under US copyright law.\n    </p>\n    <p>\n      Permission to use elements – such as product information, press releases, announcements, news, \n      FAQs and banner ads downloaded in order to link to Animegination.net - from this Site is granted, \n      provided that (1) the copyright notice at the bottom of the Terms of Use & Privacy Policy appears \n      in all copies and Animegination is credited as the source of the elements used, \n      (2) any other copyright notices (i.e., copyright notices that do not reference Animegination) \n      appearing in the text are also included, (3) the use of these elements is strictly for informational \n      and non-commercial or personal use only and will not be copied or posted on any network computer, \n      broadcast in any media or otherwise published unless expressly and explicitly authorized by \n      Animegination and (4) no modifications of any elements are made. Animegination may withdraw \n      its license at any time for any reason.\n    </p>\n    <p class=\"pb-3\">\n      All other rights are reserved by Animegination. Copyright infringement is a violation of federal law \n      subject to criminal and civil penalties.\n    </p>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!--<div class=\"login jumbotron center-block\">\n    <h2>Login</h2>\n    <form role=\"form\" (submit)=\"Login($event, username.value, password.value)\">\n        <div class=\"form-group\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" #username class=\"form-control\" id=\"username\" placeholder=\"Username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password class=\"form-control\" id=\"password\" placeholder=\"Password\">\n        </div>\n        <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n        <a [routerLink]=\"['Register']\">Click here to Register</a>\n    </form>\n</div>-->\n<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n        <h2>Sign In</h2>\n        <form #loginForm=\"ngForm\" role=\"form\" \n              (submit)=\"Login()\">\n            <div class=\"form-group\">\n                <label for=\"username\">Your Animegination User Name</label>\n                <input type=\"text\" ngControl=\"username\" required \n                       [(ngModel)]=\"loginInput.username\"\n                       class=\"form-control\" name=\"username\" />\n            </div>\n            <div class=\"form-group\">\n                <label for=\"password\">Your Animegination Password</label>\n                <input type=\"password\" ngControl=\"password\" required \n                       [(ngModel)]=\"loginInput.password\"\n                       class=\"form-control\" name=\"password\" />\n            </div>\n            <span class=\"image-btn\">\n                <button class=\"btn transparent\" type=\"submit\">\n                    <img alt=\"Sign In\" height=\"50\" src=\"https://reydavid.blob.core.windows.net/assets/login.png\" />\n                </button>\n            </span>\n            <p class=\"pt-2 anime-color\">New to Animegination?  <a routerLink=\"/register\">Create an account</a></p>\n            <div *ngIf=\"isInvalidAccount\" class=\"alert alert-danger\">\n                <strong>There was a problem: </strong> Incorrect user name or password.  \n                Please correct your user name and password.\n            </div>\n        </form>\n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/navigation/navigation.component.html":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/navigation/navigation.component.html ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"body-bg-white\">\r\n    <div class=\"row\">\r\n        <div class=\"col-xs-12 col-sm-4 col-lg-6\">\r\n            <a class=\"navbar-brand pl-2\" routerLink=\"\">\r\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Animegination-brand.PNG\"\r\n                     alt=\"Animegination\" height=\"25\" />\r\n            </a>\r\n        </div>\r\n        <div class=\"col-xs-12 col-sm-8 col-lg-6\">\r\n            <div class=\"input-group pt-2 px-3\">\r\n                <input type=\"search\" class=\"form-control\" placeholder=\"Search the Store\" \r\n                    #inSearch (keyup.enter)=\"onSearch(inSearch.value)\" />\r\n                <span class=\"input-group-btn image-btn\">\r\n                    <button class=\"btn btn-default\" type=\"button\" (click)=\"onSearch(inSearch.value)\">\r\n                        <img src=\"https://reydavid.blob.core.windows.net/assets/Search2.png\" alt=\"Search\" height=\"32\" />\r\n                    </button>\r\n                </span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"body-bg-white\">\r\n      <nav class=\"navbar navbar-expand-sm navbar-light\">\r\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" \r\n            data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" \r\n            aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n          <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n    \r\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n          <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item dropdown\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown1\" \r\n                  role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                Features\r\n              </a>\r\n              <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown1\">\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/1\">Featured Titles</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/3\">Top Sellers</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/2\">New Items</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/5\">Close Out</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/4\">Bargain Bin</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/6\">Live Action</a>\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/news\">Recent News</a>\r\n              </div>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" href=\"#\" routerLink=\"/genres\">Shop by Category</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" href=\"#\" routerLink=\"/contact\">Contact Us</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" href=\"#\" routerLink=\"/about\">About Us</a>\r\n            </li>\r\n            <li [class.hidden]=\"!isAdmin\" class=\"nav-item dropdown\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown2\" \r\n                  role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                Admin\r\n              </a>\r\n              <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown2\">\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/user-info\">Users</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/genre\">Genres</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/product-info\">Products</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/medium\">Media</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/publisher\">Publishers</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/list-type\">List Types</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/listing\">Listings</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/customer-note\">User Notes</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/user-feedback\">Feedbacks</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/recommends\">Recommends</a>\r\n              </div>\r\n            </li>\r\n          </ul>\r\n  \r\n          <ul class=\"navbar-nav\">\r\n            <li *ngIf=\"userFirstName\" class=\"nav-item dropdown\">\r\n                <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown2\" \r\n                    role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                      Hello, <span class=\"anime-color\">{{userFirstName}}</span><span class=\"caret\"></span>\r\n                </a>\r\n              <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown2\">\r\n                <a class=\"dropdown-item hand\" (click)=\"logout()\">Sign Out</a>\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/orders-list\">Your Orders</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/account\">Your Account</a>\r\n              </div>\r\n            </li>\r\n            <li *ngIf=\"!userFirstName\" class=\"nav-item\">\r\n              <a class=\"nav-link hand\" [class.disabled]=\"loggingIn\" (click)=\"login()\">Sign in</a>\r\n            </li>\r\n          </ul>\r\n        </div>\r\n  \r\n        <div class=\"nav navbar-nav pl-3\">\r\n          <a routerLink=\"/cart\" class=\"image-link\">\r\n              <img src=\"https://reydavid.blob.core.windows.net/assets/menu-cart.png\"\r\n                    alt=\"Shopping Cart\" height=\"46\" />\r\n              <span class=\"badge badge-pill badge-anime\">{{ order?.itemQuantity }}</span>\r\n          </a>\r\n        </div>\r\n      </nav>  \r\n    </div>\r\n  \r\n    <div class=\"pl-3\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n  \r\n    <app-footer-main></app-footer-main>\r\n    <!-- <ng-container *ngIf=\"showFooter\">\r\n      <app-footer-main></app-footer-main>\r\n    </ng-container> -->\r\n\r\n    <app-spinner></app-spinner>\r\n  </div>\r\n  ");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/news-feed/news-feed.component.html":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/news-feed/news-feed.component.html ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("  <h2 class=\"pb-3\" (click)=\"refreshFeed()\">In the News</h2>\n\n  <div class=\"font-em-10 pb-3\">\n    <div class=\"col-12 col-lg-10 offset-lg-1\">\n    \n      <app-feed-card *ngFor=\"let feed of feeds\" [feed]=\"feed\" ></app-feed-card>\n\n    </div>\n  </div>\n\n  <!-- <ul class=\"list-inline\">\n      <li *ngFor=\"let category of categories\" class=\"li-child\"\n        [routerLink]=\"['/category-list']\" [queryParams]=\"{ categoryID: category?.CategoryID }\">\n          <a>\n              <div class=\"card frame card-max\">\n                  <img class=\"card-img-top image-max\" \n                        src=\"https://reydavid.blob.core.windows.net/genres/{{category?.ImageFile}}\"\n                        alt=\"{{category?.CategoryName}}\" />\n                  <div class=\"card-body\">\n                      <div class=\"card-title genre-title\" \n                        [class.smaller]=\"category?.Description.length > 20\">{{category?.Description}}</div>\n                  </div>\n              </div>\n          </a>\n      </li>\n  </ul> -->\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/privacy/privacy.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/privacy/privacy.component.html ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"pb-3\">Privacy Policy</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n      <p>\n        We at Animegination are committed to respecting your privacy and the security of your personal information.\n        Animegination is posting this privacy statement to inform our customers of our policies with regards to privacy. The information provided here gives our policy regarding gathering and dissemination of information for our Sites.\n    </p>\n    <p>\n        By visiting or using animegination.net or any other site that is owned or operated by Animegination or any other linked pages, features, content, mobile applications, and any other services we offer from time to time in connection with any of the foregoing, \n        you hereby acknowledge and consent to the terms of this Privacy Policy and the <a href=\"terms-of-use\" target=\"_blank\">Terms of Use</a>, of which this Privacy Policy is a part. \n        If you have questions or complaints regarding our Privacy Policy or practices, please contact us at legal@animegination.net.\n    </p>\n    <p>\n      Any personal information (email address, home address, etc.) which we obtain from visitors/customers will not be sold or shared with any third party. All information gathered is used for internal purposes only. You may exercise the right to not receive future mailings, and information on removing yourself from our e-mail lists may be found in the Help section.\n    </p>\n    <p>\n      Our Site uses cookies to keep track of your shopping cart so that you can go in and out of the ordering system without losing your order.\n    </p>\n    <p>\n      Registration forms on our Site require users to give us contact information including addresses and email addresses. Customer contact information from the registration forms will not be used to send information about our company and its products. This information is only used internally.\n    </p>\n    <p>\n      On-line ordering is available on our Sites for customers to mock the purchase of products and services.  No actual purchases take place.</p>\n    <p>\n      You may choose to add interactivity to our content through the use of third-party social networking sites, such as Facebook or Twitter, or through other third-party plug-ins and applications. When doing so, access may be provided in both directions from and to your personal social media profile. It is also possible that non-personally identifiable information can be provided from your interaction with our content. \n      By utilizing our Site in coordination with such third-party social networking sites, plug-ins, or applications, you consent to the use of such information by us in accordance with our privacy policy. In addition, Animegination cannot control how such information is used by these third parties, plug-ins, and applications, and it is possible that that information may be publically viewed by other users of these social networking sites, plug-ins, and applications.\n    </p>\n    <p>\n      Social networking sites, plug-ins, and applications generally have their own privacy settings where you can control what data is shared. We recommend you consult their privacy policies and terms of use.\n    </p>\n    <p>\n      Our Privacy Policy may change from time to time. We will post any changes on the Sites. If the changes are significant, then we will provide a more prominent notice, which will be posted on this Site prior to the changes becoming effective. \n      Each time a user accesses the Sites, the current version of the Privacy Policy applies.\n    </p>\n    <p class=\"pb-3\">\n      We hope this information is useful to you as our customer.\n    </p>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/product-slice/product-slice.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/product-slice/product-slice.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"wrapper\">\n    <h2>{{listType?.Description}}</h2>\n\n    <div class=\"row flex-row\">\n        <ng-container *ngFor=\"let prod of apiProducts\">\n            <div class=\"col-1\"></div>\n            <div class=\"col-5 details\">\n                <div>\n                    <p class=\"hyperlink\"><a (click)=\"OnSelectProduct(prod)\">{{prod?.ProductTitle}}</a></p>\n\n                    <p>Publisher: {{prod.PublisherName}}</p>\n\n                    <p>Genre: {{prod.CategoryName}} </p>\n\n                    <p>Age Rating: {{prod.ProductAgeRating}} </p>\n\n                    <p>List Price: <s>{{prod?.UnitPrice | currency:'USD':'symbol' }}</s></p>\n                    <p>Your Price: <strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></p>\n\n                    <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\" \n                        alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n                </div>\n            </div>\n            <div class=\"col-5\">\n                <a (click)=\"OnSelectProduct(prod)\" class=\"pointer ml-neg-1\">\n                    <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                            class=\"image-max slice\" alt=\"{{prod?.ProductCode}}\" />\n                </a>\n            </div>\n        </ng-container>    \n    </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/product-slide/product-slide.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/product-slide/product-slide.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div [class.bgc-gray]=\"bgc\">\n  <h2>{{listType?.Description}}  \n      <span *ngIf=\"showButtons\" class=\"link-normal\">  \n        <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: listTypeID }\">See More</a>\n    </span>\n  </h2>\n\n  <div *ngIf=\"showButtons\" class=\"row\">\n    <div [id]=\"'prev' + listTypeID\" class=\"slide-prev slide-col col-2 col-sm-1 d-flex align-items-center\">\n      <a>\n        <img src=\"assets/Previous2.jpg\" alt=\"Previous\" \n              class=\"slide-buttons\">\n      </a>\n    </div>\n    <div [id]=\"'wrap' + listTypeID\" class=\"slide-wrapper col-8 col-sm-10\">\n      <ul>\n          <li *ngFor=\"let prod of apiProducts\">\n            <a (click)=\"OnSelectProduct(prod)\">\n              <div class=\"card card-max\">\n                    <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                          class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n                    <div class=\"card-body\">\n                        <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                        <!-- <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                              alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />         -->\n                        <div>\n                            <table>\n                                <tr>\n                                    <td>List Price: </td>\n                                    <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                                </tr>\n                                <tr>\n                                    <td>Your Price: </td>\n                                    <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                                </tr>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n              </a>\n          </li>\n      </ul>\n    </div>\n\n    <div [id]=\"'next' + listTypeID\" class=\"slide-next slide-col col-2 col-sm-1 d-flex align-items-center\">\n      <a>\n          <img src=\"assets/Next2.jpg\" alt=\"Next\" class=\"slide-buttons\">\n      </a>\n    </div>\n  </div>\n</div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/product/product.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/product/product.component.html ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- <div [class.hidden]=\"!loaded\" class=\"row\"> -->\r\n<div *ngIf=\"product?.ProductCode\" class=\"row\">\r\n        <div class=\"child col-12 col-md-6 col-lg-5 offset-lg-1\">\r\n        <div class=\"panel-body panel-default\">\r\n            <img src=\"https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg\"\r\n                 alt=\"{{product?.ProductCode}}\" class=\"image-feature img-responsive\" />\r\n        </div>\r\n    </div>\r\n    <div class=\"child col-12 col-md-6 col-lg-6 pl-3\">\r\n        <h3>{{product?.ProductTitle}}</h3>\r\n        <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{product?.RatingID}} Stars.png\"\r\n             alt=\"{{product?.RatingID}} stars\" class=\"img-responsive\" />\r\n        <div class=\"pt-3\"></div>\r\n        <table>\r\n            <tr>\r\n                <td>List Price: </td>\r\n                <td><s>{{product?.UnitPrice | currency: 'USD':true }} </s></td>\r\n            </tr>\r\n            <tr>\r\n                <td><strong>Your Price: </strong></td>\r\n                <td><strong><span class=\"text-danger font-em-10\">{{product?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\r\n            </tr>\r\n            <tr>\r\n                <td>You Save: </td>\r\n                <td><span class=\"text-danger\">{{ (product?.UnitPrice - product?.YourPrice).toFixed(2) | currency:'USD':'symbol' }} </span></td>\r\n            </tr>\r\n        </table>\r\n        <div class=\"pt-3\">\r\n            <div class=\"fine-print alert-content\">In Stock</div>\r\n\r\n            <div>Quantity: \r\n                <input type=\"number\" min=\"1\" max=\"10\" step=\"1\" \r\n                    value={{quantity}} \r\n                    (change)=\"updateQuantity($event.target.value)\" \r\n                >\r\n            </div>\r\n\r\n            <button class=\"btn btn-default bgc-light\" (click)=\"AddToCart(product)\">\r\n                <img src=\"https://reydavid.blob.core.windows.net/assets/shopping-cart.png\"\r\n                        alt=\"Buy in website now\" style=\"max-width: 130px;\" />\r\n            </button>\r\n            <!-- <div>\r\n                <a href=\"http://www.animegination.net/Product/Details/{{product?.ProductCode}}\" target=\"_blank\">\r\n                    <img src=\"https://reydavid.blob.core.windows.net/assets/shopping-cart.png\"\r\n                         alt=\"Buy in website now\" style=\"max-width: 130px;\" />\r\n                </a>\r\n            </div> -->\r\n            <div class=\"fine-print pt-3\">Free US Economy Shipping at $49</div>\r\n            <div class=\"fine-print\">Free Canadian Shipping at $249</div>\r\n            <div class=\"tiny-gray\">Item: {{product?.ProductCode}}</div>\r\n        </div>\r\n        <div class=\"pt-3\">\r\n            <div class=\"pb-2\">Share your thoughts on this item with other customers</div>\r\n            <div>\r\n                <button type=\"button\" class=\"btn btn-default btn-outline-anime bold\" \r\n                    (click)=\"WriteReview(product)\">Write a Review</button>\r\n            </div>                    \r\n        </div>\r\n    </div>\r\n    <div class=\"child col-12 col-md-6\">\r\n        <div class=\"col-md-10 offset-md-1 description\">\r\n            <h4>Description</h4>\r\n            <p>\r\n                {{product?.ProductDescription}}\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"child col-12 col-md-6\">\r\n        <div class=\"col-md-10\">\r\n            <h4>Product Details</h4>\r\n            <table class=\"table table-bordered\">\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Rated: </td>\r\n                    <td>{{product?.ProductAgeRating}}</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Run Time: </td>\r\n                    <td>{{product?.ProductLength}} minutes</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Format: </td>\r\n                    <td>{{product?.MediumName}}</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Category: </td>\r\n                    <td>{{product?.CategoryName}}</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Released: </td>\r\n                    <td>{{product?.ProductYearCreated}}</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Publisher: </td>\r\n                    <td>{{product?.PublisherName}}</td>\r\n                </tr>\r\n            </table>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<div *ngIf=\"product.ProductCode == undefined\">\r\n    <h3>Product could {{product.ProductTitle}} not be found</h3>\r\n    <div class=\"pb-2\"></div>\r\n</div>\r\n\r\n<app-similars [productID]=\"productID\"></app-similars>\r\n\r\n<app-footer-product></app-footer-product>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/products-list/products-list.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/products-list/products-list.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"bgc-gray\">\n\n<h2 class=\"child\">{{title}}</h2>\n\n<ul class=\"list-inline\">\n    <li *ngFor=\"let prod of products\" class=\"li-child\" (click)=\"OnSelectProduct(prod)\">\n      <!-- [routerLink]=\"['/detail']\" [queryParams]=\"{ productID: prod?.ProductID }\"> -->\n        <a>\n          <div class=\"card frame card-max\">\n            <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                  class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n            <div class=\"card-body\">\n                <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                      alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n                <div>\n                  <table>\n                    <tr>\n                      <td>List Price: </td>\n                      <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                    </tr>\n                    <tr>\n                      <td>Your Price: </td>\n                      <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                    </tr>\n                  </table>\n                </div>\n            </div>\n          </div>\n        </a>\n    </li>\n</ul>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/products-slice/products-slice.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/products-slice/products-slice.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"child\">{{listType?.Description}}</h2>\n\n<div class=\"row flex-row\">\n  <ng-container *ngFor=\"let prod of apiProducts\">\n    <div class=\"child col-6 col-sm-4 col-md-3 col-lg-2\">\n        <a (click)=\"OnSelectProduct(prod)\">\n            <div class=\"card card-max\">\n                <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                      class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n                <div class=\"card-body\">\n                    <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                    <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                          alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n\n                    <div>\n                        <table>\n                            <tr>\n                                <td>List Price: </td>\n                                <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                            </tr>\n                            <tr>\n                                <td>Your Price: </td>\n                                <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                            </tr>\n                        </table>\n                    </div>\n                </div>\n            </div>\n        </a>\n      </div>\n  </ng-container>\n</div>\n<!-- <ul class=\"list-inline\">\n    <li *ngFor=\"let prod of apiProducts\"\n        (click)=\"OnSelectProduct(prod)\">\n    </li>\n</ul> -->\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/ratings/ratings.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/ratings/ratings.component.html ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"pb-3\">Ratings System</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>\n      The contents of all material available on this Internet site – including, but not limited to, \n      text, graphics, logos, icons, images, audio and/or video clips, digital downloads, \n      data compilations, the compilation of materials on this site and software -- have not been \n      copyrighted by Animegination, unless otherwise indicated. \n      These materials may not be reproduced, copied, distributed, displayed, published, transmitted, \n      adapted, edited or downloaded in any way without drawing the ire of Animegination.\n    </p>\n\n    <h4>ALL, PG</h4>\n    <p class=\"pl-3\">\n      Generally acceptable for children. No Nudity. Possible mild violence.\n    </p>\n    <h4>12+, 13+, 14+</h4>\n    <p class=\"pl-3\">\n      May contain violence, brief nudity, and/or mild language. May suggest sexual situations, \n      but no situations are shown. Parental discretion advised.\n    </p>\n    <h4>15+, 16+, 17+</h4>\n    <p class=\"pl-3\">\n      Strong violence and strong language. Prevalent Nudity may be contained within the picture. \n      Mild sexual situations may be shown.\n    </p>\n    <h4>18+, R</h4>\n    <p class=\"pl-3\">\n      Extreme violence, Explicit Nudity, and/or Extreme Language may be contained in the picture. \n      May contain sexually explicit material. Absolutely not for anyone under 18 years of age.\n    </p>\n    <h4>NR</h4>\n    <p class=\"pl-3\">\n      Not Rated.\n    </p>\n    <h4>Please note:</h4>\n    <p>\n      Ratings used within our system are oftentimes provided by the manufacturer of the product. \n      Because of the differences in ratings used by these companies, we have combined their systems, \n      with the descriptions of the ratings listed above. Animegination does not set ratings \n      (except for its own products) and is not responsible for errors, omissions, \n      or inaccurate ratings. These ratings are guidelines only, and are subject to change. \n      Should you find that the ratings listed here are not accurate, or would like to suggest \n      a rating for titles which do not have one at present, please contact us at \n      <a href=\"mailto:info@animegination.net\">info@animegination.net</a> \n    </p>\n    <p class=\"pb-3\">\n      We hope this feature is useful to you as our customer.\n    </p>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/register/register.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/register/register.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1\">\n      <h2>Register</h2>\n      <div class=\"anime-color pb-3\">New to Animegination? Create an account and take advantage of faster checkouts and other benefits</div>\n      <form role=\"form\" [formGroup]=\"registerForm\" \n            (submit)=\"Register(registerForm.value, registerForm.valid)\">\n          <div class=\"form-group\">\n              <label for=\"username\">Enter a new User Name <span class=\"anime-color\">*</span></label>\n              <input type=\"text\" \n                     formControlName=\"username\"\n                     class=\"form-control\" id=\"username\" />\n          </div>\n          <div class=\"form-group\">\n              <label for=\"username\">Your First Name <span class=\"anime-color\">*</span></label>\n              <input type=\"text\" \n                     formControlName=\"firstname\"\n                     class=\"form-control\" id=\"firstname\" />\n          </div>\n          <div class=\"form-group\">\n              <label for=\"username\">Your Last Name <span class=\"anime-color\">*</span></label>\n              <input type=\"text\" \n                     formControlName=\"lastname\"\n                     class=\"form-control\" id=\"lastname\" />\n          </div>\n          <div class=\"form-group\">\n              <label for=\"username\">Your Email Address <span class=\"anime-color\">*</span></label>\n              <input type=\"email\"  \n                     formControlName=\"email\"\n                     class=\"form-control\" id=\"email\" placeholder=\"your@email.com\" />\n          </div>\n          <div class=\"form-group\">\n              <label for=\"address\">Street Address <span class=\"anime-color\">*</span></label>\n              <input type=\"text\" \n                     formControlName=\"address\"\n                     class=\"form-control\" id=\"address\" />\n          </div>\n          <div class=\"form-group\">\n            <label for=\"city\">City <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" \n                   formControlName=\"city\"\n                   class=\"form-control\" id=\"city\" />\n          </div>\n          <div class=\"form-group\">\n            <label for=\"zipcode\">Zip Code <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" placeholder=\"5-digit zip code\"\n                   formControlName=\"zipcode\"\n                   class=\"form-control\" id=\"zipcode\" />\n          </div>\n        <div class=\"form-group\">\n          <label for=\"state\">State</label>\n          <!-- <states [defaultState]=\"currentState\" (select)=\"selectState($event)\"></states> -->\n          <select formControlName=\"state\" \n            class=\"form-control\" id=\"state\">\n              <option *ngFor=\"let state of states\" \n                  value={{state.StateID}} >\n                      {{state.StateName}}\n              </option>\n          </select>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"cellphone\">Cell Phone</label>\n          <input type=\"text\"  placeholder=\"555-555-5555\"\n                 formControlName=\"cellphone\"\n                 class=\"form-control\" id=\"cellphone\" />\n        </div>\n        <div class=\"form-group\">\n          <label for=\"homephone\">Other Phone</label>\n          <input type=\"text\" placeholder=\"555 555-5555\"\n                 formControlName=\"homephone\"\n                 class=\"form-control\" id=\"homephone\" />\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"password\">Enter a new Password <span class=\"anime-color\">*</span></label>\n          <input type=\"password\" placeholder=\"at least 6 characters, 1 uppercase, 1 lowercase, and 1 number\" \n                 formControlName=\"password\"\n                 class=\"form-control\" id=\"password\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Re-Enter your Password <span class=\"anime-color\">*</span></label>\n            <input type=\"password\" placeholder=\"password must match\" \n                  formControlName=\"confirmPassword\"\n                  class=\"form-control\" id=\"confirmPassword\" />\n        </div>\n\n        <div class=\"checkbox pt-2\">\n            <label>\n              <input type=\"checkbox\" value=\"\" /> Yes, please sign me up for Animegination exclusive offers and promotions</label>\n        </div>\n        <span class=\"image-btn\">\n            <button class=\"btn transparent pb-3\" type=\"submit\" \n                [disabled]=\"!registerForm.valid || registerForm.errors?.passwordsDontMatch || registerForm.errors?.passwordNotStrong\">\n                <img alt=\"Sign In\" height=\"50\" src=\"https://reydavid.blob.core.windows.net/assets/register.png\" />\n            </button>\n        </span>\n          <!--\n          <div class=\"padding-bottom-15\"></div>\n          <div *ngIf=\"!username.valid && username.errors.required\" class=\"alert alert-danger\">\n              <strong>User Name is required</strong>\n          </div>\n          <div *ngIf=\"username.dirty && !username.valid && username.errors.minlength\" class=\"alert alert-danger\">\n              <strong>User Name is too short. Please lengthen it to 6 characters or more</strong>\n          </div>\n          -->\n          <div class=\"pb-3\"></div>\n          <div *ngIf=\"isSuccess\" class=\"alert alert-success\">\n              <strong>Success! </strong> Your Registration was successful.\n          </div>\n          <div *ngIf=\"isFailure\" class=\"alert alert-danger\">\n              <strong>There was a problem: </strong> Your Registration failed.\n              <div *ngIf=\"errorMessage\">\n                {{ errorMessage }}\n              </div>\n          </div>\n      </form>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/returns/returns.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/returns/returns.component.html ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"pb-3\">Return Policy and Requests</h2>\n\n<div class=\"row font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n\n    <p>\n        All of the products that we sell are new and factory sealed. If your Blu-Ray, DVD, \n        or other merchandise is defective due to a flaw in manufacturing, \n        we will promptly exchange the product for another of the same title.\n    </p>\n    <p>\n        Unopened products can be exchanged for a store credit (credit card purchases \n        will be credited back to the card, rather than issuing store credit) with our company \n        for the original purchase price within ninety (90) days of the date on your purchase invoice.\n    </p>\n    <p>\n        You will need a return request form and then call us or use our \n        <span class=\"p6\" (click)=\"newNote()\">online return authorization form</span> \n        to obtain a return authorization number. \n        Additional return request forms can be downloaded and printed on your own computer. \n        Please remember to include these with your return shipment.\n    </p>\n    <p>\n        Note: Products returned without necessary paperwork, without a return authorization number, \n        or more than ninety (90) days after the invoice date, may be returned to the customer.\n    </p>\n    <p>\n        If your merchandise is not defective, but has been damaged during shipping:\n    </p>\n    <p>\n        For <span class=\"bold\">UPS Packages</span>: You will need to call UPS at 1-800-PICK-UPS to report the incident. \n        Although it is not necessary, it is also a good idea to call us and let us know that a problem has occured \n        during shipment and that UPS will be contacting us.\n    </p>\n    <p>\n        For <span class=\"bold\">US Postal Service (USPS)</span>: Please contact our Customer Care Team through this \n        <span class=\"p6\" (click)=\"newNote()\">online form</span>.\n    </p>\n    <p>\n        For the return authorization request form, \n        <span class=\"p6\" (click)=\"newNote()\">click here</span>.\n        We cannot accept any product back without a request authorization numer \n        (request authorization numers expire in 30 days!). \n        If you’re still unsure about what to do, please contact us!\n    </p>\n    <p>\n        In the request form, please provide specific information if you had a problem with your order \n        or why you wish to return your purchase.\n    </p>\n\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/review/review.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/review/review.component.html ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"pb-3\">\n  <div>\n      <div class=\"inline-block pr-3\">\n          <img src=\"https://reydavid.blob.core.windows.net/assets/User.png\"\n          alt=\"User\" class=\"thumbnail0\" />\n      </div>\n      <div class=\"inline\">\n        <span class=\"font-em-10 bold\">{{recommendation?.reviewer}}</span>\n        <span>, {{recommendation?.reviewerEmployer}}</span>\n      </div>\n  </div>\n  <div>\n      <div class=\"inline-block pr-3\">\n          <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{recommendation?.ratingId}} Stars.png\"\n          alt=\"User\" class=\"img-responsive\" />\n      </div>\n      <div class=\"inline font-em-10\">{{recommendation?.created | date: 'MMM d, y'}}</div>\n  </div>\n  <div class=\"bold\">\n    {{recommendation?.title}}\n  </div>\n  <div class=\"font-italic\">\n    {{recommendation?.recommendation}}\n    <div class=\"inline pull-right pb-2\">\n        <button type=\"button\" [class.nodisplay]=\"helpful\" class=\"btn btn-default btn-outline-anime inline mx-2\" \n            (click)=\"OnHelpful()\">Helpful</button>\n        <i [class.nodisplay]=\"!thanks\" class=\"fa fa-check\"></i>\n        <span [class.nodisplay]=\"!thanks\" class=\"alert-content normal px-2\">Thank you for your feedback!</span>\n        <button type=\"button\" [class.nodisplay]=\"notHelpful\" class=\"btn btn-default btn-outline-anime inline mx-2\" \n          (click)=\"OnNotHelpful()\">Not Helpful</button>\n    </div>\n  </div>\n\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/reydavid/reydavid.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/reydavid/reydavid.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row\">\n    <div class=\"child col-12 col-md-6 col-lg-5 offset-lg-1 order-1\">\n      <div class=\"panel-body panel-default\">\n          <img src=\"https://reydavid.blob.core.windows.net/assets/ReyDavid2018.jpg\"\n                alt=\"Rey David\" class=\"image-resume img-responsive\" />\n      </div>\n    </div>\n    <div class=\"child col-12 col-md-6 col-lg-6 pl-3 order-2\">\n        <h3>REY DAVID</h3>\n        <h4>Senior Software Engineer / Software Architect</h4>\n        <img src=\"https://reydavid.blob.core.windows.net/assets/Rating 5 Stars.png\"\n             alt=\"5 stars\" class=\"img-responsive\" />\n        <div class=\"pt-3\"></div>\n        <table>\n            <tr>\n                <td>List Price: </td>\n                <td><s>{{ 999999 | currency: 'USD':true }} </s></td>\n            </tr>\n            <tr>\n                <td><strong>Your Price: </strong></td>\n                <td><strong><span class=\"text-danger font-em-10 pl-2\">Add to Cart for Pricing Info </span></strong></td>\n            </tr>\n        </table>\n        <div class=\"pt-3\">\n            <div class=\"fine-print alert-content\">Only 1 left in stock - Order soon!</div>\n\n            <div>Quantity: \n                <input type=\"number\" min=\"1\" max=\"10\" step=\"1\" value=1>\n            </div>\n\n            <button class=\"btn btn-default bgc-light\" data-toggle=\"modal\" data-target=\"#buyMeModal\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/shopping-cart.png\"\n                        alt=\"Buy in website now\" style=\"max-width: 130px;\" />\n            </button>\n            <div class=\"fine-print pt-3\">Free US Economy Shipping at $49</div>\n            <div class=\"fine-print\">This item is available for shipping only in the Northern California East Bay</div>\n            <div class=\"tiny-gray\">Item: reydavid</div>\n        </div>\n        <div class=\"pt-3\">\n            <div class=\"pb-2\">Share your thoughts on this item with other customers</div>\n            <div>\n                <button type=\"button\" class=\"btn btn-default btn-outline-anime bold\" \n                    (click)=\"WriteReview()\">Write a Review</button>\n            </div>\n        </div>\n        <div class=\"p-3\"></div>\n    </div>\n    <div class=\"child col-12 col-md-6 order-3\">\n        <div class=\"col-md-10 offset-md-1\">\n            <h4>Description</h4>\n            <p>\n                {{employmentService.CoverIntro}}\n            </p>\n            <div class=\"d-none d-lg-block pb-1\"></div>\n            <h5>Need technical Tips and Tricks?</h5>\n            <div class=\"spanhalf\">\n                <a href=\"https://www.linkedin.com/in/reyldavid/\" target=\"_blank\">\n                    <img src=\"http://reydavid.blob.core.windows.net/assets/LinkedIn3.png\" \n                        alt=\"Linked In\" class=\"image-linkedin img-responsive\" />\n                </a>\n                <p>\n                    Visit Rey David's Developers Blog at <a href='http://davidsdotnetlines.blogspot.com' \n                    target='_blank'>http://DavidsDotNetLines.BlogSpot.com</a> \n                    for tips and tricks on Angular, Asp.Net, SQL Server, IIS and Https, \n                    Windows 8 App development, and much more. \n                    <a href='http://davidsdotnetlines.blogspot.com' target='_blank'>Check it out now.</a>\n                </p>\n            </div>\n        </div>\n    </div>\n    <div class=\"child col-12 col-md-6 order-4\">\n        <div class=\"col-md-10\">\n            <h4>Product Details</h4>\n            <table class=\"table table-bordered\">\n                <tr>\n                    <td class=\"bg-lightgray\">Product Dimensions: </td>\n                    <td>Height: 5 ft 7 in</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Product Availability: </td>\n                    <td>Currently unavailable</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Most recent golf score: </td>\n                    <td>83 strokes on a Par 71</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Software Dev Experience: </td>\n                    <td>30 years</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Address: </td>\n                    <td>60 Windsor Court, Danville, CA 94506</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Phone: </td>\n                    <td>(925)915-0230</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Email: </td>\n                    <td><a href=\"mailto:rdavid47@comcast.net\">rdavid47@comcast.net</a></td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Overall Rating: </td>\n                    <td>\n                      <img src=\"https://reydavid.blob.core.windows.net/assets/Rating 5 Stars.png\"\n                        alt=\"5 stars\" class=\"img-responsive\" />\n                    </td>\n                </tr>\n            </table>\n        </div>\n    </div>\n\n    <div class=\"child col-12 col-lg-5 order-6 order-lg-5\">\n        <div class=\"col-lg-10 offset-lg-1\">\n            <h4>Customer Ratings</h4>\n            <div class=\"font-em-10 pt-1\">{{ratingsCount}} customer reviews</div>\n            <div>\n                <div class=\"inline-block pr-3\">\n                    <img src=\"https://reydavid.blob.core.windows.net/assets/Rating 5 Stars.png\"\n                    alt=\"5 stars\" class=\"img-responsive\" />\n                </div>\n                <div class=\"inline font-em-10\">{{ratingsAverage}} out of 5</div>\n            </div>\n\n            <div class=\"pt-2\">\n                <div class=\"row py-1 my-1\">\n                    <div class=\"col-2 text-truncate stars-label\">\n                        5 stars\n                    </div>\n                    <div class=\"col-7 all-borders-gray px-0\">\n                        <div class=\"bar47\"></div>\n                    </div>\n                    <div class=\"col-2 text-center align-middle\">\n                        94%\n                    </div>\n                </div>\n                <div class=\"row py-1 my-1\">\n                    <div class=\"col-2 text-truncate stars-label\">\n                        4 stars\n                    </div>\n                    <div class=\"col-7 all-borders-gray px-0\">\n                        <div class=\"bar03\"></div>\n                    </div>\n                    <div class=\"col-2 text-center align-middle\">\n                        6%\n                    </div>\n                </div>\n                <div class=\"row py-1 my-1\">\n                    <div class=\"col-2 text-truncate stars-label\">\n                        3 stars\n                    </div>\n                    <div class=\"col-7 all-borders-gray\">\n                    </div>\n                    <div class=\"col-2 text-center align-middle\">\n                        0%\n                    </div>\n                </div>\n                <div class=\"row py-1 my-1\">\n                    <div class=\"col-2 text-truncate stars-label\">\n                        2 stars\n                    </div>\n                    <div class=\"col-7 all-borders-gray\">\n                    </div>\n                    <div class=\"col-2 text-center align-middle\">\n                        0%\n                    </div>\n                </div>\n                <div class=\"row py-1 my-1\">\n                    <div class=\"col-2 text-truncate stars-label\">\n                        1 star\n                    </div>\n                    <div class=\"col-7 all-borders-gray\">\n                    </div>\n                    <div class=\"col-2 text-center align-middle\">\n                        0%\n                    </div>\n                </div>\n            </div>\n\n        </div>\n    </div>\n    <div class=\"child col-12 col-lg-7 order-5 order-lg-6\">\n        <h4>Frequently Bought Together</h4>\n        <div class=\"pt-3\">\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/ReyDavid2018.jpg\"\n                    alt=\"Rey David\" class=\"thumbnail3 img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Plus.jpg\"\n                    alt=\"Plus\" class=\"plus img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Angular.png\"\n                    alt=\"Angular\" class=\"thumbnail3 img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Plus.jpg\"\n                    alt=\"Plus\" class=\"plus img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/DotNet.jpg\"\n                    alt=\"Microsoft .Net\" class=\"thumbnail2 img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Plus.jpg\"\n                    alt=\"Plus\" class=\"plus img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/AspNet.png\"\n                    alt=\"ASP.Net\" class=\"thumbnail3 img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Plus.jpg\"\n                    alt=\"Plus\" class=\"plus img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/SqlServer2.png\"\n                    alt=\"SQL Server\" class=\"thumbnail3 img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Plus.jpg\"\n                    alt=\"Plus\" class=\"plus img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Windows.png\"\n                    alt=\"Windows\" class=\"thumbnail1 img-responsive\" />\n            </div>\n        </div>\n    </div>\n\n</div>\n\n<!-- <div class=\"child row pt-4 px-lg-5\">\n    <div *ngFor=\"let recommend of recommends\" class=\"col-12 col-lg-6\">\n        <app-review [review]=\"recommend\"></app-review>\n    </div>\n</div> -->\n\n<div class=\"child pt-4 px-lg-5\">\n        <div class=\"card\">\n            <div class=\"card-header\">\n                <a class=\"card-link\" data-toggle=\"collapse\" href=\"#reviews\">\n                    Customer Reviews\n                </a>\n            </div>\n            <div id=\"reviews\" class=\"collapse show\">\n                <div class=\"card-body\">\n                    <div class=\"row\">\n                        <div *ngFor=\"let recommend of recommends\" class=\"col-12 col-lg-6\">\n                            <app-review [review]=\"recommend\"></app-review>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    \n<div class=\"child pt-3 px-lg-5\">\n    <div class=\"card\">\n        <div class=\"card-header\">\n            <a class=\"card-link\" data-toggle=\"collapse\" href=\"#history\">\n                Product History\n            </a>\n        </div>\n        <div id=\"history\" class=\"collapse show\">\n            <div class=\"card-body\">\n                <div *ngFor=\"let employment of employments\">\n                    <app-employment [experience]=\"employment\"></app-employment>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"child pt-3 px-lg-5\">\n    <div class=\"card\">\n        <div class=\"card-header\">\n            <a class=\"card-link\" data-toggle=\"collapse\" href=\"#education\">\n                Product KnowledgeBase\n            </a>\n        </div>\n        <div id=\"education\" class=\"collapse show\">\n            <div class=\"card-body\">\n                <div *ngFor=\"let education of educations\">\n                    <app-employment [experience]=\"education\"></app-employment>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n    \n<div class=\"modal fade\" id=\"buyMeModal\" tabindex=\"-1\" role=\"dialog\" \n    aria-labelledby=\"buyMeModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h5 class=\"modal-title\" id=\"buyMeModalLabel\">Add to Cart</h5>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n                <div>To complete your order, please contact Rey David by phone \n                    at (925)915-0230 or by email at \n                    <a href=\"mailto:rdavid47@comast.net\">rdavid47@comast.net</a>\n                </div>\n            </div>\n            <div class=\"modal-footer\">\n                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n            </div>\n        </div>\n    </div>\n</div>\n\n<app-similars [productID]=\"1291\"></app-similars>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/search-results/search-results.component.html":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/search-results/search-results.component.html ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"!showResults\" class=\"bgc-gray\">\n  <h2>Retrieving results for <span class=\"anime-orig-color\">{{searchText}}</span>...</h2>\n</div>\n<div *ngIf=\"showResults\" class=\"bgc-gray\">\n\n    <h2>Showing {{count}} results for <span class=\"anime-orig-color\">{{searchText}}</span></h2>\n    \n    <ul class=\"list-inline\">\n        <li *ngFor=\"let prod of products\" (click)=\"OnSelectProduct(prod)\">\n          <!-- [routerLink]=\"['/detail']\" [queryParams]=\"{ productID: prod?.ProductID }\"> -->\n            <a>\n              <div class=\"card frame card-max\">\n                <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                      class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n                <div class=\"card-body\">\n                    <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                    <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                          alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n                    <div>\n                      <table>\n                        <tr>\n                          <td>List Price: </td>\n                          <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                        </tr>\n                        <tr>\n                          <td>Your Price: </td>\n                          <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                        </tr>\n                      </table>\n                    </div>\n                </div>\n              </div>\n            </a>\n        </li>\n    </ul>\n    ");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/shipping-info/shipping-info.component.html":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/shipping-info/shipping-info.component.html ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"pb-3\">Shipping Info</h2>\n\n<div class=\"row font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>\n        From the time we receive your order and place it in our system, standard processing time is 24-48 hours. \n        The delivery time after processing varies based upon the shipping method that you have selected. \n        Typical delivery times for each shipping method are listed in the \"Current Rates\" section of this page.\n    </p>\n    <p>\n        All pre-pack items are counted as a single item for shipping costs.\n    </p>\n    <p class=\"bold\">\n        If you are a domestic customer (US) and order over $49, Economy shipping is free.\n    </p>\n    <p>\n        Please understand that many of the pre-order dates shift about without the manufacturer letting us know. \n        If you’re ordering something projected into the future by a fair amount, call us.\n    </p>\n\n    <h5 class=\"bold\">Express Shipments</h5>\n\n    <p>\n        Express shipping means that, if you order by credit card and we’ve got the item in stock \n        (even more likely now), you will receive it in very short order. \n        However, if it’s out of stock (either here or from the manufacturer), \n        then you’ll have to wait for it regardless of the shipping method you choose. \n        Express shipped items are shipped via UPS 2 Day Air and typically arrive at least one week \n        sooner than standard shipping.\n    </p>\n\n    <p>\n        Please be aware that if you have a PO Box, or are stationed in the service, \n        our shipping is limited to Mail and Priority Mail (Economy and Standard Shipping options) \n        because UPS will not deliver to these locations.\n    </p>\n\n    <p>\n        Backordered items usually take an average of 10-14 business days. \n        If it is an extremely popular item, or it is an imported item, it may take longer.\n    </p>\n\n    <h5 class=\"bold\">Other Notes</h5>\n\n    <p>\n        If you receive defective merchandise, please call for return instructions. \n        Note that packages damaged in transit by UPS are not defective: to remedy that situation, \n        see below:\n    </p>\n\n    <p>\n        For <span class=\"bold\">UPS Packages</span>: You will need to call UPS at 1-800-PICK-UPS to report the incident. \n        Although it is not necessary, it is also a good idea to call us and let us know that a problem has occured \n        during shipment and that UPS will be contacting us.\n    </p>\n    <p>\n        For <span class=\"bold\">US Postal Service (USPS)</span>: Please contact our Customer Care Team through this \n        <span class=\"p6\" (click)=\"newNote()\">online form</span>.\n    </p>\n    <p>\n        We cannot accept any product back without an RMA (RMAs expire in 30 days!). If you’re still unsure about what to do, please contact us!\n    </p>\n    <p>\n        For any other concerns, please visit our \n        <span class=\"p6\" (click)=\"newNote()\">General Customer Care Page </span> \n        or contact us via email at \n        <span><a href=\"mailto:info@animegination.net\">info@animegination.net</a></span>.\n    </p>\n\n    <h5 class=\"bold\">Current Rates</h5>\n\n    <p>\n        $3.0 for first + $1.0 each additional item. Shipped via USPS Mail. \n        Typical delivery time is 10 - 14 days. \n        <span class=\"bold\">Free for domestic (US) customers who order over $49!</span> \n    </p>\n\n    <div class=\"row\">\n      <div class=\"col-12 col-lg-8 offset-lg-1\">\n        <table class=\"bordered\">\n          <tr class=\"bordered text-center\">\n            <th>If you order:</th>\n            <th>Total Shipping <br/>and Handling:</th>\n          </tr>\n          <tr class=\"bordered\">\n            <td>1 item</td>\n            <td>$3.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>2 items</td>\n            <td>$4.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>3 items</td>\n            <td>$5.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>4 items</td>\n            <td>$6.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>5 items</td>\n            <td>$7.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>6 items</td>\n            <td>$8.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>7 items</td>\n            <td>$9.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>8 items</td>\n            <td>$10.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>9 items</td>\n            <td>$11.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>10 items</td>\n            <td>$12.0</td>\n          </tr>\n        </table>\n      </div>\n    </div>\n    <div class=\"py-3\"></div>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/shipping/shipping.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/shipping/shipping.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"row shipping\">\n  <div class=\"col-md-6\">\n    <p>\n        Free US Economy Shipping at $49\n      </p>\n  </div>\n  <div class=\"col-md-6\">\n    <p>\n        Free Canadian Shipping at $249\n      </p>\n  </div>\n</div> ");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/similars/similars.component.html":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/similars/similars.component.html ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"showButtons\" [class.bgc-gray]=\"bgc\">\n  <div [class.child]=\"showButtons\" class=\"col-12 col-md-10 offset-md-1 pt-3\">\n    <h4>{{title}}</h4>\n  </div>\n\n  <div class=\"row\">\n    <div [id]=\"'prev' + productID\" [class.child]=\"showButtons\" \n        class=\"slide-prev slide-col col-2 col-sm-1 d-flex align-items-center\">\n      <a>\n        <img src=\"assets/Previous2.jpg\" alt=\"Previous\" \n              class=\"slide-buttons\">\n      </a>\n    </div>\n    <div [id]=\"'wrap' + productID\" [class.child]=\"showButtons\" \n        class=\"slide-wrapper col-8 col-sm-10\">\n      <ul>\n          <li *ngFor=\"let prod of apiProducts\">\n            <a (click)=\"OnSelectProduct(prod)\">\n              <div class=\"card card-max\">\n                    <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                          class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n                    <div class=\"card-body\">\n                        <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                        <!-- <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                              alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />         -->\n                        <div>\n                            <table>\n                                <tr>\n                                    <td>List Price: </td>\n                                    <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                                </tr>\n                                <tr>\n                                    <td>Your Price: </td>\n                                    <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                                </tr>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n              </a>\n          </li>\n      </ul>\n    </div>\n    <div [id]=\"'next' + productID\" [class.child]=\"showButtons\"\n        class=\"slide-next slide-col col-2 col-sm-1 d-flex align-items-center\">\n      <a>\n          <img src=\"assets/Next2.jpg\" alt=\"Next\" class=\"slide-buttons\">\n      </a>\n    </div>\n  </div>\n</div>\n\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/spinner/spinner.component.html":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/spinner/spinner.component.html ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"modal fade\" id=\"spinner\" tabindex=\"-2\" role=\"dialog\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-tiny modal-dialog-centered\">\n    <div class=\"modal-content spinner\">\n      <i class=\"fa fa-spinner fa-spin fa-5x\"></i>\n    </div>\n  </div>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/terms-of-use/terms-of-use.component.html":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/terms-of-use/terms-of-use.component.html ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h2 class=\"pb-3\">Terms of Use</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>Animegination provides website features and other products and services when you visit or shop using animegination.net, Animegination's mobile applications or other sites operated by Animegination (the \"Sites\").</p>\n    <p>By using the Sites, and any of its affiliated sites and/or subdomains, you agree to our Terms of Use & Privacy Policy as each are posted on this site.</p>\n    <p>Animegination reserves the right, at its sole discretion, to change, modify, alter or update the Terms of Use & Privacy Policy, in part or in whole, at any time. By using Animegination.net and/or its affiliated sites and/or subdomains after notice of such modifications, alterations or updates, you agree to be bound by the revised terms.</p>\n    <p>If you have any questions regarding the Terms of Use & Privacy Policy for this site, please contact our Customer Care Team by e-mail ( \n      <a href=\"mailto:info@animegination.net\">info@animegination.net</a> ), \n      mail or fax. Our contact information may be found by <a href=\"contact\" target=\"_blank\">clicking here</a>.</p>\n\n    <ul>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">SITE CONTENT AND INFORMATION. </span>\n        The Sites contain information, advice, text, and other materials that are provided for your convenience and enjoyment. You should be aware that the information might contain errors, omissions, inaccuracies, or outdated information. If a product offered by Animegination is not as described, you may return it according to our Return Policy\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">SITE POLICIES, MODIFICATION, AND SEVERABILITY. </span>\n        Animegination reserves the right to make changes to the Sites and these Conditions of Use and the Privacy Policy at any time. Each time you use the Sites, you should visit and review the then current Terms of Use and Privacy Policy that apply to your transactions and use. If you are dissatisfied with the Sites, their content, Terms of Use or Privacy Policy, you agree that your sole and exclusive remedy is to discontinue using the Sites. \n        If any of these Terms of Use are deemed to be illegal or unenforceable, the remainder of the Terms of Use shall be unaffected and shall continue to be fully valid, binding, and enforceable.</li>\n      <li class=\"bullets-circle\"><span class=\"bold\">YOUR ACCOUNT.</span></li>\n      <li class=\"bullets-circle pb-2\">\n        If you register on the Sites, you are responsible for maintaining the confidentiality of your account and password, restricting access to your computer, and you agree to accept responsibility for all activities that occur under your account or password.\n      </li>\n      <li class=\"bullets-circle pb-2\">\n        Animegination does sell products for children, but it sells them to adults who can purchase with a credit card or other permitted payment method. If you are under 18, you may use the Sites only with involvement of a parent or guardian. Animegination reserves the right to refuse service, terminate accounts, remove or edit content, or cancel orders in its sole discretion. \n        Animegination reserves the right to change, suspend, or discontinue all or any aspects of the Sites at any time without prior notice.\n      </li>\n      <li class=\"bullets-circle pb-2\">\n        Animegination does not knowingly collect information from children, including those less than thirteen years of age. If you are a child, do not submit any information to Animegination. If a parent, guardian, or other concerned person becomes aware that we have collected information from a child, including one less than 13 years of age, please contact us promptly and we will take steps to delete and remove any such information.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">NO UNLAWFUL OR PROHIBITED USE. </span>\n        As a condition of using the Sites, you agree that you will not use the Sites, or any of the content obtained from the Sites, for any purpose that is unlawful under applicable law or prohibited by these Conditions of Use, or to solicit or encourage the performance of any illegal activity or other activity which infringes the rights of Animegination, its affiliates or other individuals. \n        Furthermore, you may not, without limitation, copy, reproduce, distribute (including mirroring, data-mining or data scraping), transmit, publicly display, upload, perform, publish, license, modify, translate, adapt, create derivative works from, transfer, sell or otherwise exploit the Sites or any content, information, products or services obtained from the Sites, for any commercial purpose or enterprise without express written permission. \n        If you violate any of these Conditions of Use, your permission to use the Sites automatically terminates. Please report any violations of these Conditions of Use (except for claims of intellectual property infringement) to Animegination's Site director at legal@animegination.net.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">PROMOTIONAL PRICING. </span>\n        All promotional pricing percentages off are based on the original Retail Price or MSRP.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">ERRORS ON THE SITES. </span>\n        Prices and availability of products are subject to change without notice. In the event a product price is listed incorrectly due to typographical error or error in pricing information received from our vendors, Animegination shall have the right to refuse or cancel any orders placed for any product listed at the incorrect price, regardless of whether the order has been confirmed or your credit card has been charged. If your credit card has already been charged for the purchase and your order is canceled, animegination.net will promptly refund the amount charged to your credit card if applicable.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">DISTRIBUTING USER CONTENT. </span>\n        Animegination may allow users to the Sites to post reviews and comments (\"Content\") on products featured on the Sites. By submitting such Content, you automatically agree and promise that all Content is accurate and original and that, without any particular time limit, and without the payment of any fees, Animegination and anyone Animegination permits may reproduce, display, distribute and create new works of authorship in any media, based on and including the Content. Additionally, you grant Animegination the right to use the name you submit in connection with such Content.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">NO ENDORSEMENT OF USER CONTENT. </span>\n        Users to the Sites are prohibited from posting through the Sites any harmful, vulgar, obscene, profane, sexually explicit, abusive, threatening, privacy invading, libelous, racially, ethnically, or otherwise objectionable or unlawful content of any kind, or that infringes or may infringe on the intellectual or other rights of another. You acknowledge that Animegination does not endorse or pre-screen content, but that Animegination and its designees will have the right (but not the obligation) in their sole discretion to refuse, edit, move, or remove any content that is available via the Sites. You may not use a false e-mail address, impersonate any person or entity, or otherwise mislead as to the origin of any Content posted by you.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">APPLICABLE LAW. </span>\n        By using the Sites, you agree that the laws of the state of California, without regard to principles of conflict of laws, will govern these Conditions of Use and any dispute of any sort that might arise between you and Animegination.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">COPYRIGHT AND TRADEMARK NOTICE. </span>\n        All screens appearing on the Sites including graphics, text, design, buttons, logos, images, and icons, as well as the selection, assembly, and arrangement, are the sole property of Animegination or its suppliers and/or licensors, and are protected by U.S. and international copyright laws. The content on the Sites is only for the purpose of shopping on the Sites or placing an order and for no other purpose. Any other use, including modification, reproduction, uploading, posting, transmission, or distribution in any form or by any means without Animegination's prior written permission, is strictly prohibited. All software used on the Sites is the sole property of Animegination or those supplying the software.\n      </li>\n      <p class=\"pb-3\">\n        ANIMEGINATION is a registered trademark of Animegination, Inc. In addition, graphics, logos, page headers, button icons, scripts, and service names included in or made available through the Sites are trademarks or trade dress of Animegination in the U.S. and other countries or are the property of their respective owners. All rights not expressly granted herein are reserved.\n      </p>\n    </ul>\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -315,21 +1314,12 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*!*************************************************!*\
   !*** ./src/app/about-us/about-us.component.css ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/about-us/about-us.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/about-us/about-us.component.html ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"pb-3\">About Animegination</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>\n        Animegination is a demo website written by \n        <span class=\"p6\" (click)=\"reydavid()\">Rey David</span> \n        to apply new learned technologies. \n        The website is an online retail site that specializes in Japanese animation (Anime) \n        titles and American live-action titles. The entire product inventory in the website \n        represents Rey's own private collection of entertainment media. \n        Every item found in the website exists in Rey's own library, and is not for sale. \n    </p>\n    <h4 class=\"bold\">History of Animation</h4>\n    <p>\n        The Animegination website is a Node.js application written in Angular 6, \n        Typescript and Bootstrap. The REST APIs run as an Azure App, \n        the backend database resides in Azure SQL Server, \n        and other services are hosted in Microsoft Azure. \n        In years past, <span class=\"p6\" (click)=\"reydavid()\">Rey David</span> \n        has built earlier versions of the Animegination website \n        using the latest Microsoft technologies of the time. \n        The first version was written in 2002 using Microsoft ASP.NET 2.0 technology. \n        In 2005, the website was upgraded with Silverlight technology. In 2008, \n        the website was replaced with Microsoft ASP.NET 3.5 technology. In 2012, \n        the website was rewritten with ASP.NET MVC 4 technology.  And in 2019, \n        it was repaced yet again with Angular 6, Typescript and Azure technologies. \n    </p>\n    <h4 class=\"bold\">Future of Animegination</h4>\n    <p>\n        In December 2019, <span class=\"p6\" (click)=\"reydavid()\">Rey David</span> \n        published a Hybrid Mobile App version of Animegination.  \n        Using essentially the same code base as the website (write once deploy everywhere), \n        he deployed the mobile app in both the Android and the iOS operating systems. \n        The Animegination mobile app is now available to download for free in both \n        the Google Play Store (for Android phones) and the Apple App Store (for iOS phones).  \n        Just search for the app named ANIMEGINATION.\n    </p>\n    <p> \n        In February 2013, Rey David  \n        also published a Windows 8 Application version of Animegination.  \n        The Windows 8 App may be downloaded for free from the Microsoft Store.  \n        For as long as web media and mobile media technologies evolve, \n        Animegination will continue to evolve with it. \n        <span class=\"p6\" (click)=\"reydavid()\">Rey David</span> \n        will make sure of that. \n        We look forward to the future, and the exciting new technologies that it will bring.\n    </p>\n    <h4 class=\"bold\">Disclaimer</h4>\n    <p>\n        We remind you that this is only a Demo website. \n        None of the items in the website is actually available for purchase. \n        We do not use the user information for any purpose other than demonstration. \n        Nevertheless, when entering user information, please do not enter any sensitive data.\n    </p>\n    <div class=\"pb-3\"></div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Fib3V0LXVzL2Fib3V0LXVzLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -354,6 +1344,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 var AboutUsComponent = /** @class */ (function () {
@@ -365,11 +1358,14 @@ var AboutUsComponent = /** @class */ (function () {
     AboutUsComponent.prototype.reydavid = function () {
         this.router.navigate(['/reydavid']);
     };
+    AboutUsComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }
+    ]; };
     AboutUsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-about-us',
-            template: __webpack_require__(/*! ./about-us.component.html */ "./src/app/about-us/about-us.component.html"),
-            styles: [__webpack_require__(/*! ./about-us.component.css */ "./src/app/about-us/about-us.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./about-us.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/about-us/about-us.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./about-us.component.css */ "./src/app/about-us/about-us.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], AboutUsComponent);
@@ -421,6 +1417,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -541,6 +1540,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -643,21 +1645,12 @@ var AdminModule = /** @class */ (function () {
 /*!*****************************************************************!*\
   !*** ./src/app/admin/customer-note/customer-note.component.css ***!
   \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/customer-note/customer-note.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/admin/customer-note/customer-note.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1 pb-3\">\n        <h2>Customer Communications</h2>\n        <div class=\"pb-3\"></div>\n        <ng-container *ngFor=\"let userNote of userNotes\">\n          <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-8 order-1 col-md-3 order-md-1\">\n              <strong>{{userNote?.firstName}} {{userNote?.lastName}}</strong> - {{userNote?.created | date: 'MMM d, y'}}<br />\n              {{userNote?.email}}<br />\n              {{helper.SplitCamelCase(userNote?.correspondenceType)}}\n            </div>\n            <div class=\"col-12 order-3 col-md-7 order-md-2\">\n              <strong>{{userNote?.title}}</strong><br />\n              {{userNote?.note}}\n            </div>\n            <div class=\"col-4 order-2 col-md-2 order-md-3 d-flex justify-content-end align-items-center\">\n              <span class=\"p6 px-3\" (click)=\"OnDeleteUserNote(userNote)\">Delete</span> \n            </div>\n          </div>\n        </ng-container>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2N1c3RvbWVyLW5vdGUvY3VzdG9tZXItbm90ZS5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -685,6 +1678,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -723,11 +1719,18 @@ var CustomerNoteComponent = /** @class */ (function () {
             });
         }
     };
+    CustomerNoteComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_userNotes_service__WEBPACK_IMPORTED_MODULE_1__["UserNoteService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] },
+        { type: _services_utilities_service__WEBPACK_IMPORTED_MODULE_5__["UtilityService"] }
+    ]; };
     CustomerNoteComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-customer-note',
-            template: __webpack_require__(/*! ./customer-note.component.html */ "./src/app/admin/customer-note/customer-note.component.html"),
-            styles: [__webpack_require__(/*! ./customer-note.component.css */ "./src/app/admin/customer-note/customer-note.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./customer-note.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/customer-note/customer-note.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./customer-note.component.css */ "./src/app/admin/customer-note/customer-note.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_userNotes_service__WEBPACK_IMPORTED_MODULE_1__["UserNoteService"],
@@ -746,21 +1749,12 @@ var CustomerNoteComponent = /** @class */ (function () {
 /*!*********************************************************!*\
   !*** ./src/app/admin/genre-add/genre-add.component.css ***!
   \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/genre-add/genre-add.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/admin/genre-add/genre-add.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Add New</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit(); genreForm.reset()\" #genreForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"genreName\">Genre Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"genreName\"\n                  class=\"form-control\" id=\"genreName\" \n                  [(ngModel)]=\"genreModel.CategoryName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"genreModel.Description\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"genreImage\">Image File <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"genreImage\"\n                  class=\"form-control\" id=\"genreImage\" \n                  [(ngModel)]=\"genreModel.ImageFile\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!genreForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Genre Model</div>\n      {{ genreForm.value | json }}\n      {{ genreForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !genreForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2dlbnJlLWFkZC9nZW5yZS1hZGQuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -786,6 +1780,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -815,11 +1812,16 @@ var GenreAddComponent = /** @class */ (function () {
             });
         }
     };
+    GenreAddComponent.ctorParameters = function () { return [
+        { type: _services_categories_service__WEBPACK_IMPORTED_MODULE_2__["CategoryService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     GenreAddComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-genre-add',
-            template: __webpack_require__(/*! ./genre-add.component.html */ "./src/app/admin/genre-add/genre-add.component.html"),
-            styles: [__webpack_require__(/*! ./genre-add.component.css */ "./src/app/admin/genre-add/genre-add.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./genre-add.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/genre-add/genre-add.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./genre-add.component.css */ "./src/app/admin/genre-add/genre-add.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_categories_service__WEBPACK_IMPORTED_MODULE_2__["CategoryService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
@@ -836,21 +1838,12 @@ var GenreAddComponent = /** @class */ (function () {
 /*!***********************************************************!*\
   !*** ./src/app/admin/genre-edit/genre-edit.component.css ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/genre-edit/genre-edit.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/admin/genre-edit/genre-edit.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Edit {{ genreModel?.CategoryName }}</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit()\" #genreForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"genreName\">Genre Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"genreName\"\n                  class=\"form-control\" id=\"genreName\" \n                  [(ngModel)]=\"genreModel.CategoryName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"genreModel.Description\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"imageFile\">Image File <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"imageFile\"\n                  class=\"form-control\" id=\"imageFile\" \n                  [(ngModel)]=\"genreModel.ImageFile\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!genreForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Genre Model</div>\n      {{ genreForm.value | json }}\n      {{ genreForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !genreForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2dlbnJlLWVkaXQvZ2VucmUtZWRpdC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -877,6 +1870,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -929,11 +1925,17 @@ var GenreEditComponent = /** @class */ (function () {
             });
         }
     };
+    GenreEditComponent.ctorParameters = function () { return [
+        { type: _services_categories_service__WEBPACK_IMPORTED_MODULE_2__["CategoryService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] }
+    ]; };
     GenreEditComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-genre-edit',
-            template: __webpack_require__(/*! ./genre-edit.component.html */ "./src/app/admin/genre-edit/genre-edit.component.html"),
-            styles: [__webpack_require__(/*! ./genre-edit.component.css */ "./src/app/admin/genre-edit/genre-edit.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./genre-edit.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/genre-edit/genre-edit.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./genre-edit.component.css */ "./src/app/admin/genre-edit/genre-edit.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_categories_service__WEBPACK_IMPORTED_MODULE_2__["CategoryService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
@@ -951,21 +1953,12 @@ var GenreEditComponent = /** @class */ (function () {
 /*!*************************************************!*\
   !*** ./src/app/admin/genre/genre.component.css ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/genre/genre.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/admin/genre/genre.component.html ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1 pb-3\">\n        <h2>Genres</h2>\n        <div class=\"row pt-3 pb-2\">\n          <div class=\"col-6\">\n            <span class=\"p6 py-3\" [routerLink]=\"['/genre-add']\">Create New</span>\n          </div>\n        </div>\n        <ng-container *ngFor=\"let genre of genres\">\n          <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-6 order-1 col-md-3 order-md-1\">{{genre?.CategoryName}}</div>\n            <div class=\"col-8 order-3 col-md-4 order-md-2\">{{genre?.Description}}</div>\n            <div class=\"col-6 order-2 col-md-3 order-md-3\">{{genre?.ImageFile}}</div>\n            <div class=\"col-4 order-4 col-md-2 order-md-4 d-flex justify-content-end\">\n                <span class=\"p6 px-3\" [routerLink]=\"['/genre-edit']\" \n                  [queryParams]=\"{ categoryID: genre?.CategoryID }\">Edit</span> | \n                <span class=\"p6 px-3\" (click)=\"OnDeleteGenre(genre)\">Delete</span> \n            </div>\n          </div>\n        </ng-container>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2dlbnJlL2dlbnJlLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -992,6 +1985,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1026,11 +2022,17 @@ var GenreComponent = /** @class */ (function () {
             });
         }
     };
+    GenreComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_categories_service__WEBPACK_IMPORTED_MODULE_1__["CategoryService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     GenreComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-genre',
-            template: __webpack_require__(/*! ./genre.component.html */ "./src/app/admin/genre/genre.component.html"),
-            styles: [__webpack_require__(/*! ./genre.component.css */ "./src/app/admin/genre/genre.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./genre.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/genre/genre.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./genre.component.css */ "./src/app/admin/genre/genre.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_categories_service__WEBPACK_IMPORTED_MODULE_1__["CategoryService"],
@@ -1048,21 +2050,12 @@ var GenreComponent = /** @class */ (function () {
 /*!*********************************************************!*\
   !*** ./src/app/admin/list-type/list-type.component.css ***!
   \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/list-type/list-type.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/admin/list-type/list-type.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1 pb-3\">\n      <h2>List Types</h2>\n      <div class=\"pb-3\"></div>\n      <ng-container *ngFor=\"let listType of listTypes\">\n        <div class=\"row p-2 my-2 all-borders-black\">\n          <div class=\"col-2\">{{listType?.ListTypeID}}</div>\n          <div class=\"col-3\">{{listType?.ListTypeName}}</div>\n          <div class=\"col-5\">{{listType?.Description}}</div>\n          <div class=\"col-2 d-flex justify-content-end\">\n              <span class=\"p6 px-3\" [routerLink]=\"['/list-type-edit']\" \n                [queryParams]=\"{ listTypeID: listType?.listTypeID }\">Edit</span> \n          </div>\n        </div>\n      </ng-container>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2xpc3QtdHlwZS9saXN0LXR5cGUuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1089,6 +2082,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -1110,11 +2106,16 @@ var ListTypeComponent = /** @class */ (function () {
     ListTypeComponent.prototype.OnEditListType = function (listType) {
         this.router.navigate(['/list-type-edit'], { queryParams: { listTypeID: listType.ListTypeID } });
     };
+    ListTypeComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_listtypes_service__WEBPACK_IMPORTED_MODULE_1__["ListTypeService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     ListTypeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-list-type',
-            template: __webpack_require__(/*! ./list-type.component.html */ "./src/app/admin/list-type/list-type.component.html"),
-            styles: [__webpack_require__(/*! ./list-type.component.css */ "./src/app/admin/list-type/list-type.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./list-type.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/list-type/list-type.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./list-type.component.css */ "./src/app/admin/list-type/list-type.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_listtypes_service__WEBPACK_IMPORTED_MODULE_1__["ListTypeService"],
@@ -1131,21 +2132,12 @@ var ListTypeComponent = /** @class */ (function () {
 /*!*************************************************************!*\
   !*** ./src/app/admin/listing-add/listing-add.component.css ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "\r\ninput.dp-picker-input {\r\n    display: block;\r\n    width: 100%;\r\n    height: calc(2.25rem + 2px);\r\n    padding: .375rem .75rem;\r\n    font-size: 1rem;\r\n    line-height: 1.5;\r\n    color: #495057;\r\n    background-color: #fff;\r\n    background-clip: padding-box;\r\n    border: 1px solid #ced4da;\r\n    border-radius: .25rem;\r\n    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;    \r\n}\r\n\r\n.control-mb {\r\n    margin-bottom: .5rem;\r\n}"
-
-/***/ }),
-
-/***/ "./src/app/admin/listing-add/listing-add.component.html":
-/*!**************************************************************!*\
-  !*** ./src/app/admin/listing-add/listing-add.component.html ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1\">\n\n  <h2>Add New</h2>\n  <div class=\"py-1\"></div>\n\n  <form (submit)=\"onSubmit(); listingForm.reset()\" #listingForm=\"ngForm\">\n\n      <div class=\"form-group\">\n          <label for=\"listType\">List Type</label>\n          <!-- <select (change)=\"selectListType($event.target.value)\"  -->\n          <select [(ngModel)]=\"listing.ListTypeID\" \n            class=\"form-control\" id=\"listType\" name=\"listType\">\n              <option *ngFor=\"let listType of listTypes\" \n                  value={{listType.ListTypeID}} \n                  [selected]=\"listing.ListingTypeID == listType.ListTypeID\">\n                      {{listType.Description}}\n              </option>\n          </select>\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"rank\">Position <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"1\" max=\"20\" step=\"1\" required\n              name=\"rank\"\n              class=\"form-control\" id=\"rank\" \n              [(ngModel)]=\"listing.Rank\" />\n      </div>\n\n      <div class=\"form-group\">\n          <label for=\"product\">Product</label>\n          <!-- <select (change)=\"selectProduct($event.target.value)\"  -->\n          <select [(ngModel)]=\"listing.ProductID\" \n            class=\"form-control\" id=\"product\" name=\"product\">\n              <option *ngFor=\"let product of products\" \n                  value={{product.ProductID}} \n                  [selected]=\"listing.ProductID == product.ProductID\">\n                      {{product.ProductTitle}}\n              </option>\n          </select>\n      </div>\n\n      <!-- <div class=\"form-group\">\n          <div class=\"control-mb\">Effective Date <span class=\"anime-color\">*</span></div>\n          <div>\n            <dp-date-picker #effectiveDatePicker \n              name=\"effectiveDatePicker\" [mode]=\"'day'\"\n              [config]=\"datePickerConfig\" \n              (onChange)=\"onEffectiveDateChange($event)\" \n              required>\n            </dp-date-picker>\n            <button class=\"hidden\" (click)=\"open()\"></button> \n            <button class=\"hidden\" (click)=\"close()\"></button>\n          </div>\n      </div> -->\n\n      <div class=\"form-group\">\n        <label for=\"effectivDatePicker\">Effective Date <span class=\"anime-color\">*</span></label>\n        <input name=\"effectivDatePicker\" required \n              class=\"form-control\" id=\"effectivDatePicker\" \n              [theme]=\"'dp-material'\" \n              [dpDayPicker]=\"datePickerConfig\"\n              [(ngModel)]=\"dateEffective\" />\n      </div>\n\n      <div class=\"form-group\">\n        <label for=\"expirationDatePicker\">Expiration Date <span class=\"anime-color\">*</span></label>\n        <input name=\"expirationDatePicker\" required \n              class=\"form-control\" id=\"expirationDatePicker\" \n              [theme]=\"'dp-material'\" \n              [dpDayPicker]=\"datePickerConfig\"\n              [(ngModel)]=\"dateExpiration\" />\n      </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!listingForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Listing Model</div>\n      {{ listingForm.value | json }}\n      {{ listingForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !listingForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\ninput.dp-picker-input {\r\n    display: block;\r\n    width: 100%;\r\n    height: calc(2.25rem + 2px);\r\n    padding: .375rem .75rem;\r\n    font-size: 1rem;\r\n    line-height: 1.5;\r\n    color: #495057;\r\n    background-color: #fff;\r\n    background-clip: padding-box;\r\n    border: 1px solid #ced4da;\r\n    border-radius: .25rem;\r\n    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;\r\n    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;    \r\n}\r\n\r\n.control-mb {\r\n    margin-bottom: .5rem;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4vbGlzdGluZy1hZGQvbGlzdGluZy1hZGQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxjQUFjO0lBQ2QsV0FBVztJQUNYLDJCQUEyQjtJQUMzQix1QkFBdUI7SUFDdkIsZUFBZTtJQUNmLGdCQUFnQjtJQUNoQixjQUFjO0lBQ2Qsc0JBQXNCO0lBQ3RCLDRCQUE0QjtJQUM1Qix5QkFBeUI7SUFDekIscUJBQXFCO0lBQ3JCLDZFQUFxRTtJQUFyRSxxRUFBcUU7QUFDekU7O0FBRUE7SUFDSSxvQkFBb0I7QUFDeEIiLCJmaWxlIjoic3JjL2FwcC9hZG1pbi9saXN0aW5nLWFkZC9saXN0aW5nLWFkZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbmlucHV0LmRwLXBpY2tlci1pbnB1dCB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgaGVpZ2h0OiBjYWxjKDIuMjVyZW0gKyAycHgpO1xyXG4gICAgcGFkZGluZzogLjM3NXJlbSAuNzVyZW07XHJcbiAgICBmb250LXNpemU6IDFyZW07XHJcbiAgICBsaW5lLWhlaWdodDogMS41O1xyXG4gICAgY29sb3I6ICM0OTUwNTc7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xyXG4gICAgYmFja2dyb3VuZC1jbGlwOiBwYWRkaW5nLWJveDtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICNjZWQ0ZGE7XHJcbiAgICBib3JkZXItcmFkaXVzOiAuMjVyZW07XHJcbiAgICB0cmFuc2l0aW9uOiBib3JkZXItY29sb3IgLjE1cyBlYXNlLWluLW91dCxib3gtc2hhZG93IC4xNXMgZWFzZS1pbi1vdXQ7ICAgIFxyXG59XHJcblxyXG4uY29udHJvbC1tYiB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAuNXJlbTtcclxufSJdfQ== */");
 
 /***/ }),
 
@@ -1174,6 +2166,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1250,15 +2245,22 @@ var ListingAddComponent = /** @class */ (function () {
             });
         }
     };
+    ListingAddComponent.ctorParameters = function () { return [
+        { type: _services_listings_service__WEBPACK_IMPORTED_MODULE_4__["ListingService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_2__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] },
+        { type: _services_products_service__WEBPACK_IMPORTED_MODULE_6__["ProductsService"] },
+        { type: _services_listtypes_service__WEBPACK_IMPORTED_MODULE_5__["ListTypeService"] }
+    ]; };
     __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('effectiveDatePicker'),
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('effectiveDatePicker', { static: false }),
         __metadata("design:type", ng2_date_picker__WEBPACK_IMPORTED_MODULE_1__["DatePickerComponent"])
     ], ListingAddComponent.prototype, "effDatePicker", void 0);
     ListingAddComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-listing-add',
-            template: __webpack_require__(/*! ./listing-add.component.html */ "./src/app/admin/listing-add/listing-add.component.html"),
-            styles: [__webpack_require__(/*! ./listing-add.component.css */ "./src/app/admin/listing-add/listing-add.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./listing-add.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/listing-add/listing-add.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./listing-add.component.css */ "./src/app/admin/listing-add/listing-add.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_listings_service__WEBPACK_IMPORTED_MODULE_4__["ListingService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_2__["SessionService"],
@@ -1277,21 +2279,12 @@ var ListingAddComponent = /** @class */ (function () {
 /*!***************************************************************!*\
   !*** ./src/app/admin/listing-edit/listing-edit.component.css ***!
   \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/listing-edit/listing-edit.component.html":
-/*!****************************************************************!*\
-  !*** ./src/app/admin/listing-edit/listing-edit.component.html ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n  \n    <h2>\n      <img src=\"https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg\"\n        alt=\"{{product?.ProductCode}}\" class=\"image-min mr-4\" />\n      Editing {{product?.ProductTitle}} </h2>\n    <div class=\"py-1\"></div>\n    \n    <form (submit)=\"onSubmit(); listingForm.reset()\" #listingForm=\"ngForm\">\n  \n        <div class=\"form-group\">\n            <label for=\"listType\">List Type</label>\n            <!-- <select (change)=\"selectListType($event.target.value)\"  -->\n            <select [(ngModel)]=\"listing.ListTypeID\" \n              class=\"form-control\" id=\"listType\" name=\"listType\">\n                <option *ngFor=\"let listType of listTypes\" \n                    value={{listType.ListTypeID}} \n                    [selected]=\"listing.ListingTypeID == listType.ListTypeID\">\n                        {{listType.Description}}\n                </option>\n            </select>\n        </div>\n  \n        <div class=\"form-group\">\n          <label for=\"rank\">Position <span class=\"anime-color\">*</span></label>\n          <input type=\"number\" min=\"1\" max=\"20\" step=\"1\" required\n                name=\"rank\"\n                class=\"form-control\" id=\"rank\" \n                [(ngModel)]=\"listing.Rank\" />\n        </div>\n  \n        <div class=\"form-group\">\n            <label for=\"product\">Product</label>\n            <!-- <select (change)=\"selectProduct($event.target.value)\"  -->\n            <select [(ngModel)]=\"listing.ProductID\" \n              class=\"form-control\" id=\"product\" name=\"product\">\n                <option *ngFor=\"let product of products\" \n                    value={{product.ProductID}} \n                    [selected]=\"listing.ProductID == product.ProductID\">\n                        {{product.ProductTitle}}\n                </option>\n            </select>\n        </div>\n \n        <!-- <div class=\"form-group\">\n            <div class=\"control-mb\">Effective Date <span class=\"anime-color\">*</span></div>\n            <div>\n              <dp-date-picker #effectiveDatePicker \n                name=\"effectiveDatePicker\" [mode]=\"'day'\"\n                [config]=\"datePickerConfig\" \n                (onChange)=\"onEffectiveDateChange($event)\" \n                required>\n              </dp-date-picker>\n              <button class=\"hidden\" (click)=\"open()\"></button> \n              <button class=\"hidden\" (click)=\"close()\"></button>\n            </div>\n        </div> -->\n  \n        <div class=\"form-group\">\n          <label for=\"effectivDatePicker\">Effective Date <span class=\"anime-color\">*</span></label>\n          <input name=\"effectivDatePicker\" required \n                class=\"form-control\" id=\"effectivDatePicker\" \n                [theme]=\"'dp-material'\" \n                [dpDayPicker]=\"datePickerConfig\"\n                [(ngModel)]=\"listing.Effective\" />\n        </div>\n  \n        <div class=\"form-group\">\n          <label for=\"expirationDatePicker\">Expiration Date <span class=\"anime-color\">*</span></label>\n          <input name=\"expirationDatePicker\" required \n                class=\"form-control\" id=\"expirationDatePicker\" \n                [theme]=\"'dp-material'\" \n                [dpDayPicker]=\"datePickerConfig\"\n                [(ngModel)]=\"listing.Expiration\" />\n        </div>\n  \n        <div class=\"py-3\">\n            <button class=\"btn btn-block anime-button-lg font-em-10\" \n              type=\"submit\"\n              [disabled]=\"!listingForm.valid\">Submit\n            </button>\n        </div>\n  \n        <div>Listing Model</div>\n          {{ listingForm.value | json }}\n          {{ listingForm.valid }}\n    \n        <div class=\"pb-3\"></div>\n        <div *ngIf=\"submitted && !listingForm.valid\" class=\"alert alert-success pb-3\">\n            Your message was successfully submitted.  Thank you.\n        </div>\n   </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2xpc3RpbmctZWRpdC9saXN0aW5nLWVkaXQuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1323,6 +2316,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1427,11 +2423,20 @@ var ListingEditComponent = /** @class */ (function () {
             });
         }
     };
+    ListingEditComponent.ctorParameters = function () { return [
+        { type: _services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_2__["MessageService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] },
+        { type: _services_products_service__WEBPACK_IMPORTED_MODULE_5__["ProductsService"] },
+        { type: _services_listtypes_service__WEBPACK_IMPORTED_MODULE_4__["ListTypeService"] },
+        { type: _services_utilities_service__WEBPACK_IMPORTED_MODULE_7__["UtilityService"] }
+    ]; };
     ListingEditComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-listing-edit',
-            template: __webpack_require__(/*! ./listing-edit.component.html */ "./src/app/admin/listing-edit/listing-edit.component.html"),
-            styles: [__webpack_require__(/*! ./listing-edit.component.css */ "./src/app/admin/listing-edit/listing-edit.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./listing-edit.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/listing-edit/listing-edit.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./listing-edit.component.css */ "./src/app/admin/listing-edit/listing-edit.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_listings_service__WEBPACK_IMPORTED_MODULE_3__["ListingService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
@@ -1452,21 +2457,12 @@ var ListingEditComponent = /** @class */ (function () {
 /*!*****************************************************!*\
   !*** ./src/app/admin/listing/listing.component.css ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/listing/listing.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/admin/listing/listing.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1 pb-3\">\n      <h2>Listings</h2>\n      <div class=\"row pt-3 pb-2\">\n        <div class=\"col-6\">\n          <span class=\"p6 py-3\" [routerLink]=\"['/listing-add']\">Create New</span>\n        </div>\n      </div>\n      <ng-container *ngFor=\"let listing of listings\">\n        <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-8\">\n                <img src=\"https://reydavid.blob.core.windows.net/anime/{{listing?.ProductCode}}.jpg\"\n                  alt=\"{{listing?.ProductCode}}\" class=\"float-left image-min mr-4\" />\n\n                <div>List: <strong class=\"anime-color\">{{listing?.ListingTypeDescription}}</strong></div>\n                <div>Position: <strong>{{listing?.Rank}}</strong></div>\n                <div>From: <strong class=\"pr-3\">{{listing?.EffectiveDate | date: 'MMM d, y'}}</strong> \n                  To: <strong>{{listing?.Expiration | date: 'MMM d, y'}}</strong></div>\n                <div>Title: <strong>{{listing.ProductTitle}}</strong></div>\n            </div>\n            <div class=\"col-4 d-flex justify-content-end align-items-center\">\n              <span class=\"p6 px-3\" [routerLink]=\"['/listing-edit']\" \n                [queryParams]=\"{ listingID: listing?.ListingID }\">Edit</span> | \n              <span class=\"p6 px-3\" (click)=\"OnDeleteListing(listing)\">Delete</span> \n            </div>\n          </div>\n      </ng-container>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL2xpc3RpbmcvbGlzdGluZy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -1493,6 +2489,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1526,11 +2525,17 @@ var ListingComponent = /** @class */ (function () {
             });
         }
     };
+    ListingComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_listings_service__WEBPACK_IMPORTED_MODULE_1__["ListingService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     ListingComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-listing',
-            template: __webpack_require__(/*! ./listing.component.html */ "./src/app/admin/listing/listing.component.html"),
-            styles: [__webpack_require__(/*! ./listing.component.css */ "./src/app/admin/listing/listing.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./listing.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/listing/listing.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./listing.component.css */ "./src/app/admin/listing/listing.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_listings_service__WEBPACK_IMPORTED_MODULE_1__["ListingService"],
@@ -1548,21 +2553,12 @@ var ListingComponent = /** @class */ (function () {
 /*!***********************************************************!*\
   !*** ./src/app/admin/medium-add/medium-add.component.css ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/medium-add/medium-add.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/admin/medium-add/medium-add.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Add New</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit(); mediumForm.reset()\" #mediumForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"mediumName\">Medium Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"mediumName\"\n                  class=\"form-control\" id=\"mediumName\" \n                  [(ngModel)]=\"mediumModel.MediumName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"mediumModel.Description\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!mediumForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Medium Model</div>\n      {{ mediumForm.value | json }}\n      {{ mediumForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !mediumForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL21lZGl1bS1hZGQvbWVkaXVtLWFkZC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -1588,6 +2584,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1617,11 +2616,16 @@ var MediumAddComponent = /** @class */ (function () {
             });
         }
     };
+    MediumAddComponent.ctorParameters = function () { return [
+        { type: _services_media_service__WEBPACK_IMPORTED_MODULE_2__["MediaService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     MediumAddComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-medium-add',
-            template: __webpack_require__(/*! ./medium-add.component.html */ "./src/app/admin/medium-add/medium-add.component.html"),
-            styles: [__webpack_require__(/*! ./medium-add.component.css */ "./src/app/admin/medium-add/medium-add.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./medium-add.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/medium-add/medium-add.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./medium-add.component.css */ "./src/app/admin/medium-add/medium-add.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_media_service__WEBPACK_IMPORTED_MODULE_2__["MediaService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
@@ -1638,21 +2642,12 @@ var MediumAddComponent = /** @class */ (function () {
 /*!*************************************************************!*\
   !*** ./src/app/admin/medium-edit/medium-edit.component.css ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/medium-edit/medium-edit.component.html":
-/*!**************************************************************!*\
-  !*** ./src/app/admin/medium-edit/medium-edit.component.html ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Edit {{ mediumModel?.MediumName }}</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit()\" #mediumForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"mediumName\">Medium Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"mediumName\"\n                  class=\"form-control\" id=\"mediumName\" \n                  [(ngModel)]=\"mediumModel.MediumName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"mediumModel.Description\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!mediumForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Medium Model</div>\n      {{ mediumForm.value | json }}\n      {{ mediumForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !mediumForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL21lZGl1bS1lZGl0L21lZGl1bS1lZGl0LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -1679,6 +2674,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1730,11 +2728,17 @@ var MediumEditComponent = /** @class */ (function () {
             });
         }
     };
+    MediumEditComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
+        { type: _services_media_service__WEBPACK_IMPORTED_MODULE_2__["MediaService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     MediumEditComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-medium-edit',
-            template: __webpack_require__(/*! ./medium-edit.component.html */ "./src/app/admin/medium-edit/medium-edit.component.html"),
-            styles: [__webpack_require__(/*! ./medium-edit.component.css */ "./src/app/admin/medium-edit/medium-edit.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./medium-edit.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/medium-edit/medium-edit.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./medium-edit.component.css */ "./src/app/admin/medium-edit/medium-edit.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
             _services_media_service__WEBPACK_IMPORTED_MODULE_2__["MediaService"],
@@ -1752,21 +2756,12 @@ var MediumEditComponent = /** @class */ (function () {
 /*!***************************************************!*\
   !*** ./src/app/admin/medium/medium.component.css ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/medium/medium.component.html":
-/*!****************************************************!*\
-  !*** ./src/app/admin/medium/medium.component.html ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1 pb-3\">\n        <h2>Media Types</h2>\n        <div class=\"row pt-3 pb-2\">\n          <div class=\"col-6\">\n            <span class=\"p6 py-3\" [routerLink]=\"['/medium-add']\">Create New</span>\n          </div>\n        </div>\n        <ng-container *ngFor=\"let medium of media\">\n          <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-3\">{{medium?.MediumName}}</div>\n            <div class=\"col-6\">{{medium?.Description}}</div>\n            <div class=\"col-3 d-flex justify-content-end\">\n                <span class=\"p6 px-3\" [routerLink]=\"['/medium-edit']\" \n                  [queryParams]=\"{ mediumID: medium?.MediumID }\">Edit</span> | \n                <span class=\"p6 px-3\" (click)=\"OnDeleteMedium(medium)\">Delete</span> \n            </div>\n          </div>\n        </ng-container>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL21lZGl1bS9tZWRpdW0uY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -1793,6 +2788,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1826,11 +2824,17 @@ var MediumComponent = /** @class */ (function () {
             });
         }
     };
+    MediumComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_media_service__WEBPACK_IMPORTED_MODULE_1__["MediaService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     MediumComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-medium',
-            template: __webpack_require__(/*! ./medium.component.html */ "./src/app/admin/medium/medium.component.html"),
-            styles: [__webpack_require__(/*! ./medium.component.css */ "./src/app/admin/medium/medium.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./medium.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/medium/medium.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./medium.component.css */ "./src/app/admin/medium/medium.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_media_service__WEBPACK_IMPORTED_MODULE_1__["MediaService"],
@@ -1848,21 +2852,12 @@ var MediumComponent = /** @class */ (function () {
 /*!***********************************************************************!*\
   !*** ./src/app/admin/product-info-add/product-info-add.component.css ***!
   \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/product-info-add/product-info-add.component.html":
-/*!************************************************************************!*\
-  !*** ./src/app/admin/product-info-add/product-info-add.component.html ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1\">\n\n  <h2>Add New</h2>\n  <div class=\"py-1\"></div>\n\n  <form (submit)=\"onSubmit()\" #productForm=\"ngForm\">\n      <div class=\"form-group\">\n          <label for=\"productcode\">Code <span class=\"anime-color\">*</span></label>\n          <input type=\"text\" required\n                name=\"productcode\"\n                class=\"form-control\" id=\"productcode\" \n                [(ngModel)]=\"product.productcode\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"producttitle\">Title <span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"producttitle\"\n              class=\"form-control\" id=\"producttitle\" \n              [(ngModel)]=\"product.producttitle\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productdescription\">Description <span class=\"anime-color\">*</span></label>\n        <textarea rows=\"5\" required\n              name=\"productdescription\"\n              class=\"form-control\" id=\"productdescription\" \n              [(ngModel)]=\"product.productdescription\">\n        </textarea>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"unitprice\">Unit Price <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"1000\" required\n              name=\"unitprice\"\n              class=\"form-control\" id=\"unitprice\" \n              [(ngModel)]=\"product.unitprice\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"yourprice\">Your Price <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"1000\" required\n              name=\"yourprice\"\n              class=\"form-control\" id=\"yourprice\" \n              [(ngModel)]=\"product.yourprice\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"genre\">Genre</label>\n        <select (change)=\"selectGenre($event.target.value)\" \n          class=\"form-control\" id=\"genre\" name=\"genre\">\n            <option *ngFor=\"let genre of genres\" \n                value={{genre.CategoryID}} \n                [selected]=\"genre.CategoryID == product.categoryid\">\n                    {{genre.CategoryName}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productagerating\">Age Rating <span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"productagerating\"\n              class=\"form-control\" id=\"productagerating\" \n              [(ngModel)]=\"product.productagerating\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productlength\">Length <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"1\" max=\"600\" required\n              name=\"productlength\"\n              class=\"form-control\" id=\"productlength\" \n              [(ngModel)]=\"product.productlength\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productyearcreated\">Year Created <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"1950\" max=\"2050\" required\n              name=\"productyearcreated\"\n              class=\"form-control\" id=\"productyearcreated\" \n              [(ngModel)]=\"product.productyearcreated\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"medium\">Medium</label>\n        <select (change)=\"selectMedium($event.target.value)\" \n          class=\"form-control\" id=\"medium\" name=\"medium\">\n            <option *ngFor=\"let medium of media\" \n                value={{medium.MediumID}} \n                [selected]=\"medium.MediumID == product.mediumid\">\n                    {{medium.Description}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"publisher\">Publisher</label>\n        <select (change)=\"selectPublisher($event.target.value)\" \n          class=\"form-control\" id=\"publisher\" name=\"publisher\">\n            <option *ngFor=\"let publisher of publishers\" \n                value={{publisher.PublisherID}} \n                [selected]=\"publisher.PublisherID == product.publisherid\">\n                    {{publisher.PublisherName}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productimageurl\">Image URL <span class=\"anime-color\">*</span></label>\n        <input type=\"text\" \n              name=\"productimageurl\"\n              class=\"form-control\" id=\"productimageurl\" \n              [(ngModel)]=\"product.productimageurl\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"ratingid\">Rating <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"5\" step=\"1\" required\n              name=\"ratingid\"\n              class=\"form-control\" id=\"ratingid\" \n              [(ngModel)]=\"product.ratingid\" />\n      </div>\n\n      <div class=\"py-3\">\n        <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!productForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Product Model</div>\n      {{ productForm.value | json }}\n      {{ productForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !productForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3Byb2R1Y3QtaW5mby1hZGQvcHJvZHVjdC1pbmZvLWFkZC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -1891,6 +2886,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -1963,11 +2961,19 @@ var ProductInfoAddComponent = /** @class */ (function () {
             });
         }
     };
+    ProductInfoAddComponent.ctorParameters = function () { return [
+        { type: _services_products_service__WEBPACK_IMPORTED_MODULE_2__["ProductsService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] },
+        { type: _services_categories_service__WEBPACK_IMPORTED_MODULE_6__["CategoryService"] },
+        { type: _services_media_service__WEBPACK_IMPORTED_MODULE_5__["MediaService"] },
+        { type: _services_publishers_service__WEBPACK_IMPORTED_MODULE_4__["PublishersService"] }
+    ]; };
     ProductInfoAddComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-product-info-add',
-            template: __webpack_require__(/*! ./product-info-add.component.html */ "./src/app/admin/product-info-add/product-info-add.component.html"),
-            styles: [__webpack_require__(/*! ./product-info-add.component.css */ "./src/app/admin/product-info-add/product-info-add.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./product-info-add.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/product-info-add/product-info-add.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./product-info-add.component.css */ "./src/app/admin/product-info-add/product-info-add.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_products_service__WEBPACK_IMPORTED_MODULE_2__["ProductsService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
@@ -1987,21 +2993,12 @@ var ProductInfoAddComponent = /** @class */ (function () {
 /*!*************************************************************************!*\
   !*** ./src/app/admin/product-info-edit/product-info-edit.component.css ***!
   \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/product-info-edit/product-info-edit.component.html":
-/*!**************************************************************************!*\
-  !*** ./src/app/admin/product-info-edit/product-info-edit.component.html ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1\">\n\n  <h2>Edit product: {{ product.productcode }}</h2>\n  <div class=\"py-1\"></div>\n\n  <form (submit)=\"onSubmit()\" #productForm=\"ngForm\">\n    <div class=\"form-group\">\n      <label for=\"productcode\">Code <span class=\"anime-color\">*</span></label>\n      <input type=\"text\" required\n            name=\"productcode\"\n            class=\"form-control\" id=\"productcode\" \n            [(ngModel)]=\"product.productcode\" />\n    </div>\n    <div class=\"form-group\">\n          <label for=\"producttitle\">Title <span class=\"anime-color\">*</span></label>\n          <input type=\"text\" required\n                name=\"producttitle\"\n                class=\"form-control\" id=\"producttitle\" \n                [(ngModel)]=\"product.producttitle\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productdescription\">Description <span class=\"anime-color\">*</span></label>\n        <textarea rows=\"10\" required\n              name=\"productdescription\"\n              class=\"form-control\" id=\"productdescription\" \n              [(ngModel)]=\"product.productdescription\">\n        </textarea>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"unitprice\">Unit Price <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"1000\" required\n              name=\"unitprice\"\n              class=\"form-control\" id=\"unitprice\" \n              [(ngModel)]=\"product.unitprice\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"yourprice\">Your Price <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"1000\" required\n              name=\"yourprice\"\n              class=\"form-control\" id=\"yourprice\" \n              [(ngModel)]=\"product.yourprice\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"genre\">Genre</label>\n        <select (change)=\"selectGenre($event.target.value)\" \n          class=\"form-control\" id=\"genre\" name=\"genre\">\n            <option *ngFor=\"let genre of genres\" \n                value={{genre.CategoryID}} \n                [selected]=\"genre.CategoryID == product.categoryid\">\n                    {{genre.CategoryName}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productagerating\">Age Rating <span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"productagerating\"\n              class=\"form-control\" id=\"productagerating\" \n              [(ngModel)]=\"product.productagerating\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productlength\">Length <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"1\" max=\"600\" required\n              name=\"productlength\"\n              class=\"form-control\" id=\"productlength\" \n              [(ngModel)]=\"product.productlength\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"productyearcreated\">Year Created <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"1950\" max=\"2050\" required\n              name=\"productyearcreated\"\n              class=\"form-control\" id=\"productyearcreated\" \n              [(ngModel)]=\"product.productyearcreated\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"medium\">Medium</label>\n        <select (change)=\"selectMedium($event.target.value)\" \n          class=\"form-control\" id=\"medium\" name=\"medium\">\n            <option *ngFor=\"let medium of media\" \n                value={{medium.MediumID}} \n                [selected]=\"medium.MediumID == product.mediumid\">\n                    {{medium.Description}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"publisher\">Publisher</label>\n        <select (change)=\"selectPublisher($event.target.value)\" \n          class=\"form-control\" id=\"publisher\" name=\"publisher\">\n            <option *ngFor=\"let publisher of publishers\" \n                value={{publisher.PublisherID}} \n                [selected]=\"publisher.PublisherID == product.publisherid\">\n                    {{publisher.PublisherName}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"ratingid\">Rating <span class=\"anime-color\">*</span></label>\n        <input type=\"number\" min=\"0\" max=\"5\" step=\"1\" required\n              name=\"ratingid\"\n              class=\"form-control\" id=\"ratingid\" \n              [(ngModel)]=\"product.ratingid\" />\n      </div>\n\n      <div class=\"py-3\">\n        <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!productForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Product Model</div>\n      {{ productForm.value | json }}\n      {{ productForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !productForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3Byb2R1Y3QtaW5mby1lZGl0L3Byb2R1Y3QtaW5mby1lZGl0LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -2031,6 +3028,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -2145,11 +3145,20 @@ var ProductInfoEditComponent = /** @class */ (function () {
             });
         }
     };
+    ProductInfoEditComponent.ctorParameters = function () { return [
+        { type: _services_products_service__WEBPACK_IMPORTED_MODULE_2__["ProductsService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] },
+        { type: _services_categories_service__WEBPACK_IMPORTED_MODULE_7__["CategoryService"] },
+        { type: _services_media_service__WEBPACK_IMPORTED_MODULE_6__["MediaService"] },
+        { type: _services_publishers_service__WEBPACK_IMPORTED_MODULE_5__["PublishersService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] }
+    ]; };
     ProductInfoEditComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-product-info-edit',
-            template: __webpack_require__(/*! ./product-info-edit.component.html */ "./src/app/admin/product-info-edit/product-info-edit.component.html"),
-            styles: [__webpack_require__(/*! ./product-info-edit.component.css */ "./src/app/admin/product-info-edit/product-info-edit.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./product-info-edit.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/product-info-edit/product-info-edit.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./product-info-edit.component.css */ "./src/app/admin/product-info-edit/product-info-edit.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_products_service__WEBPACK_IMPORTED_MODULE_2__["ProductsService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
@@ -2170,21 +3179,12 @@ var ProductInfoEditComponent = /** @class */ (function () {
 /*!***************************************************************!*\
   !*** ./src/app/admin/product-info/product-info.component.css ***!
   \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/product-info/product-info.component.html":
-/*!****************************************************************!*\
-  !*** ./src/app/admin/product-info/product-info.component.html ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"bgc-gray vertical-scroll\">\n  <h2 class=\"child anime-orig-color\">Products</h2>\n  <div class=\"row pt-3 pb-2\">\n    <div class=\"col-6\">\n      <span class=\"p6 py-3\" [routerLink]=\"['/product-info-add']\">Create New</span>\n    </div>\n  </div>\n  <ul class=\"list-inline\">\n      <li *ngFor=\"let product of products\" class=\"li-child\"\n        [routerLink]=\"['/product-info-edit']\" [queryParams]=\"{ productID: product?.ProductID }\">\n          <a>\n              <div class=\"card frame card-max\">\n                  <img class=\"card-img-top image-max\" \n                       src=\"https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg\"\n                       alt=\"{{product?.ProductCode}}\" />\n                  <div class=\"card-body\">\n                      <div class=\"card-title bold anime-color\">{{product?.ProductTitle}}</div>\n                      <div>{{product?.MediumName}} ({{product?.ProductYearCreated}})</div>\n                      <div>{{product?.ProductLength}} minutes</div>\n                      <div class=\"tiny-gray\">Item: {{product?.ProductCode}}</div>\n                      <div class=\"p6 pt-2\" (click)=\"OnDeleteProduct(product)\">Delete</div>\n                  </div>\n              </div>\n          </a>\n      </li>\n  </ul>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3Byb2R1Y3QtaW5mby9wcm9kdWN0LWluZm8uY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -2211,6 +3211,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -2246,11 +3249,17 @@ var ProductInfoComponent = /** @class */ (function () {
             });
         }
     };
+    ProductInfoComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_products_service__WEBPACK_IMPORTED_MODULE_1__["ProductsService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     ProductInfoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-product-info',
-            template: __webpack_require__(/*! ./product-info.component.html */ "./src/app/admin/product-info/product-info.component.html"),
-            styles: [__webpack_require__(/*! ./product-info.component.css */ "./src/app/admin/product-info/product-info.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./product-info.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/product-info/product-info.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./product-info.component.css */ "./src/app/admin/product-info/product-info.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_products_service__WEBPACK_IMPORTED_MODULE_1__["ProductsService"],
@@ -2268,21 +3277,12 @@ var ProductInfoComponent = /** @class */ (function () {
 /*!*****************************************************************!*\
   !*** ./src/app/admin/publisher-add/publisher-add.component.css ***!
   \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/publisher-add/publisher-add.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/admin/publisher-add/publisher-add.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Add New</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit(); publisherForm.reset()\" #publisherForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"publisherName\">Publisher Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"publisherName\"\n                  class=\"form-control\" id=\"publisherName\" \n                  [(ngModel)]=\"publisherModel.PublisherName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"publisherModel.Description\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!publisherForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Publisher Model</div>\n      {{ publisherForm.value | json }}\n      {{ publisherForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !publisherForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3B1Ymxpc2hlci1hZGQvcHVibGlzaGVyLWFkZC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -2308,6 +3308,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -2337,11 +3340,16 @@ var PublisherAddComponent = /** @class */ (function () {
             });
         }
     };
+    PublisherAddComponent.ctorParameters = function () { return [
+        { type: _services_publishers_service__WEBPACK_IMPORTED_MODULE_2__["PublishersService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     PublisherAddComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-publisher-add',
-            template: __webpack_require__(/*! ./publisher-add.component.html */ "./src/app/admin/publisher-add/publisher-add.component.html"),
-            styles: [__webpack_require__(/*! ./publisher-add.component.css */ "./src/app/admin/publisher-add/publisher-add.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./publisher-add.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/publisher-add/publisher-add.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./publisher-add.component.css */ "./src/app/admin/publisher-add/publisher-add.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_publishers_service__WEBPACK_IMPORTED_MODULE_2__["PublishersService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
@@ -2358,21 +3366,12 @@ var PublisherAddComponent = /** @class */ (function () {
 /*!*******************************************************************!*\
   !*** ./src/app/admin/publisher-edit/publisher-edit.component.css ***!
   \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/publisher-edit/publisher-edit.component.html":
-/*!********************************************************************!*\
-  !*** ./src/app/admin/publisher-edit/publisher-edit.component.html ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Edit {{ publisherModel?.PublisherName }}</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit()\" #publisherForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"publisherName\">Publisher Name <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"publisherName\"\n                  class=\"form-control\" id=\"publisherName\" \n                  [(ngModel)]=\"publisherModel.PublisherName\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"description\">Description <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"description\"\n                  class=\"form-control\" id=\"description\" \n                  [(ngModel)]=\"publisherModel.Description\" />\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!publisherForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Publisher Model</div>\n      {{ publisherForm.value | json }}\n      {{ publisherForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !publisherForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3B1Ymxpc2hlci1lZGl0L3B1Ymxpc2hlci1lZGl0LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -2399,6 +3398,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -2450,11 +3452,17 @@ var PublisherEditComponent = /** @class */ (function () {
             });
         }
     };
+    PublisherEditComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
+        { type: _services_publishers_service__WEBPACK_IMPORTED_MODULE_2__["PublishersService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     PublisherEditComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-publisher-edit',
-            template: __webpack_require__(/*! ./publisher-edit.component.html */ "./src/app/admin/publisher-edit/publisher-edit.component.html"),
-            styles: [__webpack_require__(/*! ./publisher-edit.component.css */ "./src/app/admin/publisher-edit/publisher-edit.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./publisher-edit.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/publisher-edit/publisher-edit.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./publisher-edit.component.css */ "./src/app/admin/publisher-edit/publisher-edit.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
             _services_publishers_service__WEBPACK_IMPORTED_MODULE_2__["PublishersService"],
@@ -2472,21 +3480,12 @@ var PublisherEditComponent = /** @class */ (function () {
 /*!*********************************************************!*\
   !*** ./src/app/admin/publisher/publisher.component.css ***!
   \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/publisher/publisher.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/admin/publisher/publisher.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1 pb-3\">\n        <h2>Publishers</h2>\n        <div class=\"row pt-3 pb-2\">\n          <div class=\"col-6\">\n            <span class=\"p6 py-3\" [routerLink]=\"['/publisher-add']\">Create New</span>\n          </div>\n        </div>\n        <ng-container *ngFor=\"let publisher of publishers\">\n          <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-3\">{{publisher?.PublisherName}}</div>\n            <div class=\"col-6\">{{publisher?.Description}}</div>\n            <div class=\"col-3 d-flex justify-content-end\">\n                <span class=\"p6 px-3\" [routerLink]=\"['/publisher-edit']\" \n                  [queryParams]=\"{ publisherID: publisher?.PublisherID }\">Edit</span> | \n                <span class=\"p6 px-3\" (click)=\"OnDeletePublisher(publisher)\">Delete</span> \n            </div>\n          </div>\n        </ng-container>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3B1Ymxpc2hlci9wdWJsaXNoZXIuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -2513,6 +3512,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -2546,11 +3548,17 @@ var PublisherComponent = /** @class */ (function () {
             });
         }
     };
+    PublisherComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_publishers_service__WEBPACK_IMPORTED_MODULE_1__["PublishersService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     PublisherComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-publisher',
-            template: __webpack_require__(/*! ./publisher.component.html */ "./src/app/admin/publisher/publisher.component.html"),
-            styles: [__webpack_require__(/*! ./publisher.component.css */ "./src/app/admin/publisher/publisher.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./publisher.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/publisher/publisher.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./publisher.component.css */ "./src/app/admin/publisher/publisher.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_publishers_service__WEBPACK_IMPORTED_MODULE_1__["PublishersService"],
@@ -2568,21 +3576,12 @@ var PublisherComponent = /** @class */ (function () {
 /*!*****************************************************************!*\
   !*** ./src/app/admin/recommend-add/recommend-add.component.css ***!
   \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/recommend-add/recommend-add.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/admin/recommend-add/recommend-add.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Add New</h2>\n    <div class=\"py-1\"></div>\n\n    <!-- <form (submit)=\"onSubmit(); recommendForm.reset()\" #recommendForm=\"ngForm\"> -->\n    <form (submit)=\"onSubmit(); recommendForm.reset()\" #recommendForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"title\">Title <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"title\"\n                  class=\"form-control\" id=\"title\" \n                  [(ngModel)]=\"recommendModel.title\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"ratingId\">Rating <span class=\"anime-color\">*</span></label>\n            <input type=\"number\" required min=\"1\" max=\"5\" step=\"1\"\n                  name=\"ratingId\"\n                  class=\"form-control\" id=\"ratingId\" \n                  [(ngModel)]=\"recommendModel.ratingId\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"recommendation\">Recommendation <span class=\"anime-color\">*</span></label>\n            <textarea rows=\"5\" required\n                name=\"recommendation\"\n                class=\"form-control\" id=\"recommendation\" \n                [(ngModel)]=\"recommendModel.recommendation\">\n            </textarea>\n        </div>\n        <div class=\"form-group\">\n            <label for=\"reviewer\">Reviewer <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"reviewer\"\n                  class=\"form-control\" id=\"reviewer\" \n                  [(ngModel)]=\"recommendModel.reviewer\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"reviewerEmployer\">Reviewer's Employer </label>\n            <input type=\"text\" \n                  name=\"reviewerEmployer\"\n                  class=\"form-control\" id=\"reviewerEmployer\" \n                  [(ngModel)]=\"recommendModel.reviewerEmployer\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"employerUrl\">Employer URL </label>\n            <input type=\"text\" \n                  name=\"employerUrl\"\n                  class=\"form-control\" id=\"employerUrl\" \n                  [(ngModel)]=\"recommendModel.employerUrl\" />\n        </div>\n\n      <div class=\"form-group\">\n        <label for=\"reviewDatePicker\">Review Date <span class=\"anime-color\">*</span></label>\n        <input name=\"reviewDatePicker\" required \n              class=\"form-control\" id=\"reviewDatePicker\" \n              [theme]=\"'dp-material'\" \n              [dpDayPicker]=\"datePickerConfig\"\n              [(ngModel)]=\"reviewDate\" />\n      </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!recommendForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>Recommendation Model</div>\n      {{ recommendForm.value | json }}\n      {{ recommendForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !recommendForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3JlY29tbWVuZC1hZGQvcmVjb21tZW5kLWFkZC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -2608,6 +3607,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -2651,11 +3653,16 @@ var RecommendAddComponent = /** @class */ (function () {
             });
         }
     };
+    RecommendAddComponent.ctorParameters = function () { return [
+        { type: _services_recommend_service__WEBPACK_IMPORTED_MODULE_2__["RecommendsService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     RecommendAddComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-recommend-add',
-            template: __webpack_require__(/*! ./recommend-add.component.html */ "./src/app/admin/recommend-add/recommend-add.component.html"),
-            styles: [__webpack_require__(/*! ./recommend-add.component.css */ "./src/app/admin/recommend-add/recommend-add.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./recommend-add.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/recommend-add/recommend-add.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./recommend-add.component.css */ "./src/app/admin/recommend-add/recommend-add.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_recommend_service__WEBPACK_IMPORTED_MODULE_2__["RecommendsService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
@@ -2672,21 +3679,12 @@ var RecommendAddComponent = /** @class */ (function () {
 /*!*******************************************************************!*\
   !*** ./src/app/admin/recommend-edit/recommend-edit.component.css ***!
   \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/recommend-edit/recommend-edit.component.html":
-/*!********************************************************************!*\
-  !*** ./src/app/admin/recommend-edit/recommend-edit.component.html ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  recommend-edit works!\n</p>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3JlY29tbWVuZC1lZGl0L3JlY29tbWVuZC1lZGl0LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -2710,6 +3708,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var RecommendEditComponent = /** @class */ (function () {
     function RecommendEditComponent() {
@@ -2719,8 +3720,8 @@ var RecommendEditComponent = /** @class */ (function () {
     RecommendEditComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-recommend-edit',
-            template: __webpack_require__(/*! ./recommend-edit.component.html */ "./src/app/admin/recommend-edit/recommend-edit.component.html"),
-            styles: [__webpack_require__(/*! ./recommend-edit.component.css */ "./src/app/admin/recommend-edit/recommend-edit.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./recommend-edit.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/recommend-edit/recommend-edit.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./recommend-edit.component.css */ "./src/app/admin/recommend-edit/recommend-edit.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], RecommendEditComponent);
@@ -2735,21 +3736,12 @@ var RecommendEditComponent = /** @class */ (function () {
 /*!*********************************************************************!*\
   !*** ./src/app/admin/recommendations/recommendations.component.css ***!
   \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/recommendations/recommendations.component.html":
-/*!**********************************************************************!*\
-  !*** ./src/app/admin/recommendations/recommendations.component.html ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1 pb-3\">\n        <h2>Recommendations</h2>\n        <div class=\"row pt-3 pb-2\">\n          <div class=\"col-6\">\n            <span class=\"p6 py-3\" [routerLink]=\"['/recommend-add']\">Create New</span>\n          </div>\n        </div>\n        <ng-container *ngFor=\"let recommend of recommends\">\n          <div class=\"row p-2 my-2 all-borders-black\">\n            <div class=\"col-9 bold\">{{recommend?.title}}</div>\n            <div class=\"col-3 bold\">{{recommend?.ratingId}} stars</div>\n            <div class=\"col-12 font-italic\">{{recommend?.recommendation}}</div>\n            <div class=\"col-4\">by {{recommend?.reviewer}}</div>\n            <div class=\"col-8\">{{recommend?.reviewerEmployer}}</div>\n            <!-- <div class=\"col-3 d-flex justify-content-end\">\n                <span class=\"p6 px-3\" [routerLink]=\"['/recommend-edit']\" \n                  [queryParams]=\"{ recommendID: recommend?.RecommendID }\">Edit</span> | \n                <span class=\"p6 px-3\" (click)=\"OnDeleteRecommend(recommend)\">Delete</span> \n            </div> -->\n          </div>\n        </ng-container>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3JlY29tbWVuZGF0aW9ucy9yZWNvbW1lbmRhdGlvbnMuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -2776,6 +3768,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -2809,11 +3804,17 @@ var RecommendationsComponent = /** @class */ (function () {
             });
         }
     };
+    RecommendationsComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_recommend_service__WEBPACK_IMPORTED_MODULE_1__["RecommendsService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     RecommendationsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-recommendations',
-            template: __webpack_require__(/*! ./recommendations.component.html */ "./src/app/admin/recommendations/recommendations.component.html"),
-            styles: [__webpack_require__(/*! ./recommendations.component.css */ "./src/app/admin/recommendations/recommendations.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./recommendations.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/recommendations/recommendations.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./recommendations.component.css */ "./src/app/admin/recommendations/recommendations.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_recommend_service__WEBPACK_IMPORTED_MODULE_1__["RecommendsService"],
@@ -2831,21 +3832,12 @@ var RecommendationsComponent = /** @class */ (function () {
 /*!*****************************************************************!*\
   !*** ./src/app/admin/user-feedback/user-feedback.component.css ***!
   \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/user-feedback/user-feedback.component.html":
-/*!******************************************************************!*\
-  !*** ./src/app/admin/user-feedback/user-feedback.component.html ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1 pb-3\">\n      <h2>Customer Reviews</h2>\n      <div class=\"pb-3\"></div>\n      <ng-container *ngFor=\"let feedback of feedbacks\">\n        <div class=\"row p-2 my-2 all-borders-black\">\n          <div class=\"col-8\">\n              <img src=\"https://reydavid.blob.core.windows.net/anime/{{feedback?.productCode}}.jpg\"\n                alt=\"{{feedback?.productCode}}\" class=\"float-left image-min mr-4\" />\n\n              <strong>{{feedback.productTitle}}</strong><br />\n              <strong>{{feedback?.firstName}} {{feedback?.lastName}}</strong> - {{feedback?.created | date: 'MMM d, y'}}<br />\n              {{feedback?.email}}<br />\n\n              <div *ngIf=\"feedback?.feedbackType != 'ProductReview'\">\n                Type: {{helper.SplitCamelCase(feedback?.feedbackType)}}</div>\n\n              <img *ngIf=\"feedback?.feedbackType == 'ProductReview'\" \n                src=\"https://reydavid.blob.core.windows.net/assets/Rating {{feedback?.rating}} Stars.png\"\n                alt=\"{{feedback?.rating}} stars\" class=\"img-responsive\" />\n          </div>\n          <div class=\"col-4 d-flex justify-content-end align-items-center\">\n            <span class=\"p6 px-3\" (click)=\"OnDeleteUserFeedback(feedback)\">Delete</span> \n          </div>\n          <div class=\"col-12\">\n            <strong>{{feedback?.title}}</strong><br />\n            {{feedback?.feedback}}\n          </div>\n        </div>\n      </ng-container>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3VzZXItZmVlZGJhY2svdXNlci1mZWVkYmFjay5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -2873,6 +3865,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -2915,11 +3910,18 @@ var UserFeedbackComponent = /** @class */ (function () {
         var parsed = camelCase.replace(/([a-z])([A-Z])/g, "$1 $2");
         return parsed;
     };
+    UserFeedbackComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_userFeedback_service__WEBPACK_IMPORTED_MODULE_4__["UserFeedbackService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_2__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] },
+        { type: _services_utilities_service__WEBPACK_IMPORTED_MODULE_5__["UtilityService"] }
+    ]; };
     UserFeedbackComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-user-feedback',
-            template: __webpack_require__(/*! ./user-feedback.component.html */ "./src/app/admin/user-feedback/user-feedback.component.html"),
-            styles: [__webpack_require__(/*! ./user-feedback.component.css */ "./src/app/admin/user-feedback/user-feedback.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./user-feedback.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user-feedback/user-feedback.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./user-feedback.component.css */ "./src/app/admin/user-feedback/user-feedback.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _services_userFeedback_service__WEBPACK_IMPORTED_MODULE_4__["UserFeedbackService"],
@@ -2938,21 +3940,12 @@ var UserFeedbackComponent = /** @class */ (function () {
 /*!*******************************************************************!*\
   !*** ./src/app/admin/user-info-edit/user-info-edit.component.css ***!
   \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/user-info-edit/user-info-edit.component.html":
-/*!********************************************************************!*\
-  !*** ./src/app/admin/user-info-edit/user-info-edit.component.html ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1\">\n\n  <h2>Edit user: {{ userAccount?.userName }}</h2>\n  <h3>{{ userAccount?.email }}</h3>\n  <div class=\"py-1\"></div>\n\n  <form (submit)=\"onSubmit()\" #userForm=\"ngForm\">\n      <div class=\"form-group\">\n          <label for=\"userFirstName\">First Name <span class=\"anime-color\">*</span></label>\n          <input type=\"text\" required\n                name=\"userFirstName\"\n                class=\"form-control\" id=\"userFirstName\" \n                [(ngModel)]=\"userAccount.firstName\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"userLastName\">Last Name <span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"userLastName\"\n              class=\"form-control\" id=\"userLastName\" \n              [(ngModel)]=\"userAccount.lastName\" />\n      </div>\n      <div class=\"form-group\">\n          <label for=\"address\">Address <span class=\"anime-color\">*</span></label>\n          <input type=\"text\" required\n                name=\"address\"\n                class=\"form-control\" id=\"address\" \n                [(ngModel)]=\"userAccount.address\" />\n      </div>\n      <div class=\"form-group\">\n          <label for=\"city\">City <span class=\"anime-color\">*</span></label>\n          <input type=\"text\" required\n                name=\"city\"\n                class=\"form-control\" id=\"city\" \n                [(ngModel)]=\"userAccount.city\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"zipCode\">Zip Code<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"zipCode\"\n              class=\"form-control\" id=\"zipCode\" \n              [(ngModel)]=\"userAccount.zipCode\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"state\">State</label>\n        <select (change)=\"selectState($event.target.value)\" \n          class=\"form-control\" id=\"state\" name=\"state\">\n            <option *ngFor=\"let state of states\" \n                value={{state.StateID}} \n                [selected]=\"state.StateID == userAccount.stateId\">\n                    {{state.StateName}}\n            </option>\n        </select>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"cellPhone\">Cell Phone<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"cellPhone\"\n              class=\"form-control\" id=\"cellPhone\" \n              [(ngModel)]=\"userAccount.cellPhone\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"homePhone\">Home Phone<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"homePhone\"\n              class=\"form-control\" id=\"homePhone\" \n              [(ngModel)]=\"userAccount.homePhone\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"creditCardType\">Credit Card Type<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"creditCardType\"\n              class=\"form-control\" id=\"creditCardType\" \n              [(ngModel)]=\"userAccount.creditCardType\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"creditCardExpiration\">Credit Card Expiration<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"creditCardExpiration\"\n              class=\"form-control\" id=\"creditCardExpiration\" \n              [(ngModel)]=\"userAccount.creditCardExpiration\" />\n      </div>\n      <div class=\"form-group\">\n        <label for=\"creditCardNumber\">Credit Card Number<span class=\"anime-color\">*</span></label>\n        <input type=\"text\" required\n              name=\"creditCardNumber\"\n              class=\"form-control\" id=\"creditCardNumber\" \n              [(ngModel)]=\"userAccount.creditCardNumber\" />\n      </div>\n\n      <div class=\"py-3\">\n        <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!userForm.valid\">Submit\n          </button>\n      </div>\n\n      <div>User Account Model</div>\n      {{ userForm.value | json }}\n      {{ userForm.valid }}\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !userForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3VzZXItaW5mby1lZGl0L3VzZXItaW5mby1lZGl0LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -2982,6 +3975,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -3059,11 +4055,18 @@ var UserInfoEditComponent = /** @class */ (function () {
             });
         }
     };
+    UserInfoEditComponent.ctorParameters = function () { return [
+        { type: _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_2__["UserAccountsService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] },
+        { type: _services_states_service__WEBPACK_IMPORTED_MODULE_5__["StatesService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] }
+    ]; };
     UserInfoEditComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-user-info-edit',
-            template: __webpack_require__(/*! ./user-info-edit.component.html */ "./src/app/admin/user-info-edit/user-info-edit.component.html"),
-            styles: [__webpack_require__(/*! ./user-info-edit.component.css */ "./src/app/admin/user-info-edit/user-info-edit.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./user-info-edit.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user-info-edit/user-info-edit.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./user-info-edit.component.css */ "./src/app/admin/user-info-edit/user-info-edit.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_userAccounts_service__WEBPACK_IMPORTED_MODULE_2__["UserAccountsService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
@@ -3082,21 +4085,12 @@ var UserInfoEditComponent = /** @class */ (function () {
 /*!*********************************************************!*\
   !*** ./src/app/admin/user-info/user-info.component.css ***!
   \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/admin/user-info/user-info.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/admin/user-info/user-info.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1 pb-3\">\n      <h2>Users</h2>\n      <div class=\"pb-3\"></div>\n      <ng-container *ngFor=\"let user of userAccounts\">\n        <div class=\"row p-2 my-2 all-borders-black\">\n          <div class=\"col-5\">\n            Name: <strong>{{user?.firstName}} {{user?.lastName}}</strong><br />\n            Street: <strong>{{user?.address}}</strong><br />\n            Cell: <strong>{{user?.cellPhone}}</strong>\n          </div>\n          <div class=\"col-5\">\n            Email: <strong>{{user?.email}}</strong><br />\n            City: <strong>{{user?.city}}, {{user?.state}} {{user?.zipCode}}</strong><br />\n            Home: <strong>{{user?.homePhone}}</strong>\n          </div>\n          <div class=\"col-2 d-flex justify-content-end align-items-center\">\n            <span class=\"p6 px-3\" (click)=\"OnEditUserAccount(user)\">Edit</span> \n          </div>\n        </div>\n      </ng-container>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FkbWluL3VzZXItaW5mby91c2VyLWluZm8uY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -3123,6 +4117,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -3151,11 +4148,17 @@ var UserInfoComponent = /** @class */ (function () {
     UserInfoComponent.prototype.OnEditUserAccount = function (userAccount) {
         this.router.navigate(['/user-info-edit'], { queryParams: { userAccountID: userAccount.userId } });
     };
+    UserInfoComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_1__["UserAccountsService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     UserInfoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-user-info',
-            template: __webpack_require__(/*! ./user-info.component.html */ "./src/app/admin/user-info/user-info.component.html"),
-            styles: [__webpack_require__(/*! ./user-info.component.css */ "./src/app/admin/user-info/user-info.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./user-info.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/admin/user-info/user-info.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./user-info.component.css */ "./src/app/admin/user-info/user-info.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_1__["UserAccountsService"],
@@ -3208,6 +4211,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -3284,21 +4290,12 @@ var AppRouterModule = /** @class */ (function () {
 /*!***********************************!*\
   !*** ./src/app/app.component.css ***!
   \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/app.component.html":
-/*!************************************!*\
-  !*** ./src/app/app.component.html ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<app-navigation></app-navigation>\r\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -3322,6 +4319,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
@@ -3330,8 +4330,8 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
-            styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], AppComponent);
@@ -3353,66 +4353,70 @@ var AppComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _globals__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./globals */ "./src/app/globals.ts");
-/* harmony import */ var _services_http_helper_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./services/http.helper.service */ "./src/app/services/http.helper.service.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _admin_admin_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./admin/admin.module */ "./src/app/admin/admin.module.ts");
-/* harmony import */ var _admin_admin_router_admin_router_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./admin/admin-router/admin-router.module */ "./src/app/admin/admin-router/admin-router.module.ts");
-/* harmony import */ var _customer_customer_router_customer_router_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./customer/customer-router/customer-router.module */ "./src/app/customer/customer-router/customer-router.module.ts");
-/* harmony import */ var _services_listtypes_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services/listtypes.service */ "./src/app/services/listtypes.service.ts");
-/* harmony import */ var _services_products_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./services/products.service */ "./src/app/services/products.service.ts");
-/* harmony import */ var _services_listings_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./services/listings.service */ "./src/app/services/listings.service.ts");
-/* harmony import */ var _services_search_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./services/search.service */ "./src/app/services/search.service.ts");
-/* harmony import */ var _services_categories_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./services/categories.service */ "./src/app/services/categories.service.ts");
-/* harmony import */ var _services_accounts_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./services/accounts.service */ "./src/app/services/accounts.service.ts");
-/* harmony import */ var _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/userAccounts.service */ "./src/app/services/userAccounts.service.ts");
-/* harmony import */ var _services_cart_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/cart.service */ "./src/app/services/cart.service.ts");
-/* harmony import */ var _services_orders_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/orders.service */ "./src/app/services/orders.service.ts");
-/* harmony import */ var _services_login_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./services/login.service */ "./src/app/services/login.service.ts");
-/* harmony import */ var _services_session_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/session.service */ "./src/app/services/session.service.ts");
-/* harmony import */ var _services_utilities_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/utilities.service */ "./src/app/services/utilities.service.ts");
-/* harmony import */ var _services_userNotes_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./services/userNotes.service */ "./src/app/services/userNotes.service.ts");
-/* harmony import */ var _guards_authorization_guard__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./guards/authorization.guard */ "./src/app/guards/authorization.guard.ts");
-/* harmony import */ var _guards_products_resolve_guard__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./guards/products-resolve.guard */ "./src/app/guards/products-resolve.guard.ts");
-/* harmony import */ var _app_router_app_router_module__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./app-router/app-router.module */ "./src/app/app-router/app-router.module.ts");
-/* harmony import */ var _about_us_about_us_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./about-us/about-us.component */ "./src/app/about-us/about-us.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _products_list_products_list_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./products-list/products-list.component */ "./src/app/products-list/products-list.component.ts");
-/* harmony import */ var _product_product_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./product/product.component */ "./src/app/product/product.component.ts");
-/* harmony import */ var _products_slice_products_slice_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./products-slice/products-slice.component */ "./src/app/products-slice/products-slice.component.ts");
-/* harmony import */ var _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./contact-us/contact-us.component */ "./src/app/contact-us/contact-us.component.ts");
-/* harmony import */ var _login_login_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./login/login.component */ "./src/app/login/login.component.ts");
-/* harmony import */ var _register_register_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./register/register.component */ "./src/app/register/register.component.ts");
-/* harmony import */ var _categories_categories_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./categories/categories.component */ "./src/app/categories/categories.component.ts");
-/* harmony import */ var _news_feed_news_feed_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./news-feed/news-feed.component */ "./src/app/news-feed/news-feed.component.ts");
-/* harmony import */ var _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
-/* harmony import */ var _category_list_category_list_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./category-list/category-list.component */ "./src/app/category-list/category-list.component.ts");
-/* harmony import */ var _navigation_navigation_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./navigation/navigation.component */ "./src/app/navigation/navigation.component.ts");
-/* harmony import */ var _product_slice_product_slice_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./product-slice/product-slice.component */ "./src/app/product-slice/product-slice.component.ts");
-/* harmony import */ var _cards_carousel_cards_carousel_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./cards-carousel/cards-carousel.component */ "./src/app/cards-carousel/cards-carousel.component.ts");
-/* harmony import */ var _product_slide_product_slide_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./product-slide/product-slide.component */ "./src/app/product-slide/product-slide.component.ts");
-/* harmony import */ var _shipping_shipping_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./shipping/shipping.component */ "./src/app/shipping/shipping.component.ts");
-/* harmony import */ var _similars_similars_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./similars/similars.component */ "./src/app/similars/similars.component.ts");
-/* harmony import */ var _footer_main_footer_main_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./footer-main/footer-main.component */ "./src/app/footer-main/footer-main.component.ts");
-/* harmony import */ var _returns_returns_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ./returns/returns.component */ "./src/app/returns/returns.component.ts");
-/* harmony import */ var _legal_legal_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ./legal/legal.component */ "./src/app/legal/legal.component.ts");
-/* harmony import */ var _ratings_ratings_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ./ratings/ratings.component */ "./src/app/ratings/ratings.component.ts");
-/* harmony import */ var _spinner_spinner_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ./spinner/spinner.component */ "./src/app/spinner/spinner.component.ts");
-/* harmony import */ var _terms_of_use_terms_of_use_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ./terms-of-use/terms-of-use.component */ "./src/app/terms-of-use/terms-of-use.component.ts");
-/* harmony import */ var _privacy_privacy_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ./privacy/privacy.component */ "./src/app/privacy/privacy.component.ts");
-/* harmony import */ var _shipping_info_shipping_info_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ./shipping-info/shipping-info.component */ "./src/app/shipping-info/shipping-info.component.ts");
-/* harmony import */ var _customer_customer_module__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ./customer/customer.module */ "./src/app/customer/customer.module.ts");
-/* harmony import */ var _feed_card_feed_card_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ./feed-card/feed-card.component */ "./src/app/feed-card/feed-card.component.ts");
-/* harmony import */ var _strip_html_tags_strip_html_tags_pipe__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ./strip-html-tags/strip-html-tags.pipe */ "./src/app/strip-html-tags/strip-html-tags.pipe.ts");
-/* harmony import */ var _reydavid_reydavid_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! ./reydavid/reydavid.component */ "./src/app/reydavid/reydavid.component.ts");
-/* harmony import */ var _review_review_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! ./review/review.component */ "./src/app/review/review.component.ts");
-/* harmony import */ var _services_employment_service__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! ./services/employment.service */ "./src/app/services/employment.service.ts");
-/* harmony import */ var _employment_employment_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! ./employment/employment.component */ "./src/app/employment/employment.component.ts");
+/* harmony import */ var _src_app_globals__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @src/app/globals */ "./src/app/globals.ts");
+/* harmony import */ var _src_app_services_http_helper_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @src/app/services/http.helper.service */ "./src/app/services/http.helper.service.ts");
+/* harmony import */ var _src_app_app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @src/app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _src_app_admin_admin_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @src/app/admin/admin.module */ "./src/app/admin/admin.module.ts");
+/* harmony import */ var _src_app_admin_admin_router_admin_router_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @src/app/admin/admin-router/admin-router.module */ "./src/app/admin/admin-router/admin-router.module.ts");
+/* harmony import */ var _src_app_customer_customer_router_customer_router_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @src/app/customer/customer-router/customer-router.module */ "./src/app/customer/customer-router/customer-router.module.ts");
+/* harmony import */ var _src_app_services_listtypes_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @src/app/services/listtypes.service */ "./src/app/services/listtypes.service.ts");
+/* harmony import */ var _src_app_services_products_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @src/app/services/products.service */ "./src/app/services/products.service.ts");
+/* harmony import */ var _src_app_services_listings_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @src/app/services/listings.service */ "./src/app/services/listings.service.ts");
+/* harmony import */ var _src_app_services_search_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @src/app/services/search.service */ "./src/app/services/search.service.ts");
+/* harmony import */ var _src_app_services_categories_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @src/app/services/categories.service */ "./src/app/services/categories.service.ts");
+/* harmony import */ var _src_app_services_accounts_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @src/app/services/accounts.service */ "./src/app/services/accounts.service.ts");
+/* harmony import */ var _src_app_services_userAccounts_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @src/app/services/userAccounts.service */ "./src/app/services/userAccounts.service.ts");
+/* harmony import */ var _src_app_services_cart_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @src/app/services/cart.service */ "./src/app/services/cart.service.ts");
+/* harmony import */ var _src_app_services_orders_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @src/app/services/orders.service */ "./src/app/services/orders.service.ts");
+/* harmony import */ var _src_app_services_login_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @src/app/services/login.service */ "./src/app/services/login.service.ts");
+/* harmony import */ var _src_app_services_session_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @src/app/services/session.service */ "./src/app/services/session.service.ts");
+/* harmony import */ var _src_app_services_utilities_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @src/app/services/utilities.service */ "./src/app/services/utilities.service.ts");
+/* harmony import */ var _src_app_services_userNotes_service__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @src/app/services/userNotes.service */ "./src/app/services/userNotes.service.ts");
+/* harmony import */ var _src_app_guards_authorization_guard__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @src/app/guards/authorization.guard */ "./src/app/guards/authorization.guard.ts");
+/* harmony import */ var _src_app_guards_products_resolve_guard__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @src/app/guards/products-resolve.guard */ "./src/app/guards/products-resolve.guard.ts");
+/* harmony import */ var _src_app_app_router_app_router_module__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @src/app/app-router/app-router.module */ "./src/app/app-router/app-router.module.ts");
+/* harmony import */ var _src_app_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @src/app/about-us/about-us.component */ "./src/app/about-us/about-us.component.ts");
+/* harmony import */ var _src_app_home_home_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @src/app/home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _src_app_products_list_products_list_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @src/app/products-list/products-list.component */ "./src/app/products-list/products-list.component.ts");
+/* harmony import */ var _src_app_product_product_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @src/app/product/product.component */ "./src/app/product/product.component.ts");
+/* harmony import */ var _src_app_products_slice_products_slice_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @src/app/products-slice/products-slice.component */ "./src/app/products-slice/products-slice.component.ts");
+/* harmony import */ var _src_app_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @src/app/contact-us/contact-us.component */ "./src/app/contact-us/contact-us.component.ts");
+/* harmony import */ var _src_app_login_login_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @src/app/login/login.component */ "./src/app/login/login.component.ts");
+/* harmony import */ var _src_app_register_register_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @src/app/register/register.component */ "./src/app/register/register.component.ts");
+/* harmony import */ var _src_app_categories_categories_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @src/app/categories/categories.component */ "./src/app/categories/categories.component.ts");
+/* harmony import */ var _src_app_news_feed_news_feed_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @src/app/news-feed/news-feed.component */ "./src/app/news-feed/news-feed.component.ts");
+/* harmony import */ var _src_app_search_results_search_results_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @src/app/search-results/search-results.component */ "./src/app/search-results/search-results.component.ts");
+/* harmony import */ var _src_app_category_list_category_list_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @src/app/category-list/category-list.component */ "./src/app/category-list/category-list.component.ts");
+/* harmony import */ var _src_app_navigation_navigation_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @src/app/navigation/navigation.component */ "./src/app/navigation/navigation.component.ts");
+/* harmony import */ var _src_app_product_slice_product_slice_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @src/app/product-slice/product-slice.component */ "./src/app/product-slice/product-slice.component.ts");
+/* harmony import */ var _src_app_cards_carousel_cards_carousel_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @src/app/cards-carousel/cards-carousel.component */ "./src/app/cards-carousel/cards-carousel.component.ts");
+/* harmony import */ var _src_app_product_slide_product_slide_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! @src/app/product-slide/product-slide.component */ "./src/app/product-slide/product-slide.component.ts");
+/* harmony import */ var _src_app_shipping_shipping_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! @src/app/shipping/shipping.component */ "./src/app/shipping/shipping.component.ts");
+/* harmony import */ var _src_app_similars_similars_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! @src/app/similars/similars.component */ "./src/app/similars/similars.component.ts");
+/* harmony import */ var _src_app_footer_main_footer_main_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @src/app/footer-main/footer-main.component */ "./src/app/footer-main/footer-main.component.ts");
+/* harmony import */ var _src_app_returns_returns_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! @src/app/returns/returns.component */ "./src/app/returns/returns.component.ts");
+/* harmony import */ var _src_app_legal_legal_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! @src/app/legal/legal.component */ "./src/app/legal/legal.component.ts");
+/* harmony import */ var _src_app_ratings_ratings_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! @src/app/ratings/ratings.component */ "./src/app/ratings/ratings.component.ts");
+/* harmony import */ var _src_app_spinner_spinner_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! @src/app/spinner/spinner.component */ "./src/app/spinner/spinner.component.ts");
+/* harmony import */ var _src_app_terms_of_use_terms_of_use_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! @src/app/terms-of-use/terms-of-use.component */ "./src/app/terms-of-use/terms-of-use.component.ts");
+/* harmony import */ var _src_app_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! @src/app/privacy/privacy.component */ "./src/app/privacy/privacy.component.ts");
+/* harmony import */ var _src_app_shipping_info_shipping_info_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! @src/app/shipping-info/shipping-info.component */ "./src/app/shipping-info/shipping-info.component.ts");
+/* harmony import */ var _src_app_customer_customer_module__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! @src/app/customer/customer.module */ "./src/app/customer/customer.module.ts");
+/* harmony import */ var _src_app_feed_card_feed_card_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! @src/app/feed-card/feed-card.component */ "./src/app/feed-card/feed-card.component.ts");
+/* harmony import */ var _src_app_strip_html_tags_strip_html_tags_pipe__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! @src/app/strip-html-tags/strip-html-tags.pipe */ "./src/app/strip-html-tags/strip-html-tags.pipe.ts");
+/* harmony import */ var _src_app_reydavid_reydavid_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(/*! @src/app/reydavid/reydavid.component */ "./src/app/reydavid/reydavid.component.ts");
+/* harmony import */ var _src_app_review_review_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(/*! @src/app/review/review.component */ "./src/app/review/review.component.ts");
+/* harmony import */ var _src_app_services_employment_service__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(/*! @src/app/services/employment.service */ "./src/app/services/employment.service.ts");
+/* harmony import */ var _src_app_employment_employment_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(/*! @src/app/employment/employment.component */ "./src/app/employment/employment.component.ts");
+/* harmony import */ var _src_app_auto_generated_auto_generated_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(/*! @src/app/auto-generated/auto-generated.component */ "./src/app/auto-generated/auto-generated.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 // import { BrowserModule } from '@angular/platform-browser';
@@ -3474,73 +4478,75 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
-                _about_us_about_us_component__WEBPACK_IMPORTED_MODULE_23__["AboutUsComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_24__["HomeComponent"],
-                _products_list_products_list_component__WEBPACK_IMPORTED_MODULE_25__["ProductsListComponent"],
-                _product_product_component__WEBPACK_IMPORTED_MODULE_26__["ProductComponent"],
-                _products_slice_products_slice_component__WEBPACK_IMPORTED_MODULE_27__["ProductsSliceComponent"],
-                _contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_28__["ContactUsComponent"],
-                _login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"],
-                _register_register_component__WEBPACK_IMPORTED_MODULE_30__["RegisterComponent"],
-                _categories_categories_component__WEBPACK_IMPORTED_MODULE_31__["CategoriesComponent"],
-                _news_feed_news_feed_component__WEBPACK_IMPORTED_MODULE_32__["NewsFeedComponent"],
-                _search_results_search_results_component__WEBPACK_IMPORTED_MODULE_33__["SearchResultsComponent"],
-                _category_list_category_list_component__WEBPACK_IMPORTED_MODULE_34__["CategoryListComponent"],
-                _navigation_navigation_component__WEBPACK_IMPORTED_MODULE_35__["NavigationComponent"],
-                _product_slice_product_slice_component__WEBPACK_IMPORTED_MODULE_36__["ProductSliceComponent"],
-                _cards_carousel_cards_carousel_component__WEBPACK_IMPORTED_MODULE_37__["CardsCarouselComponent"],
-                _product_slide_product_slide_component__WEBPACK_IMPORTED_MODULE_38__["ProductSlideComponent"],
-                _shipping_shipping_component__WEBPACK_IMPORTED_MODULE_39__["ShippingComponent"],
-                _similars_similars_component__WEBPACK_IMPORTED_MODULE_40__["SimilarsComponent"],
-                _footer_main_footer_main_component__WEBPACK_IMPORTED_MODULE_41__["FooterMainComponent"],
-                _returns_returns_component__WEBPACK_IMPORTED_MODULE_42__["ReturnsComponent"],
-                _legal_legal_component__WEBPACK_IMPORTED_MODULE_43__["LegalComponent"],
-                _ratings_ratings_component__WEBPACK_IMPORTED_MODULE_44__["RatingsComponent"],
-                _spinner_spinner_component__WEBPACK_IMPORTED_MODULE_45__["SpinnerComponent"],
-                _terms_of_use_terms_of_use_component__WEBPACK_IMPORTED_MODULE_46__["TermsOfUseComponent"],
-                _privacy_privacy_component__WEBPACK_IMPORTED_MODULE_47__["PrivacyComponent"],
-                _shipping_info_shipping_info_component__WEBPACK_IMPORTED_MODULE_48__["ShippingInfoComponent"],
-                _feed_card_feed_card_component__WEBPACK_IMPORTED_MODULE_50__["FeedCardComponent"],
-                _strip_html_tags_strip_html_tags_pipe__WEBPACK_IMPORTED_MODULE_51__["StripHtmlTagsPipe"],
-                _reydavid_reydavid_component__WEBPACK_IMPORTED_MODULE_52__["ReydavidComponent"],
-                _review_review_component__WEBPACK_IMPORTED_MODULE_53__["ReviewComponent"],
-                _employment_employment_component__WEBPACK_IMPORTED_MODULE_55__["EmploymentComponent"]
+                _src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+                _src_app_about_us_about_us_component__WEBPACK_IMPORTED_MODULE_23__["AboutUsComponent"],
+                _src_app_home_home_component__WEBPACK_IMPORTED_MODULE_24__["HomeComponent"],
+                _src_app_products_list_products_list_component__WEBPACK_IMPORTED_MODULE_25__["ProductsListComponent"],
+                _src_app_product_product_component__WEBPACK_IMPORTED_MODULE_26__["ProductComponent"],
+                _src_app_products_slice_products_slice_component__WEBPACK_IMPORTED_MODULE_27__["ProductsSliceComponent"],
+                _src_app_contact_us_contact_us_component__WEBPACK_IMPORTED_MODULE_28__["ContactUsComponent"],
+                _src_app_login_login_component__WEBPACK_IMPORTED_MODULE_29__["LoginComponent"],
+                _src_app_register_register_component__WEBPACK_IMPORTED_MODULE_30__["RegisterComponent"],
+                _src_app_categories_categories_component__WEBPACK_IMPORTED_MODULE_31__["CategoriesComponent"],
+                _src_app_news_feed_news_feed_component__WEBPACK_IMPORTED_MODULE_32__["NewsFeedComponent"],
+                _src_app_search_results_search_results_component__WEBPACK_IMPORTED_MODULE_33__["SearchResultsComponent"],
+                _src_app_category_list_category_list_component__WEBPACK_IMPORTED_MODULE_34__["CategoryListComponent"],
+                _src_app_navigation_navigation_component__WEBPACK_IMPORTED_MODULE_35__["NavigationComponent"],
+                _src_app_product_slice_product_slice_component__WEBPACK_IMPORTED_MODULE_36__["ProductSliceComponent"],
+                _src_app_cards_carousel_cards_carousel_component__WEBPACK_IMPORTED_MODULE_37__["CardsCarouselComponent"],
+                _src_app_product_slide_product_slide_component__WEBPACK_IMPORTED_MODULE_38__["ProductSlideComponent"],
+                _src_app_shipping_shipping_component__WEBPACK_IMPORTED_MODULE_39__["ShippingComponent"],
+                _src_app_similars_similars_component__WEBPACK_IMPORTED_MODULE_40__["SimilarsComponent"],
+                _src_app_footer_main_footer_main_component__WEBPACK_IMPORTED_MODULE_41__["FooterMainComponent"],
+                _src_app_returns_returns_component__WEBPACK_IMPORTED_MODULE_42__["ReturnsComponent"],
+                _src_app_legal_legal_component__WEBPACK_IMPORTED_MODULE_43__["LegalComponent"],
+                _src_app_ratings_ratings_component__WEBPACK_IMPORTED_MODULE_44__["RatingsComponent"],
+                _src_app_spinner_spinner_component__WEBPACK_IMPORTED_MODULE_45__["SpinnerComponent"],
+                _src_app_terms_of_use_terms_of_use_component__WEBPACK_IMPORTED_MODULE_46__["TermsOfUseComponent"],
+                _src_app_privacy_privacy_component__WEBPACK_IMPORTED_MODULE_47__["PrivacyComponent"],
+                _src_app_shipping_info_shipping_info_component__WEBPACK_IMPORTED_MODULE_48__["ShippingInfoComponent"],
+                _src_app_feed_card_feed_card_component__WEBPACK_IMPORTED_MODULE_50__["FeedCardComponent"],
+                _src_app_strip_html_tags_strip_html_tags_pipe__WEBPACK_IMPORTED_MODULE_51__["StripHtmlTagsPipe"],
+                _src_app_reydavid_reydavid_component__WEBPACK_IMPORTED_MODULE_52__["ReydavidComponent"],
+                _src_app_review_review_component__WEBPACK_IMPORTED_MODULE_53__["ReviewComponent"],
+                _src_app_employment_employment_component__WEBPACK_IMPORTED_MODULE_55__["EmploymentComponent"],
+                _src_app_auto_generated_auto_generated_component__WEBPACK_IMPORTED_MODULE_56__["AutoGeneratedComponent"]
             ],
             imports: [
-                _app_router_app_router_module__WEBPACK_IMPORTED_MODULE_22__["AppRouterModule"],
-                _admin_admin_module__WEBPACK_IMPORTED_MODULE_4__["AdminModule"],
-                _admin_admin_router_admin_router_module__WEBPACK_IMPORTED_MODULE_5__["AdminRouterModule"],
-                _customer_customer_module__WEBPACK_IMPORTED_MODULE_49__["CustomerModule"],
-                _customer_customer_router_customer_router_module__WEBPACK_IMPORTED_MODULE_6__["CustomerRouterModule"]
+                _src_app_app_router_app_router_module__WEBPACK_IMPORTED_MODULE_22__["AppRouterModule"],
+                _src_app_admin_admin_module__WEBPACK_IMPORTED_MODULE_4__["AdminModule"],
+                _src_app_admin_admin_router_admin_router_module__WEBPACK_IMPORTED_MODULE_5__["AdminRouterModule"],
+                _src_app_customer_customer_module__WEBPACK_IMPORTED_MODULE_49__["CustomerModule"],
+                _src_app_customer_customer_router_customer_router_module__WEBPACK_IMPORTED_MODULE_6__["CustomerRouterModule"]
             ],
             providers: [
-                _globals__WEBPACK_IMPORTED_MODULE_1__["Globals"],
-                _services_http_helper_service__WEBPACK_IMPORTED_MODULE_2__["HttpHelper"],
-                _services_listtypes_service__WEBPACK_IMPORTED_MODULE_7__["ListTypeService"],
-                _services_products_service__WEBPACK_IMPORTED_MODULE_8__["ProductsService"],
-                _services_listings_service__WEBPACK_IMPORTED_MODULE_9__["ListingService"],
-                _services_search_service__WEBPACK_IMPORTED_MODULE_10__["SearchService"],
-                _services_categories_service__WEBPACK_IMPORTED_MODULE_11__["CategoryService"],
-                _services_accounts_service__WEBPACK_IMPORTED_MODULE_12__["AccountService"],
-                _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_13__["UserAccountsService"],
-                _services_cart_service__WEBPACK_IMPORTED_MODULE_14__["CartService"],
-                _services_orders_service__WEBPACK_IMPORTED_MODULE_15__["OrderService"],
-                _services_login_service__WEBPACK_IMPORTED_MODULE_16__["LoginService"],
-                _services_session_service__WEBPACK_IMPORTED_MODULE_17__["SessionService"],
-                _services_userNotes_service__WEBPACK_IMPORTED_MODULE_19__["UserNoteService"],
-                _services_utilities_service__WEBPACK_IMPORTED_MODULE_18__["UtilityService"],
-                _services_employment_service__WEBPACK_IMPORTED_MODULE_54__["EmploymentService"],
-                _guards_authorization_guard__WEBPACK_IMPORTED_MODULE_20__["AuthorizationGuard"],
-                _guards_products_resolve_guard__WEBPACK_IMPORTED_MODULE_21__["ProductsResolve"]
+                _src_app_globals__WEBPACK_IMPORTED_MODULE_1__["Globals"],
+                _src_app_services_http_helper_service__WEBPACK_IMPORTED_MODULE_2__["HttpHelper"],
+                _src_app_services_listtypes_service__WEBPACK_IMPORTED_MODULE_7__["ListTypeService"],
+                _src_app_services_products_service__WEBPACK_IMPORTED_MODULE_8__["ProductsService"],
+                _src_app_services_listings_service__WEBPACK_IMPORTED_MODULE_9__["ListingService"],
+                _src_app_services_search_service__WEBPACK_IMPORTED_MODULE_10__["SearchService"],
+                _src_app_services_categories_service__WEBPACK_IMPORTED_MODULE_11__["CategoryService"],
+                _src_app_services_accounts_service__WEBPACK_IMPORTED_MODULE_12__["AccountService"],
+                _src_app_services_userAccounts_service__WEBPACK_IMPORTED_MODULE_13__["UserAccountsService"],
+                _src_app_services_cart_service__WEBPACK_IMPORTED_MODULE_14__["CartService"],
+                _src_app_services_orders_service__WEBPACK_IMPORTED_MODULE_15__["OrderService"],
+                _src_app_services_login_service__WEBPACK_IMPORTED_MODULE_16__["LoginService"],
+                _src_app_services_session_service__WEBPACK_IMPORTED_MODULE_17__["SessionService"],
+                _src_app_services_userNotes_service__WEBPACK_IMPORTED_MODULE_19__["UserNoteService"],
+                _src_app_services_utilities_service__WEBPACK_IMPORTED_MODULE_18__["UtilityService"],
+                _src_app_services_employment_service__WEBPACK_IMPORTED_MODULE_54__["EmploymentService"],
+                _src_app_guards_authorization_guard__WEBPACK_IMPORTED_MODULE_20__["AuthorizationGuard"],
+                _src_app_guards_products_resolve_guard__WEBPACK_IMPORTED_MODULE_21__["ProductsResolve"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+            bootstrap: [_src_app_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -3552,25 +4558,73 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/auto-generated/auto-generated.component.css":
+/*!*************************************************************!*\
+  !*** ./src/app/auto-generated/auto-generated.component.css ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2F1dG8tZ2VuZXJhdGVkL2F1dG8tZ2VuZXJhdGVkLmNvbXBvbmVudC5jc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/auto-generated/auto-generated.component.ts":
+/*!************************************************************!*\
+  !*** ./src/app/auto-generated/auto-generated.component.ts ***!
+  \************************************************************/
+/*! exports provided: AutoGeneratedComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AutoGeneratedComponent", function() { return AutoGeneratedComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+
+var AutoGeneratedComponent = /** @class */ (function () {
+    function AutoGeneratedComponent() {
+    }
+    AutoGeneratedComponent.prototype.ngOnInit = function () {
+    };
+    AutoGeneratedComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-auto-generated',
+            template: __importDefault(__webpack_require__(/*! raw-loader!./auto-generated.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/auto-generated/auto-generated.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./auto-generated.component.css */ "./src/app/auto-generated/auto-generated.component.css")).default]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AutoGeneratedComponent);
+    return AutoGeneratedComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/cards-carousel/cards-carousel.component.css":
 /*!*************************************************************!*\
   !*** ./src/app/cards-carousel/cards-carousel.component.css ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "\r\n.carousel {\r\n    width: 100%;\r\n  }\r\n  \r\n  .slide-box {\r\n    display: flex;\r\n    justify-content: space-between;\r\n  }\r\n  \r\n  @media (min-width: 576px) and (max-width: 767.98px) {\r\n    .slide-box img {\r\n      flex: 0 0 50%;\r\n      max-width: 50%;\r\n    }\r\n  }\r\n  \r\n  @media (min-width: 768px) and (max-width: 991.98px) {\r\n    .slide-box img {\r\n      flex: 0 0 33.3333%;\r\n      max-width: 33.3333%;\r\n    }\r\n  }\r\n  \r\n  @media (min-width: 992px)\r\n  {\r\n    .slide-box img {\r\n      flex: 0 0 25%;\r\n      max-width: 25%;\r\n    }\r\n\r\n  }\r\n  \r\n  @media (min-width: 1180px)\r\n  {\r\n    .row.wider {\r\n      margin-right: -80px;\r\n      margin-left: -80px;\r\n    }\r\n  }\r\n  \r\n  .carousel-caption {\r\n    background-color: rgba(0, 0, 0, 0.5);\r\n    padding: 20px;\r\n    border-radius: .5rem;\r\n  }"
-
-/***/ }),
-
-/***/ "./src/app/cards-carousel/cards-carousel.component.html":
-/*!**************************************************************!*\
-  !*** ./src/app/cards-carousel/cards-carousel.component.html ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"container\">\n  <div class=\"row wider\">\n    <div id=\"carousel\" class=\"carousel slide\" data-ride=\"carousel\">\n      <ol class=\"carousel-indicators\">\n        <li data-target=\"#carousel\" data-slide-to=\"0\" class=\"active\"></li>\n        <li data-target=\"#carousel\" data-slide-to=\"1\"></li>\n        <li data-target=\"#carousel\" data-slide-to=\"2\"></li>\n      </ol>\n      <div class=\"carousel-inner\">\n        <div class=\"carousel-item active\">\n          <div class=\"d-none d-lg-block\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n                    alt=\"Haruhi Suzumiya\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto17.jpg\"\n                    alt=\"K-ON\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto22.jpg\"\n                    alt=\"Avengers\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n                    alt=\"Namae\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-none d-md-block d-lg-none\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n                    alt=\"Haruhi Suzumiya\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto17.jpg\"\n                    alt=\"K-ON\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto22.jpg\"\n                    alt=\"Avengers\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-none d-sm-block d-md-none\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n                    alt=\"Haruhi Suzumiya\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto17.jpg\"\n                    alt=\"K-ON\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-block d-sm-none\">\n            <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n                alt=\"Haruhi Suzumiya\" class=\"d-block w-100\" />\n          </div>\n        </div>\n\n        <div class=\"carousel-item\">\n          <div class=\"d-none d-lg-block\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto27.jpg\"\n                    alt=\"Miku Hatsune\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto15.png\"\n                    alt=\"K-ON\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto11.png\"\n                    alt=\"Cosplay\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto20.jpg\"\n                    alt=\"Love Hina\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-none d-md-block d-lg-none\">\n            <div class=\"slide-box\">\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n                  alt=\"Namae\" height=\"220px\" class=\"pr-2\" />\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto27.jpg\"\n                alt=\"Miku Hatsune\" height=\"220px\" class=\"pr-2\" />\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto15.png\"\n                alt=\"K-ON\" height=\"220px\" />\n          </div>\n          </div>\n          <div class=\"d-none d-sm-block d-md-none\">\n            <div class=\"slide-box\">\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto22.jpg\"\n                  alt=\"Avengers\" height=\"220px\" class=\"pr-2\" />\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n                  alt=\"Namae\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-block d-sm-none\">\n            <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto17.jpg\"\n              alt=\"K-ON\" class=\"d-block w-100\" />\n          </div>\n        </div>\n\n        <div class=\"carousel-item\">\n          <div class=\"d-none d-lg-block\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto22.jpg\"\n                    alt=\"Avengers\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n                    alt=\"Namae\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto27.jpg\"\n                    alt=\"Miku Hatsune\" height=\"220px\" class=\"pr-2\" />\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto15.png\"\n                    alt=\"K-ON\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-none d-md-block d-lg-none\">\n            <div class=\"slide-box\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto11.png\"\n                alt=\"Cosplay\" height=\"220px\" class=\"pr-2\" />\n            <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto20.jpg\"\n                alt=\"Love Hina\" height=\"220px\" class=\"pr-2\" />\n            <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n                alt=\"Haruhi Suzumiya\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-none d-sm-block d-md-none\">\n            <div class=\"slide-box\">\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto27.jpg\"\n                alt=\"Miku Hatsune\" height=\"220px\" class=\"pr-2\" />\n              <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto15.png\"\n                alt=\"K-ON\" height=\"220px\" />\n            </div>\n          </div>\n          <div class=\"d-block d-sm-none\">\n            <img src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n                alt=\"Namae\" class=\"d-block w-100\" />\n          </div>\n      </div>\n    </div>\n    <a class=\"carousel-control-prev\" href=\"#carousel\" role=\"button\" data-slide=\"prev\">\n        <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Previous</span>\n      </a>\n      <a class=\"carousel-control-next\" href=\"#carousel\" role=\"button\" data-slide=\"next\">\n        <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n        <span class=\"sr-only\">Next</span>\n      </a>\n  </div>\n</div>\n\n<!-- \n<div class=\"col-md-10 offset-md-1\">\n  <div id=\"homeCarousel\" class=\"carousel slide multi-item-carousel\" data-ride=\"carousel\">\n    <ol class=\"carousel-indicators\">\n      <li data-target=\"#homeCarousel\" data-slide-to=\"0\" class=\"active\"></li>\n      <li data-target=\"#homeCarousel\" data-slide-to=\"1\"></li>\n      <li data-target=\"#homeCarousel\" data-slide-to=\"2\"></li>\n      <li data-target=\"#homeCarousel\" data-slide-to=\"3\"></li>\n      <li data-target=\"#homeCarousel\" data-slide-to=\"4\"></li>\n      <li data-target=\"#homeCarousel\" data-slide-to=\"5\"></li>\n    </ol>\n    <div class=\"carousel-inner\">\n      <div class=\"carousel-item active\">\n        <div class=\"col-xs-4\">\n            <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto12.jpg\"\n          class=\"card-img-top mx-auto\" alt=\"Haruhi Suzumiya\" />\n        </div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"col-xs-4\">\n            <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto17.jpg\"\n              class=\"card-img-top mx-auto\" alt=\"K-ON\" />\n          </div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"col-xs-4\">\n          <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto22.jpg\"\n            class=\"card-img-top mx-auto\" alt=\"Avengers\" />\n        </div>\n      </div>\n      <div class=\"carousel-item\">\n          <div class=\"col-xs-4\">\n            <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto24.jpg\"\n              class=\"card-img-top mx-auto\" alt=\"Namae\" />\n          </div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"col-xs-4\">\n            <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto27.jpg\"\n            class=\"card-img-top mx-auto\" alt=\"Miku Hatsuna\" />\n        </div>\n      </div>\n      <div class=\"carousel-item\">\n        <div class=\"col-xs-4\">\n            <img class=\"d-block w-100\" src=\"https://reydavid.blob.core.windows.net/assets/WallPhoto11.png\"\n            class=\"card-img-top mx-auto\" alt=\"Cosplay\" />\n        </div>\n      </div>\n    </div>\n    <a class=\"carousel-control-prev\" href=\"#homeCarousel\" role=\"button\" data-slide=\"prev\">\n      <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n      <span class=\"sr-only\">Previous</span>\n    </a>\n    <a class=\"carousel-control-next\" href=\"#homeCarousel\" role=\"button\" data-slide=\"next\">\n      <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n      <span class=\"sr-only\">Next</span>\n    </a>\n  </div>\n</div> -->\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n.carousel {\r\n    width: 100%;\r\n  }\r\n  \r\n  .slide-box {\r\n    display: -webkit-box;\r\n    display: flex;\r\n    -webkit-box-pack: justify;\r\n            justify-content: space-between;\r\n  }\r\n  \r\n  @media (min-width: 576px) and (max-width: 767.98px) {\r\n    .slide-box img {\r\n      -webkit-box-flex: 0;\r\n              flex: 0 0 50%;\r\n      max-width: 50%;\r\n    }\r\n  }\r\n  \r\n  @media (min-width: 768px) and (max-width: 991.98px) {\r\n    .slide-box img {\r\n      -webkit-box-flex: 0;\r\n              flex: 0 0 33.3333%;\r\n      max-width: 33.3333%;\r\n    }\r\n  }\r\n  \r\n  @media (min-width: 992px)\r\n  {\r\n    .slide-box img {\r\n      -webkit-box-flex: 0;\r\n              flex: 0 0 25%;\r\n      max-width: 25%;\r\n    }\r\n\r\n  }\r\n  \r\n  @media (min-width: 1180px)\r\n  {\r\n    .row.wider {\r\n      margin-right: -80px;\r\n      margin-left: -80px;\r\n    }\r\n  }\r\n  \r\n  .carousel-caption {\r\n    background-color: rgba(0, 0, 0, 0.5);\r\n    padding: 20px;\r\n    border-radius: .5rem;\r\n  }\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2FyZHMtY2Fyb3VzZWwvY2FyZHMtY2Fyb3VzZWwuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxXQUFXO0VBQ2I7O0VBRUE7SUFDRSxvQkFBYTtJQUFiLGFBQWE7SUFDYix5QkFBOEI7WUFBOUIsOEJBQThCO0VBQ2hDOztFQUVBO0lBQ0U7TUFFRSxtQkFBYTtjQUFiLGFBQWE7TUFDYixjQUFjO0lBQ2hCO0VBQ0Y7O0VBRUE7SUFDRTtNQUVFLG1CQUFrQjtjQUFsQixrQkFBa0I7TUFDbEIsbUJBQW1CO0lBQ3JCO0VBQ0Y7O0VBRUE7O0lBRUU7TUFFRSxtQkFBYTtjQUFiLGFBQWE7TUFDYixjQUFjO0lBQ2hCOztFQUVGOztFQUVBOztJQUVFO01BQ0UsbUJBQW1CO01BQ25CLGtCQUFrQjtJQUNwQjtFQUNGOztFQUVBO0lBQ0Usb0NBQW9DO0lBQ3BDLGFBQWE7SUFDYixvQkFBb0I7RUFDdEIiLCJmaWxlIjoic3JjL2FwcC9jYXJkcy1jYXJvdXNlbC9jYXJkcy1jYXJvdXNlbC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5jYXJvdXNlbCB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICB9XHJcbiAgXHJcbiAgLnNsaWRlLWJveCB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gIH1cclxuICBcclxuICBAbWVkaWEgKG1pbi13aWR0aDogNTc2cHgpIGFuZCAobWF4LXdpZHRoOiA3NjcuOThweCkge1xyXG4gICAgLnNsaWRlLWJveCBpbWcge1xyXG4gICAgICAtbXMtZmxleDogMCAwIDUwJTtcclxuICAgICAgZmxleDogMCAwIDUwJTtcclxuICAgICAgbWF4LXdpZHRoOiA1MCU7XHJcbiAgICB9XHJcbiAgfVxyXG4gIFxyXG4gIEBtZWRpYSAobWluLXdpZHRoOiA3NjhweCkgYW5kIChtYXgtd2lkdGg6IDk5MS45OHB4KSB7XHJcbiAgICAuc2xpZGUtYm94IGltZyB7XHJcbiAgICAgIC1tcy1mbGV4OiAwIDAgMzMuMzMzMyU7XHJcbiAgICAgIGZsZXg6IDAgMCAzMy4zMzMzJTtcclxuICAgICAgbWF4LXdpZHRoOiAzMy4zMzMzJTtcclxuICAgIH1cclxuICB9XHJcbiAgXHJcbiAgQG1lZGlhIChtaW4td2lkdGg6IDk5MnB4KVxyXG4gIHtcclxuICAgIC5zbGlkZS1ib3ggaW1nIHtcclxuICAgICAgLW1zLWZsZXg6IDAgMCAyNSU7XHJcbiAgICAgIGZsZXg6IDAgMCAyNSU7XHJcbiAgICAgIG1heC13aWR0aDogMjUlO1xyXG4gICAgfVxyXG5cclxuICB9XHJcblxyXG4gIEBtZWRpYSAobWluLXdpZHRoOiAxMTgwcHgpXHJcbiAge1xyXG4gICAgLnJvdy53aWRlciB7XHJcbiAgICAgIG1hcmdpbi1yaWdodDogLTgwcHg7XHJcbiAgICAgIG1hcmdpbi1sZWZ0OiAtODBweDtcclxuICAgIH1cclxuICB9XHJcbiAgXHJcbiAgLmNhcm91c2VsLWNhcHRpb24ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgwLCAwLCAwLCAwLjUpO1xyXG4gICAgcGFkZGluZzogMjBweDtcclxuICAgIGJvcmRlci1yYWRpdXM6IC41cmVtO1xyXG4gIH0iXX0= */");
 
 /***/ }),
 
@@ -3594,6 +4648,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var CardsCarouselComponent = /** @class */ (function () {
     function CardsCarouselComponent() {
@@ -3603,8 +4660,8 @@ var CardsCarouselComponent = /** @class */ (function () {
     CardsCarouselComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-cards-carousel',
-            template: __webpack_require__(/*! ./cards-carousel.component.html */ "./src/app/cards-carousel/cards-carousel.component.html"),
-            styles: [__webpack_require__(/*! ./cards-carousel.component.css */ "./src/app/cards-carousel/cards-carousel.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./cards-carousel.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/cards-carousel/cards-carousel.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./cards-carousel.component.css */ "./src/app/cards-carousel/cards-carousel.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], CardsCarouselComponent);
@@ -3619,21 +4676,12 @@ var CardsCarouselComponent = /** @class */ (function () {
 /*!*****************************************************!*\
   !*** ./src/app/categories/categories.component.css ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/categories/categories.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/categories/categories.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"bgc-gray\">\n  <h2 class=\"child anime-orig-color\">Shop by Category</h2>\n  <ul class=\"list-inline\">\n      <li *ngFor=\"let category of categories\" class=\"li-child\"\n        [routerLink]=\"['/category-list']\" [queryParams]=\"{ categoryID: category?.CategoryID }\">\n          <a>\n              <div class=\"card frame card-max\">\n                  <img class=\"card-img-top image-max\" \n                       src=\"https://reydavid.blob.core.windows.net/genres/{{category?.ImageFile}}\"\n                       alt=\"{{category?.CategoryName}}\" />\n                  <div class=\"card-body\">\n                      <div class=\"card-title genre-title\" \n                        [class.smaller]=\"category?.Description.length > 20\">{{category?.Description}}</div>\n                  </div>\n              </div>\n          </a>\n      </li>\n  </ul>\n</div>\n<!-- (click)=\"OnSelectCategory(category)\"> -->\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NhdGVnb3JpZXMvY2F0ZWdvcmllcy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -3660,6 +4708,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -3685,11 +4736,16 @@ var CategoriesComponent = /** @class */ (function () {
     CategoriesComponent.prototype.ngOnInit = function () {
         this.GetCategories();
     };
+    CategoriesComponent.ctorParameters = function () { return [
+        { type: _services_categories_service__WEBPACK_IMPORTED_MODULE_1__["CategoryService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     CategoriesComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-categories',
-            template: __webpack_require__(/*! ./categories.component.html */ "./src/app/categories/categories.component.html"),
-            styles: [__webpack_require__(/*! ./categories.component.css */ "./src/app/categories/categories.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./categories.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/categories/categories.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./categories.component.css */ "./src/app/categories/categories.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_categories_service__WEBPACK_IMPORTED_MODULE_1__["CategoryService"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
@@ -3706,21 +4762,12 @@ var CategoriesComponent = /** @class */ (function () {
 /*!***********************************************************!*\
   !*** ./src/app/category-list/category-list.component.css ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/category-list/category-list.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/category-list/category-list.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"bgc-gray\">\n  <h2 class=\"child\"><span class=\"h4\">Category:  </span>{{category}}</h2>\n\n  <ul class=\"list-inline\">\n      <li *ngFor=\"let prod of products\" class=\"li-child\" (click)=\"OnSelectProduct(prod)\">\n        <!-- [routerLink]=\"['/detail']\" [queryParams]=\"{ productID: prod?.ProductID }\"> -->\n          <a>\n            <div class=\"card frame card-max\">\n              <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                    class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n              <div class=\"card-body\">\n                  <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                  <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                        alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n                  <div>\n                    <table>\n                      <tr>\n                        <td>List Price: </td>\n                        <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                      </tr>\n                      <tr>\n                        <td>Your Price: </td>\n                        <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                      </tr>\n                    </table>\n                  </div>\n              </div>\n            </div>\n          </a>\n      </li>\n  </ul>\n\n  <!-- <div class=\"row flex-row\">\n    <ng-container *ngFor=\"let prod of products\">\n      <div class=\"col-6 col-sm-4 col-md-3 col-lg-2\">\n          <a (click)=\"OnSelectProduct(prod)\">\n              <div class=\"card card-max\">\n                  <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                        class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n                  <div class=\"card-body\">\n                      <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                      <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                            alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n                      <div>\n                        <table>\n                          <tr>\n                            <td>List Price: </td>\n                            <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                          </tr>\n                          <tr>\n                            <td>Your Price: </td>\n                            <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                          </tr>\n                        </table>\n                      </div>\n                  </div>\n              </div>\n          </a>\n        </div>\n    </ng-container>\n  </div> -->\n</div>\n\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NhdGVnb3J5LWxpc3QvY2F0ZWdvcnktbGlzdC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -3747,6 +4794,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -3793,11 +4843,18 @@ var CategoryListComponent = /** @class */ (function () {
             _this._messageService.setSpinner(false);
         });
     };
+    CategoryListComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_categories_service__WEBPACK_IMPORTED_MODULE_2__["CategoryService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_4__["CartService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     CategoryListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-category-list',
-            template: __webpack_require__(/*! ./category-list.component.html */ "./src/app/category-list/category-list.component.html"),
-            styles: [__webpack_require__(/*! ./category-list.component.css */ "./src/app/category-list/category-list.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./category-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/category-list/category-list.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./category-list.component.css */ "./src/app/category-list/category-list.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
@@ -3816,21 +4873,12 @@ var CategoryListComponent = /** @class */ (function () {
 /*!*****************************************************!*\
   !*** ./src/app/contact-us/contact-us.component.css ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/contact-us/contact-us.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/contact-us/contact-us.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"pb-3\">Contact Us</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>\n        Our offices are open Monday through Friday 8:00am to 5:00pm Pacific Standard Time. \n        Of course, you can browse and order through our \n        <span class=\"p6\" (click)=\"shopping()\">online store</span>\n        24 hours a day, 7 days a week.\n    </p>\n    <p>\n        If you have a concern about an order or item in your order, or if you need to request \n        a return authorization number, we have an \n        <span class=\"p6\" (click)=\"newNote()\">online form</span>\n        that you may use for your request. \n        If you do not have an account, please create a new account with us through the Sign Up or Registration page.  \n        User accounts allow us to better serve you. \n        If you have another type of question, would like more information on an order you have placed \n        or would like to offer feedback or say thanks - please use the \n        <span class=\"p6\" (click)=\"newNote()\">contact form</span>.\n        We try to answer all questions received within 48 hours excluding weekends and holidays.\n    </p>\n    <p>\n        You will need to be logged in to use the online form. If you are already logged in, \n        you may proceed to the \n        <span class=\"p6\" (click)=\"newNote()\">contact form</span>.  Otherwise, you may \n        <span class=\"p6\" (click)=\"login()\">log in here</span>.\n    </p>\n    <p>\n      We can also be reached through the following methods:\n    </p>\n    <h5 class=\"bold\">Phone</h5>\n    <p>\n      <span class=\"pl-4\">Customer Service: (925)915-0230</span>\n    </p>\n    <h5 class=\"bold\">Email</h5>\n    <p>\n      <span class=\"pl-4\">Support: <a href=\"mailto:techSupport@animegination.net\">\n        techSupport@animegination.net</a><br/></span> \n      <span class=\"pl-4\">Marketing: <a href=\"mailto:marketing@animegination.net\">\n          marketing@animegination.net</a><br/></span> \n      <span class=\"pl-4\">General: <a href=\"mailto:info@animegination.net\">\n          info@animegination.net</a><br/></span> \n    </p>\n\n    <h5 class=\"bold\">Snail Mail</h5>\n    <p>\n      <span class=\"pl-4\">60 Windsor Court<br/></span>\n      <span class=\"pl-4\">Danville, CA 94506</span>\n    </p>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3QtdXMvY29udGFjdC11cy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -3855,6 +4903,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 var ContactUsComponent = /** @class */ (function () {
@@ -3872,11 +4923,14 @@ var ContactUsComponent = /** @class */ (function () {
     ContactUsComponent.prototype.login = function () {
         this.router.navigate(['/login']);
     };
+    ContactUsComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }
+    ]; };
     ContactUsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-contact-us',
-            template: __webpack_require__(/*! ./contact-us.component.html */ "./src/app/contact-us/contact-us.component.html"),
-            styles: [__webpack_require__(/*! ./contact-us.component.css */ "./src/app/contact-us/contact-us.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./contact-us.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/contact-us/contact-us.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./contact-us.component.css */ "./src/app/contact-us/contact-us.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], ContactUsComponent);
@@ -3891,21 +4945,12 @@ var ContactUsComponent = /** @class */ (function () {
 /*!******************************************************************!*\
   !*** ./src/app/customer/account-info/account-info.component.css ***!
   \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/account-info/account-info.component.html":
-/*!*******************************************************************!*\
-  !*** ./src/app/customer/account-info/account-info.component.html ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!--<div>\n    <div class=\"home jumbotron centered\">\n        <h2>Account Info</h2>\n        <h3 *ngIf=\"jwt\">Your JWT is:</h3>\n        <pre *ngIf=\"jwt\" class=\"jwt\"><code>{{jwt}}</code></pre>\n        <pre *ngIf=\"jwt\" class=\"jwt\"><code>{{decodedJwt | json}}</code></pre>\n        <p>Click any of the buttons to call an API and get a response</p>\n        <p><a class=\"btn btn-primary btn-lg\" role=\"button\" (click)=\"callAnonymousApi()\">Call Anonymous API</a></p>\n        <p><a class=\"btn btn-primary btn-lg\" role=\"button\" (click)=\"callSecuredApi()\">Call Secure API</a></p>\n        <p><a class=\"btn btn-primary btn-lg\" role=\"button\" (click)=\"logout()\">Logout</a></p>\n        <h2 *ngIf=\"response\">The response of calling the <span class=\"red\"></span> API is:</h2>\n        <h3 *ngIf=\"response\">{{response}}</h3>\n    </div>\n</div>-->\n<div class=\"row\">\n    <div class=\"col-sm-12 col-md-10 offset-md-1\">\n        <h2>Your Account</h2>\n        <div class=\"row\">\n            <div class=\"col-sm-12 col-md-4\">\n                <div class=\"card\">\n                      <h3 class=\"card-header\">Orders</h3>\n                    <div class=\"card-body\">\n                        <div class=\"card-tall\">\n                            <p>{{recentPurchases}}</p>\n                        </div>\n                        <button type=\"button\" class=\"btn btn-default anime-button\" \n                                (click)=\"goOrders()\">View Recent Orders</button>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-sm-12 col-md-4\">\n                <div class=\"card\">\n                    <h3 class=\"card-header\">Profile Settings</h3>\n                    <div class=\"card-body\">\n                        <div class=\"card-tall\">\n                            <strong>{{userAccount.firstName}} {{userAccount.lastName}}</strong>\n                            <div>{{userAccount.email}}</div>\n                            <div *ngIf=\"userAccount.cellPhone\">{{userAccount.cellPhone}} (Cell)</div>\n                            <div *ngIf=\"userAccount.homePhone\">{{userAccount.homePhone}} (Other)</div>\n                            <p></p>\n                        </div>\n                        <button type=\"button\" class=\"btn btn-default anime-button\" \n                                (click)=\"goProfile()\">Edit</button>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-sm-12 col-md-4\">\n                <div class=\"card\">\n                    <h3 class=\"card-header\">Address Book</h3>\n                    <div class=\"card-body\">\n                        <div class=\"card-tall\">\n                            <div *ngIf=\"userAccount.address && userAccount.city && userAccount.zipCode\">\n                                <div>{{userAccount.address}}</div>\n                                <div>{{userAccount.city}}</div>\n                                <div>{{userAccount.state}} {{userAccount.zipCode}}</div>\n                                <div>United States</div>\n                                <p></p>\n                            </div>\n                            <div *ngIf=\"!userAccount.address && !userAccount.city && !userAccount.zipCode\">\n                                <p>{{missingAddressBook}}</p>\n                            </div>\n                            <div *ngIf=\"!userAccount.address || !userAccount.city || !userAccount.zipCode\">\n                                <div *ngIf=\"userAccount.address || userAccount.city || userAccount.zipCode\">\n                                    <p>{{incompleteAddressBook}}</p>\n                                </div>\n                            </div>\n                        </div>\n                        <button type=\"button\" class=\"btn btn-default anime-button\" \n                                (click)=\"goAddress()\">Edit</button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2FjY291bnQtaW5mby9hY2NvdW50LWluZm8uY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -3937,6 +4982,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -4020,11 +5068,19 @@ var AccountInfoComponent = /** @class */ (function () {
             _this._messageService.setSpinner(false);
         });
     };
+    AccountInfoComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_2__["UserAccountsService"] },
+        { type: _services_login_service__WEBPACK_IMPORTED_MODULE_3__["LoginService"] },
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_6__["OrderService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_4__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_5__["MessageService"] }
+    ]; };
     AccountInfoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-account-info',
-            template: __webpack_require__(/*! ./account-info.component.html */ "./src/app/customer/account-info/account-info.component.html"),
-            styles: [__webpack_require__(/*! ./account-info.component.css */ "./src/app/customer/account-info/account-info.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./account-info.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/account-info/account-info.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./account-info.component.css */ "./src/app/customer/account-info/account-info.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_2__["UserAccountsService"],
@@ -4044,21 +5100,12 @@ var AccountInfoComponent = /** @class */ (function () {
 /*!**************************************************************************!*\
   !*** ./src/app/customer/account-settings/account-settings.component.css ***!
   \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/account-settings/account-settings.component.html":
-/*!***************************************************************************!*\
-  !*** ./src/app/customer/account-settings/account-settings.component.html ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>Account Settings</h2>\n<p>Please review your account settings.  You can change them if you wish.</p>"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2FjY291bnQtc2V0dGluZ3MvYWNjb3VudC1zZXR0aW5ncy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -4082,6 +5129,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var AccountSettingsComponent = /** @class */ (function () {
     function AccountSettingsComponent() {
@@ -4091,8 +5141,8 @@ var AccountSettingsComponent = /** @class */ (function () {
     AccountSettingsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-account-settings',
-            template: __webpack_require__(/*! ./account-settings.component.html */ "./src/app/customer/account-settings/account-settings.component.html"),
-            styles: [__webpack_require__(/*! ./account-settings.component.css */ "./src/app/customer/account-settings/account-settings.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./account-settings.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/account-settings/account-settings.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./account-settings.component.css */ "./src/app/customer/account-settings/account-settings.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], AccountSettingsComponent);
@@ -4107,21 +5157,12 @@ var AccountSettingsComponent = /** @class */ (function () {
 /*!**************************************************************************!*\
   !*** ./src/app/customer/address-settings/address-settings.component.css ***!
   \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/address-settings/address-settings.component.html":
-/*!***************************************************************************!*\
-  !*** ./src/app/customer/address-settings/address-settings.component.html ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n        <h2>Edit Address</h2>\n        <form #addressForm=\"ngForm\" role=\"form\" \n            (submit)=\"Update(addressForm.value, addressForm.valid)\">\n            <div class=\"form-group\">\n                <label for=\"username\">Full Name</label>\n                <label class=\"form-control\" id=\"username\">\n                    {{addressInput.firstName}} {{addressInput.lastName}}\n                </label>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"address\">Street Address <span class=\"anime-color\">*</span></label>\n                <input type=\"text\" ngControl=\"Address\" required\n                       [(ngModel)]=\"addressInput.address\"\n                       class=\"form-control\" id=\"address\" name=\"address\" />\n            </div>\n            <div class=\"form-group\">\n                <label for=\"city\">City <span class=\"anime-color\">*</span></label>\n                <input type=\"text\" ngControl=\"City\" required\n                       [(ngModel)]=\"addressInput.city\"\n                       class=\"form-control\" id=\"city\" name=\"city\" />\n            </div>\n            <div class=\"form-group\">\n                <label for=\"state\">State</label>\n                <!-- <states [defaultState]=\"currentState\" (select)=\"selectState($event)\"></states> -->\n                <select (change)=\"selectState($event.target.value)\" \n                  class=\"form-control\" id=\"state\" name=\"state\">\n                    <option *ngFor=\"let state of states\" \n                        value={{state.StateID}} \n                        [selected]=\"state.StateName == _sessionService.UserAccount.state\">\n                            {{state.StateName}}\n                    </option>\n                </select>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"zipcode\">Zip Code <span class=\"anime-color\">*</span></label>\n                <input type=\"text\" ngControl=\"ZipCode\" required \n                       pattern=\"[0-9]{5}\" maxlength=\"5\" title=\"hint: 5-digit Zip Code\"\n                       [(ngModel)]=\"addressInput.zipCode\"\n                       class=\"form-control\" id=\"zipcode\" name=\"zipcode\" />\n            </div>\n            <div>\n                <button class=\"btn btn-default anime-button-lg\" type=\"submit\" \n                    [disabled]=\"addressForm.invalid || addressForm.pristine && !isDirty\">Update</button>\n            </div>\n            <div class=\"pb-3\"></div>\n            <div *ngIf=\"isSuccess\" class=\"alert alert-success\">\n                <strong>Success! </strong> Your Address has been Updated.\n            </div>\n            <div *ngIf=\"isFailure\" class=\"alert alert-danger\">\n                <strong>There was a problem: </strong> Your Address Update failed.\n            </div>\n        </form>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2FkZHJlc3Mtc2V0dGluZ3MvYWRkcmVzcy1zZXR0aW5ncy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -4149,6 +5190,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -4231,11 +5275,18 @@ var AddressSettingsComponent = /** @class */ (function () {
             this.isFailure = true;
         }
     };
+    AddressSettingsComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_2__["UserAccountsService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] },
+        { type: _services_states_service__WEBPACK_IMPORTED_MODULE_5__["StatesService"] }
+    ]; };
     AddressSettingsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-address-settings',
-            template: __webpack_require__(/*! ./address-settings.component.html */ "./src/app/customer/address-settings/address-settings.component.html"),
-            styles: [__webpack_require__(/*! ./address-settings.component.css */ "./src/app/customer/address-settings/address-settings.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./address-settings.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/address-settings/address-settings.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./address-settings.component.css */ "./src/app/customer/address-settings/address-settings.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_2__["UserAccountsService"],
@@ -4254,21 +5305,12 @@ var AddressSettingsComponent = /** @class */ (function () {
 /*!**********************************************************!*\
   !*** ./src/app/customer/buy-list/buy-list.component.css ***!
   \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/buy-list/buy-list.component.html":
-/*!***********************************************************!*\
-  !*** ./src/app/customer/buy-list/buy-list.component.html ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"inline pr-3\">Shopping Cart</h2>\n<div *ngIf=\"!isEmpty\" class=\"inline\">\n    {{order?.productQuantity}} Product<span *ngIf=\"order?.productQuantity != 1\">s</span>, \n    {{order?.itemQuantity}} Item<span *ngIf=\"order?.itemQuantity != 1\">s</span>\n</div>\n\n<div *ngIf=\"isEmpty\">\n    <div class=\"pt-3\"></div>\n    <h3>Your Shopping Cart is Empty</h3>\n    <div class=\"pb-3\"></div>\n</div>\n<div *ngIf=\"!isEmpty\">\n    <div class=\"row pt-3\">\n        <div class=\"col-12 col-sm-6 order-sm-2 col-md-5 order-md-2 col-lg-3\">\n            <div class=\"row\">\n                <div class=\"col-10 offset-1 col-lg-11 offset-lg-0\">\n                    <app-subtotals [actionButton]=\"true\" [marketing]=\"true\"></app-subtotals>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"col-12 col-sm-6 order-sm-1 col-md-7 order-md-1 col-lg-9\">\n            <ul class=\"list-no-bullets\">\n                <li *ngFor=\"let product of cartProducts\">\n                    <app-cart-item [cartItem]=\"product\" [cartType]=\"cartType\"></app-cart-item>\n                </li>\n            </ul>\n\n            <!--<ul class=\"list-no-bullets\">\n            <li *ngFor=\"let prod of cartProducts\"\n                (click)=\"OnSelectProduct(prod)\">\n                <cartItem [product]=\"prod\"></cartItem>\n            </li>\n            </ul>-->\n\n            <!-- <ul class=\"list-no-bullets\">\n                <li *ngFor=\"let prod of cartProducts\">\n                    <cartItem [product]=\"prod\" (selectItem)=\"OnSelectProduct($event)\"></cartItem>\n                </li>\n            </ul> -->\n        </div>\n    </div>\n</div>\n\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2J1eS1saXN0L2J1eS1saXN0LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -4297,6 +5339,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -4341,11 +5386,19 @@ var BuyListComponent = /** @class */ (function () {
             });
         }
     };
+    BuyListComponent.ctorParameters = function () { return [
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_2__["CartService"] },
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_4__["OrderService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_5__["MessageService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] }
+    ]; };
     BuyListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-buy-list',
-            template: __webpack_require__(/*! ./buy-list.component.html */ "./src/app/customer/buy-list/buy-list.component.html"),
-            styles: [__webpack_require__(/*! ./buy-list.component.css */ "./src/app/customer/buy-list/buy-list.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./buy-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/buy-list/buy-list.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./buy-list.component.css */ "./src/app/customer/buy-list/buy-list.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
             _services_cart_service__WEBPACK_IMPORTED_MODULE_2__["CartService"],
@@ -4365,21 +5418,12 @@ var BuyListComponent = /** @class */ (function () {
 /*!************************************************************!*\
   !*** ./src/app/customer/cart-item/cart-item.component.css ***!
   \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/cart-item/cart-item.component.html":
-/*!*************************************************************!*\
-  !*** ./src/app/customer/cart-item/cart-item.component.html ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-11 col-lg-6\">\n        <div class=\"row\">\n            <div class=\"col-4 col-sm-12 col-md-5 col-xl-4\">\n                <div (click)=\"OnSelectProduct(cartItem)\" class=\"panel-body panel-default pointer\">\n                    <img src=\"https://reydavid.blob.core.windows.net/anime/{{cartItem?.productCode}}.jpg\"\n                        alt=\"{{cartItem?.productCode}}\" class=\"card-max-cart img-responsive\" />\n                </div>\n            </div>\n            <div class=\"col-8 col-sm-12 col-md-7 col-xl-8\">\n                <h5 (click)=\"OnSelectProduct(cartItem)\" class=\"pointer nowrap\">{{cartItem?.productTitle}}</h5>\n                <div>{{cartItem?.mediumName}}</div>\n                <div>{{cartItem?.categoryName}}</div>\n                <div>from {{cartItem?.publisherName}} in {{cartItem?.productYearCreated}}</div>\n                <div>{{cartItem?.productLength}} minutes</div>\n                <div class=\"tiny-gray\">Item: {{cartItem?.productCode}}</div>\n\n            </div>\n        </div>\n    </div>\n    <div class=\"col-11 col-lg-5\">\n        <div class=\"row d-none d-lg-block pt-4\"></div>\n        <div class=\"row\">\n            <div class=\"col-6\">\n                <div>List Price: <s>{{cartItem?.unitPrice | currency: 'USD':true }} </s></div>\n                <div>Your Price: <strong><span class=\"text-danger font-em-10\">\n                    {{cartItem?.yourPrice | currency:'USD':'symbol' }} </span></strong>\n                </div>\n            </div>\n            <div class=\"col-6\">\n                <div>\n                    <i class=\"fa fa-check-circle\"></i>\n                    <span class=\"alert-content pb-2 pl-2\">In Stock</span>\n                </div>\n                <div>Quantity: \n                    <input type=\"number\" min=\"1\" max=\"10\" step=\"1\" \n                        value={{cartItem?.quantity}} \n                        (change)=\"updateQuantity($event.target.value, cartItem)\" \n                    >\n                </div>\n            </div>\n        </div>\n        <div class=\"d-flex justify-content-center pt-2\">\n            <div class=\"px-2\">\n                <a class=\"anchor\" (click)=\"moveItem(cartItem)\">{{moveLabel}}</a> \n            </div>\n            <div class=\"px-2\">|</div>\n            <div class=\"px-2\">\n                <a class=\"anchor\" (click)=\"deleteItem(cartItem)\">Delete</a>\n            </div>\n        </div>\n        <div class=\"row d-block d-lg-none pb-4\"></div>\n    </div>\n    <div class=\"col-12 partition\"></div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2NhcnQtaXRlbS9jYXJ0LWl0ZW0uY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -4408,6 +5452,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -4494,6 +5541,13 @@ var CartItemComponent = /** @class */ (function () {
             _this.messageService.setCartItem(_this.orderItem);
         });
     };
+    CartItemComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_2__["MessageService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_4__["OrderService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_6__["CartService"] }
+    ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
@@ -4505,8 +5559,8 @@ var CartItemComponent = /** @class */ (function () {
     CartItemComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-cart-item',
-            template: __webpack_require__(/*! ./cart-item.component.html */ "./src/app/customer/cart-item/cart-item.component.html"),
-            styles: [__webpack_require__(/*! ./cart-item.component.css */ "./src/app/customer/cart-item/cart-item.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./cart-item.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/cart-item/cart-item.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./cart-item.component.css */ "./src/app/customer/cart-item/cart-item.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _services_message_service__WEBPACK_IMPORTED_MODULE_2__["MessageService"],
@@ -4525,21 +5579,12 @@ var CartItemComponent = /** @class */ (function () {
 /*!**************************************************************************!*\
   !*** ./src/app/customer/checkout-address/checkout-address.component.css ***!
   \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/checkout-address/checkout-address.component.html":
-/*!***************************************************************************!*\
-  !*** ./src/app/customer/checkout-address/checkout-address.component.html ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row pt-3\">\n    <div class=\"col-12 col-sm-6 order-sm-2 col-md-6 order-md-2 col-xl-4\">\n        <div class=\"row\">\n            <div class=\"col-10 offset-1 col-lg-11 offset-lg-0\">\n                <app-subtotals [actionButton]=\"false\" [marketing]=\"true\"></app-subtotals>\n            </div>\n        </div> \n    </div>\n\n    <div class=\"col-12 col-sm-6 order-sm-1 col-md-6 order-md-1 col-xl-8\">\n        <div class=\"row\">\n            <div class=\"col-sm-12 col-md-10 offset-md-1\">\n                <h2>Confirm Shipping Address</h2>\n                <div class=\"row\">\n                    <div class=\"col-12 col-md-10 col-xl-6\">\n                        <div class=\"card\">\n                            <!-- <h3 class=\"card-header\">Address Book</h3> -->\n                            <div class=\"pt-3 px-3 bottom-border\">\n                                <input type=\"radio\" checked>\n                                <label class=\"pl-3 bold\">Selected</label>\n                            </div>\n                            <div class=\"card-body\">\n                                <div class=\"card-tall\">\n                                    <div *ngIf=\"userAccount.address && userAccount.city && userAccount.zipCode\">\n                                        <strong>{{userAccount.firstName}} {{userAccount.lastName}}</strong>\n                                        <div>{{userAccount.address}}</div>\n                                        <div>{{userAccount.city}}</div>\n                                        <div>{{userAccount.state}} {{userAccount.zipCode}}</div>\n                                        <div>United States</div>\n                                        <p></p>\n                                    </div>\n                                    <div *ngIf=\"!userAccount.address && !userAccount.city && !userAccount.zipCode\">\n                                        <p>{{missingAddressBook}}</p>\n                                    </div>\n                                    <div *ngIf=\"!userAccount.address || !userAccount.city || !userAccount.zipCode\">\n                                        <div *ngIf=\"userAccount.address || userAccount.city || userAccount.zipCode\">\n                                            <p>{{incompleteAddressBook}}</p>\n                                        </div>\n                                    </div>\n                                </div>\n                                <button type=\"button\" class=\"btn btn-default anime-button\" \n                                        (click)=\"goAddress()\">Edit</button>\n                            </div>\n                        </div>\n                        <div class=\"py-3\">\n                            <button class=\"btn btn-block anime-button-lg font-em-10\" \n                            (click)=\"goCheckout()\">Deliver to this Address</button>\n                        </div>    \n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2NoZWNrb3V0LWFkZHJlc3MvY2hlY2tvdXQtYWRkcmVzcy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -4565,6 +5610,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -4599,11 +5647,16 @@ var CheckoutAddressComponent = /** @class */ (function () {
     CheckoutAddressComponent.prototype.goCheckout = function () {
         this._router.navigate(['/checkout-review']);
     };
+    CheckoutAddressComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_2__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     CheckoutAddressComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-checkout-address',
-            template: __webpack_require__(/*! ./checkout-address.component.html */ "./src/app/customer/checkout-address/checkout-address.component.html"),
-            styles: [__webpack_require__(/*! ./checkout-address.component.css */ "./src/app/customer/checkout-address/checkout-address.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./checkout-address.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/checkout-address/checkout-address.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./checkout-address.component.css */ "./src/app/customer/checkout-address/checkout-address.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_2__["SessionService"],
@@ -4620,21 +5673,12 @@ var CheckoutAddressComponent = /** @class */ (function () {
 /*!************************************************************************!*\
   !*** ./src/app/customer/checkout-review/checkout-review.component.css ***!
   \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/checkout-review/checkout-review.component.html":
-/*!*************************************************************************!*\
-  !*** ./src/app/customer/checkout-review/checkout-review.component.html ***!
-  \*************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row pt-3\">\n    <div class=\"col-12 col-sm-6 order-sm-2 col-md-6 order-md-2 col-xl-4\">\n        <div class=\"row\">\n            <div class=\"col-10 offset-1 col-lg-11 offset-lg-0\">\n                <app-subtotals [actionButton]=\"false\" [marketing]=\"true\"></app-subtotals>\n            </div>\n        </div> \n    </div>\n\n    <div class=\"col-12 col-sm-6 order-sm-1 col-md-6 order-md-1 col-xl-8\">\n        <div class=\"row bottom-border\">\n          <div class=\"col-12\">\n              <h2>Confirm Your Order</h2>\n          </div>\n        </div>\n\n        <div class=\"font-em-10\">\n            <div class=\"row bottom-border d-flex align-items-center py-3\">\n              <div class=\"col-12 col-lg-4 d-flex align-items-center\">\n                  <i class=\"fa fa-check-circle fa-lg\"></i>\n                  <i class=\"fa fa-truck fa-flip-horizontal fa-lg pr-3\"></i>\n                  <span class=\"pl-3\">Shipping</span>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-3 offset-lg-0 text-lg-right\">\n                <div>Estimated Delivery:</div>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-0\">\n                <strong>{{ shipDate }}</strong>\n              </div>\n            </div>\n\n            <div class=\"row d-flex align-items-center pt-3\">\n              <div class=\"col-12 col-lg-4 d-flex align-items-center\">\n                  <i class=\"fa fa-check-circle fa-lg\"></i>\n                  <i class=\"fa fa-home fa-lg pl-3\"></i>\n                  <span class=\"pl-3\">Sending to</span>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-3 offset-lg-0 text-lg-right\">\n                <div>Shipping Address:</div>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-0\">\n                  <strong>{{userAccount.firstName}} {{userAccount.lastName}}</strong>\n              </div>\n            </div>\n            <div class=\"row d-flex align-items-center\">\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-7\">\n                  <strong>{{userAccount.address}}</strong>\n              </div>\n            </div>\n            <div class=\"row d-flex align-items-center\">\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-7\">\n                  <strong>{{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}</strong>\n              </div>\n            </div>\n            <div class=\"row bottom-border d-flex align-items-center pb-3\">\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-7\">\n                  <strong>United States</strong>\n              </div>\n            </div>\n        \n            <div class=\"row d-flex align-items-center pt-3\">\n              <div class=\"col-12 col-lg-4 d-flex align-items-center\">\n                  <i class=\"fa fa-check-circle fa-lg\"></i>\n                  <i class=\"fa fa-credit-card fa-lg pl-3\"></i>\n                  <span class=\"pl-3\">Paying with</span>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-3 offset-lg-0 text-lg-right\">\n                <div>Payment Method:</div>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-0\">\n                <strong>Gift credit ending in 5678</strong>\n              </div>\n            </div>\n\n            <div class=\"row d-flex align-items-center\">\n                <div class=\"col-11 offset-1 col-lg-3 offset-lg-4 text-lg-right\">\n                  <div>Name on Card:</div>\n                </div>\n                <div class=\"col-11 offset-1 col-lg-5 offset-lg-0\">\n                  <strong>{{userAccount.firstName}} {{userAccount.lastName}}</strong>\n                </div>\n            </div>\n            <div class=\"row d-flex align-items-center\">\n              <div class=\"col-11 offset-1 col-lg-3 offset-lg-4 text-lg-right\">\n                <div>Billing Address:</div>\n              </div>\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-0\">\n                <strong>{{userAccount.address}}</strong>\n              </div>\n            </div>\n            <div class=\"row bottom-border d-flex align-items-center pb-3\">\n              <div class=\"col-11 offset-1 col-lg-5 offset-lg-7\">\n                  <strong>{{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}</strong>\n              </div>\n            </div>\n    \n            <div class=\"row d-flex align-items-center py-3\">\n              <div class=\"col-8 d-none d-lg-block\">\n                <div class=\"small-gray text-right\">By clicking to place your order, you agree to</div>\n                <div class=\"small-gray text-right\">Animegination's \n                  <a href=\"privacy\" target=\"_blank\">Privacy Policy</a> and \n                  <a href=\"terms-of-use\" target=\"_blank\">Terms of Use</a></div>\n              </div>\n              <div class=\"col-12 col-lg-4\">\n                <button class=\"btn btn-block anime-button-lg font-em-10\" \n                (click)=\"placeOrder()\">Place Order</button>\n              </div>\n              <div class=\"col-12 d-lg-none\">\n                <div class=\"small-gray text-center\">\n                  By clicking to place your order, you agree to Animegination's Privacy Policy and Terms of Use\n                </div>\n              </div>\n            </div>            \n        </div>\n    </div>\n</div>\n\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2NoZWNrb3V0LXJldmlldy9jaGVja291dC1yZXZpZXcuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -4662,6 +5706,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -4710,11 +5757,18 @@ var CheckoutReviewComponent = /** @class */ (function () {
         });
         this._router.navigate(['/checkout-thankyou']);
     };
+    CheckoutReviewComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_2__["SessionService"] },
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_5__["OrderService"] },
+        { type: _services_utilities_service__WEBPACK_IMPORTED_MODULE_4__["UtilityService"] }
+    ]; };
     CheckoutReviewComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-checkout-review',
-            template: __webpack_require__(/*! ./checkout-review.component.html */ "./src/app/customer/checkout-review/checkout-review.component.html"),
-            styles: [__webpack_require__(/*! ./checkout-review.component.css */ "./src/app/customer/checkout-review/checkout-review.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./checkout-review.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/checkout-review/checkout-review.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./checkout-review.component.css */ "./src/app/customer/checkout-review/checkout-review.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"],
@@ -4733,21 +5787,12 @@ var CheckoutReviewComponent = /** @class */ (function () {
 /*!****************************************************************************!*\
   !*** ./src/app/customer/checkout-thankyou/checkout-thankyou.component.css ***!
   \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/checkout-thankyou/checkout-thankyou.component.html":
-/*!*****************************************************************************!*\
-  !*** ./src/app/customer/checkout-thankyou/checkout-thankyou.component.html ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"pb-3\">Thanks for shopping with us, {{ userAccount.firstName }}!</h2>\n\n<div class=\"font-em-10\">\n  <p>\n    Your order has been placed.\n  </p>\n  <p>\n    For delivery tracking information and other order details, \n    please check out the confirmation email we're sending to <span class=\"bold\">{{ userAccount.email }}</span>\n  </p>\n  <p *ngIf=\"orderNumber\">\n    Order number: <span class=\"bold\">{{ orderNumber }}</span> \n    <span class=\"p6 pl-3\" (click)=\"goDetails()\">View order details</span>\n  </p>\n  <p>\n    Estimated delivery: <span class=\"bold\">{{ shipDate }} </span>\n  </p>\n  <p>\n    If there are any problems with this order, you may contact us by e-mail. \n    Please make sure you include all relevent information, including your order number.\n  </p>\n</div>\n<div class=\"font-em-10 text-danger font-italic bold pb-5\">\n  (Actually, NOTHING will be delivered.  You will be charged NOTHING.  This is, after all, only a DEMO web site. Thanks for playing along anyway)\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2NoZWNrb3V0LXRoYW5reW91L2NoZWNrb3V0LXRoYW5reW91LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -4774,6 +5819,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -4807,11 +5855,17 @@ var CheckoutThankyouComponent = /** @class */ (function () {
     CheckoutThankyouComponent.prototype.goDetails = function () {
         this._router.navigate(["/orders-details"], { queryParams: { orderID: this.order.orderID } });
     };
+    CheckoutThankyouComponent.ctorParameters = function () { return [
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_utilities_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_3__["Globals"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+    ]; };
     CheckoutThankyouComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-checkout-thankyou',
-            template: __webpack_require__(/*! ./checkout-thankyou.component.html */ "./src/app/customer/checkout-thankyou/checkout-thankyou.component.html"),
-            styles: [__webpack_require__(/*! ./checkout-thankyou.component.css */ "./src/app/customer/checkout-thankyou/checkout-thankyou.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./checkout-thankyou.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/checkout-thankyou/checkout-thankyou.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./checkout-thankyou.component.css */ "./src/app/customer/checkout-thankyou/checkout-thankyou.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
             _services_utilities_service__WEBPACK_IMPORTED_MODULE_2__["UtilityService"],
@@ -4859,6 +5913,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -4961,6 +6018,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -5061,21 +6121,12 @@ var CustomerModule = /** @class */ (function () {
 /*!**********************************************************!*\
   !*** ./src/app/customer/feedback/feedback.component.css ***!
   \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/feedback/feedback.component.html":
-/*!***********************************************************!*\
-  !*** ./src/app/customer/feedback/feedback.component.html ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  feedback works!\n</p>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2ZlZWRiYWNrL2ZlZWRiYWNrLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -5099,6 +6150,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var FeedbackComponent = /** @class */ (function () {
     function FeedbackComponent() {
@@ -5108,8 +6162,8 @@ var FeedbackComponent = /** @class */ (function () {
     FeedbackComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-feedback',
-            template: __webpack_require__(/*! ./feedback.component.html */ "./src/app/customer/feedback/feedback.component.html"),
-            styles: [__webpack_require__(/*! ./feedback.component.css */ "./src/app/customer/feedback/feedback.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./feedback.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/feedback/feedback.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./feedback.component.css */ "./src/app/customer/feedback/feedback.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], FeedbackComponent);
@@ -5124,21 +6178,12 @@ var FeedbackComponent = /** @class */ (function () {
 /*!**********************************************************************!*\
   !*** ./src/app/customer/footer-product/footer-product.component.css ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/footer-product/footer-product.component.html":
-/*!***********************************************************************!*\
-  !*** ./src/app/customer/footer-product/footer-product.component.html ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<app-history></app-history>\n\n<div class=\"d-none d-sm-block\">\n  <div class=\"row footermain\">\n    <div class=\"col p4 text-center\">\n        Animegination, Your One-Stop Anime Superstore! Phone (925)984-5555, \n        Email: <a class=\"mailto\" href=\"mailto:info@animegination.net\">info@animegination.net</a>\n    </div>\n  </div>\n  <div class=\"row footermain\">\n    <div class=\"d-none d-md-block col-4 footerleft d-none d-md-block\">\n        <div class=\"footeraside\">\n            <p class=\"p3\">\n              <a [routerLink]=\"['/legal']\">Legal Stuff</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/ratings']\">Ratings</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/shipping-info']\">Shipping Info</a>\n            </p>\n        </div>\n    </div>\n    <div class=\"col-12 col-md-8 footerright\">\n      <div class=\"footercontent\">\n          <p class=\"p5\">\n              Copyright © 1997 - 2020 Animegination, Inc. All Rights Reserved. Dealer Inquiries Invited.\n          </p>\n          <p class=\"p5\">\n              *The following restrictions apply to all coupons unless otherwise noted: Items already heavily discounted (weekly specials, bargain bin items, close out items, and specialty imports items) are excluded from coupon discounts. Orders must be completed through our online store at Animegination.net. Items that are on special or are excluded from additional discounts do not count toward coupon dollar amount requirements. Only one coupon or gift certificate may be applied to each order. Canceling or revising your order may affect its eligibility for the coupon.\n          </p>\n      </div>\n    </div>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL2Zvb3Rlci1wcm9kdWN0L2Zvb3Rlci1wcm9kdWN0LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -5163,6 +6208,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 var FooterProductComponent = /** @class */ (function () {
@@ -5172,11 +6220,14 @@ var FooterProductComponent = /** @class */ (function () {
     FooterProductComponent.prototype.ngOnInit = function () {
         this.messageService.selectFooter(false);
     };
+    FooterProductComponent.ctorParameters = function () { return [
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_1__["MessageService"] }
+    ]; };
     FooterProductComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-footer-product',
-            template: __webpack_require__(/*! ./footer-product.component.html */ "./src/app/customer/footer-product/footer-product.component.html"),
-            styles: [__webpack_require__(/*! ./footer-product.component.css */ "./src/app/customer/footer-product/footer-product.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./footer-product.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/footer-product/footer-product.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./footer-product.component.css */ "./src/app/customer/footer-product/footer-product.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_message_service__WEBPACK_IMPORTED_MODULE_1__["MessageService"]])
     ], FooterProductComponent);
@@ -5191,21 +6242,12 @@ var FooterProductComponent = /** @class */ (function () {
 /*!********************************************************!*\
   !*** ./src/app/customer/history/history.component.css ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "\r\nul {\r\n    overflow-y: auto;\r\n    overflow-x: hidden;\r\n    white-space: nowrap;\r\n    display: block;\r\n    list-style: none;\r\n}\r\n\r\nli {\r\n    display: inline-block;\r\n    text-align: center;\r\n    padding-right: 20px;\r\n}\r\n\r\nli:last-child {\r\n    padding-right: 0px;\r\n}\r\n"
-
-/***/ }),
-
-/***/ "./src/app/customer/history/history.component.html":
-/*!*********************************************************!*\
-  !*** ./src/app/customer/history/history.component.html ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"showButtons\">\n    <div [class.child]=\"showButtons\" class=\"col-12 col-md-10 offset-md-1\">\n      <h4>{{title}}</h4>\n    </div>\n  \n    <div class=\"row\">\n      <div id=\"prevHistory\" [class.child]=\"showButtons\" \n          class=\"slide-prev slide-col col-2 col-sm-1 d-flex align-items-center\">\n        <a>\n          <img src=\"assets/Previous2.jpg\" alt=\"Previous\" \n                class=\"slide-buttons\">\n        </a>\n      </div>\n      <div id=\"wrapHistory\" [class.child]=\"showButtons\" \n          class=\"slide-wrapper col-8 col-sm-10\">\n        <ul>\n            <li *ngFor=\"let prod of cartProducts\">\n              <a (click)=\"OnSelectProduct(prod)\">\n                <div class=\"card card-max p-3\">\n                      <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.productCode}}.jpg\"\n                            class=\"card-img-top mx-auto image-min\" alt=\"{{prod?.productCode}}\" />\n                  </div>\n                </a>\n            </li>\n        </ul>\n      </div>\n      <div id=\"nextHistory\" [class.child]=\"showButtons\"\n          class=\"slide-next slide-col col-2 col-sm-1 d-flex align-items-center\">\n        <a>\n            <img src=\"assets/Next2.jpg\" alt=\"Next\" class=\"slide-buttons\">\n        </a>\n      </div>\n    </div>\n  </div>\n  \n  "
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\nul {\r\n    overflow-y: auto;\r\n    overflow-x: hidden;\r\n    white-space: nowrap;\r\n    display: block;\r\n    list-style: none;\r\n}\r\n\r\nli {\r\n    display: inline-block;\r\n    text-align: center;\r\n    padding-right: 20px;\r\n}\r\n\r\nli:last-child {\r\n    padding-right: 0px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY3VzdG9tZXIvaGlzdG9yeS9oaXN0b3J5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixtQkFBbUI7SUFDbkIsY0FBYztJQUNkLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLHFCQUFxQjtJQUNyQixrQkFBa0I7SUFDbEIsbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6InNyYy9hcHAvY3VzdG9tZXIvaGlzdG9yeS9oaXN0b3J5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcclxudWwge1xyXG4gICAgb3ZlcmZsb3cteTogYXV0bztcclxuICAgIG92ZXJmbG93LXg6IGhpZGRlbjtcclxuICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIGxpc3Qtc3R5bGU6IG5vbmU7XHJcbn1cclxuXHJcbmxpIHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDIwcHg7XHJcbn1cclxuXHJcbmxpOmxhc3QtY2hpbGQge1xyXG4gICAgcGFkZGluZy1yaWdodDogMHB4O1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -5236,6 +6278,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -5378,11 +6423,19 @@ var HistoryComponent = /** @class */ (function () {
             __this.outerWidth = 0;
         });
     };
+    HistoryComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: src_app_globals__WEBPACK_IMPORTED_MODULE_6__["Globals"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_2__["CartService"] },
+        { type: src_app_services_message_service__WEBPACK_IMPORTED_MODULE_5__["MessageService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] }
+    ]; };
     HistoryComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-history',
-            template: __webpack_require__(/*! ./history.component.html */ "./src/app/customer/history/history.component.html"),
-            styles: [__webpack_require__(/*! ./history.component.css */ "./src/app/customer/history/history.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./history.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/history/history.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./history.component.css */ "./src/app/customer/history/history.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             src_app_globals__WEBPACK_IMPORTED_MODULE_6__["Globals"],
@@ -5401,21 +6454,12 @@ var HistoryComponent = /** @class */ (function () {
 /*!**************************************************************!*\
   !*** ./src/app/customer/order-item/order-item.component.css ***!
   \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/order-item/order-item.component.html":
-/*!***************************************************************!*\
-  !*** ./src/app/customer/order-item/order-item.component.html ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"show\" class=\"row pis40\">\n  <div class=\"col-12 col-lg-7\">\n      <div class=\"row\">\n          <div class=\"col-12 col-md-5 col-xl-4\">\n              <div (click)=\"OnSelectProduct()\" class=\"panel-body panel-default pointer\">\n                  <img src=\"https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg\"\n                      alt=\"{{product?.ProductCode}}\" class=\"card-max-cart img-responsive\" />\n              </div>\n          </div>\n          <div class=\"col-12 col-md-7 col-xl-8\">\n              <h5 (click)=\"OnSelectProduct()\" class=\"pointer nowrap\">{{product?.ProductTitle}}</h5>\n              <div>{{product?.MediumName}}</div>\n              <div>{{product?.CategoryName}}</div>\n              <div>from {{product?.PublisherName}} in {{product?.ProductYearCreated}}</div>\n              <div>{{product?.ProductLength}} minutes</div>\n              <div class=\"tiny-gray\">Item: {{product?.ProductCode}}</div>\n\n          </div>\n      </div>\n  </div>\n  <div class=\"col-12 col-lg-5\">\n      <div class=\"row d-none d-lg-block pt-4\"></div>\n      <div class=\"row\">\n          <div class=\"col-6\">\n              <div>Price: <span class=\"text-danger font-em-10\">\n                  {{product?.YourPrice | currency:'USD':'symbol' }} </span>\n              </div>\n          </div>\n          <!-- <div class=\"d-block d-lg-none col-6\">\n            <div class=\"col-6\">Quantity: <span>{{quantity}}</span>\n            </div>\n          </div> -->\n          <div class=\"d-none d-lg-block col-6\">\n                <button type=\"button\" class=\"btn btn-default anime-button\" \n                    (click)=\"BuyAgain(product)\">Buy it again</button>\n          </div>\n      </div>\n      <div class=\"row\">\n        <div class=\"col-6\">Quantity: <span>{{quantity}}</span>\n        </div>\n      </div>\n\n      <div class=\"row\">\n        <div class=\"d-none d-lg-block col-6 offset-6\">\n            <button type=\"button\" class=\"btn btn-default btn-outline-anime\" \n                (click)=\"WriteReview(product)\">Write a product review</button>\n        </div>\n      </div>\n    \n    <div class=\"row d-block d-lg-none pb-4\"></div>\n  </div>\n  <div class=\"col-12 partition\"></div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL29yZGVyLWl0ZW0vb3JkZXItaXRlbS5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -5442,6 +6486,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -5488,6 +6535,12 @@ var OrderItemComponent = /** @class */ (function () {
     OrderItemComponent.prototype.WriteReview = function (product) {
         this.router.navigate(['/product-review'], { queryParams: { productID: this.product.ProductID } });
     };
+    OrderItemComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_products_service__WEBPACK_IMPORTED_MODULE_2__["ProductsService"] },
+        { type: src_app_services_cart_service__WEBPACK_IMPORTED_MODULE_4__["CartService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object),
@@ -5496,8 +6549,8 @@ var OrderItemComponent = /** @class */ (function () {
     OrderItemComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-order-item',
-            template: __webpack_require__(/*! ./order-item.component.html */ "./src/app/customer/order-item/order-item.component.html"),
-            styles: [__webpack_require__(/*! ./order-item.component.css */ "./src/app/customer/order-item/order-item.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./order-item.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/order-item/order-item.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./order-item.component.css */ "./src/app/customer/order-item/order-item.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _services_products_service__WEBPACK_IMPORTED_MODULE_2__["ProductsService"],
@@ -5515,21 +6568,12 @@ var OrderItemComponent = /** @class */ (function () {
 /*!**********************************************************************!*\
   !*** ./src/app/customer/orders-details/orders-details.component.css ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/orders-details/orders-details.component.html":
-/*!***********************************************************************!*\
-  !*** ./src/app/customer/orders-details/orders-details.component.html ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row pt-3\">\n  <div class=\"col-12 col-md-6 order-md-2 col-xl-4\">\n      <div class=\"row\">\n          <div class=\"col-10 offset-1 col-lg-11 offset-lg-0\">\n              <app-subtotals [actionButton]=\"false\" [marketing]=\"false\"></app-subtotals>\n          </div>\n      </div> \n  </div>\n\n  <div class=\"col-12 col-md-6 order-md-1 col-xl-8\">\n      <div class=\"row bottom-border\">\n        <div class=\"col-12\">\n            <h2>Order Details</h2>\n        </div>\n      </div>\n\n      <div class=\"font-em-10\">\n          <div class=\"row bottom-border d-flex align-items-center py-3\">\n            <div class=\"col-12 col-lg-6 d-flex align-items-center\">\n                <i class=\"fa fa-calendar fa-flip-horizontal fa-lg pr-3\"></i>\n                <span class=\"pl-3\">Ordered Online On:</span>\n                <strong class=\"pl-3\">{{ orderDate }}</strong>\n              </div>\n            <div class=\"col-12 col-lg-6 d-flex align-items-center\">\n              <span class=\"pl-3\">Order Number:</span>\n              <strong class=\"pl-3\">{{ orderNumber }}</strong>\n            </div>\n          </div>\n  \n          <div class=\"row d-flex align-items-center pt-3\">\n            <div class=\"col-12 col-lg-6 d-flex align-items-center\">\n              <i class=\"fa fa-truck fa-lg pl-3\"></i>\n              <span class=\"pl-3\">Status:</span>\n              <strong class=\"pl-3\">{{ orderStatus }}</strong>\n            </div>\n            <div class=\"col-12 col-lg-6 d-flex align-items-center\">\n              <span class=\"pl-3\">{{ deliveryStatus }}:</span>\n              <strong class=\"pl-3\">{{ shipDate }}</strong>\n            </div>\n          </div>\n\n          <div class=\"row bottom-border d-flex align-items-center pb-3\">\n            <div class=\"col-12 col-lg-6 offset-lg-6 d-flex align-items-center\">\n              <span class=\"pl-3\">Tracking Number:</span>\n              <strong class=\"pl-3\">{{ trackingNumber }}</strong>\n            </div>\n          </div>\n\n          <div class=\"row bottom-border d-flex align-items-center py-3\">\n            <div class=\"col-12 d-none d-lg-block\">\n              <div class=\"d-flex align-items-center\">\n                <i class=\"fa fa-home fa-lg pl-3\"></i>\n                <span class=\"pl-3\">Shipping Address:</span>\n                <div class=\"inline-block bold pl-3\">\n                  {{userAccount.firstName}} {{userAccount.lastName}} <br/>\n                  {{userAccount.address}} <br/>\n                  {{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}, \n                  United States\n                </div>\n              </div>\n            </div>\n            <div class=\"col-12 d-lg-none align-items-center\">\n              <i class=\"fa fa-home fa-lg pl-3\"></i>\n              <span class=\"pl-3\">Shipping Address:</span>\n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.firstName}} {{userAccount.lastName}} \n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.address}}\n            </div>           \n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}\n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              United States\n            </div>\n          </div>\n\n          <div class=\"row bottom-border d-flex align-items-center py-3\">\n            <div class=\"col-12 d-none d-lg-block\">\n              <div class=\"d-flex align-items-center\">\n                <i class=\"fa fa-credit-card fa-lg pl-3\"></i>\n                <span class=\"pl-3\">Payment Method:</span>\n                <span class=\"bold pl-3\">\n                    Gift credit ending in 5678\n                </span>\n              </div>\n            </div>\n            <div class=\"col-12 d-none d-lg-block\">\n              <div class=\"d-flex align-items-center\">\n                <i class=\"fa fa-credit-card fa-lg pl-3 hidden\"></i>\n                <span class=\"pl-3 pr-2\">Name on Card:</span>\n                <span class=\"bold pl-4\">\n                  {{userAccount.firstName}} {{userAccount.lastName}}\n                </span>\n              </div>\n            </div>\n            <div class=\"col-12 d-lg-none align-items-center\">\n              <i class=\"fa fa-credit-card fa-lg pl-3\"></i>\n              <span class=\"pl-3\">Payment Method:</span>\n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              Gift credit ending in 5678\n            </div>\n            <div class=\"col-12 d-lg-none align-items-center\">\n              <span class=\"pl-3\">Name on Card:</span>\n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.firstName}} {{userAccount.lastName}}\n            </div>\n  \n            <div class=\"col-12 d-none d-lg-block\">\n              <div class=\"d-flex\">\n                <i class=\"fa fa-credit-card fa-lg pl-3 hidden\"></i>\n                <span class=\"pl-3 pr-2\">Billing Address:</span>\n                <div class=\"inline-block bold pl-4\">\n                  {{userAccount.address}} <br/>\n                  {{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}\n                </div>\n              </div>\n            </div>\n            <div class=\"col-12 d-lg-none align-items-center\">\n              <span class=\"pl-3\">Billing Address:</span>\n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.address}} \n            </div>\n            <div class=\"col-12 d-lg-none bold pl-5\">\n              {{userAccount.city}}, {{userAccount.state}} {{userAccount.zipCode}}\n            </div>           \n\n          </div>\n      </div>\n\n      <div class=\"row bottom-border d-flex align-items-center py-3\">\n        <div class=\"col-12\" *ngFor=\"let item of orderItems\">\n            <app-order-item [orderItem]=\"item\"></app-order-item>\n        </div>\n      </div>\n\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL29yZGVycy1kZXRhaWxzL29yZGVycy1kZXRhaWxzLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -5558,6 +6602,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -5640,11 +6687,20 @@ var OrdersDetailsComponent = /** @class */ (function () {
             window.scrollTo(0, 0);
         });
     };
+    OrdersDetailsComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_2__["OrderService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_4__["SessionService"] },
+        { type: _services_utilities_service__WEBPACK_IMPORTED_MODULE_5__["UtilityService"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_6__["Globals"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     OrdersDetailsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-orders-details',
-            template: __webpack_require__(/*! ./orders-details.component.html */ "./src/app/customer/orders-details/orders-details.component.html"),
-            styles: [__webpack_require__(/*! ./orders-details.component.css */ "./src/app/customer/orders-details/orders-details.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./orders-details.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/orders-details/orders-details.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./orders-details.component.css */ "./src/app/customer/orders-details/orders-details.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             _services_orders_service__WEBPACK_IMPORTED_MODULE_2__["OrderService"],
@@ -5664,21 +6720,12 @@ var OrdersDetailsComponent = /** @class */ (function () {
 /*!****************************************************************!*\
   !*** ./src/app/customer/orders-list/orders-list.component.css ***!
   \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/orders-list/orders-list.component.html":
-/*!*****************************************************************!*\
-  !*** ./src/app/customer/orders-list/orders-list.component.html ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div>\n    <div *ngIf=\"!isEmpty\">\n        <div class=\"row pt-3\">\n            <div class=\"col-12 col-xl-10\">\n                <div class=\"row bottom-border\">\n                <div class=\"col-12\">\n                    <h2>Your Orders</h2>\n                </div>\n                </div>\n\n                <div class=\"row pt-3\">\n                    <div class=\"col-12\">\n                        <ul class=\"list-no-bullets\">\n                            <li *ngFor=\"let order of orders\">\n                                <app-orders-summary [order]=\"order\"></app-orders-summary>\n                            </li>\n                        </ul>\n                    </div>\n                </div>\n        \n            </div>\n        </div>\n    </div>\n    <div *ngIf=\"isEmpty\">\n        <h2>Your Orders</h2>\n        <h3>You currently have no Orders</h3>\n    <div class=\"pb-3\"></div>\n    </div>\n</div>\n\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL29yZGVycy1saXN0L29yZGVycy1saXN0LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -5707,6 +6754,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -5746,11 +6796,16 @@ var OrdersListComponent = /** @class */ (function () {
             _this._messageService.setSpinner(false);
         });
     };
+    OrdersListComponent.ctorParameters = function () { return [
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_1__["OrderService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_2__["MessageService"] }
+    ]; };
     OrdersListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-orders-list',
-            template: __webpack_require__(/*! ./orders-list.component.html */ "./src/app/customer/orders-list/orders-list.component.html"),
-            styles: [__webpack_require__(/*! ./orders-list.component.css */ "./src/app/customer/orders-list/orders-list.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./orders-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/orders-list/orders-list.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./orders-list.component.css */ "./src/app/customer/orders-list/orders-list.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_orders_service__WEBPACK_IMPORTED_MODULE_1__["OrderService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"],
@@ -5767,21 +6822,12 @@ var OrdersListComponent = /** @class */ (function () {
 /*!**********************************************************************!*\
   !*** ./src/app/customer/orders-summary/orders-summary.component.css ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ".highlight-marker {\r\n    border-left: 12px solid #FFA80B;\r\n}\r\n"
-
-/***/ }),
-
-/***/ "./src/app/customer/orders-summary/orders-summary.component.html":
-/*!***********************************************************************!*\
-  !*** ./src/app/customer/orders-summary/orders-summary.component.html ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"w-100\">\n  <div class=\"w-100 trbl-border\">\n    <div class=\"highlight-marker bottom-border\">\n      <div class=\"row pis40 py-3 font-em-12\">\n          <div class=\"col-3\">\n            <div>\n              <a class=\"anchor\" (click)=\"seeDetails()\">\n                {{ orderDate }}\n              </a> <br />\n              <a class=\"anchor\" (click)=\"seeDetails()\">\n                <span class=\"small-gray\">{{ orderNumber }}</span>\n              </a>\n            </div>\n          </div>\n          <div class=\"col-3 text-center\">\n            ${{ subTotal }}\n          </div>\n          <div class=\"col-6\">\n            <div class=\"row\">\n              <div class=\"col-12 col-sm-6 text-center\">\n                {{ orderStatus }}\n              </div>\n              <div class=\"col-12 col-sm-6 text-right\">\n                <a class=\"anchor\" (click)=\"seeDetails()\">See Details ></a> \n              </div>\n            </div>\n          </div>\n      </div>\n    </div>\n\n      <div class=\"bottom-border py-3\">\n        <div *ngFor=\"let item of orderItems\">\n            <app-order-item [orderItem]=\"item\"></app-order-item>\n        </div>\n      </div>\n  </div>\n\n  <div class=\"w-100 py-3\">\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".highlight-marker {\r\n    border-left: 12px solid #FFA80B;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY3VzdG9tZXIvb3JkZXJzLXN1bW1hcnkvb3JkZXJzLXN1bW1hcnkuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLCtCQUErQjtBQUNuQyIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL29yZGVycy1zdW1tYXJ5L29yZGVycy1zdW1tYXJ5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGlnaGxpZ2h0LW1hcmtlciB7XHJcbiAgICBib3JkZXItbGVmdDogMTJweCBzb2xpZCAjRkZBODBCO1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -5811,6 +6857,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -5892,6 +6941,14 @@ var OrdersSummaryComponent = /** @class */ (function () {
     OrdersSummaryComponent.prototype.seeDetails = function () {
         this._router.navigate(['/orders-details'], { queryParams: { orderID: this.orderID } });
     };
+    OrdersSummaryComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_2__["OrderService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_4__["SessionService"] },
+        { type: _services_utilities_service__WEBPACK_IMPORTED_MODULE_5__["UtilityService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object),
@@ -5900,8 +6957,8 @@ var OrdersSummaryComponent = /** @class */ (function () {
     OrdersSummaryComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-orders-summary',
-            template: __webpack_require__(/*! ./orders-summary.component.html */ "./src/app/customer/orders-summary/orders-summary.component.html"),
-            styles: [__webpack_require__(/*! ./orders-summary.component.css */ "./src/app/customer/orders-summary/orders-summary.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./orders-summary.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/orders-summary/orders-summary.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./orders-summary.component.css */ "./src/app/customer/orders-summary/orders-summary.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             _services_orders_service__WEBPACK_IMPORTED_MODULE_2__["OrderService"],
@@ -5920,21 +6977,12 @@ var OrdersSummaryComponent = /** @class */ (function () {
 /*!**********************************************************************!*\
   !*** ./src/app/customer/product-review/product-review.component.css ***!
   \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/product-review/product-review.component.html":
-/*!***********************************************************************!*\
-  !*** ./src/app/customer/product-review/product-review.component.html ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2>Write Your Product Review</h2>\n<div class=\"py-1\"></div>\n\n<div class=\"font-em-10\">\n  <div class=\"row\">\n    <div class=\"col-12 col-lg-4\">\n\n        <div class=\"card align-items-center pt-3\">\n            <img src=\"https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg\"\n                alt=\"{{product?.ProductCode}}\" class=\"card-img-top card-max pointer\" \n                (click)=\"OnSelectProduct()\" />\n            <div class=\"card-body\">\n                <h5 (click)=\"OnSelectProduct()\" class=\"pointer nowrap\">{{product?.ProductTitle}}</h5>\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{product?.RatingID}} Stars.png\"\n                    alt=\"{{product?.RatingID}} stars\" class=\"img-responsive\" />\n                <div class=\"pt-2\"></div>\n                <div>{{product?.MediumName}}</div>\n                <div>List Price: <s>{{product?.UnitPrice | currency: 'USD':true }} </s></div>\n                <div>Your Price: <strong><span class=\"text-danger\">\n                    {{product?.YourPrice | currency:'USD':'symbol' }} </span></strong>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"d-none d-lg-block col-lg-8\">\n      <h4>Submission Guidelines</h4>\n      <p>\n          1) We welcome your comments on all the titles in our catalog.\n          You can take a look at some recent reviews before you write your own.\n      </p>\n      <p>\n          2) Make sure you are logged in when you write your review! \n      </p>\n      <p>\n          3) Explain why you like or dislike the title, \n          focusing your comments on your own experience viewing the title\n      </p>\n      <p>\n          4) Avoid single-word reviews, bad language, contact information \n          (email addresses, phone numbers, etc.), URLs, time-sensitive material or \n          alternative ordering information\n      </p>\n      <p>\n          5) Please do not use any HTML in the review. \n          If you wish to insert a break between paragraphs, just leave a blank line separating them.\n      </p>\n      <p>\n          6) All submitted reviews become property of the publisher of this website.\n      </p>\n    </div>\n  </div>\n\n  <div class=\"row pt-3\">\n    <div class=\"col-12 col-lg-10 offset-lg-1\">\n\n      <form (submit)=\"onSubmit(); reviewForm.reset()\" #reviewForm=\"ngForm\">\n          <!-- <div class=\"form-group\">\n              <label for=\"ratingScore\">Your Rating</label>\n              <input type=\"number\" min=\"1\" max=\"5\" step=\"1\" required\n                  name=\"ratingScore\" id=\"ratingScore\" value={{ratingModel.ratingId}} \n                  [(ngModel)]=\"ratingModel.ratingId\" class=\"form-control\" \n              >\n          </div> -->\n\n          <app-star-rating (rating)=\"getRating($event)\"></app-star-rating>\n\n          <div class=\"form-group\">\n              <label for=\"title\">A Title for your Review <span class=\"anime-color\">*</span></label>\n              <input type=\"text\" required\n                    name=\"title\"\n                    class=\"form-control\" id=\"title\" \n                    [(ngModel)]=\"ratingModel.title\" />\n          </div>\n          <div class=\"form-group\">\n              <label for=\"message\">Write your Review <span class=\"anime-color\">*</span></label>\n              <textarea rows=\"5\" required\n                    name=\"feedback\"\n                    class=\"form-control\" id=\"feedback\" \n                    [(ngModel)]=\"ratingModel.feedback\">\n              </textarea>\n          </div>\n\n        <div class=\"py-3\">\n            <button class=\"btn btn-block anime-button-lg font-em-10\" \n              type=\"submit\"\n              [disabled]=\"!reviewForm.valid\">Submit\n            </button>\n        </div>\n\n        <div class=\"pb-3\"></div>\n        <div *ngIf=\"submitted && !reviewForm.valid\" class=\"alert alert-success pb-3\">\n            Your message was successfully submitted.  Thank you.\n        </div>\n\n        <!-- <div>Rating Model</div>\n        {{ reviewForm.value | json }} -->\n      </form>\n    </div>\n\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL3Byb2R1Y3QtcmV2aWV3L3Byb2R1Y3QtcmV2aWV3LmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -5964,6 +7012,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -6038,11 +7089,20 @@ var ProductReviewComponent = /** @class */ (function () {
     ProductReviewComponent.prototype.getRating = function (rating) {
         this.ratingModel.ratingId = rating;
     };
+    ProductReviewComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
+        { type: _services_products_service__WEBPACK_IMPORTED_MODULE_5__["ProductsService"] },
+        { type: _services_userFeedback_service__WEBPACK_IMPORTED_MODULE_2__["UserFeedbackService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: src_app_services_cart_service__WEBPACK_IMPORTED_MODULE_7__["CartService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     ProductReviewComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-product-review',
-            template: __webpack_require__(/*! ./product-review.component.html */ "./src/app/customer/product-review/product-review.component.html"),
-            styles: [__webpack_require__(/*! ./product-review.component.css */ "./src/app/customer/product-review/product-review.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./product-review.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/product-review/product-review.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./product-review.component.css */ "./src/app/customer/product-review/product-review.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
             _services_products_service__WEBPACK_IMPORTED_MODULE_5__["ProductsService"],
@@ -6062,21 +7122,12 @@ var ProductReviewComponent = /** @class */ (function () {
 /*!**************************************************************************!*\
   !*** ./src/app/customer/profile-settings/profile-settings.component.css ***!
   \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/profile-settings/profile-settings.component.html":
-/*!***************************************************************************!*\
-  !*** ./src/app/customer/profile-settings/profile-settings.component.html ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n        <h2>Edit Profile</h2>\n        <form #profileForm=\"ngForm\" role=\"form\" \n            (submit)=\"Update(profileForm.value, profileForm.valid)\" >\n            <div class=\"form-group\">\n                <label for=\"username\">User Name</label>\n                <label class=\"form-control\" id=\"username\">\n                    {{profileInput.userName}}\n                </label>\n            </div>\n            <div class=\"form-group\">\n                <label for=\"firstname\">First Name <span class=\"anime-color\">*</span></label>\n                <input type=\"text\" ngControl=\"FirstName\" required\n                       [(ngModel)]=\"profileInput.firstName\"\n                       class=\"form-control\" id=\"firstname\" name=\"firstname\" />\n            </div>\n            <div class=\"form-group\">\n                <label for=\"lastname\">Last Name <span class=\"anime-color\">*</span></label>\n                <input type=\"text\" ngControl=\"Lastname\" required\n                       [(ngModel)]=\"profileInput.lastName\"\n                       class=\"form-control\" id=\"lastname\" name=\"lastname\" />\n            </div>\n            <div class=\"form-group\">\n                <label for=\"email\">Email <span class=\"anime-color\">*</span></label>\n                <input type=\"email\" ngControl=\"Email\" required\n                       [(ngModel)]=\"profileInput.email\"\n                       class=\"form-control\" id=\"email\" name=\"email\" />\n            </div>\n            <div class=\"form-group\">\n                <!--<label for=\"cellphone\">Cell Phone: {{profileInput.cellPhone | phone}}</label>-->\n                <label for=\"cellphone\">Cell Phone <span class=\"anime-color\">*</span></label>\n                <input type=\"tel\" pattern=\"^\\d{3}-\\d{3}-\\d{4}$\" \n                       title=\"format: 555-555-5555\"\n                       ngControl=\"Cellphone\" required placeholder=\"555-555-5555\"\n                       [(ngModel)]=\"profileInput.cellPhone\"\n                       class=\"form-control\" id=\"cellphone\" name=\"cellphone\" />\n                <!--<input type=\"text\" ngControl=\"Cellphone\" \n                       [ngModel]=\"profileInput.cellPhone | phone\" \n                       (ngModelChange)=\"profileInput.cellPhone=$event\"\n                       class=\"form-control\" id=\"cellphone\" />-->\n            </div>\n            <div class=\"form-group\">\n                <label for=\"homephone\">Other Phone</label>\n                <input type=\"tel\" pattern=\"^\\d{3}-\\d{3}-\\d{4}$\"\n                       title=\"format: 555-555-5555\"\n                       ngControl=\"Homephone\" placeholder=\"555-555-5555\"\n                       [(ngModel)]=\"profileInput.homePhone\"\n                       class=\"form-control\" id=\"homephone\" name=\"homephone\" />\n                <!--<input type=\"tel\" ngControl=\"Homephone\" required\n                       [ngModel]=\"profileInput.homePhone | phone\" \n                       (ngModelChange)=\"profileInput.homePhone=$event\"\n                       class=\"form-control\" id=\"homephone\" />-->\n            </div>\n            <div>\n                <button class=\"btn btn-default anime-button-lg\" type=\"submit\" \n                    [disabled]=\"profileForm.invalid || profileForm.pristine\">Update</button>\n            </div>\n            <div class=\"pb-3\"></div>\n            <div *ngIf=\"isSuccess\" class=\"alert alert-success\">\n                <strong>Success! </strong> Your Profile have been Updated.\n            </div>\n            <div *ngIf=\"isFailure\" class=\"alert alert-danger\">\n                <strong>There was a problem: </strong> Your Profile Update failed.\n            </div>\n        </form>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL3Byb2ZpbGUtc2V0dGluZ3MvcHJvZmlsZS1zZXR0aW5ncy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -6103,6 +7154,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -6170,11 +7224,17 @@ var ProfileSettingsComponent = /** @class */ (function () {
             this.isFailure = true;
         }
     };
+    ProfileSettingsComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_2__["UserAccountsService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     ProfileSettingsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-profile-settings',
-            template: __webpack_require__(/*! ./profile-settings.component.html */ "./src/app/customer/profile-settings/profile-settings.component.html"),
-            styles: [__webpack_require__(/*! ./profile-settings.component.css */ "./src/app/customer/profile-settings/profile-settings.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./profile-settings.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/profile-settings/profile-settings.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./profile-settings.component.css */ "./src/app/customer/profile-settings/profile-settings.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_2__["UserAccountsService"],
@@ -6192,21 +7252,12 @@ var ProfileSettingsComponent = /** @class */ (function () {
 /*!********************************************************************!*\
   !*** ./src/app/customer/shopping-cart/shopping-cart.component.css ***!
   \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/shopping-cart/shopping-cart.component.html":
-/*!*********************************************************************!*\
-  !*** ./src/app/customer/shopping-cart/shopping-cart.component.html ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<app-buy-list></app-buy-list>\n<app-wish-list></app-wish-list>\n<app-footer-product></app-footer-product>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL3Nob3BwaW5nLWNhcnQvc2hvcHBpbmctY2FydC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -6231,6 +7282,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 var ShoppingCartComponent = /** @class */ (function () {
@@ -6240,11 +7294,14 @@ var ShoppingCartComponent = /** @class */ (function () {
     ShoppingCartComponent.prototype.ngOnInit = function () {
         this.messageService.setSpinner(false);
     };
+    ShoppingCartComponent.ctorParameters = function () { return [
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_1__["MessageService"] }
+    ]; };
     ShoppingCartComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-shopping-cart',
-            template: __webpack_require__(/*! ./shopping-cart.component.html */ "./src/app/customer/shopping-cart/shopping-cart.component.html"),
-            styles: [__webpack_require__(/*! ./shopping-cart.component.css */ "./src/app/customer/shopping-cart/shopping-cart.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./shopping-cart.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/shopping-cart/shopping-cart.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./shopping-cart.component.css */ "./src/app/customer/shopping-cart/shopping-cart.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_message_service__WEBPACK_IMPORTED_MODULE_1__["MessageService"]])
     ], ShoppingCartComponent);
@@ -6259,21 +7316,12 @@ var ShoppingCartComponent = /** @class */ (function () {
 /*!****************************************************************!*\
   !*** ./src/app/customer/star-rating/star-rating.component.css ***!
   \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "body\r\n{\r\n  background: #4a4a4c !important;\r\n}\r\nlabel {\r\n    font-size: 0.8em;\r\n    line-height: 1;\r\n}\r\n.starrating > input {display: none;}\r\n/* Remove radio buttons */\r\n.starrating > label:before { \r\n  content: \"\\f005\"; /* Star */\r\n  margin: 2px;\r\n  font-size: 5em;\r\n  font-family: FontAwesome;\r\n  display: inline-block; \r\n}\r\n.starrating > label\r\n{\r\n  color: #222222; /* Start color when not clicked */\r\n}\r\n.starrating > input:checked ~ label\r\n{ color: #FFA80B ; }\r\n/* Set yellow color when star checked */\r\n.starrating > input:hover ~ label\r\n{ color: #FFA80B ;  }\r\n/* Set yellow color when star hover */\r\n"
-
-/***/ }),
-
-/***/ "./src/app/customer/star-rating/star-rating.component.html":
-/*!*****************************************************************!*\
-  !*** ./src/app/customer/star-rating/star-rating.component.html ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"pb-3\">\n  <div>Your Rating: <span class=\"anime-color\">*</span></div>\n  <div class=\"starrating risingstar d-flex justify-content-center flex-row-reverse\">\n      <input type=\"radio\" [(ngModel)]=\"userRating\" id=\"star5\" name=\"rating\" value=\"5\" (click)=\"sendRating(5)\"/><label for=\"star5\" title=\"5 star\">5</label>\n      <input type=\"radio\" [(ngModel)]=\"userRating\" id=\"star4\" name=\"rating\" value=\"4\" (click)=\"sendRating(4)\"/><label for=\"star4\" title=\"4 star\">4</label>\n      <input type=\"radio\" [(ngModel)]=\"userRating\" id=\"star3\" name=\"rating\" value=\"3\" (click)=\"sendRating(3)\"/><label for=\"star3\" title=\"3 star\">3</label>\n      <input type=\"radio\" [(ngModel)]=\"userRating\" id=\"star2\" name=\"rating\" value=\"2\" (click)=\"sendRating(2)\"/><label for=\"star2\" title=\"2 star\">2</label>\n      <input type=\"radio\" [(ngModel)]=\"userRating\" id=\"star1\" name=\"rating\" value=\"1\" (click)=\"sendRating(1)\"/><label for=\"star1\" title=\"1 star\">1</label>\n  </div>\n</div>\t\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("body\r\n{\r\n  background: #4a4a4c !important;\r\n}\r\nlabel {\r\n    font-size: 0.8em;\r\n    line-height: 1;\r\n}\r\n.starrating > input {display: none;}\r\n/* Remove radio buttons */\r\n.starrating > label:before { \r\n  content: \"\\f005\"; /* Star */\r\n  margin: 2px;\r\n  font-size: 5em;\r\n  font-family: FontAwesome;\r\n  display: inline-block; \r\n}\r\n.starrating > label\r\n{\r\n  color: #222222; /* Start color when not clicked */\r\n}\r\n.starrating > input:checked ~ label\r\n{ color: #FFA80B ; }\r\n/* Set yellow color when star checked */\r\n.starrating > input:hover ~ label\r\n{ color: #FFA80B ;  }\r\n/* Set yellow color when star hover */\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY3VzdG9tZXIvc3Rhci1yYXRpbmcvc3Rhci1yYXRpbmcuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7RUFFRSw4QkFBOEI7QUFDaEM7QUFDQTtJQUNJLGdCQUFnQjtJQUNoQixjQUFjO0FBQ2xCO0FBRUEscUJBQXFCLGFBQWEsQ0FBQztBQUFHLHlCQUF5QjtBQUUvRDtFQUNFLGdCQUFnQixFQUFFLFNBQVM7RUFDM0IsV0FBVztFQUNYLGNBQWM7RUFDZCx3QkFBd0I7RUFDeEIscUJBQXFCO0FBQ3ZCO0FBRUE7O0VBRUUsY0FBYyxFQUFFLGlDQUFpQztBQUNuRDtBQUVBO0VBQ0UsZUFBZSxFQUFFO0FBQUUsdUNBQXVDO0FBRTVEO0VBQ0UsZUFBZSxHQUFHO0FBQUUscUNBQXFDIiwiZmlsZSI6InNyYy9hcHAvY3VzdG9tZXIvc3Rhci1yYXRpbmcvc3Rhci1yYXRpbmcuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHlcclxue1xyXG4gIGJhY2tncm91bmQ6ICM0YTRhNGMgIWltcG9ydGFudDtcclxufVxyXG5sYWJlbCB7XHJcbiAgICBmb250LXNpemU6IDAuOGVtO1xyXG4gICAgbGluZS1oZWlnaHQ6IDE7XHJcbn1cclxuXHJcbi5zdGFycmF0aW5nID4gaW5wdXQge2Rpc3BsYXk6IG5vbmU7fSAgLyogUmVtb3ZlIHJhZGlvIGJ1dHRvbnMgKi9cclxuXHJcbi5zdGFycmF0aW5nID4gbGFiZWw6YmVmb3JlIHsgXHJcbiAgY29udGVudDogXCJcXGYwMDVcIjsgLyogU3RhciAqL1xyXG4gIG1hcmdpbjogMnB4O1xyXG4gIGZvbnQtc2l6ZTogNWVtO1xyXG4gIGZvbnQtZmFtaWx5OiBGb250QXdlc29tZTtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7IFxyXG59XHJcblxyXG4uc3RhcnJhdGluZyA+IGxhYmVsXHJcbntcclxuICBjb2xvcjogIzIyMjIyMjsgLyogU3RhcnQgY29sb3Igd2hlbiBub3QgY2xpY2tlZCAqL1xyXG59XHJcblxyXG4uc3RhcnJhdGluZyA+IGlucHV0OmNoZWNrZWQgfiBsYWJlbFxyXG57IGNvbG9yOiAjRkZBODBCIDsgfSAvKiBTZXQgeWVsbG93IGNvbG9yIHdoZW4gc3RhciBjaGVja2VkICovXHJcblxyXG4uc3RhcnJhdGluZyA+IGlucHV0OmhvdmVyIH4gbGFiZWxcclxueyBjb2xvcjogI0ZGQTgwQiA7ICB9IC8qIFNldCB5ZWxsb3cgY29sb3Igd2hlbiBzdGFyIGhvdmVyICovXHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -6297,6 +7345,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var StarRatingComponent = /** @class */ (function () {
     function StarRatingComponent() {
@@ -6314,8 +7365,8 @@ var StarRatingComponent = /** @class */ (function () {
     StarRatingComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-star-rating',
-            template: __webpack_require__(/*! ./star-rating.component.html */ "./src/app/customer/star-rating/star-rating.component.html"),
-            styles: [__webpack_require__(/*! ./star-rating.component.css */ "./src/app/customer/star-rating/star-rating.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./star-rating.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/star-rating/star-rating.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./star-rating.component.css */ "./src/app/customer/star-rating/star-rating.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], StarRatingComponent);
@@ -6330,21 +7381,12 @@ var StarRatingComponent = /** @class */ (function () {
 /*!************************************************************!*\
   !*** ./src/app/customer/subtotals/subtotals.component.css ***!
   \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/subtotals/subtotals.component.html":
-/*!*************************************************************!*\
-  !*** ./src/app/customer/subtotals/subtotals.component.html ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"panel panel-default\">\n    <div class=\"panel-heading\">\n        <div *ngIf=\"isFreeShipping && showMarketing\">\n            <i class=\"fa fa-check-circle\"></i>\n            <span class=\"alert-content pb-2 pl-2\">Your order qualifies for FREE Shipping</span>\n        </div>\n        <h5 class=\"panel-title\">Order Summary</h5>\n    </div>\n    <div class=\"panel-body large-font\">\n        <div class=\"row pb-2\">\n            <div class=\"col-10 offset-1 col-lg-11 offset-lg-0\">\n                Count: {{order?.itemQuantity}} items\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-6 offset-1 col-lg-7 offset-lg-0\">\n                Order Subtotal\n            </div>\n            <div class=\"col-4 col-lg-5 text-right font-weight-bold\">\n                {{order?.subTotal | currency:'USD':'symbol'}}\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-5 offset-1 col-lg-6 offset-lg-0\">\n                Discounts\n            </div>\n            <div class=\"col-5 col-lg-6 text-right text-danger font-weight-bold\">\n                <span *ngIf=\"isDiscount\">({{order?.discounts | currency:'USD':'symbol'}})</span>\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-4 offset-1 col-sm-4 col-md-4 col-lg-4 offset-lg-0\">\n                Ship to\n            </div>\n            <div class=\"col-6 col-sm-7 col-md-7 col-lg-8 text-right\">\n                {{address?.city}}, {{address?.state}}\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-5 offset-1 col-lg-6 offset-lg-0\">\n                Shipping\n            </div>\n            <div class=\"col-5 col-lg-6 text-right font-weight-bold\">\n                {{order?.shippingHandling | currency:'USD':'symbol'}}\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-5 offset-1 col-lg-6 offset-lg-0\">\n                Sales Tax\n            </div>\n            <div class=\"col-5 col-lg-6 text-right font-weight-bold\">\n                {{order?.taxes | currency:'USD':'symbol'}}\n            </div>\n        </div>\n        <div class=\"row pb-2\">\n            <div class=\"col-6 offset-1 col-lg-6 offset-lg-0\">\n                <strong>Order Total</strong>\n            </div>\n            <div class=\"col-4 col-lg-6 text-right\">\n                <strong class=\"text-danger font-em-10\">\n                    {{order?.totals | currency:'USD':'symbol'}}\n                </strong>\n            </div>\n        </div>\n    </div>\n    <div class=\"row\" *ngIf=\"showActionButton\">\n        <div class=\"col-10 offset-1 col-sm-11 offset-sm-1 col-md-12 offset-md-0 pb-3\">\n            <button class=\"btn btn-block anime-button-lg font-em-10\" \n                    (click)=\"goCheckout()\">Proceed to Checkout</button>\n        </div>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL3N1YnRvdGFscy9zdWJ0b3RhbHMuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -6375,6 +7417,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -6484,6 +7529,14 @@ var SubtotalsComponent = /** @class */ (function () {
         this._router.navigate(['/checkout-address']);
         // , { queryParams: { productID: product.ProductID } });
     };
+    SubtotalsComponent.ctorParameters = function () { return [
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_2__["CartService"] },
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_4__["OrderService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_5__["MessageService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"] }
+    ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Boolean),
@@ -6497,8 +7550,8 @@ var SubtotalsComponent = /** @class */ (function () {
     SubtotalsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-subtotals',
-            template: __webpack_require__(/*! ./subtotals.component.html */ "./src/app/customer/subtotals/subtotals.component.html"),
-            styles: [__webpack_require__(/*! ./subtotals.component.css */ "./src/app/customer/subtotals/subtotals.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./subtotals.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/subtotals/subtotals.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./subtotals.component.css */ "./src/app/customer/subtotals/subtotals.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
             _services_cart_service__WEBPACK_IMPORTED_MODULE_2__["CartService"],
@@ -6518,21 +7571,12 @@ var SubtotalsComponent = /** @class */ (function () {
 /*!************************************************************!*\
   !*** ./src/app/customer/user-note/user-note.component.css ***!
   \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/user-note/user-note.component.html":
-/*!*************************************************************!*\
-  !*** ./src/app/customer/user-note/user-note.component.html ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n\n    <h2>Contact Form</h2>\n    <div class=\"py-1\"></div>\n\n    <form (submit)=\"onSubmit(); contactForm.reset()\" #contactForm=\"ngForm\">\n        <div class=\"form-group\">\n            <label for=\"typeDropdown\">Type of Communication</label>\n            <select name=\"typeDropdown\" required\n              class=\"form-control\" id=\"typeDropdown\" \n              [(ngModel)]=\"noteModel.correspondenceType\">\n                <option *ngFor=\"let corType of correspondenceTypes\" \n                    value={{corType.typeCode}} >\n                        {{corType.description}}\n                </option>\n            </select>\n        </div>\n\n        <div class=\"form-group\">\n            <label for=\"title\">Title <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" required\n                  name=\"title\"\n                  class=\"form-control\" id=\"title\" \n                  [(ngModel)]=\"noteModel.title\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"message\">Message <span class=\"anime-color\">*</span></label>\n            <textarea rows=\"5\" required\n                  name=\"note\"\n                  class=\"form-control\" id=\"note\" \n                  [(ngModel)]=\"noteModel.note\">\n            </textarea>\n        </div>\n\n      <div class=\"py-3\">\n          <button class=\"btn btn-block anime-button-lg font-em-10\" \n            type=\"submit\"\n            [disabled]=\"!contactForm.valid\">Submit\n          </button>\n      </div>\n\n      <div class=\"pb-3\"></div>\n      <div *ngIf=\"submitted && !contactForm.valid\" class=\"alert alert-success pb-3\">\n          Your message was successfully submitted.  Thank you.\n      </div>\n    </form>\n  </div> \n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL3VzZXItbm90ZS91c2VyLW5vdGUuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -6558,6 +7602,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -6597,11 +7644,16 @@ var UserNoteComponent = /** @class */ (function () {
             });
         }
     };
+    UserNoteComponent.ctorParameters = function () { return [
+        { type: _services_userNotes_service__WEBPACK_IMPORTED_MODULE_2__["UserNoteService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     UserNoteComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-user-note',
-            template: __webpack_require__(/*! ./user-note.component.html */ "./src/app/customer/user-note/user-note.component.html"),
-            styles: [__webpack_require__(/*! ./user-note.component.css */ "./src/app/customer/user-note/user-note.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./user-note.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/user-note/user-note.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./user-note.component.css */ "./src/app/customer/user-note/user-note.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_userNotes_service__WEBPACK_IMPORTED_MODULE_2__["UserNoteService"],
             _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
@@ -6618,21 +7670,12 @@ var UserNoteComponent = /** @class */ (function () {
 /*!************************************************************!*\
   !*** ./src/app/customer/wish-list/wish-list.component.css ***!
   \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/customer/wish-list/wish-list.component.html":
-/*!*************************************************************!*\
-  !*** ./src/app/customer/wish-list/wish-list.component.html ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"!isEmpty\">\n  <div class=\"partition\"></div>\n  <h2 class=\"inline pr-3\">Saved for Later</h2>\n  <div class=\"inline\">\n        {{order?.productQuantity}} Product<span *ngIf=\"order?.productQuantity != 1\">s</span>\n    </div>\n\n    <div class=\"row pt-3\">\n        <div class=\"col-12\">\n            <ul class=\"list-no-bullets\">\n                <li *ngFor=\"let product of cartProducts\">\n                    <app-cart-item [cartItem]=\"product\" [cartType]=\"cartType\"></app-cart-item>\n                </li>\n            </ul>\n        </div>\n    </div>\n</div>\n\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2N1c3RvbWVyL3dpc2gtbGlzdC93aXNoLWxpc3QuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -6660,6 +7703,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -6708,11 +7754,17 @@ var WishListComponent = /** @class */ (function () {
             _this.messageService.setSpinner(false);
         });
     };
+    WishListComponent.ctorParameters = function () { return [
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_2__["CartService"] },
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_4__["OrderService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_5__["MessageService"] }
+    ]; };
     WishListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-wish-list',
-            template: __webpack_require__(/*! ./wish-list.component.html */ "./src/app/customer/wish-list/wish-list.component.html"),
-            styles: [__webpack_require__(/*! ./wish-list.component.css */ "./src/app/customer/wish-list/wish-list.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./wish-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/customer/wish-list/wish-list.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./wish-list.component.css */ "./src/app/customer/wish-list/wish-list.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_session_service__WEBPACK_IMPORTED_MODULE_1__["SessionService"],
             _services_cart_service__WEBPACK_IMPORTED_MODULE_2__["CartService"],
@@ -6730,21 +7782,12 @@ var WishListComponent = /** @class */ (function () {
 /*!*****************************************************!*\
   !*** ./src/app/employment/employment.component.css ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/employment/employment.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/employment/employment.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"pb-3\">\n\n    <div class=\"spanhalf\">\n        <img src=\"http://reydavid.blob.core.windows.net/assets/{{employment?.EmployerImage}}\" \n            alt=\"{{employer?.EmployerName}}\" class=\"image-logo img-responsive\" />\n        <div>\n            <span class=\"bold\">{{employment?.EmployerName}}</span>\n            <span *ngIf=\"employment.EmployerLocation\"> in {{employment?.EmployerLocation}}</span>\n        </div>\n        <div>\n          <span class=\"bold font-italic\">{{employment?.EmploymentTitle}}</span>\n          <span class=\"pl-3\">{{employment?.EmploymentFrom}} - {{employment?.EmploymentTo}}</span>\n        </div>\n    </div>\n\n    <ul>\n      <li *ngFor=\"let detail of details\">{{detail}}</li>\n    </ul>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VtcGxveW1lbnQvZW1wbG95bWVudC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -6767,6 +7810,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 var EmploymentComponent = /** @class */ (function () {
@@ -6791,8 +7837,8 @@ var EmploymentComponent = /** @class */ (function () {
     EmploymentComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-employment',
-            template: __webpack_require__(/*! ./employment.component.html */ "./src/app/employment/employment.component.html"),
-            styles: [__webpack_require__(/*! ./employment.component.css */ "./src/app/employment/employment.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./employment.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/employment/employment.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./employment.component.css */ "./src/app/employment/employment.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], EmploymentComponent);
@@ -6807,21 +7853,12 @@ var EmploymentComponent = /** @class */ (function () {
 /*!***************************************************!*\
   !*** ./src/app/feed-card/feed-card.component.css ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/feed-card/feed-card.component.html":
-/*!****************************************************!*\
-  !*** ./src/app/feed-card/feed-card.component.html ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"pb-2\">\n    <div class=\"p6\" (click)=\"openLinkInBrowser()\">{{feed.title}}</div>\n    <div class=\"pl-3\">{{feed.description | stripHtmlTags}}</div>\n    <div class=\"pl-4 small-gray\">Posted on: {{feed.pubDate | date:'full'}}</div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2ZlZWQtY2FyZC9mZWVkLWNhcmQuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -6845,6 +7882,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var FeedCardComponent = /** @class */ (function () {
     function FeedCardComponent() {
@@ -6861,8 +7901,8 @@ var FeedCardComponent = /** @class */ (function () {
     FeedCardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-feed-card',
-            template: __webpack_require__(/*! ./feed-card.component.html */ "./src/app/feed-card/feed-card.component.html"),
-            styles: [__webpack_require__(/*! ./feed-card.component.css */ "./src/app/feed-card/feed-card.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./feed-card.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/feed-card/feed-card.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./feed-card.component.css */ "./src/app/feed-card/feed-card.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], FeedCardComponent);
@@ -6877,21 +7917,12 @@ var FeedCardComponent = /** @class */ (function () {
 /*!*******************************************************!*\
   !*** ./src/app/footer-main/footer-main.component.css ***!
   \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/footer-main/footer-main.component.html":
-/*!********************************************************!*\
-  !*** ./src/app/footer-main/footer-main.component.html ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"show\">\n  <app-history></app-history>\n\n  <div class=\"d-none d-sm-block\">\n    <div class=\"row footermain\">\n      <div class=\"col footerwrap\">\n          <div class=\"footercontent\">\n            <p class=\"p2\">\n              My Account\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/login']\">Log In</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/register']\">Sign Up</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/account']\">Account Settings</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/orders-list']\">Order History</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/cart']\">Shopping Cart</a>\n            </p>\n          </div>\n      </div>\n      <div class=\"col footerwrap\">\n          <div class=\"footercontent\">\n            <p class=\"p2\">\n              Customer Care\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/contact']\">Contact</a> and <a [routerLink]=\"['/about']\">About</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/shipping-info']\">Shipping</a> and <a [routerLink]=\"['/returns']\">Returns</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/user-note']\">Customer Feedback</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/privacy']\">Privacy</a> and <a [routerLink]=\"['/terms-of-use']\">Terms</a>\n            </p>\n            <p class=\"p3\">\n              <a [routerLink]=\"['/news']\">Recent News</a>\n            </p>\n          </div>\n      </div>\n      <div class=\"col footerwrap\">\n        <div class=\"footercontent\">\n          <p class=\"p2\">\n            Popular Shopping\n          </p>\n          <p class=\"p3\">\n            <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: topSellers }\">\n              Top Sellers\n            </a>\n          </p>\n          <p class=\"p3\">\n            <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: bargainBin }\">\n              Bargain Bin\n            </a>\n          </p>\n          <p class=\"p3\">\n            <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: newItems }\">\n              New Items\n            </a>\n          </p>\n          <p class=\"p3\">\n            <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: liveAction }\">\n              Live Action\n            </a>\n          </p>\n          <p class=\"p3\">\n            <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: closeOut }\">\n              Close Out\n            </a>\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Zvb3Rlci1tYWluL2Zvb3Rlci1tYWluLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -6917,6 +7948,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -6939,11 +7973,14 @@ var FooterMainComponent = /** @class */ (function () {
     }
     FooterMainComponent.prototype.ngOnInit = function () {
     };
+    FooterMainComponent.ctorParameters = function () { return [
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_2__["MessageService"] }
+    ]; };
     FooterMainComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-footer-main',
-            template: __webpack_require__(/*! ./footer-main.component.html */ "./src/app/footer-main/footer-main.component.html"),
-            styles: [__webpack_require__(/*! ./footer-main.component.css */ "./src/app/footer-main/footer-main.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./footer-main.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/footer-main/footer-main.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./footer-main.component.css */ "./src/app/footer-main/footer-main.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_message_service__WEBPACK_IMPORTED_MODULE_2__["MessageService"]])
     ], FooterMainComponent);
@@ -6964,6 +8001,9 @@ var FooterMainComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Globals", function() { return Globals; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var Globals = /** @class */ (function () {
     function Globals() {
         this.localData = false;
@@ -7009,6 +8049,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -7020,6 +8063,10 @@ var AdminGuard = /** @class */ (function () {
     AdminGuard.prototype.canActivate = function (route, state) {
         return this.sessionService.IsAdmin;
     };
+    AdminGuard.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_2__["SessionService"] }
+    ]; };
     AdminGuard = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -7055,6 +8102,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -7070,6 +8120,10 @@ var AuthorizationGuard = /** @class */ (function () {
         this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
         return false;
     };
+    AuthorizationGuard.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_2__["SessionService"] }
+    ]; };
     AuthorizationGuard = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -7104,6 +8158,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 var CanDeactivateGuard = /** @class */ (function () {
@@ -7117,6 +8174,9 @@ var CanDeactivateGuard = /** @class */ (function () {
     CanDeactivateGuard.prototype.canActivate = function (next, state) {
         return true;
     };
+    CanDeactivateGuard.ctorParameters = function () { return [
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_1__["MessageService"] }
+    ]; };
     CanDeactivateGuard = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -7151,6 +8211,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 var ProductsResolve = /** @class */ (function () {
@@ -7169,6 +8232,9 @@ var ProductsResolve = /** @class */ (function () {
         });
         return null;
     };
+    ProductsResolve.ctorParameters = function () { return [
+        { type: _services_products_service__WEBPACK_IMPORTED_MODULE_1__["ProductsService"] }
+    ]; };
     ProductsResolve = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -7186,21 +8252,12 @@ var ProductsResolve = /** @class */ (function () {
 /*!*****************************************!*\
   !*** ./src/app/home/home.component.css ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ".fill-size {\r\n    width: calc(100vw - 465px);\r\n}"
-
-/***/ }),
-
-/***/ "./src/app/home/home.component.html":
-/*!******************************************!*\
-  !*** ./src/app/home/home.component.html ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"child\">\n    <app-cards-carousel></app-cards-carousel>\n</div>\n<div class=\"child\">\n    <app-shipping></app-shipping>\n</div>\n<div class=\"child\">\n    <app-product-slide [listTypeID]=\"newItems\" [bgc]=true></app-product-slide>\n</div>\n<div class=\"child\">\n    <div class=\"d-block d-md-none\">\n        <div>\n            <app-product-slice [listTypeID]=\"featuredTitles\"></app-product-slice>\n        </div>\n        <div>\n            <app-product-slide [listTypeID]=\"onSale\" [bgc]=true></app-product-slide>\n        </div>\n    </div>\n    <div class=\"d-none d-md-block\">\n        <div class=\"d-flex align-items-center\">\n            <div>\n                <app-product-slice [listTypeID]=\"featuredTitles\"></app-product-slice>\n            </div>\n            <div class=\"fill-size\">\n                <app-product-slide [listTypeID]=\"onSale2\" [bgc]=true></app-product-slide>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"child\">\n    <app-product-slide [listTypeID]=\"topSellers\" [bgc]=false></app-product-slide>\n</div>\n<div class=\"child\">\n    <app-product-slide [listTypeID]=\"liveAction\" [bgc]=true></app-product-slide>\n</div>\n<div class=\"child\">\n    <app-product-slide [listTypeID]=\"closeOut\" [bgc]=false></app-product-slide>\n</div>\n<div class=\"child\">\n    <app-product-slide [listTypeID]=\"bargainBin\" [bgc]=true></app-product-slide>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".fill-size {\r\n    width: calc(100vw - 465px);\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaG9tZS9ob21lLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwwQkFBMEI7QUFDOUIiLCJmaWxlIjoic3JjL2FwcC9ob21lL2hvbWUuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5maWxsLXNpemUge1xyXG4gICAgd2lkdGg6IGNhbGMoMTAwdncgLSA0NjVweCk7XHJcbn0iXX0= */");
 
 /***/ }),
 
@@ -7221,6 +8278,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -7244,8 +8304,8 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-home',
-            template: __webpack_require__(/*! ./home.component.html */ "./src/app/home/home.component.html"),
-            styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./home.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./home.component.css */ "./src/app/home/home.component.css")).default]
         })
     ], HomeComponent);
     return HomeComponent;
@@ -7259,21 +8319,12 @@ var HomeComponent = /** @class */ (function () {
 /*!*******************************************!*\
   !*** ./src/app/legal/legal.component.css ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/legal/legal.component.html":
-/*!********************************************!*\
-  !*** ./src/app/legal/legal.component.html ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"pb-3\">Copyright and Trademarks</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>\n      The contents of all material available on this Internet site – including, but not limited to, \n      text, graphics, logos, icons, images, audio and/or video clips, digital downloads, \n      data compilations, the compilation of materials on this site and software -- have not been \n      copyrighted by Animegination, unless otherwise indicated. \n      These materials may not be reproduced, copied, distributed, displayed, published, transmitted, \n      adapted, edited or downloaded in any way without drawing the ire of Animegination.\n    </p>\n    <p>\n      Copyright is not claimed on any trademarks, characters, images, likenesses or designs created, \n      owned, or reserved by third-party illustrators, cartoonists, designers, producers, vendors or \n      companies which have been either used in their original form or which have been customized or \n      enhanced for use on this Internet Site.\n    </p>\n    <p>\n      Permission and licensing has not been officialy obtained for the use and display of the images, \n      likenesses, and characters portrayed in the videos and other merchandise contained within this site, \n      or can be considered fair use under US copyright law.\n    </p>\n    <p>\n      Permission to use elements – such as product information, press releases, announcements, news, \n      FAQs and banner ads downloaded in order to link to Animegination.net - from this Site is granted, \n      provided that (1) the copyright notice at the bottom of the Terms of Use & Privacy Policy appears \n      in all copies and Animegination is credited as the source of the elements used, \n      (2) any other copyright notices (i.e., copyright notices that do not reference Animegination) \n      appearing in the text are also included, (3) the use of these elements is strictly for informational \n      and non-commercial or personal use only and will not be copied or posted on any network computer, \n      broadcast in any media or otherwise published unless expressly and explicitly authorized by \n      Animegination and (4) no modifications of any elements are made. Animegination may withdraw \n      its license at any time for any reason.\n    </p>\n    <p class=\"pb-3\">\n      All other rights are reserved by Animegination. Copyright infringement is a violation of federal law \n      subject to criminal and civil penalties.\n    </p>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xlZ2FsL2xlZ2FsLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -7297,6 +8348,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var LegalComponent = /** @class */ (function () {
     function LegalComponent() {
@@ -7306,8 +8360,8 @@ var LegalComponent = /** @class */ (function () {
     LegalComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-legal',
-            template: __webpack_require__(/*! ./legal.component.html */ "./src/app/legal/legal.component.html"),
-            styles: [__webpack_require__(/*! ./legal.component.css */ "./src/app/legal/legal.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./legal.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/legal/legal.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./legal.component.css */ "./src/app/legal/legal.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], LegalComponent);
@@ -7322,21 +8376,12 @@ var LegalComponent = /** @class */ (function () {
 /*!*******************************************!*\
   !*** ./src/app/login/login.component.css ***!
   \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/login/login.component.html":
-/*!********************************************!*\
-  !*** ./src/app/login/login.component.html ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!--<div class=\"login jumbotron center-block\">\n    <h2>Login</h2>\n    <form role=\"form\" (submit)=\"Login($event, username.value, password.value)\">\n        <div class=\"form-group\">\n            <label for=\"username\">Username</label>\n            <input type=\"text\" #username class=\"form-control\" id=\"username\" placeholder=\"Username\">\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Password</label>\n            <input type=\"password\" #password class=\"form-control\" id=\"password\" placeholder=\"Password\">\n        </div>\n        <button type=\"submit\" class=\"btn btn-default\">Submit</button>\n        <a [routerLink]=\"['Register']\">Click here to Register</a>\n    </form>\n</div>-->\n<div class=\"row\">\n    <div class=\"col-sm-10 offset-sm-1\">\n        <h2>Sign In</h2>\n        <form #loginForm=\"ngForm\" role=\"form\" \n              (submit)=\"Login()\">\n            <div class=\"form-group\">\n                <label for=\"username\">Your Animegination User Name</label>\n                <input type=\"text\" ngControl=\"username\" required \n                       [(ngModel)]=\"loginInput.username\"\n                       class=\"form-control\" name=\"username\" />\n            </div>\n            <div class=\"form-group\">\n                <label for=\"password\">Your Animegination Password</label>\n                <input type=\"password\" ngControl=\"password\" required \n                       [(ngModel)]=\"loginInput.password\"\n                       class=\"form-control\" name=\"password\" />\n            </div>\n            <span class=\"image-btn\">\n                <button class=\"btn transparent\" type=\"submit\">\n                    <img alt=\"Sign In\" height=\"50\" src=\"https://reydavid.blob.core.windows.net/assets/login.png\" />\n                </button>\n            </span>\n            <p class=\"pt-2 anime-color\">New to Animegination?  <a routerLink=\"/register\">Create an account</a></p>\n            <div *ngIf=\"isInvalidAccount\" class=\"alert alert-danger\">\n                <strong>There was a problem: </strong> Incorrect user name or password.  \n                Please correct your user name and password.\n            </div>\n        </form>\n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xvZ2luL2xvZ2luLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -7367,6 +8412,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -7462,11 +8510,21 @@ var LoginComponent = /** @class */ (function () {
             this.orderSubscription.unsubscribe();
         }
     };
+    LoginComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_accounts_service__WEBPACK_IMPORTED_MODULE_2__["AccountService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_4__["UserAccountsService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_5__["MessageService"] },
+        { type: _services_login_service__WEBPACK_IMPORTED_MODULE_6__["LoginService"] },
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_7__["OrderService"] }
+    ]; };
     LoginComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-login',
-            template: __webpack_require__(/*! ./login.component.html */ "./src/app/login/login.component.html"),
-            styles: [__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./login.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/login/login.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./login.component.css */ "./src/app/login/login.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
@@ -7494,6 +8552,9 @@ var LoginComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartType", function() { return CartType; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var CartType;
 (function (CartType) {
     CartType["shoppingCart"] = "cart";
@@ -7524,6 +8585,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MediaCache", function() { return MediaCache; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PublisherCache", function() { return PublisherCache; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecommendsCache", function() { return RecommendsCache; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var ApiProductCache = /** @class */ (function () {
     function ApiProductCache() {
         this.key = {};
@@ -7608,6 +8672,9 @@ var RecommendsCache = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FeedbackType", function() { return FeedbackType; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var FeedbackType;
 (function (FeedbackType) {
     FeedbackType["ProductReview"] = "ProductReview";
@@ -7630,6 +8697,9 @@ var FeedbackType;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListingType", function() { return ListingType; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var ListingType;
 (function (ListingType) {
     ListingType[ListingType["FeaturedTitles"] = 1] = "FeaturedTitles";
@@ -7656,6 +8726,9 @@ var ListingType;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ServiceName", function() { return ServiceName; });
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var ServiceName;
 (function (ServiceName) {
     ServiceName["listType"] = "listtypes";
@@ -7696,21 +8769,12 @@ var ServiceName;
 /*!*****************************************************!*\
   !*** ./src/app/navigation/navigation.component.css ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/navigation/navigation.component.html":
-/*!******************************************************!*\
-  !*** ./src/app/navigation/navigation.component.html ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"body-bg-white\">\r\n    <div class=\"row\">\r\n        <div class=\"col-xs-12 col-sm-4 col-lg-6\">\r\n            <a class=\"navbar-brand pl-2\" routerLink=\"\">\r\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Animegination-brand.PNG\"\r\n                     alt=\"Animegination\" height=\"25\" />\r\n            </a>\r\n        </div>\r\n        <div class=\"col-xs-12 col-sm-8 col-lg-6\">\r\n            <div class=\"input-group pt-2 px-3\">\r\n                <input type=\"search\" class=\"form-control\" placeholder=\"Search the Store\" \r\n                    #inSearch (keyup.enter)=\"onSearch(inSearch.value)\" />\r\n                <span class=\"input-group-btn image-btn\">\r\n                    <button class=\"btn btn-default\" type=\"button\" (click)=\"onSearch(inSearch.value)\">\r\n                        <img src=\"https://reydavid.blob.core.windows.net/assets/Search2.png\" alt=\"Search\" height=\"32\" />\r\n                    </button>\r\n                </span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    \r\n    <div class=\"body-bg-white\">\r\n      <nav class=\"navbar navbar-expand-sm navbar-light\">\r\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" \r\n            data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" \r\n            aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n          <span class=\"navbar-toggler-icon\"></span>\r\n        </button>\r\n    \r\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\r\n          <ul class=\"navbar-nav mr-auto\">\r\n            <li class=\"nav-item dropdown\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown1\" \r\n                  role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                Features\r\n              </a>\r\n              <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown1\">\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/1\">Featured Titles</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/3\">Top Sellers</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/2\">New Items</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/5\">Close Out</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/4\">Bargain Bin</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/slice/6\">Live Action</a>\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/news\">Recent News</a>\r\n              </div>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" href=\"#\" routerLink=\"/genres\">Shop by Category</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" href=\"#\" routerLink=\"/contact\">Contact Us</a>\r\n            </li>\r\n            <li class=\"nav-item\">\r\n              <a class=\"nav-link\" href=\"#\" routerLink=\"/about\">About Us</a>\r\n            </li>\r\n            <li [class.hidden]=\"!isAdmin\" class=\"nav-item dropdown\">\r\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown2\" \r\n                  role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                Admin\r\n              </a>\r\n              <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown2\">\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/user-info\">Users</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/genre\">Genres</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/product-info\">Products</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/medium\">Media</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/publisher\">Publishers</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/list-type\">List Types</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/listing\">Listings</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/customer-note\">User Notes</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/user-feedback\">Feedbacks</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/recommends\">Recommends</a>\r\n              </div>\r\n            </li>\r\n          </ul>\r\n  \r\n          <ul class=\"navbar-nav\">\r\n            <li *ngIf=\"userFirstName\" class=\"nav-item dropdown\">\r\n                <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown2\" \r\n                    role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                      Hello, <span class=\"anime-color\">{{userFirstName}}</span><span class=\"caret\"></span>\r\n                </a>\r\n              <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown2\">\r\n                <a class=\"dropdown-item hand\" (click)=\"logout()\">Sign Out</a>\r\n                <div class=\"dropdown-divider\"></div>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/orders-list\">Your Orders</a>\r\n                <a class=\"dropdown-item\" href=\"#\" routerLink=\"/account\">Your Account</a>\r\n              </div>\r\n            </li>\r\n            <li *ngIf=\"!userFirstName\" class=\"nav-item\">\r\n              <a class=\"nav-link hand\" [class.disabled]=\"loggingIn\" (click)=\"login()\">Sign in</a>\r\n            </li>\r\n          </ul>\r\n        </div>\r\n  \r\n        <div class=\"nav navbar-nav pl-3\">\r\n          <a routerLink=\"/cart\" class=\"image-link\">\r\n              <img src=\"https://reydavid.blob.core.windows.net/assets/menu-cart.png\"\r\n                    alt=\"Shopping Cart\" height=\"46\" />\r\n              <span class=\"badge badge-pill badge-anime\">{{ order?.itemQuantity }}</span>\r\n          </a>\r\n        </div>\r\n      </nav>  \r\n    </div>\r\n  \r\n    <div class=\"pl-3\">\r\n      <router-outlet></router-outlet>\r\n    </div>\r\n  \r\n    <app-footer-main></app-footer-main>\r\n    <!-- <ng-container *ngIf=\"showFooter\">\r\n      <app-footer-main></app-footer-main>\r\n    </ng-container> -->\r\n\r\n    <app-spinner></app-spinner>\r\n  </div>\r\n  "
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL25hdmlnYXRpb24vbmF2aWdhdGlvbi5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -7743,6 +8807,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -7851,11 +8918,20 @@ var NavigationComponent = /** @class */ (function () {
             this._router.navigate(['/login'], { queryParams: { returnUrl: returnUrl } });
         }
     };
+    NavigationComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_login_service__WEBPACK_IMPORTED_MODULE_2__["LoginService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_3__["SessionService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] },
+        { type: _services_orders_service__WEBPACK_IMPORTED_MODULE_5__["OrderService"] },
+        { type: _services_products_service__WEBPACK_IMPORTED_MODULE_8__["ProductsService"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_6__["Globals"] }
+    ]; };
     NavigationComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-navigation',
-            template: __webpack_require__(/*! ./navigation.component.html */ "./src/app/navigation/navigation.component.html"),
-            styles: [__webpack_require__(/*! ./navigation.component.css */ "./src/app/navigation/navigation.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./navigation.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/navigation/navigation.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./navigation.component.css */ "./src/app/navigation/navigation.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _services_login_service__WEBPACK_IMPORTED_MODULE_2__["LoginService"],
@@ -7876,21 +8952,12 @@ var NavigationComponent = /** @class */ (function () {
 /*!***************************************************!*\
   !*** ./src/app/news-feed/news-feed.component.css ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/news-feed/news-feed.component.html":
-/*!****************************************************!*\
-  !*** ./src/app/news-feed/news-feed.component.html ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "  <h2 class=\"pb-3\" (click)=\"refreshFeed()\">In the News</h2>\n\n  <div class=\"font-em-10 pb-3\">\n    <div class=\"col-12 col-lg-10 offset-lg-1\">\n    \n      <app-feed-card *ngFor=\"let feed of feeds\" [feed]=\"feed\" ></app-feed-card>\n\n    </div>\n  </div>\n\n  <!-- <ul class=\"list-inline\">\n      <li *ngFor=\"let category of categories\" class=\"li-child\"\n        [routerLink]=\"['/category-list']\" [queryParams]=\"{ categoryID: category?.CategoryID }\">\n          <a>\n              <div class=\"card frame card-max\">\n                  <img class=\"card-img-top image-max\" \n                        src=\"https://reydavid.blob.core.windows.net/genres/{{category?.ImageFile}}\"\n                        alt=\"{{category?.CategoryName}}\" />\n                  <div class=\"card-body\">\n                      <div class=\"card-title genre-title\" \n                        [class.smaller]=\"category?.Description.length > 20\">{{category?.Description}}</div>\n                  </div>\n              </div>\n          </a>\n      </li>\n  </ul> -->\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL25ld3MtZmVlZC9uZXdzLWZlZWQuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -7916,6 +8983,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -7946,11 +9016,16 @@ var NewsFeedComponent = /** @class */ (function () {
             _this.messageService.setSpinner(false);
         });
     };
+    NewsFeedComponent.ctorParameters = function () { return [
+        { type: _globals__WEBPACK_IMPORTED_MODULE_2__["Globals"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] },
+        { type: _services_feed_service__WEBPACK_IMPORTED_MODULE_1__["FeedService"] }
+    ]; };
     NewsFeedComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-news-feed',
-            template: __webpack_require__(/*! ./news-feed.component.html */ "./src/app/news-feed/news-feed.component.html"),
-            styles: [__webpack_require__(/*! ./news-feed.component.css */ "./src/app/news-feed/news-feed.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./news-feed.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/news-feed/news-feed.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./news-feed.component.css */ "./src/app/news-feed/news-feed.component.css")).default]
         }),
         __metadata("design:paramtypes", [_globals__WEBPACK_IMPORTED_MODULE_2__["Globals"],
             _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"],
@@ -7967,21 +9042,12 @@ var NewsFeedComponent = /** @class */ (function () {
 /*!***********************************************!*\
   !*** ./src/app/privacy/privacy.component.css ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/privacy/privacy.component.html":
-/*!************************************************!*\
-  !*** ./src/app/privacy/privacy.component.html ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"pb-3\">Privacy Policy</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n      <p>\n        We at Animegination are committed to respecting your privacy and the security of your personal information.\n        Animegination is posting this privacy statement to inform our customers of our policies with regards to privacy. The information provided here gives our policy regarding gathering and dissemination of information for our Sites.\n    </p>\n    <p>\n        By visiting or using animegination.net or any other site that is owned or operated by Animegination or any other linked pages, features, content, mobile applications, and any other services we offer from time to time in connection with any of the foregoing, \n        you hereby acknowledge and consent to the terms of this Privacy Policy and the <a href=\"terms-of-use\" target=\"_blank\">Terms of Use</a>, of which this Privacy Policy is a part. \n        If you have questions or complaints regarding our Privacy Policy or practices, please contact us at legal@animegination.net.\n    </p>\n    <p>\n      Any personal information (email address, home address, etc.) which we obtain from visitors/customers will not be sold or shared with any third party. All information gathered is used for internal purposes only. You may exercise the right to not receive future mailings, and information on removing yourself from our e-mail lists may be found in the Help section.\n    </p>\n    <p>\n      Our Site uses cookies to keep track of your shopping cart so that you can go in and out of the ordering system without losing your order.\n    </p>\n    <p>\n      Registration forms on our Site require users to give us contact information including addresses and email addresses. Customer contact information from the registration forms will not be used to send information about our company and its products. This information is only used internally.\n    </p>\n    <p>\n      On-line ordering is available on our Sites for customers to mock the purchase of products and services.  No actual purchases take place.</p>\n    <p>\n      You may choose to add interactivity to our content through the use of third-party social networking sites, such as Facebook or Twitter, or through other third-party plug-ins and applications. When doing so, access may be provided in both directions from and to your personal social media profile. It is also possible that non-personally identifiable information can be provided from your interaction with our content. \n      By utilizing our Site in coordination with such third-party social networking sites, plug-ins, or applications, you consent to the use of such information by us in accordance with our privacy policy. In addition, Animegination cannot control how such information is used by these third parties, plug-ins, and applications, and it is possible that that information may be publically viewed by other users of these social networking sites, plug-ins, and applications.\n    </p>\n    <p>\n      Social networking sites, plug-ins, and applications generally have their own privacy settings where you can control what data is shared. We recommend you consult their privacy policies and terms of use.\n    </p>\n    <p>\n      Our Privacy Policy may change from time to time. We will post any changes on the Sites. If the changes are significant, then we will provide a more prominent notice, which will be posted on this Site prior to the changes becoming effective. \n      Each time a user accesses the Sites, the current version of the Privacy Policy applies.\n    </p>\n    <p class=\"pb-3\">\n      We hope this information is useful to you as our customer.\n    </p>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ByaXZhY3kvcHJpdmFjeS5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -8005,6 +9071,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var PrivacyComponent = /** @class */ (function () {
     function PrivacyComponent() {
@@ -8014,8 +9083,8 @@ var PrivacyComponent = /** @class */ (function () {
     PrivacyComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-privacy',
-            template: __webpack_require__(/*! ./privacy.component.html */ "./src/app/privacy/privacy.component.html"),
-            styles: [__webpack_require__(/*! ./privacy.component.css */ "./src/app/privacy/privacy.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./privacy.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/privacy/privacy.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./privacy.component.css */ "./src/app/privacy/privacy.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], PrivacyComponent);
@@ -8030,21 +9099,12 @@ var PrivacyComponent = /** @class */ (function () {
 /*!***********************************************************!*\
   !*** ./src/app/product-slice/product-slice.component.css ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ".wrapper { \r\n    width: 430px;\r\n}\r\n.hyperlink {\r\n    padding-top: 10px;\r\n}\r\n.hyperlink a {\r\n    cursor: pointer;\r\n    color: #0059b2 !important;\r\n}\r\n.details p {\r\n    margin-bottom: 0.4rem;\r\n}\r\n.ml-neg-1 {\r\n    margin-left: -10px;\r\n}\r\n"
-
-/***/ }),
-
-/***/ "./src/app/product-slice/product-slice.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/product-slice/product-slice.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\">\n    <h2>{{listType?.Description}}</h2>\n\n    <div class=\"row flex-row\">\n        <ng-container *ngFor=\"let prod of apiProducts\">\n            <div class=\"col-1\"></div>\n            <div class=\"col-5 details\">\n                <div>\n                    <p class=\"hyperlink\"><a (click)=\"OnSelectProduct(prod)\">{{prod?.ProductTitle}}</a></p>\n\n                    <p>Publisher: {{prod.PublisherName}}</p>\n\n                    <p>Genre: {{prod.CategoryName}} </p>\n\n                    <p>Age Rating: {{prod.ProductAgeRating}} </p>\n\n                    <p>List Price: <s>{{prod?.UnitPrice | currency:'USD':'symbol' }}</s></p>\n                    <p>Your Price: <strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></p>\n\n                    <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\" \n                        alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n                </div>\n            </div>\n            <div class=\"col-5\">\n                <a (click)=\"OnSelectProduct(prod)\" class=\"pointer ml-neg-1\">\n                    <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                            class=\"image-max slice\" alt=\"{{prod?.ProductCode}}\" />\n                </a>\n            </div>\n        </ng-container>    \n    </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".wrapper { \r\n    width: 430px;\r\n}\r\n.hyperlink {\r\n    padding-top: 10px;\r\n}\r\n.hyperlink a {\r\n    cursor: pointer;\r\n    color: #0059b2 !important;\r\n}\r\n.details p {\r\n    margin-bottom: 0.4rem;\r\n}\r\n.ml-neg-1 {\r\n    margin-left: -10px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZHVjdC1zbGljZS9wcm9kdWN0LXNsaWNlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0FBQ2hCO0FBQ0E7SUFDSSxpQkFBaUI7QUFDckI7QUFDQTtJQUNJLGVBQWU7SUFDZix5QkFBeUI7QUFDN0I7QUFFQTtJQUNJLHFCQUFxQjtBQUN6QjtBQUNBO0lBQ0ksa0JBQWtCO0FBQ3RCIiwiZmlsZSI6InNyYy9hcHAvcHJvZHVjdC1zbGljZS9wcm9kdWN0LXNsaWNlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIud3JhcHBlciB7IFxyXG4gICAgd2lkdGg6IDQzMHB4O1xyXG59XHJcbi5oeXBlcmxpbmsge1xyXG4gICAgcGFkZGluZy10b3A6IDEwcHg7XHJcbn1cclxuLmh5cGVybGluayBhIHtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICAgIGNvbG9yOiAjMDA1OWIyICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5kZXRhaWxzIHAge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMC40cmVtO1xyXG59XHJcbi5tbC1uZWctMSB7XHJcbiAgICBtYXJnaW4tbGVmdDogLTEwcHg7XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -8071,6 +9131,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -8116,6 +9179,13 @@ var ProductSliceComponent = /** @class */ (function () {
             _this.GetProductSlice(_this.listTypeID);
         });
     };
+    ProductSliceComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_listings_service__WEBPACK_IMPORTED_MODULE_2__["ListingService"] },
+        { type: _services_listtypes_service__WEBPACK_IMPORTED_MODULE_3__["ListTypeService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_4__["CartService"] }
+    ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Number)
@@ -8123,8 +9193,8 @@ var ProductSliceComponent = /** @class */ (function () {
     ProductSliceComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-product-slice',
-            template: __webpack_require__(/*! ./product-slice.component.html */ "./src/app/product-slice/product-slice.component.html"),
-            styles: [__webpack_require__(/*! ./product-slice.component.css */ "./src/app/product-slice/product-slice.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./product-slice.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/product-slice/product-slice.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./product-slice.component.css */ "./src/app/product-slice/product-slice.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             _services_listings_service__WEBPACK_IMPORTED_MODULE_2__["ListingService"],
@@ -8142,21 +9212,12 @@ var ProductSliceComponent = /** @class */ (function () {
 /*!***********************************************************!*\
   !*** ./src/app/product-slide/product-slide.component.css ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "\r\nul {\r\n    overflow-y: auto;\r\n    overflow-x: hidden;\r\n    white-space: nowrap;\r\n    display: block;\r\n    list-style: none;\r\n}\r\n\r\nli {\r\n    display: inline-block;\r\n    text-align: center;\r\n    padding-right: 20px;\r\n}\r\n\r\nli:last-child {\r\n    padding-right: 0px;\r\n}\r\n\r\n/* li:nth-child(odd) {\r\n    background-color: yellow;\r\n}\r\n\r\nli:nth-child(even) {\r\n    background-color: blue;\r\n} */\r\n\r\n"
-
-/***/ }),
-
-/***/ "./src/app/product-slide/product-slide.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/product-slide/product-slide.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div [class.bgc-gray]=\"bgc\">\n  <h2>{{listType?.Description}}  \n      <span *ngIf=\"showButtons\" class=\"link-normal\">  \n        <a [routerLink]=\"['/list']\" [queryParams]=\"{ listTypeId: listTypeID }\">See More</a>\n    </span>\n  </h2>\n\n  <div *ngIf=\"showButtons\" class=\"row\">\n    <div [id]=\"'prev' + listTypeID\" class=\"slide-prev slide-col col-2 col-sm-1 d-flex align-items-center\">\n      <a>\n        <img src=\"assets/Previous2.jpg\" alt=\"Previous\" \n              class=\"slide-buttons\">\n      </a>\n    </div>\n    <div [id]=\"'wrap' + listTypeID\" class=\"slide-wrapper col-8 col-sm-10\">\n      <ul>\n          <li *ngFor=\"let prod of apiProducts\">\n            <a (click)=\"OnSelectProduct(prod)\">\n              <div class=\"card card-max\">\n                    <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                          class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n                    <div class=\"card-body\">\n                        <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                        <!-- <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                              alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />         -->\n                        <div>\n                            <table>\n                                <tr>\n                                    <td>List Price: </td>\n                                    <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                                </tr>\n                                <tr>\n                                    <td>Your Price: </td>\n                                    <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                                </tr>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n              </a>\n          </li>\n      </ul>\n    </div>\n\n    <div [id]=\"'next' + listTypeID\" class=\"slide-next slide-col col-2 col-sm-1 d-flex align-items-center\">\n      <a>\n          <img src=\"assets/Next2.jpg\" alt=\"Next\" class=\"slide-buttons\">\n      </a>\n    </div>\n  </div>\n</div>\n\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\nul {\r\n    overflow-y: auto;\r\n    overflow-x: hidden;\r\n    white-space: nowrap;\r\n    display: block;\r\n    list-style: none;\r\n}\r\n\r\nli {\r\n    display: inline-block;\r\n    text-align: center;\r\n    padding-right: 20px;\r\n}\r\n\r\nli:last-child {\r\n    padding-right: 0px;\r\n}\r\n\r\n/* li:nth-child(odd) {\r\n    background-color: yellow;\r\n}\r\n\r\nli:nth-child(even) {\r\n    background-color: blue;\r\n} */\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZHVjdC1zbGlkZS9wcm9kdWN0LXNsaWRlLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUNBO0lBQ0ksZ0JBQWdCO0lBQ2hCLGtCQUFrQjtJQUNsQixtQkFBbUI7SUFDbkIsY0FBYztJQUNkLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLHFCQUFxQjtJQUNyQixrQkFBa0I7SUFDbEIsbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksa0JBQWtCO0FBQ3RCOztBQUVBOzs7Ozs7R0FNRyIsImZpbGUiOiJzcmMvYXBwL3Byb2R1Y3Qtc2xpZGUvcHJvZHVjdC1zbGlkZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbnVsIHtcclxuICAgIG92ZXJmbG93LXk6IGF1dG87XHJcbiAgICBvdmVyZmxvdy14OiBoaWRkZW47XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gICAgZGlzcGxheTogYmxvY2s7XHJcbiAgICBsaXN0LXN0eWxlOiBub25lO1xyXG59XHJcblxyXG5saSB7XHJcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiAyMHB4O1xyXG59XHJcblxyXG5saTpsYXN0LWNoaWxkIHtcclxuICAgIHBhZGRpbmctcmlnaHQ6IDBweDtcclxufVxyXG5cclxuLyogbGk6bnRoLWNoaWxkKG9kZCkge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogeWVsbG93O1xyXG59XHJcblxyXG5saTpudGgtY2hpbGQoZXZlbikge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmx1ZTtcclxufSAqL1xyXG5cclxuIl19 */");
 
 /***/ }),
 
@@ -8185,6 +9246,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -8211,40 +9275,40 @@ var ProductSlideComponent = /** @class */ (function () {
         });
     };
     ProductSlideComponent.prototype.GetProductsSlideByType = function (listTypeID) {
-        var _this = this;
+        var _this_1 = this;
         this._listingService.getAnimeListing(listTypeID)
             .subscribe(function (apiProducts) {
-            _this.apiProducts = apiProducts;
-            _this.showButtons = true;
-            _this.GetProductListType(listTypeID);
+            _this_1.apiProducts = apiProducts;
+            _this_1.showButtons = true;
+            _this_1.GetProductListType(listTypeID);
         });
     };
     ProductSlideComponent.prototype.GetProductListType = function (listTypeID) {
-        var _this = this;
+        var _this_1 = this;
         var __this = this;
         this._listTypeService.getAnimeListType(listTypeID)
             .subscribe(function (listType) {
-            _this.listType = listType;
+            _this_1.listType = listType;
             // this.SetupListeners();
             setTimeout(function () {
                 __this.SetupListeners();
             }, 1400);
-            _this._messageService.setSpinner(false);
+            _this_1._messageService.setSpinner(false);
         });
     };
     ProductSlideComponent.prototype.ngOnInit = function () {
-        var _this = this;
+        var _this_1 = this;
         this._route.paramMap.subscribe(function (params) {
-            _this.listTypeIDparam = params.get('listTypeID');
-            if (_this.listTypeID) {
-                var typeID = _this.listTypeID % 10;
-                _this.GetProductsSlideByType(typeID);
+            _this_1.listTypeIDparam = params.get('listTypeID');
+            if (_this_1.listTypeID) {
+                var typeID = _this_1.listTypeID % 10;
+                _this_1.GetProductsSlideByType(typeID);
             }
             else {
-                if (_this.listTypeIDparam) {
-                    _this.listTypeID = Number(_this.listTypeIDparam);
-                    var typeID = _this.listTypeID % 10;
-                    _this.GetProductsSlideByType(typeID);
+                if (_this_1.listTypeIDparam) {
+                    _this_1.listTypeID = Number(_this_1.listTypeIDparam);
+                    var typeID = _this_1.listTypeID % 10;
+                    _this_1.GetProductsSlideByType(typeID);
                 }
             }
         });
@@ -8304,6 +9368,14 @@ var ProductSlideComponent = /** @class */ (function () {
             _this.outerWidth = 0;
         });
     };
+    ProductSlideComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_listings_service__WEBPACK_IMPORTED_MODULE_2__["ListingService"] },
+        { type: _services_listtypes_service__WEBPACK_IMPORTED_MODULE_3__["ListTypeService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_5__["CartService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Number)
@@ -8319,8 +9391,8 @@ var ProductSlideComponent = /** @class */ (function () {
     ProductSlideComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-product-slide',
-            template: __webpack_require__(/*! ./product-slide.component.html */ "./src/app/product-slide/product-slide.component.html"),
-            styles: [__webpack_require__(/*! ./product-slide.component.css */ "./src/app/product-slide/product-slide.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./product-slide.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/product-slide/product-slide.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./product-slide.component.css */ "./src/app/product-slide/product-slide.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             _services_listings_service__WEBPACK_IMPORTED_MODULE_2__["ListingService"],
@@ -8339,21 +9411,12 @@ var ProductSlideComponent = /** @class */ (function () {
 /*!***********************************************!*\
   !*** ./src/app/product/product.component.css ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/product/product.component.html":
-/*!************************************************!*\
-  !*** ./src/app/product/product.component.html ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!-- <div [class.hidden]=\"!loaded\" class=\"row\"> -->\r\n<div *ngIf=\"product?.ProductCode\" class=\"row\">\r\n        <div class=\"child col-12 col-md-6 col-lg-5 offset-lg-1\">\r\n        <div class=\"panel-body panel-default\">\r\n            <img src=\"https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg\"\r\n                 alt=\"{{product?.ProductCode}}\" class=\"image-feature img-responsive\" />\r\n        </div>\r\n    </div>\r\n    <div class=\"child col-12 col-md-6 col-lg-6 pl-3\">\r\n        <h3>{{product?.ProductTitle}}</h3>\r\n        <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{product?.RatingID}} Stars.png\"\r\n             alt=\"{{product?.RatingID}} stars\" class=\"img-responsive\" />\r\n        <div class=\"pt-3\"></div>\r\n        <table>\r\n            <tr>\r\n                <td>List Price: </td>\r\n                <td><s>{{product?.UnitPrice | currency: 'USD':true }} </s></td>\r\n            </tr>\r\n            <tr>\r\n                <td><strong>Your Price: </strong></td>\r\n                <td><strong><span class=\"text-danger font-em-10\">{{product?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\r\n            </tr>\r\n            <tr>\r\n                <td>You Save: </td>\r\n                <td><span class=\"text-danger\">{{ (product?.UnitPrice - product?.YourPrice).toFixed(2) | currency:'USD':'symbol' }} </span></td>\r\n            </tr>\r\n        </table>\r\n        <div class=\"pt-3\">\r\n            <div class=\"fine-print alert-content\">In Stock</div>\r\n\r\n            <div>Quantity: \r\n                <input type=\"number\" min=\"1\" max=\"10\" step=\"1\" \r\n                    value={{quantity}} \r\n                    (change)=\"updateQuantity($event.target.value)\" \r\n                >\r\n            </div>\r\n\r\n            <button class=\"btn btn-default bgc-light\" (click)=\"AddToCart(product)\">\r\n                <img src=\"https://reydavid.blob.core.windows.net/assets/shopping-cart.png\"\r\n                        alt=\"Buy in website now\" style=\"max-width: 130px;\" />\r\n            </button>\r\n            <!-- <div>\r\n                <a href=\"http://www.animegination.net/Product/Details/{{product?.ProductCode}}\" target=\"_blank\">\r\n                    <img src=\"https://reydavid.blob.core.windows.net/assets/shopping-cart.png\"\r\n                         alt=\"Buy in website now\" style=\"max-width: 130px;\" />\r\n                </a>\r\n            </div> -->\r\n            <div class=\"fine-print pt-3\">Free US Economy Shipping at $49</div>\r\n            <div class=\"fine-print\">Free Canadian Shipping at $249</div>\r\n            <div class=\"tiny-gray\">Item: {{product?.ProductCode}}</div>\r\n        </div>\r\n        <div class=\"pt-3\">\r\n            <div class=\"pb-2\">Share your thoughts on this item with other customers</div>\r\n            <div>\r\n                <button type=\"button\" class=\"btn btn-default btn-outline-anime bold\" \r\n                    (click)=\"WriteReview(product)\">Write a Review</button>\r\n            </div>                    \r\n        </div>\r\n    </div>\r\n    <div class=\"child col-12 col-md-6\">\r\n        <div class=\"col-md-10 offset-md-1 description\">\r\n            <h4>Description</h4>\r\n            <p>\r\n                {{product?.ProductDescription}}\r\n            </p>\r\n        </div>\r\n    </div>\r\n    <div class=\"child col-12 col-md-6\">\r\n        <div class=\"col-md-10\">\r\n            <h4>Product Details</h4>\r\n            <table class=\"table table-bordered\">\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Rated: </td>\r\n                    <td>{{product?.ProductAgeRating}}</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Run Time: </td>\r\n                    <td>{{product?.ProductLength}} minutes</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Format: </td>\r\n                    <td>{{product?.MediumName}}</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Category: </td>\r\n                    <td>{{product?.CategoryName}}</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Released: </td>\r\n                    <td>{{product?.ProductYearCreated}}</td>\r\n                </tr>\r\n                <tr>\r\n                    <td class=\"bg-lightgray\">Publisher: </td>\r\n                    <td>{{product?.PublisherName}}</td>\r\n                </tr>\r\n            </table>\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<div *ngIf=\"product.ProductCode == undefined\">\r\n    <h3>Product could {{product.ProductTitle}} not be found</h3>\r\n    <div class=\"pb-2\"></div>\r\n</div>\r\n\r\n<app-similars [productID]=\"productID\"></app-similars>\r\n\r\n<app-footer-product></app-footer-product>"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2R1Y3QvcHJvZHVjdC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -8382,6 +9445,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -8455,6 +9521,15 @@ var ProductComponent = /** @class */ (function () {
     ProductComponent.prototype.WriteReview = function () {
         this._router.navigate(['/product-review'], { queryParams: { productID: this.productID } });
     };
+    ProductComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_products_service__WEBPACK_IMPORTED_MODULE_2__["ProductsService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_5__["CartService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_6__["SessionService"] },
+        { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }
+    ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Number)
@@ -8462,8 +9537,8 @@ var ProductComponent = /** @class */ (function () {
     ProductComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-product',
-            template: __webpack_require__(/*! ./product.component.html */ "./src/app/product/product.component.html"),
-            styles: [__webpack_require__(/*! ./product.component.css */ "./src/app/product/product.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./product.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/product/product.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./product.component.css */ "./src/app/product/product.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             _services_products_service__WEBPACK_IMPORTED_MODULE_2__["ProductsService"],
@@ -8483,21 +9558,12 @@ var ProductComponent = /** @class */ (function () {
 /*!***********************************************************!*\
   !*** ./src/app/products-list/products-list.component.css ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/products-list/products-list.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/products-list/products-list.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"bgc-gray\">\n\n<h2 class=\"child\">{{title}}</h2>\n\n<ul class=\"list-inline\">\n    <li *ngFor=\"let prod of products\" class=\"li-child\" (click)=\"OnSelectProduct(prod)\">\n      <!-- [routerLink]=\"['/detail']\" [queryParams]=\"{ productID: prod?.ProductID }\"> -->\n        <a>\n          <div class=\"card frame card-max\">\n            <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                  class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n            <div class=\"card-body\">\n                <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                      alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n                <div>\n                  <table>\n                    <tr>\n                      <td>List Price: </td>\n                      <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                    </tr>\n                    <tr>\n                      <td>Your Price: </td>\n                      <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                    </tr>\n                  </table>\n                </div>\n            </div>\n          </div>\n        </a>\n    </li>\n</ul>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2R1Y3RzLWxpc3QvcHJvZHVjdHMtbGlzdC5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -8525,6 +9591,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -8579,11 +9648,19 @@ var ProductsListComponent = /** @class */ (function () {
         this._cartService.addVisitHistory(product.ProductID).subscribe(function (item) {
         });
     };
+    ProductsListComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_listings_service__WEBPACK_IMPORTED_MODULE_2__["ListingService"] },
+        { type: _services_listtypes_service__WEBPACK_IMPORTED_MODULE_3__["ListTypeService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_5__["CartService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     ProductsListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-products-list',
-            template: __webpack_require__(/*! ./products-list.component.html */ "./src/app/products-list/products-list.component.html"),
-            styles: [__webpack_require__(/*! ./products-list.component.css */ "./src/app/products-list/products-list.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./products-list.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/products-list/products-list.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./products-list.component.css */ "./src/app/products-list/products-list.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
@@ -8603,21 +9680,12 @@ var ProductsListComponent = /** @class */ (function () {
 /*!*************************************************************!*\
   !*** ./src/app/products-slice/products-slice.component.css ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/products-slice/products-slice.component.html":
-/*!**************************************************************!*\
-  !*** ./src/app/products-slice/products-slice.component.html ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"child\">{{listType?.Description}}</h2>\n\n<div class=\"row flex-row\">\n  <ng-container *ngFor=\"let prod of apiProducts\">\n    <div class=\"child col-6 col-sm-4 col-md-3 col-lg-2\">\n        <a (click)=\"OnSelectProduct(prod)\">\n            <div class=\"card card-max\">\n                <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                      class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n                <div class=\"card-body\">\n                    <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                    <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                          alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n\n                    <div>\n                        <table>\n                            <tr>\n                                <td>List Price: </td>\n                                <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                            </tr>\n                            <tr>\n                                <td>Your Price: </td>\n                                <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                            </tr>\n                        </table>\n                    </div>\n                </div>\n            </div>\n        </a>\n      </div>\n  </ng-container>\n</div>\n<!-- <ul class=\"list-inline\">\n    <li *ngFor=\"let prod of apiProducts\"\n        (click)=\"OnSelectProduct(prod)\">\n    </li>\n</ul> -->\n\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2R1Y3RzLXNsaWNlL3Byb2R1Y3RzLXNsaWNlLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -8645,6 +9713,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -8721,6 +9792,14 @@ var ProductsSliceComponent = /** @class */ (function () {
         //         }
         // })      
     };
+    ProductsSliceComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_listings_service__WEBPACK_IMPORTED_MODULE_2__["ListingService"] },
+        { type: _services_listtypes_service__WEBPACK_IMPORTED_MODULE_3__["ListTypeService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_5__["CartService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_4__["MessageService"] }
+    ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Number)
@@ -8732,8 +9811,8 @@ var ProductsSliceComponent = /** @class */ (function () {
     ProductsSliceComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-products-slice',
-            template: __webpack_require__(/*! ./products-slice.component.html */ "./src/app/products-slice/products-slice.component.html"),
-            styles: [__webpack_require__(/*! ./products-slice.component.css */ "./src/app/products-slice/products-slice.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./products-slice.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/products-slice/products-slice.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./products-slice.component.css */ "./src/app/products-slice/products-slice.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             _services_listings_service__WEBPACK_IMPORTED_MODULE_2__["ListingService"],
@@ -8752,21 +9831,12 @@ var ProductsSliceComponent = /** @class */ (function () {
 /*!***********************************************!*\
   !*** ./src/app/ratings/ratings.component.css ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/ratings/ratings.component.html":
-/*!************************************************!*\
-  !*** ./src/app/ratings/ratings.component.html ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"pb-3\">Ratings System</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>\n      The contents of all material available on this Internet site – including, but not limited to, \n      text, graphics, logos, icons, images, audio and/or video clips, digital downloads, \n      data compilations, the compilation of materials on this site and software -- have not been \n      copyrighted by Animegination, unless otherwise indicated. \n      These materials may not be reproduced, copied, distributed, displayed, published, transmitted, \n      adapted, edited or downloaded in any way without drawing the ire of Animegination.\n    </p>\n\n    <h4>ALL, PG</h4>\n    <p class=\"pl-3\">\n      Generally acceptable for children. No Nudity. Possible mild violence.\n    </p>\n    <h4>12+, 13+, 14+</h4>\n    <p class=\"pl-3\">\n      May contain violence, brief nudity, and/or mild language. May suggest sexual situations, \n      but no situations are shown. Parental discretion advised.\n    </p>\n    <h4>15+, 16+, 17+</h4>\n    <p class=\"pl-3\">\n      Strong violence and strong language. Prevalent Nudity may be contained within the picture. \n      Mild sexual situations may be shown.\n    </p>\n    <h4>18+, R</h4>\n    <p class=\"pl-3\">\n      Extreme violence, Explicit Nudity, and/or Extreme Language may be contained in the picture. \n      May contain sexually explicit material. Absolutely not for anyone under 18 years of age.\n    </p>\n    <h4>NR</h4>\n    <p class=\"pl-3\">\n      Not Rated.\n    </p>\n    <h4>Please note:</h4>\n    <p>\n      Ratings used within our system are oftentimes provided by the manufacturer of the product. \n      Because of the differences in ratings used by these companies, we have combined their systems, \n      with the descriptions of the ratings listed above. Animegination does not set ratings \n      (except for its own products) and is not responsible for errors, omissions, \n      or inaccurate ratings. These ratings are guidelines only, and are subject to change. \n      Should you find that the ratings listed here are not accurate, or would like to suggest \n      a rating for titles which do not have one at present, please contact us at \n      <a href=\"mailto:info@animegination.net\">info@animegination.net</a> \n    </p>\n    <p class=\"pb-3\">\n      We hope this feature is useful to you as our customer.\n    </p>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JhdGluZ3MvcmF0aW5ncy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -8790,6 +9860,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var RatingsComponent = /** @class */ (function () {
     function RatingsComponent() {
@@ -8799,8 +9872,8 @@ var RatingsComponent = /** @class */ (function () {
     RatingsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-ratings',
-            template: __webpack_require__(/*! ./ratings.component.html */ "./src/app/ratings/ratings.component.html"),
-            styles: [__webpack_require__(/*! ./ratings.component.css */ "./src/app/ratings/ratings.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./ratings.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/ratings/ratings.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./ratings.component.css */ "./src/app/ratings/ratings.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], RatingsComponent);
@@ -8815,21 +9888,12 @@ var RatingsComponent = /** @class */ (function () {
 /*!*************************************************!*\
   !*** ./src/app/register/register.component.css ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/register/register.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/register/register.component.html ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n  <div class=\"col-sm-10 offset-sm-1\">\n      <h2>Register</h2>\n      <div class=\"anime-color pb-3\">New to Animegination? Create an account and take advantage of faster checkouts and other benefits</div>\n      <form role=\"form\" [formGroup]=\"registerForm\" \n            (submit)=\"Register(registerForm.value, registerForm.valid)\">\n          <div class=\"form-group\">\n              <label for=\"username\">Enter a new User Name <span class=\"anime-color\">*</span></label>\n              <input type=\"text\" \n                     formControlName=\"username\"\n                     class=\"form-control\" id=\"username\" />\n          </div>\n          <div class=\"form-group\">\n              <label for=\"username\">Your First Name <span class=\"anime-color\">*</span></label>\n              <input type=\"text\" \n                     formControlName=\"firstname\"\n                     class=\"form-control\" id=\"firstname\" />\n          </div>\n          <div class=\"form-group\">\n              <label for=\"username\">Your Last Name <span class=\"anime-color\">*</span></label>\n              <input type=\"text\" \n                     formControlName=\"lastname\"\n                     class=\"form-control\" id=\"lastname\" />\n          </div>\n          <div class=\"form-group\">\n              <label for=\"username\">Your Email Address <span class=\"anime-color\">*</span></label>\n              <input type=\"email\"  \n                     formControlName=\"email\"\n                     class=\"form-control\" id=\"email\" placeholder=\"your@email.com\" />\n          </div>\n          <div class=\"form-group\">\n              <label for=\"address\">Street Address <span class=\"anime-color\">*</span></label>\n              <input type=\"text\" \n                     formControlName=\"address\"\n                     class=\"form-control\" id=\"address\" />\n          </div>\n          <div class=\"form-group\">\n            <label for=\"city\">City <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" \n                   formControlName=\"city\"\n                   class=\"form-control\" id=\"city\" />\n          </div>\n          <div class=\"form-group\">\n            <label for=\"zipcode\">Zip Code <span class=\"anime-color\">*</span></label>\n            <input type=\"text\" placeholder=\"5-digit zip code\"\n                   formControlName=\"zipcode\"\n                   class=\"form-control\" id=\"zipcode\" />\n          </div>\n        <div class=\"form-group\">\n          <label for=\"state\">State</label>\n          <!-- <states [defaultState]=\"currentState\" (select)=\"selectState($event)\"></states> -->\n          <select formControlName=\"state\" \n            class=\"form-control\" id=\"state\">\n              <option *ngFor=\"let state of states\" \n                  value={{state.StateID}} >\n                      {{state.StateName}}\n              </option>\n          </select>\n        </div>\n        <div class=\"form-group\">\n          <label for=\"cellphone\">Cell Phone</label>\n          <input type=\"text\"  placeholder=\"555-555-5555\"\n                 formControlName=\"cellphone\"\n                 class=\"form-control\" id=\"cellphone\" />\n        </div>\n        <div class=\"form-group\">\n          <label for=\"homephone\">Other Phone</label>\n          <input type=\"text\" placeholder=\"555 555-5555\"\n                 formControlName=\"homephone\"\n                 class=\"form-control\" id=\"homephone\" />\n        </div>\n\n        <div class=\"form-group\">\n          <label for=\"password\">Enter a new Password <span class=\"anime-color\">*</span></label>\n          <input type=\"password\" placeholder=\"at least 6 characters, 1 uppercase, 1 lowercase, and 1 number\" \n                 formControlName=\"password\"\n                 class=\"form-control\" id=\"password\" />\n        </div>\n        <div class=\"form-group\">\n            <label for=\"password\">Re-Enter your Password <span class=\"anime-color\">*</span></label>\n            <input type=\"password\" placeholder=\"password must match\" \n                  formControlName=\"confirmPassword\"\n                  class=\"form-control\" id=\"confirmPassword\" />\n        </div>\n\n        <div class=\"checkbox pt-2\">\n            <label>\n              <input type=\"checkbox\" value=\"\" /> Yes, please sign me up for Animegination exclusive offers and promotions</label>\n        </div>\n        <span class=\"image-btn\">\n            <button class=\"btn transparent pb-3\" type=\"submit\" \n                [disabled]=\"!registerForm.valid || registerForm.errors?.passwordsDontMatch || registerForm.errors?.passwordNotStrong\">\n                <img alt=\"Sign In\" height=\"50\" src=\"https://reydavid.blob.core.windows.net/assets/register.png\" />\n            </button>\n        </span>\n          <!--\n          <div class=\"padding-bottom-15\"></div>\n          <div *ngIf=\"!username.valid && username.errors.required\" class=\"alert alert-danger\">\n              <strong>User Name is required</strong>\n          </div>\n          <div *ngIf=\"username.dirty && !username.valid && username.errors.minlength\" class=\"alert alert-danger\">\n              <strong>User Name is too short. Please lengthen it to 6 characters or more</strong>\n          </div>\n          -->\n          <div class=\"pb-3\"></div>\n          <div *ngIf=\"isSuccess\" class=\"alert alert-success\">\n              <strong>Success! </strong> Your Registration was successful.\n          </div>\n          <div *ngIf=\"isFailure\" class=\"alert alert-danger\">\n              <strong>There was a problem: </strong> Your Registration failed.\n              <div *ngIf=\"errorMessage\">\n                {{ errorMessage }}\n              </div>\n          </div>\n      </form>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JlZ2lzdGVyL3JlZ2lzdGVyLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -8861,6 +9925,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -8992,11 +10059,20 @@ var RegisterComponent = /** @class */ (function () {
             this.errorMessage = error.message;
         }
     };
+    RegisterComponent.ctorParameters = function () { return [
+        { type: _services_accounts_service__WEBPACK_IMPORTED_MODULE_2__["AccountService"] },
+        { type: _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_3__["UserAccountsService"] },
+        { type: _services_session_service__WEBPACK_IMPORTED_MODULE_4__["SessionService"] },
+        { type: _services_states_service__WEBPACK_IMPORTED_MODULE_5__["StatesService"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] },
+        { type: _services_login_service__WEBPACK_IMPORTED_MODULE_7__["LoginService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_8__["MessageService"] }
+    ]; };
     RegisterComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-register',
-            template: __webpack_require__(/*! ./register.component.html */ "./src/app/register/register.component.html"),
-            styles: [__webpack_require__(/*! ./register.component.css */ "./src/app/register/register.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./register.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/register/register.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./register.component.css */ "./src/app/register/register.component.css")).default]
         }),
         __metadata("design:paramtypes", [_services_accounts_service__WEBPACK_IMPORTED_MODULE_2__["AccountService"],
             _services_userAccounts_service__WEBPACK_IMPORTED_MODULE_3__["UserAccountsService"],
@@ -9056,21 +10132,12 @@ var RegisterComponent = /** @class */ (function () {
 /*!***********************************************!*\
   !*** ./src/app/returns/returns.component.css ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/returns/returns.component.html":
-/*!************************************************!*\
-  !*** ./src/app/returns/returns.component.html ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"pb-3\">Return Policy and Requests</h2>\n\n<div class=\"row font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n\n    <p>\n        All of the products that we sell are new and factory sealed. If your Blu-Ray, DVD, \n        or other merchandise is defective due to a flaw in manufacturing, \n        we will promptly exchange the product for another of the same title.\n    </p>\n    <p>\n        Unopened products can be exchanged for a store credit (credit card purchases \n        will be credited back to the card, rather than issuing store credit) with our company \n        for the original purchase price within ninety (90) days of the date on your purchase invoice.\n    </p>\n    <p>\n        You will need a return request form and then call us or use our \n        <span class=\"p6\" (click)=\"newNote()\">online return authorization form</span> \n        to obtain a return authorization number. \n        Additional return request forms can be downloaded and printed on your own computer. \n        Please remember to include these with your return shipment.\n    </p>\n    <p>\n        Note: Products returned without necessary paperwork, without a return authorization number, \n        or more than ninety (90) days after the invoice date, may be returned to the customer.\n    </p>\n    <p>\n        If your merchandise is not defective, but has been damaged during shipping:\n    </p>\n    <p>\n        For <span class=\"bold\">UPS Packages</span>: You will need to call UPS at 1-800-PICK-UPS to report the incident. \n        Although it is not necessary, it is also a good idea to call us and let us know that a problem has occured \n        during shipment and that UPS will be contacting us.\n    </p>\n    <p>\n        For <span class=\"bold\">US Postal Service (USPS)</span>: Please contact our Customer Care Team through this \n        <span class=\"p6\" (click)=\"newNote()\">online form</span>.\n    </p>\n    <p>\n        For the return authorization request form, \n        <span class=\"p6\" (click)=\"newNote()\">click here</span>.\n        We cannot accept any product back without a request authorization numer \n        (request authorization numers expire in 30 days!). \n        If you’re still unsure about what to do, please contact us!\n    </p>\n    <p>\n        In the request form, please provide specific information if you had a problem with your order \n        or why you wish to return your purchase.\n    </p>\n\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3JldHVybnMvcmV0dXJucy5jb21wb25lbnQuY3NzIn0= */");
 
 /***/ }),
 
@@ -9095,6 +10162,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 var ReturnsComponent = /** @class */ (function () {
@@ -9106,11 +10176,14 @@ var ReturnsComponent = /** @class */ (function () {
     ReturnsComponent.prototype.newNote = function () {
         this.router.navigate(['/user-note']);
     };
+    ReturnsComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }
+    ]; };
     ReturnsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-returns',
-            template: __webpack_require__(/*! ./returns.component.html */ "./src/app/returns/returns.component.html"),
-            styles: [__webpack_require__(/*! ./returns.component.css */ "./src/app/returns/returns.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./returns.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/returns/returns.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./returns.component.css */ "./src/app/returns/returns.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], ReturnsComponent);
@@ -9125,21 +10198,12 @@ var ReturnsComponent = /** @class */ (function () {
 /*!*********************************************!*\
   !*** ./src/app/review/review.component.css ***!
   \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ".fa-check {\r\n    color: #007600;\r\n}"
-
-/***/ }),
-
-/***/ "./src/app/review/review.component.html":
-/*!**********************************************!*\
-  !*** ./src/app/review/review.component.html ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"pb-3\">\n  <div>\n      <div class=\"inline-block pr-3\">\n          <img src=\"https://reydavid.blob.core.windows.net/assets/User.png\"\n          alt=\"User\" class=\"thumbnail0\" />\n      </div>\n      <div class=\"inline\">\n        <span class=\"font-em-10 bold\">{{recommendation?.reviewer}}</span>\n        <span>, {{recommendation?.reviewerEmployer}}</span>\n      </div>\n  </div>\n  <div>\n      <div class=\"inline-block pr-3\">\n          <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{recommendation?.ratingId}} Stars.png\"\n          alt=\"User\" class=\"img-responsive\" />\n      </div>\n      <div class=\"inline font-em-10\">{{recommendation?.created | date: 'MMM d, y'}}</div>\n  </div>\n  <div class=\"bold\">\n    {{recommendation?.title}}\n  </div>\n  <div class=\"font-italic\">\n    {{recommendation?.recommendation}}\n    <div class=\"inline pull-right pb-2\">\n        <button type=\"button\" [class.nodisplay]=\"helpful\" class=\"btn btn-default btn-outline-anime inline mx-2\" \n            (click)=\"OnHelpful()\">Helpful</button>\n        <i [class.nodisplay]=\"!thanks\" class=\"fa fa-check\"></i>\n        <span [class.nodisplay]=\"!thanks\" class=\"alert-content normal px-2\">Thank you for your feedback!</span>\n        <button type=\"button\" [class.nodisplay]=\"notHelpful\" class=\"btn btn-default btn-outline-anime inline mx-2\" \n          (click)=\"OnNotHelpful()\">Not Helpful</button>\n    </div>\n  </div>\n\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".fa-check {\r\n    color: #007600;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmV2aWV3L3Jldmlldy5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksY0FBYztBQUNsQiIsImZpbGUiOiJzcmMvYXBwL3Jldmlldy9yZXZpZXcuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mYS1jaGVjayB7XHJcbiAgICBjb2xvcjogIzAwNzYwMDtcclxufSJdfQ== */");
 
 /***/ }),
 
@@ -9162,6 +10226,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 var ReviewComponent = /** @class */ (function () {
@@ -9199,8 +10266,8 @@ var ReviewComponent = /** @class */ (function () {
     ReviewComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-review',
-            template: __webpack_require__(/*! ./review.component.html */ "./src/app/review/review.component.html"),
-            styles: [__webpack_require__(/*! ./review.component.css */ "./src/app/review/review.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./review.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/review/review.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./review.component.css */ "./src/app/review/review.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], ReviewComponent);
@@ -9215,21 +10282,12 @@ var ReviewComponent = /** @class */ (function () {
 /*!*************************************************!*\
   !*** ./src/app/reydavid/reydavid.component.css ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ".bar47 {\r\n    height: 100%;\r\n    width: 94%;\r\n    background-color: #FFA80B;\r\n}\r\n.bar03 {\r\n    height: 100%;\r\n    width: 6%;\r\n    background-color: #FFA80B;\r\n}\r\n.no-bullets {\r\n    list-style-type: none;\r\n}\r\na.card-link {\r\n    font-size: 1.5rem;\r\n    color: #FFA80B !important;\r\n}\r\n.card .card-link::after {\r\n    font-family: 'FontAwesome';\r\n    content: \"\\f139\";\r\n    float: right;\r\n}\r\n.card .card-link.collapsed::after {\r\n    content: \"\\f13a\";\r\n}"
-
-/***/ }),
-
-/***/ "./src/app/reydavid/reydavid.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/reydavid/reydavid.component.html ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row\">\n    <div class=\"child col-12 col-md-6 col-lg-5 offset-lg-1 order-1\">\n      <div class=\"panel-body panel-default\">\n          <img src=\"https://reydavid.blob.core.windows.net/assets/ReyDavid2018.jpg\"\n                alt=\"Rey David\" class=\"image-resume img-responsive\" />\n      </div>\n    </div>\n    <div class=\"child col-12 col-md-6 col-lg-6 pl-3 order-2\">\n        <h3>REY DAVID</h3>\n        <h4>Senior Software Engineer / Software Architect</h4>\n        <img src=\"https://reydavid.blob.core.windows.net/assets/Rating 5 Stars.png\"\n             alt=\"5 stars\" class=\"img-responsive\" />\n        <div class=\"pt-3\"></div>\n        <table>\n            <tr>\n                <td>List Price: </td>\n                <td><s>{{ 999999 | currency: 'USD':true }} </s></td>\n            </tr>\n            <tr>\n                <td><strong>Your Price: </strong></td>\n                <td><strong><span class=\"text-danger font-em-10 pl-2\">Add to Cart for Pricing Info </span></strong></td>\n            </tr>\n        </table>\n        <div class=\"pt-3\">\n            <div class=\"fine-print alert-content\">Only 1 left in stock - Order soon!</div>\n\n            <div>Quantity: \n                <input type=\"number\" min=\"1\" max=\"10\" step=\"1\" value=1>\n            </div>\n\n            <button class=\"btn btn-default bgc-light\" data-toggle=\"modal\" data-target=\"#buyMeModal\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/shopping-cart.png\"\n                        alt=\"Buy in website now\" style=\"max-width: 130px;\" />\n            </button>\n            <div class=\"fine-print pt-3\">Free US Economy Shipping at $49</div>\n            <div class=\"fine-print\">This item is available for shipping only in the Northern California East Bay</div>\n            <div class=\"tiny-gray\">Item: reydavid</div>\n        </div>\n        <div class=\"pt-3\">\n            <div class=\"pb-2\">Share your thoughts on this item with other customers</div>\n            <div>\n                <button type=\"button\" class=\"btn btn-default btn-outline-anime bold\" \n                    (click)=\"WriteReview()\">Write a Review</button>\n            </div>\n        </div>\n        <div class=\"p-3\"></div>\n    </div>\n    <div class=\"child col-12 col-md-6 order-3\">\n        <div class=\"col-md-10 offset-md-1\">\n            <h4>Description</h4>\n            <p>\n                {{employmentService.CoverIntro}}\n            </p>\n            <div class=\"d-none d-lg-block pb-1\"></div>\n            <h5>Need technical Tips and Tricks?</h5>\n            <div class=\"spanhalf\">\n                <a href=\"https://www.linkedin.com/in/reyldavid/\" target=\"_blank\">\n                    <img src=\"http://reydavid.blob.core.windows.net/assets/LinkedIn3.png\" \n                        alt=\"Linked In\" class=\"image-linkedin img-responsive\" />\n                </a>\n                <p>\n                    Visit Rey David's Developers Blog at <a href='http://davidsdotnetlines.blogspot.com' \n                    target='_blank'>http://DavidsDotNetLines.BlogSpot.com</a> \n                    for tips and tricks on Angular, Asp.Net, SQL Server, IIS and Https, \n                    Windows 8 App development, and much more. \n                    <a href='http://davidsdotnetlines.blogspot.com' target='_blank'>Check it out now.</a>\n                </p>\n            </div>\n        </div>\n    </div>\n    <div class=\"child col-12 col-md-6 order-4\">\n        <div class=\"col-md-10\">\n            <h4>Product Details</h4>\n            <table class=\"table table-bordered\">\n                <tr>\n                    <td class=\"bg-lightgray\">Product Dimensions: </td>\n                    <td>Height: 5 ft 7 in</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Product Availability: </td>\n                    <td>Currently unavailable</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Most recent golf score: </td>\n                    <td>83 strokes on a Par 71</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Software Dev Experience: </td>\n                    <td>30 years</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Address: </td>\n                    <td>60 Windsor Court, Danville, CA 94506</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Phone: </td>\n                    <td>(925)915-0230</td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Email: </td>\n                    <td><a href=\"mailto:rdavid47@comcast.net\">rdavid47@comcast.net</a></td>\n                </tr>\n                <tr>\n                    <td class=\"bg-lightgray\">Overall Rating: </td>\n                    <td>\n                      <img src=\"https://reydavid.blob.core.windows.net/assets/Rating 5 Stars.png\"\n                        alt=\"5 stars\" class=\"img-responsive\" />\n                    </td>\n                </tr>\n            </table>\n        </div>\n    </div>\n\n    <div class=\"child col-12 col-lg-5 order-6 order-lg-5\">\n        <div class=\"col-lg-10 offset-lg-1\">\n            <h4>Customer Ratings</h4>\n            <div class=\"font-em-10 pt-1\">{{ratingsCount}} customer reviews</div>\n            <div>\n                <div class=\"inline-block pr-3\">\n                    <img src=\"https://reydavid.blob.core.windows.net/assets/Rating 5 Stars.png\"\n                    alt=\"5 stars\" class=\"img-responsive\" />\n                </div>\n                <div class=\"inline font-em-10\">{{ratingsAverage}} out of 5</div>\n            </div>\n\n            <div class=\"pt-2\">\n                <div class=\"row py-1 my-1\">\n                    <div class=\"col-2 text-truncate stars-label\">\n                        5 stars\n                    </div>\n                    <div class=\"col-7 all-borders-gray px-0\">\n                        <div class=\"bar47\"></div>\n                    </div>\n                    <div class=\"col-2 text-center align-middle\">\n                        94%\n                    </div>\n                </div>\n                <div class=\"row py-1 my-1\">\n                    <div class=\"col-2 text-truncate stars-label\">\n                        4 stars\n                    </div>\n                    <div class=\"col-7 all-borders-gray px-0\">\n                        <div class=\"bar03\"></div>\n                    </div>\n                    <div class=\"col-2 text-center align-middle\">\n                        6%\n                    </div>\n                </div>\n                <div class=\"row py-1 my-1\">\n                    <div class=\"col-2 text-truncate stars-label\">\n                        3 stars\n                    </div>\n                    <div class=\"col-7 all-borders-gray\">\n                    </div>\n                    <div class=\"col-2 text-center align-middle\">\n                        0%\n                    </div>\n                </div>\n                <div class=\"row py-1 my-1\">\n                    <div class=\"col-2 text-truncate stars-label\">\n                        2 stars\n                    </div>\n                    <div class=\"col-7 all-borders-gray\">\n                    </div>\n                    <div class=\"col-2 text-center align-middle\">\n                        0%\n                    </div>\n                </div>\n                <div class=\"row py-1 my-1\">\n                    <div class=\"col-2 text-truncate stars-label\">\n                        1 star\n                    </div>\n                    <div class=\"col-7 all-borders-gray\">\n                    </div>\n                    <div class=\"col-2 text-center align-middle\">\n                        0%\n                    </div>\n                </div>\n            </div>\n\n        </div>\n    </div>\n    <div class=\"child col-12 col-lg-7 order-5 order-lg-6\">\n        <h4>Frequently Bought Together</h4>\n        <div class=\"pt-3\">\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/ReyDavid2018.jpg\"\n                    alt=\"Rey David\" class=\"thumbnail3 img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Plus.jpg\"\n                    alt=\"Plus\" class=\"plus img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Angular.png\"\n                    alt=\"Angular\" class=\"thumbnail3 img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Plus.jpg\"\n                    alt=\"Plus\" class=\"plus img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/DotNet.jpg\"\n                    alt=\"Microsoft .Net\" class=\"thumbnail2 img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Plus.jpg\"\n                    alt=\"Plus\" class=\"plus img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/AspNet.png\"\n                    alt=\"ASP.Net\" class=\"thumbnail3 img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Plus.jpg\"\n                    alt=\"Plus\" class=\"plus img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/SqlServer2.png\"\n                    alt=\"SQL Server\" class=\"thumbnail3 img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Plus.jpg\"\n                    alt=\"Plus\" class=\"plus img-responsive\" />\n            </div>\n            <div class=\"inline-block pb-3\">\n                <img src=\"https://reydavid.blob.core.windows.net/assets/Windows.png\"\n                    alt=\"Windows\" class=\"thumbnail1 img-responsive\" />\n            </div>\n        </div>\n    </div>\n\n</div>\n\n<!-- <div class=\"child row pt-4 px-lg-5\">\n    <div *ngFor=\"let recommend of recommends\" class=\"col-12 col-lg-6\">\n        <app-review [review]=\"recommend\"></app-review>\n    </div>\n</div> -->\n\n<div class=\"child pt-4 px-lg-5\">\n        <div class=\"card\">\n            <div class=\"card-header\">\n                <a class=\"card-link\" data-toggle=\"collapse\" href=\"#reviews\">\n                    Customer Reviews\n                </a>\n            </div>\n            <div id=\"reviews\" class=\"collapse show\">\n                <div class=\"card-body\">\n                    <div class=\"row\">\n                        <div *ngFor=\"let recommend of recommends\" class=\"col-12 col-lg-6\">\n                            <app-review [review]=\"recommend\"></app-review>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    \n<div class=\"child pt-3 px-lg-5\">\n    <div class=\"card\">\n        <div class=\"card-header\">\n            <a class=\"card-link\" data-toggle=\"collapse\" href=\"#history\">\n                Product History\n            </a>\n        </div>\n        <div id=\"history\" class=\"collapse show\">\n            <div class=\"card-body\">\n                <div *ngFor=\"let employment of employments\">\n                    <app-employment [experience]=\"employment\"></app-employment>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"child pt-3 px-lg-5\">\n    <div class=\"card\">\n        <div class=\"card-header\">\n            <a class=\"card-link\" data-toggle=\"collapse\" href=\"#education\">\n                Product KnowledgeBase\n            </a>\n        </div>\n        <div id=\"education\" class=\"collapse show\">\n            <div class=\"card-body\">\n                <div *ngFor=\"let education of educations\">\n                    <app-employment [experience]=\"education\"></app-employment>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n    \n<div class=\"modal fade\" id=\"buyMeModal\" tabindex=\"-1\" role=\"dialog\" \n    aria-labelledby=\"buyMeModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h5 class=\"modal-title\" id=\"buyMeModalLabel\">Add to Cart</h5>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n                <div>To complete your order, please contact Rey David by phone \n                    at (925)915-0230 or by email at \n                    <a href=\"mailto:rdavid47@comast.net\">rdavid47@comast.net</a>\n                </div>\n            </div>\n            <div class=\"modal-footer\">\n                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>\n            </div>\n        </div>\n    </div>\n</div>\n\n<app-similars [productID]=\"1291\"></app-similars>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".bar47 {\r\n    height: 100%;\r\n    width: 94%;\r\n    background-color: #FFA80B;\r\n}\r\n.bar03 {\r\n    height: 100%;\r\n    width: 6%;\r\n    background-color: #FFA80B;\r\n}\r\n.no-bullets {\r\n    list-style-type: none;\r\n}\r\na.card-link {\r\n    font-size: 1.5rem;\r\n    color: #FFA80B !important;\r\n}\r\n.card .card-link::after {\r\n    font-family: 'FontAwesome';\r\n    content: \"\\f139\";\r\n    float: right;\r\n}\r\n.card .card-link.collapsed::after {\r\n    content: \"\\f13a\";\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmV5ZGF2aWQvcmV5ZGF2aWQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLFlBQVk7SUFDWixVQUFVO0lBQ1YseUJBQXlCO0FBQzdCO0FBQ0E7SUFDSSxZQUFZO0lBQ1osU0FBUztJQUNULHlCQUF5QjtBQUM3QjtBQUNBO0lBQ0kscUJBQXFCO0FBQ3pCO0FBQ0E7SUFDSSxpQkFBaUI7SUFDakIseUJBQXlCO0FBQzdCO0FBQ0E7SUFDSSwwQkFBMEI7SUFDMUIsZ0JBQWdCO0lBQ2hCLFlBQVk7QUFDaEI7QUFDQTtJQUNJLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL3JleWRhdmlkL3JleWRhdmlkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmFyNDcge1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG4gICAgd2lkdGg6IDk0JTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkE4MEI7XHJcbn1cclxuLmJhcjAzIHtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICAgIHdpZHRoOiA2JTtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkE4MEI7XHJcbn1cclxuLm5vLWJ1bGxldHMge1xyXG4gICAgbGlzdC1zdHlsZS10eXBlOiBub25lO1xyXG59XHJcbmEuY2FyZC1saW5rIHtcclxuICAgIGZvbnQtc2l6ZTogMS41cmVtO1xyXG4gICAgY29sb3I6ICNGRkE4MEIgIWltcG9ydGFudDtcclxufVxyXG4uY2FyZCAuY2FyZC1saW5rOjphZnRlciB7XHJcbiAgICBmb250LWZhbWlseTogJ0ZvbnRBd2Vzb21lJztcclxuICAgIGNvbnRlbnQ6IFwiXFxmMTM5XCI7XHJcbiAgICBmbG9hdDogcmlnaHQ7XHJcbn1cclxuLmNhcmQgLmNhcmQtbGluay5jb2xsYXBzZWQ6OmFmdGVyIHtcclxuICAgIGNvbnRlbnQ6IFwiXFxmMTNhXCI7XHJcbn0iXX0= */");
 
 /***/ }),
 
@@ -9255,6 +10313,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -9288,11 +10349,16 @@ var ReydavidComponent = /** @class */ (function () {
         // window.open("https://www.linkedin.com/in/reyldavid/");
         this.router.navigate(['/user-note']);
     };
+    ReydavidComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _services_recommend_service__WEBPACK_IMPORTED_MODULE_2__["RecommendsService"] },
+        { type: _services_employment_service__WEBPACK_IMPORTED_MODULE_3__["EmploymentService"] }
+    ]; };
     ReydavidComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-reydavid',
-            template: __webpack_require__(/*! ./reydavid.component.html */ "./src/app/reydavid/reydavid.component.html"),
-            styles: [__webpack_require__(/*! ./reydavid.component.css */ "./src/app/reydavid/reydavid.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./reydavid.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/reydavid/reydavid.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./reydavid.component.css */ "./src/app/reydavid/reydavid.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _services_recommend_service__WEBPACK_IMPORTED_MODULE_2__["RecommendsService"],
@@ -9309,21 +10375,12 @@ var ReydavidComponent = /** @class */ (function () {
 /*!*************************************************************!*\
   !*** ./src/app/search-results/search-results.component.css ***!
   \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/search-results/search-results.component.html":
-/*!**************************************************************!*\
-  !*** ./src/app/search-results/search-results.component.html ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"!showResults\" class=\"bgc-gray\">\n  <h2>Retrieving results for <span class=\"anime-orig-color\">{{searchText}}</span>...</h2>\n</div>\n<div *ngIf=\"showResults\" class=\"bgc-gray\">\n\n    <h2>Showing {{count}} results for <span class=\"anime-orig-color\">{{searchText}}</span></h2>\n    \n    <ul class=\"list-inline\">\n        <li *ngFor=\"let prod of products\" (click)=\"OnSelectProduct(prod)\">\n          <!-- [routerLink]=\"['/detail']\" [queryParams]=\"{ productID: prod?.ProductID }\"> -->\n            <a>\n              <div class=\"card frame card-max\">\n                <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                      class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n                <div class=\"card-body\">\n                    <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                    <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                          alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />\n                    <div>\n                      <table>\n                        <tr>\n                          <td>List Price: </td>\n                          <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                        </tr>\n                        <tr>\n                          <td>Your Price: </td>\n                          <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                        </tr>\n                      </table>\n                    </div>\n                </div>\n              </div>\n            </a>\n        </li>\n    </ul>\n    "
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3NlYXJjaC1yZXN1bHRzL3NlYXJjaC1yZXN1bHRzLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -9350,6 +10407,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -9398,11 +10458,18 @@ var SearchResultsComponent = /** @class */ (function () {
         this._cartService.addVisitHistory(product.ProductID).subscribe(function (item) {
         });
     };
+    SearchResultsComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_search_service__WEBPACK_IMPORTED_MODULE_2__["SearchService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_4__["CartService"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     SearchResultsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-search-results',
-            template: __webpack_require__(/*! ./search-results.component.html */ "./src/app/search-results/search-results.component.html"),
-            styles: [__webpack_require__(/*! ./search-results.component.css */ "./src/app/search-results/search-results.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./search-results.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/search-results/search-results.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./search-results.component.css */ "./src/app/search-results/search-results.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
@@ -9441,6 +10508,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -9485,6 +10555,11 @@ var AccountService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(_http_helper_service__WEBPACK_IMPORTED_MODULE_3__["HttpHelper"].extractData), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["catchError"])(_http_helper_service__WEBPACK_IMPORTED_MODULE_3__["HttpHelper"].handleError));
         return observable;
     };
+    AccountService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_3__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_5__["MessageService"] }
+    ]; };
     AccountService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -9529,6 +10604,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 /**
 * Created by reynaldodavid on 10/05/18.
@@ -9625,6 +10703,14 @@ var CartService = /** @class */ (function () {
         }
         return observables;
     };
+    CartService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_9__["Router"] },
+        { type: _session_service__WEBPACK_IMPORTED_MODULE_10__["SessionService"] },
+        { type: _message_service__WEBPACK_IMPORTED_MODULE_8__["MessageService"] }
+    ]; };
     CartService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
@@ -9670,6 +10756,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -9827,6 +10916,12 @@ var CategoryService = /** @class */ (function () {
             return observables;
         }
     };
+    CategoryService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_8__["MessageService"] }
+    ]; };
     CategoryService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
@@ -9865,6 +10960,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -10052,6 +11150,11 @@ var EmploymentService = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
+    EmploymentService.ctorParameters = function () { return [
+        { type: _globals__WEBPACK_IMPORTED_MODULE_1__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_2__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_3__["MessageService"] }
+    ]; };
     EmploymentService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -10094,6 +11197,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -10126,6 +11232,12 @@ var FeedService = /** @class */ (function () {
         //         .catch(this.handleError);
         return observables;
     };
+    FeedService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_3__["Globals"] },
+        { type: _message_service__WEBPACK_IMPORTED_MODULE_5__["MessageService"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_4__["HttpHelper"] }
+    ]; };
     FeedService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -10165,6 +11277,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 /**
 * Created by reynaldodavid on 9/08/18.
@@ -10279,6 +11394,9 @@ var HttpHelper = /** @class */ (function () {
         }
         return endpoint;
     };
+    HttpHelper.ctorParameters = function () { return [
+        { type: _globals__WEBPACK_IMPORTED_MODULE_3__["Globals"] }
+    ]; };
     HttpHelper = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
         __metadata("design:paramtypes", [_globals__WEBPACK_IMPORTED_MODULE_3__["Globals"]])
@@ -10318,6 +11436,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -10435,6 +11556,12 @@ var ListingService = /** @class */ (function () {
             return observables;
         }
     };
+    ListingService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_9__["MessageService"] }
+    ]; };
     ListingService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
@@ -10478,6 +11605,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -10566,6 +11696,11 @@ var ListTypeService = /** @class */ (function () {
             }
         }
     };
+    ListTypeService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] }
+    ]; };
     ListTypeService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
@@ -10600,6 +11735,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 var LoginService = /** @class */ (function () {
@@ -10654,6 +11792,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -10773,6 +11914,12 @@ var MediaService = /** @class */ (function () {
             return observables;
         }
     };
+    MediaService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_8__["MessageService"] }
+    ]; };
     MediaService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -10807,6 +11954,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -10960,6 +12110,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -11126,6 +12279,12 @@ var OrderService = /** @class */ (function () {
         });
         return newOrders;
     };
+    OrderService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_3__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_4__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_6__["MessageService"] }
+    ]; };
     OrderService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -11175,6 +12334,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -11376,6 +12538,15 @@ var ProductsService = /** @class */ (function () {
         // }).then(pr => {console.log("aya pr 3", pr); return pr});
         // return null;
     };
+    ProductsService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_8__["MessageService"] },
+        { type: _services_categories_service__WEBPACK_IMPORTED_MODULE_10__["CategoryService"] },
+        { type: _services_media_service__WEBPACK_IMPORTED_MODULE_9__["MediaService"] },
+        { type: _services_publishers_service__WEBPACK_IMPORTED_MODULE_11__["PublishersService"] }
+    ]; };
     ProductsService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
@@ -11425,6 +12596,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -11540,6 +12714,12 @@ var PublishersService = /** @class */ (function () {
             return observables;
         }
     };
+    PublishersService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_8__["MessageService"] }
+    ]; };
     PublishersService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -11586,6 +12766,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -11687,6 +12870,12 @@ var RecommendsService = /** @class */ (function () {
             return observables;
         }
     };
+    RecommendsService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_8__["MessageService"] }
+    ]; };
     RecommendsService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -11731,6 +12920,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -11806,6 +12998,12 @@ var SearchService = /** @class */ (function () {
             }
         }
     };
+    SearchService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_9__["MessageService"] }
+    ]; };
     SearchService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
@@ -11840,6 +13038,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -11980,6 +13181,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -12027,6 +13231,11 @@ var SimilarsService = /** @class */ (function () {
             }
         }
     };
+    SimilarsService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] }
+    ]; };
     SimilarsService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
@@ -12069,6 +13278,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -12127,6 +13339,11 @@ var StatesService = /** @class */ (function () {
             }
         }
     };
+    StatesService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_4__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_5__["HttpHelper"] }
+    ]; };
     StatesService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["Injectable"])({
             providedIn: 'root'
@@ -12167,6 +13384,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -12241,6 +13461,12 @@ var UserAccountsService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["map"])(_http_helper_service__WEBPACK_IMPORTED_MODULE_3__["HttpHelper"].extractData), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_1__["catchError"])(_http_helper_service__WEBPACK_IMPORTED_MODULE_3__["HttpHelper"].handleError));
         return observable;
     };
+    UserAccountsService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_3__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_5__["MessageService"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_6__["Globals"] }
+    ]; };
     UserAccountsService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -12282,6 +13508,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -12346,6 +13575,12 @@ var UserFeedbackService = /** @class */ (function () {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["map"])(_http_helper_service__WEBPACK_IMPORTED_MODULE_4__["HttpHelper"].extractData), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["catchError"])(_http_helper_service__WEBPACK_IMPORTED_MODULE_4__["HttpHelper"].handleError));
         return observables;
     };
+    UserFeedbackService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_3__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_4__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_6__["MessageService"] }
+    ]; };
     UserFeedbackService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -12387,6 +13622,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -12455,6 +13693,12 @@ var UserNoteService = /** @class */ (function () {
             return observables;
         }
     };
+    UserNoteService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+        { type: _globals__WEBPACK_IMPORTED_MODULE_3__["Globals"] },
+        { type: _http_helper_service__WEBPACK_IMPORTED_MODULE_4__["HttpHelper"] },
+        { type: _services_message_service__WEBPACK_IMPORTED_MODULE_6__["MessageService"] }
+    ]; };
     UserNoteService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -12492,6 +13736,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 };
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 /**
 * Created by reynaldodavid on 6/30/2019.
@@ -12560,6 +13807,9 @@ var UtilityService = /** @class */ (function () {
         var parsed = camelCase.replace(/([a-z])([A-Z])/g, "$1 $2");
         return parsed;
     };
+    UtilityService.ctorParameters = function () { return [
+        { type: _globals__WEBPACK_IMPORTED_MODULE_1__["Globals"] }
+    ]; };
     UtilityService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
             providedIn: 'root'
@@ -12577,21 +13827,12 @@ var UtilityService = /** @class */ (function () {
 /*!***********************************************************!*\
   !*** ./src/app/shipping-info/shipping-info.component.css ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "table.bordered\r\n{\r\n    width: 100%;\r\n    border-collapse: collapse;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-color: LightGrey;\r\n}\r\ntr.bordered th {\r\n    font-weight: normal;\r\n}\r\ntr.bordered td\r\n{    \r\n    font-size: 1.0em;\r\n    border-top-width: 1px;\r\n    border-top-style: solid;\r\n    border-top-color: LightGrey;\r\n    text-align: center;\r\n}\r\n"
-
-/***/ }),
-
-/***/ "./src/app/shipping-info/shipping-info.component.html":
-/*!************************************************************!*\
-  !*** ./src/app/shipping-info/shipping-info.component.html ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"pb-3\">Shipping Info</h2>\n\n<div class=\"row font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>\n        From the time we receive your order and place it in our system, standard processing time is 24-48 hours. \n        The delivery time after processing varies based upon the shipping method that you have selected. \n        Typical delivery times for each shipping method are listed in the \"Current Rates\" section of this page.\n    </p>\n    <p>\n        All pre-pack items are counted as a single item for shipping costs.\n    </p>\n    <p class=\"bold\">\n        If you are a domestic customer (US) and order over $49, Economy shipping is free.\n    </p>\n    <p>\n        Please understand that many of the pre-order dates shift about without the manufacturer letting us know. \n        If you’re ordering something projected into the future by a fair amount, call us.\n    </p>\n\n    <h5 class=\"bold\">Express Shipments</h5>\n\n    <p>\n        Express shipping means that, if you order by credit card and we’ve got the item in stock \n        (even more likely now), you will receive it in very short order. \n        However, if it’s out of stock (either here or from the manufacturer), \n        then you’ll have to wait for it regardless of the shipping method you choose. \n        Express shipped items are shipped via UPS 2 Day Air and typically arrive at least one week \n        sooner than standard shipping.\n    </p>\n\n    <p>\n        Please be aware that if you have a PO Box, or are stationed in the service, \n        our shipping is limited to Mail and Priority Mail (Economy and Standard Shipping options) \n        because UPS will not deliver to these locations.\n    </p>\n\n    <p>\n        Backordered items usually take an average of 10-14 business days. \n        If it is an extremely popular item, or it is an imported item, it may take longer.\n    </p>\n\n    <h5 class=\"bold\">Other Notes</h5>\n\n    <p>\n        If you receive defective merchandise, please call for return instructions. \n        Note that packages damaged in transit by UPS are not defective: to remedy that situation, \n        see below:\n    </p>\n\n    <p>\n        For <span class=\"bold\">UPS Packages</span>: You will need to call UPS at 1-800-PICK-UPS to report the incident. \n        Although it is not necessary, it is also a good idea to call us and let us know that a problem has occured \n        during shipment and that UPS will be contacting us.\n    </p>\n    <p>\n        For <span class=\"bold\">US Postal Service (USPS)</span>: Please contact our Customer Care Team through this \n        <span class=\"p6\" (click)=\"newNote()\">online form</span>.\n    </p>\n    <p>\n        We cannot accept any product back without an RMA (RMAs expire in 30 days!). If you’re still unsure about what to do, please contact us!\n    </p>\n    <p>\n        For any other concerns, please visit our \n        <span class=\"p6\" (click)=\"newNote()\">General Customer Care Page </span> \n        or contact us via email at \n        <span><a href=\"mailto:info@animegination.net\">info@animegination.net</a></span>.\n    </p>\n\n    <h5 class=\"bold\">Current Rates</h5>\n\n    <p>\n        $3.0 for first + $1.0 each additional item. Shipped via USPS Mail. \n        Typical delivery time is 10 - 14 days. \n        <span class=\"bold\">Free for domestic (US) customers who order over $49!</span> \n    </p>\n\n    <div class=\"row\">\n      <div class=\"col-12 col-lg-8 offset-lg-1\">\n        <table class=\"bordered\">\n          <tr class=\"bordered text-center\">\n            <th>If you order:</th>\n            <th>Total Shipping <br/>and Handling:</th>\n          </tr>\n          <tr class=\"bordered\">\n            <td>1 item</td>\n            <td>$3.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>2 items</td>\n            <td>$4.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>3 items</td>\n            <td>$5.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>4 items</td>\n            <td>$6.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>5 items</td>\n            <td>$7.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>6 items</td>\n            <td>$8.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>7 items</td>\n            <td>$9.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>8 items</td>\n            <td>$10.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>9 items</td>\n            <td>$11.0</td>\n          </tr>\n          <tr class=\"bordered\">\n            <td>10 items</td>\n            <td>$12.0</td>\n          </tr>\n        </table>\n      </div>\n    </div>\n    <div class=\"py-3\"></div>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("table.bordered\r\n{\r\n    width: 100%;\r\n    border-collapse: collapse;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    border-color: LightGrey;\r\n}\r\ntr.bordered th {\r\n    font-weight: normal;\r\n}\r\ntr.bordered td\r\n{    \r\n    font-size: 1.0em;\r\n    border-top-width: 1px;\r\n    border-top-style: solid;\r\n    border-top-color: LightGrey;\r\n    text-align: center;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hpcHBpbmctaW5mby9zaGlwcGluZy1pbmZvLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksV0FBVztJQUNYLHlCQUF5QjtJQUN6QixpQkFBaUI7SUFDakIsbUJBQW1CO0lBQ25CLHVCQUF1QjtBQUMzQjtBQUNBO0lBQ0ksbUJBQW1CO0FBQ3ZCO0FBQ0E7O0lBRUksZ0JBQWdCO0lBQ2hCLHFCQUFxQjtJQUNyQix1QkFBdUI7SUFDdkIsMkJBQTJCO0lBQzNCLGtCQUFrQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL3NoaXBwaW5nLWluZm8vc2hpcHBpbmctaW5mby5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsidGFibGUuYm9yZGVyZWRcclxue1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBib3JkZXItY29sbGFwc2U6IGNvbGxhcHNlO1xyXG4gICAgYm9yZGVyLXdpZHRoOiAxcHg7XHJcbiAgICBib3JkZXItc3R5bGU6IHNvbGlkO1xyXG4gICAgYm9yZGVyLWNvbG9yOiBMaWdodEdyZXk7XHJcbn1cclxudHIuYm9yZGVyZWQgdGgge1xyXG4gICAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcclxufVxyXG50ci5ib3JkZXJlZCB0ZFxyXG57ICAgIFxyXG4gICAgZm9udC1zaXplOiAxLjBlbTtcclxuICAgIGJvcmRlci10b3Atd2lkdGg6IDFweDtcclxuICAgIGJvcmRlci10b3Atc3R5bGU6IHNvbGlkO1xyXG4gICAgYm9yZGVyLXRvcC1jb2xvcjogTGlnaHRHcmV5O1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -12616,6 +13857,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 var ShippingInfoComponent = /** @class */ (function () {
@@ -12627,11 +13871,14 @@ var ShippingInfoComponent = /** @class */ (function () {
     ShippingInfoComponent.prototype.newNote = function () {
         this.router.navigate(['/user-note']);
     };
+    ShippingInfoComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }
+    ]; };
     ShippingInfoComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-shipping-info',
-            template: __webpack_require__(/*! ./shipping-info.component.html */ "./src/app/shipping-info/shipping-info.component.html"),
-            styles: [__webpack_require__(/*! ./shipping-info.component.css */ "./src/app/shipping-info/shipping-info.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./shipping-info.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/shipping-info/shipping-info.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./shipping-info.component.css */ "./src/app/shipping-info/shipping-info.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]])
     ], ShippingInfoComponent);
@@ -12646,21 +13893,12 @@ var ShippingInfoComponent = /** @class */ (function () {
 /*!*************************************************!*\
   !*** ./src/app/shipping/shipping.component.css ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "\r\ndiv.shipping {\r\n    color: white;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1.25px;\r\n    text-align: center;\r\n    margin: 15px auto;\r\n    padding: 5px 0;\r\n    width: 100%;\r\n}\r\n\r\ndiv.shipping p {\r\n    margin-bottom: 0 !important;\r\n}\r\n\r\n@media (max-width: 992px) {\r\n    div.shipping {\r\n        background-color: #00afec;\r\n    }\r\n}\r\n\r\n@media (min-width: 992px) {\r\n    div.shipping {\r\n        font-size: 20px;\r\n        background: #00afec url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABJIAAAA6CAIAAABkj+TYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAFPlJREFUeNrsnXlz20gOxaFbFHVZh484U/v9/9gvtUkmsR1LtnVTErUAqXiciQ9JvBrN9yvV1O5W7SQku9F43a+BAv13RBFZLmg5pRiZjGnnE1CE41L/ExVLeBP6iH3+nkiBWl0qlS15q4sp3X0j2ql/EJ7Ug2uqNzBRaLej1Vz+CUz8Oj55K7yGXLDd0Nqj9cr+RLFSp8v/UKGAbw6eiSNJqju0XspEiot2n7yF5D1ABZ2B/IBWzFj53LY9mm32SPffrUgaajS8pnIVk0TYrKHZzGW9xjuwXa1tRaptPPK3+XjgAg2uoNlAArKNabRo8hDb1vLOl3Sh6tB0HKcaBLFTLFH/ipwm3oRm1WZAJuq0qGKLNpiMaHxrw4PUXRrgCP15VdpJvggMTejXcOjYrNY2Kzley4ta+0W7L5kwAInItlJZXDTLWazLpE9uV8Lx7BHfyUSwE29LQprxn19rUK1uybt8/Ck/C2idUfccG73/sMFhjsmKGtu71uH7+7O1fO7dc37V6WMUgMRkG8OyzVvGvR2yE0HYGYpyw06nUTTa1L+kQhFvQn/Sk+kuNS9OjmvJmxzfyL1c9RSod07NM8yM3+YIFiBzFTU+jV1qjT/o2pMt+zzTu8SuGUhYtjFuaJVMYMlkkcCCcDrGBzMiq+sOqd3Di7AlJc3utK1cEX+1He9w9J1mT+ofBAVIXhcGOGozle1GEn1gQQgN1RpEONPqUc3BawDJy7ZSRfxOq3kSc5qKRTl2W0ylWgnIilJZKkYiq4Nsi0UhuG0bNhR3Pv3824YSSuUqDT/bc8kwxu8L2WZurg97pH61xvOLBRuh3k8YhyvURY03kI5so8AquV4ldXOUl0/+9/NvMkJFrwyoOjT8JOIcQLZFpFCkZscGky3HurtvyexVpUutIVdVUYDkT9bY/jeVDXJ9zdMqPF7DF/wXvStcPwEpyrZCgRpNmiZcRKQVdAiItwIKeJ9ml84uYLaGbIslTFCzbYNC2G7o7qvc6dWO26UeZvers8NHNWNzZx/skfqU9nrfcg1q7a1QDDcTSFW2UeC0qToJWxl3VK3vOwTkrSZsBhQkpWPZBiDb4lmZ2jac2W7XdPvFhqOYs3O5SgFeBUdtxkYt2CN1aeycNMiOQqlMZ0O8BpC6bGMcV/psJL4TtpMq1RwL5k/4kInFkYpYp6p1vAmLM6BU/zSnacPtKQ47rNm01zorFKUzG/ouvoW/xVGbocAeqUitbTxsrx9E7xI2dZCRbCsUpH9uCv3Wdju5vtkZiC1zi1vjcVNrSFZXKuNN2CvZdmmPKAsKZHlL0WzaExGOnMO/UIDkA3EOTBQDW9gjTf9A+WyQHQW3jR00kJ1sYzgbqNZTuvXBqafbkX2d2QO+aGy0+6KHcd3FctmWYvZjR4u25Vzus2m3+rB4HlxjR+bd1HODpNPIkLVDYU9DKRZptZCsD2fUR7+6EnXP8RpAprKNAjfU2ksrv9lRqST9xGYTWi/xXSNRKFL/ypKGWuDDHCilSFO2YUQtplLrX7tmczvo5fox0AbmfhfYIw1LGGSbviamJwv6oGRC7wKbaMAA2SZVJVOxSj7j+7KdLx0CxojsJ8Lxd4DeTZBtsVIsilTQrhM4lN3/UB9YukM5SAfvg6M2M+GPgu9ijFwTqVap7bOFjUdPI7yUU3Ca1GjjNQADZFuoAXhWS7HXNINJQdx9y6mc14Njw8fgE3qGQLbFOh+LUoZU+6CajGl8ozzLKlL/kzRoAR+CW21mBqs1jkANUGvhFZhy5bedOAmP2Cs/nmJJvA8AmCLbGM4SntZp24r4j5PiB8GxGwrOHgi24XOZCiW+xlvQou3xnh7vdD9CqULnn2UTDXzIdo1Vw0Rgj8xWrbFOq9Wlw9OfvonFlBboo3tq3gV7JDg0X9vxXEt+uBSKcoaTVY3+dtCYG37r9+GsevCJ6i7eRO7wE06DLGjRNr6liXLzT9WRNh5IDg4ERzomRirYIzOC1Vq1LidsbzkmOJXkIAlOgJMudMQFByJlF584DKaykFdr5FWDRivpa1NfNpjDxtyobvQqlbqkdOUK3kQeSdQkqb1FG7+c0Y9Ub+cmQaNN/Us4nw9eGnHUBi0NgtbPrNY4efswdExG2WR32uEX27vAawAH4S1pPg3tBmntv4pVMrsyIbwMu11Zj7VnYLEjNeUukNLlmMQy1Jqju0UbB42ff6s/qO8MqQPn81HyAAmoeaC5dmoUS3u1dqCzndOqx3u8tlPoDsVxCsAHqYgYI192UyunFwucJi0mGT667B5xEsPKDTtDQoF659Q8w4vIt2pLJhmqVHV3DvW3dPeNVnPN87soh2woUHasPNhBHpg2GX1p3wySzdCKgROydrSVenyH0+lTqDnUQvYFPuKXMfLl/5bibYdaXTqqZdsMh+ML5zH8CqbjXA8FDs2Da92HISCmKZHI6FKtFjhQsmbzFron+PCz5GHgiKmAPs6mammQnFqr1KlaPfEG8nKeWdkC3RSod4W3AD7AW9F88meSlu4l9UYrS6vkc57KoaozDI4dc9khgNXaAPUJQDgb4t4o5cnV1Nyibbum269p9yyJF87Dzq/VV4LJQB6scdSGj5IP1VAM7vzXIt1pl0okN3iXp9AdoDUu+GBy/W6MzE62FUtSOWdpwHURzlbrjaAx9yhfq0KrJ45q7Y2PQYzRId5sQHWLto1HN19EuekFrRdPnghbHLWZ9lF8FBKLV6791iA7ItOx7u2trKg6koYB8BbiB3x8p3Bu6kcudUeskubE4lbQIWCZg5YjUrboUgqyA5CIbFPeoo1TkJv/6S4y3u7Lpgw4RbHjVMfAKQkhHVNkfrVBdhQ4hUMlktO+hdT1xb45eDsPmU3e9yRm4ZRrtGjyYExhqF1QNynoEGBxW5hyVar8o9kuSE62qW7RtlzQ3RfNd+uDbMDtYESfOAtwgco00Ikhekx4p0F2RB5+oo3eKXT6SMPAm8vQYnbI1a0sZFupLO5Esw64dnJszTLXyvu1jkv9T4qPQYD5sq2uuUXbYiq1/vXmiKgwFBFoNuPikk8b2CNPZd8gu5bUqY63pNkDXvPR8Bdpox0LeA1/KxUjD/MhZlSXgmUbz3yjdmt4neBg1xmIqdSmSw78RPwDIDnZVnXE/KwUjpX33xV3heJUYPg5UmkBKAQUkDQN2CNP4PAG2REZoRLJSfSuYI8Er4W7j42RBsg2xg2tkuZlsW4naJWgfzOpWKL+le72WSD5ER9ZNlSpoXaMTce6UxAUIImOh7IKhgF75HFqrRQU8a+lZKiZPua0BHdEWj0xrALwL8VxmDHSDNlWqoirZ2Xg/N9JHOwOZRteb6Ek2YO/FlM7AG+O9Mi5keoWbY/39Hin+PO1e9LIBNu30fcdVkuZC3iThuQxsEceAou0sCxkmr18/K3umJkVnIl1YXoCf8ymg42RZsg2pu6KLvKN3Ffjv5XTlL/hZKzPQMWZtFQrwh48+ChDipQ3aG7RNr6V5h9aKVDvQnotgFjSX8eVueAFJY4h3rIF9ww/jLpRGmRH5PEeLRlOoYd8DPzO2pNSGiflYJnKNl4gGy05czc3OyrIxbDl1MhTwTfyubMhuoKAxGUbL0KuzhZt/NSjHzR71PrVWGYMruV6MIg31Ic1XXg1Xa8g3rKBJYEPe+Qb8bZSo1oty2q9PDVkFxscSbOLcA1+YxFJU5Qz/tuXq1LPwGSr9M6nWkN+HLAMN9yXylIxEgECHD62T94dkHL/CmuTsmb7+U2CplJgfk78DVflx/rBW8E5mfbcRG2YP3cTeMpXa0ZM+dEPxaWbMsvKKnR2jtcA9pxqjDRJtlFQnn6zUrDH1u6TN5frg2bC6nf4SXHjLJBBnnTq/9FtqSxdyFn47VdazbV+r7orBUjQySONZKtMTlmExGpB/gYGpzSAPfKFXIu/QXZE5hPFkTNDeheIHmCPGCMn0Y9/DJBtHJWclgLPEr9r8ZQ3pPqcafbuZpfOLrAxDNLQbdKiTWHDUJ6zd98U10BrnsmuLeZ4ymtTaF4Q56RHePeJTk/YIxNtkB0x+RnfYpAejdtBKW+wZxHbZauyEc8Tbix5Sw2Jri9XerZrY3QmihOAU/GPl21KW7TxhL39qrYwLM/xc5FtIMMVau+cXMoRHMRzzKtq7qtHJt0gOyJPI6ua2aZDqQx7JAgSra1UH4kvxJVNeTDHle1MHd1adjIhO0NRbtn6OkoVuehSRTMQcOoexHHRQmeLNp6kN1+0ph1SgOST2COBCXmY05RZs1rKSgzxFuMMzeelqXJ533LNZB8df53HewzSozm7gKEdxGWMNFK2cdhqtDSVd+PP0GjL4j3NqLZSvSEF5RAXQJQNiKNyVldhi7b1im6/aC1azTp5+FnOeYA58FIVOie9lWS0EG8RyaE9kmNpWGhExfIt9khUIjkSpyUJLcg5i1kSN0LLBj1haERZK7qXvJMmKp2hmFZTvjPT7ktnAmQMIAqHmySVtmhbLUSz7XQmhbWGnKVjX8ZYqkHmvV0HNScJN99OWkLzZI+UBtl1SXJKZTV/5+VMcd3dDD907wKvId+RzZeKkcmUxjUsfDRa9DRWlmbx37bekN9kFLV/8SEUitS/wkYOiGff4cAh53b0lcNazKTWv1LN5naDEmSQAsZTqpBTCZyTCzk1wic7ijzYI/cNsmua1NqzqEYlkhPonuv71iBGEjBGGizbODV0XHlgjbT6ch6aaJHcSk2MkTBNgbh2HA6SEC19i9D8iX5+15oR8qrf7mF4akKck8H9QzgnD8ff2myPNKFBdkQmI7VlnLKD40Czg9eQX5YzWibbKsO8bCwsKamy7eaOao5Ym6ZjWZBix2lKcQL0AAGxDdgDVI3b1tfcmSfg6EZrqsdzHDWj9fLSOQneDz5rG4sTilqrmtIgOwrbjfpKJKWyfAVOxjifTMd2IWaoS0zuvMa0BI2RZss2+mWV1Oqd2FGrJ3tU86c4/63dodxnAyBN2VZ39bVoe7qnhzudSUaFzv/CWboNwDn5IZLc2GSPNK9BdkQebrU6zF8qT17CSkHHGp6G/F+ffwmNvbOh4sNVECmgeTSbpDNljJRtxZJYJfVehOUvx7G7M6DpYwxlx1EBHCQ3UN+BU5CwYp6uVONppPJb1BzxP+NGhE3845wM/CMQb8+IPXJrxzemStByzbQG2RFZLeTcwALmE+lqy5+mWKRi9Z9Nse1WcjP+p7+Jrc4wx3B018wnyRsjjZdt4QRYr3RaJZ9z4p0UcuCIMHs4/V/C6wEnc2Xs34Akhug7gaGqrOwNT7fRD00dRF7CgaJ3ibTeWjiM82/jiXMSX9kOe6ThDbKjxtIbW57FlwOAP9eyUkl+z88bHsH52/0/TxPw/SuEuvxFs5SMkRpkG2m3Sv7Kizk0dIZimDzhai+SOZD08vwqPGh1tWjjB/n5Ny10ljKC/zknlKv7mzbeMtfOya1me6Q0yHaoWrX5kvnsgdZLex5n48nhYc15W3AVRIQ/b46Hdkp/I60pDrdTdgfqbzOCE4ZWWsZIJbKtWBKP1nJmgxx3muKWmRyuQgvUO8eBO0h8W+GVeVfcu0oUza/br8lWcE0INPPIIbKuubLRwOKNk8K8iTfJiRXaI6VBdl3UmvV9FP0tPfy07aF4dZDyJIe5lkI7JVUpvNYdGik3m/fslFVHKhqAXLGcZyVPzL5KwbJtvYrNeZxxilaQ227LqWz8fLhCDK7f2xwCIBa18+p+ga4WbZxksGZLudl9PIlghc4/66v4AuJaDsIInzfnpDRqU6Wxq0HLtfx0vWfNZsm1w99ZTE/cjgztlM+BmtPRzfp3O2Vgj4QrKle5U+rGSD2yjQKrpBxS2fKxaw35Td5uKY7KBCCl0fjaUVuzrWnsbdei2TR2Fqo6NMQ0By+ck6ulLAp2J39Sh12DPVJvg+yIcCydju18NJ5c80kM5n8eEs+jggczD+mwzIlMXjRnygH8xedP2TacND4q8QwRq+Tcqg/f7pM3p8UfB6ytnlx0wbYNyES2NVS1aNt4otl0bd4/v+f+JdZ48EInBMWT7XZO7nzTjTMWNMiOyOiHzU+3XYtbshZfeeRCYa/ZwlJYrPZ55PCvUqZiGYmchWRnjFQl2xieZt7KqoN7XsBkMy9ozB2uZLxg9C6V1YEA2gfhS+qu7C5rYb2i2y8q7dOdgfwAeDULDJ2Ta09GuGVpn7HVI61pkB0R1h6rheXPyA9YqiRVmtv3yV/JzA3ruYTncvxnvTygA3rzpUyNkdpkG69ebosmDxaOA7cb7AAtxDGFWy4g1eH34j/ratHG84U1m7pWsFKA5FKO2gB4n0rQYGq7kf1KO5yTYo80bcIWpMRIpY4G9/ts5OEuF0+6mMr97WLyZoewqYC33A+2cnmvGPk/wGqhC87SZxkbI7XJNgqu79ccG7eCdrIN07uEZgOZ6TZeSBQVM1zO6O6bPs3G03z4WeQxAIePGacszkle+PyN4lTPLHukpQ2yI/J4b0ntt0NGoyi3lLfPgltw/AsvYj/bKcvBQRzGodEpx0JKCZqEnqPbuiunz75v4bAIm4pg6oI08QPZJi3aOmr+zvMn+vldX9OnSp3Or/N7YQZEUhmF/Um4XuekIfZIaZDtyNkaltp/fyCPnkY5et7YL7kdvfj+slOGFEvBKVxV0z2FnCj82cTA+/N6ZBuH2kaLpo92Dg4OIqxLAUhx2Mmen6unRdv0QeWNeadJg09wxYDI4v/ZObmUIzgt03abtT2SE+Kw5Rrm4FuMbxQ3QD+NRC+5Ha3ituRtg3JEDSlNBAwJXCYZI3XKNgpqJVfrv7zCdrEMD9ywroC0EM2WisU/Fp7uVV69aPelNiwAcSHOyWaw07eUbM9w8cZ/z80msxcVFvEvYlV9l/nUhOJ4GZDaJbcjxORcTt5q8NIbkJAbZoxUK9so2LreeDZaJXe0mFOjifkCUkLRdUoWbCzblFGQAiSKDKhA0+Aq7p2T3koWRGPFW/r2yBw2yI6Ud+zo4Savz57JJbcPxeQkaBuIMjnZjYr5RGzDBqNNtvH65LT2XTIsw1tQ3cFiA8BvWcXohmbaqsiWyjS43hdzByA5WJ/wb7sOak7KXoFBbDfp2SNz2yA7Ik8jQ2qaZzRE19KJy7QqyrMnanUxkrMZD6YaI1/yfwEGAGs2wAfdjiAZAAAAAElFTkSuQmCC) no-repeat center;\r\n    }\r\n}\r\n"
-
-/***/ }),
-
-/***/ "./src/app/shipping/shipping.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/shipping/shipping.component.html ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"row shipping\">\n  <div class=\"col-md-6\">\n    <p>\n        Free US Economy Shipping at $49\n      </p>\n  </div>\n  <div class=\"col-md-6\">\n    <p>\n        Free Canadian Shipping at $249\n      </p>\n  </div>\n</div> "
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\ndiv.shipping {\r\n    color: white;\r\n    text-transform: uppercase;\r\n    letter-spacing: 1.25px;\r\n    text-align: center;\r\n    margin: 15px auto;\r\n    padding: 5px 0;\r\n    width: 100%;\r\n}\r\n\r\ndiv.shipping p {\r\n    margin-bottom: 0 !important;\r\n}\r\n\r\n@media (max-width: 992px) {\r\n    div.shipping {\r\n        background-color: #00afec;\r\n    }\r\n}\r\n\r\n@media (min-width: 992px) {\r\n    div.shipping {\r\n        font-size: 20px;\r\n        background: #00afec url('ShippingBanner.png') no-repeat center;\r\n    }\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hpcHBpbmcvc2hpcHBpbmcuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxZQUFZO0lBQ1oseUJBQXlCO0lBQ3pCLHNCQUFzQjtJQUN0QixrQkFBa0I7SUFDbEIsaUJBQWlCO0lBQ2pCLGNBQWM7SUFDZCxXQUFXO0FBQ2Y7O0FBRUE7SUFDSSwyQkFBMkI7QUFDL0I7O0FBRUE7SUFDSTtRQUNJLHlCQUF5QjtJQUM3QjtBQUNKOztBQUNBO0lBQ0k7UUFDSSxlQUFlO1FBQ2YsOERBQXlFO0lBQzdFO0FBQ0oiLCJmaWxlIjoic3JjL2FwcC9zaGlwcGluZy9zaGlwcGluZy5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbmRpdi5zaGlwcGluZyB7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG4gICAgbGV0dGVyLXNwYWNpbmc6IDEuMjVweDtcclxuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICAgIG1hcmdpbjogMTVweCBhdXRvO1xyXG4gICAgcGFkZGluZzogNXB4IDA7XHJcbiAgICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuZGl2LnNoaXBwaW5nIHAge1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMCAhaW1wb3J0YW50O1xyXG59XHJcblxyXG5AbWVkaWEgKG1heC13aWR0aDogOTkycHgpIHtcclxuICAgIGRpdi5zaGlwcGluZyB7XHJcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzAwYWZlYztcclxuICAgIH1cclxufVxyXG5AbWVkaWEgKG1pbi13aWR0aDogOTkycHgpIHtcclxuICAgIGRpdi5zaGlwcGluZyB7XHJcbiAgICAgICAgZm9udC1zaXplOiAyMHB4O1xyXG4gICAgICAgIGJhY2tncm91bmQ6ICMwMGFmZWMgdXJsKC4uLy4uL2Fzc2V0cy9TaGlwcGluZ0Jhbm5lci5wbmcpIG5vLXJlcGVhdCBjZW50ZXI7XHJcbiAgICB9XHJcbn1cclxuIl19 */");
 
 /***/ }),
 
@@ -12684,6 +13922,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var ShippingComponent = /** @class */ (function () {
     function ShippingComponent() {
@@ -12693,8 +13934,8 @@ var ShippingComponent = /** @class */ (function () {
     ShippingComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-shipping',
-            template: __webpack_require__(/*! ./shipping.component.html */ "./src/app/shipping/shipping.component.html"),
-            styles: [__webpack_require__(/*! ./shipping.component.css */ "./src/app/shipping/shipping.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./shipping.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/shipping/shipping.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./shipping.component.css */ "./src/app/shipping/shipping.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], ShippingComponent);
@@ -12709,21 +13950,12 @@ var ShippingComponent = /** @class */ (function () {
 /*!*************************************************!*\
   !*** ./src/app/similars/similars.component.css ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = "\r\nul {\r\n    overflow-y: auto;\r\n    overflow-x: hidden;\r\n    white-space: nowrap;\r\n    display: block;\r\n    list-style: none;\r\n}\r\n\r\nli {\r\n    display: inline-block;\r\n    text-align: center;\r\n    padding-right: 20px;\r\n}\r\n\r\nli:last-child {\r\n    padding-right: 0px;\r\n}\r\n\r\n/* li:nth-child(odd) {\r\n    background-color: yellow;\r\n}\r\n\r\nli:nth-child(even) {\r\n    background-color: blue;\r\n} */\r\n\r\n"
-
-/***/ }),
-
-/***/ "./src/app/similars/similars.component.html":
-/*!**************************************************!*\
-  !*** ./src/app/similars/similars.component.html ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div *ngIf=\"showButtons\" [class.bgc-gray]=\"bgc\">\n  <div [class.child]=\"showButtons\" class=\"col-12 col-md-10 offset-md-1 pt-3\">\n    <h4>{{title}}</h4>\n  </div>\n\n  <div class=\"row\">\n    <div [id]=\"'prev' + productID\" [class.child]=\"showButtons\" \n        class=\"slide-prev slide-col col-2 col-sm-1 d-flex align-items-center\">\n      <a>\n        <img src=\"assets/Previous2.jpg\" alt=\"Previous\" \n              class=\"slide-buttons\">\n      </a>\n    </div>\n    <div [id]=\"'wrap' + productID\" [class.child]=\"showButtons\" \n        class=\"slide-wrapper col-8 col-sm-10\">\n      <ul>\n          <li *ngFor=\"let prod of apiProducts\">\n            <a (click)=\"OnSelectProduct(prod)\">\n              <div class=\"card card-max\">\n                    <img src=\"https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg\"\n                          class=\"card-img-top mx-auto image-max\" alt=\"{{prod?.ProductCode}}\" />\n                    <div class=\"card-body\">\n                        <div class=\"card-title blue\">{{prod?.ProductTitle}}</div>\n                        <!-- <img src=\"https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png\"\n                              alt=\"{{prod?.RatingID}} stars\" class=\"rating-max\" />         -->\n                        <div>\n                            <table>\n                                <tr>\n                                    <td>List Price: </td>\n                                    <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>\n                                </tr>\n                                <tr>\n                                    <td>Your Price: </td>\n                                    <td><strong><span class=\"text-danger\">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>\n                                </tr>\n                            </table>\n                        </div>\n                    </div>\n                </div>\n              </a>\n          </li>\n      </ul>\n    </div>\n    <div [id]=\"'next' + productID\" [class.child]=\"showButtons\"\n        class=\"slide-next slide-col col-2 col-sm-1 d-flex align-items-center\">\n      <a>\n          <img src=\"assets/Next2.jpg\" alt=\"Next\" class=\"slide-buttons\">\n      </a>\n    </div>\n  </div>\n</div>\n\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\nul {\r\n    overflow-y: auto;\r\n    overflow-x: hidden;\r\n    white-space: nowrap;\r\n    display: block;\r\n    list-style: none;\r\n}\r\n\r\nli {\r\n    display: inline-block;\r\n    text-align: center;\r\n    padding-right: 20px;\r\n}\r\n\r\nli:last-child {\r\n    padding-right: 0px;\r\n}\r\n\r\n/* li:nth-child(odd) {\r\n    background-color: yellow;\r\n}\r\n\r\nli:nth-child(even) {\r\n    background-color: blue;\r\n} */\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2ltaWxhcnMvc2ltaWxhcnMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSxnQkFBZ0I7SUFDaEIsa0JBQWtCO0lBQ2xCLG1CQUFtQjtJQUNuQixjQUFjO0lBQ2QsZ0JBQWdCO0FBQ3BCOztBQUVBO0lBQ0kscUJBQXFCO0lBQ3JCLGtCQUFrQjtJQUNsQixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxrQkFBa0I7QUFDdEI7O0FBRUE7Ozs7OztHQU1HIiwiZmlsZSI6InNyYy9hcHAvc2ltaWxhcnMvc2ltaWxhcnMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIlxyXG51bCB7XHJcbiAgICBvdmVyZmxvdy15OiBhdXRvO1xyXG4gICAgb3ZlcmZsb3cteDogaGlkZGVuO1xyXG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcclxuICAgIGRpc3BsYXk6IGJsb2NrO1xyXG4gICAgbGlzdC1zdHlsZTogbm9uZTtcclxufVxyXG5cclxubGkge1xyXG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgcGFkZGluZy1yaWdodDogMjBweDtcclxufVxyXG5cclxubGk6bGFzdC1jaGlsZCB7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiAwcHg7XHJcbn1cclxuXHJcbi8qIGxpOm50aC1jaGlsZChvZGQpIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHllbGxvdztcclxufVxyXG5cclxubGk6bnRoLWNoaWxkKGV2ZW4pIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGJsdWU7XHJcbn0gKi9cclxuXHJcbiJdfQ== */");
 
 /***/ }),
 
@@ -12750,6 +13982,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 
@@ -12772,34 +14007,34 @@ var SimilarsComponent = /** @class */ (function () {
         });
     };
     SimilarsComponent.prototype.GetProductsSlideByID = function (productID) {
-        var _this = this;
+        var _this_1 = this;
         var __this = this;
         this._similarsService.getSimilarProducts(productID)
             .subscribe(function (apiProducts) {
-            _this.apiProducts = apiProducts;
-            _this.showButtons = true;
+            _this_1.apiProducts = apiProducts;
+            _this_1.showButtons = true;
             setTimeout(function () {
                 __this.SetupListeners();
             }, 1400);
         });
     };
     SimilarsComponent.prototype.ngOnInit = function () {
-        var _this = this;
+        var _this_1 = this;
         this._route.paramMap.subscribe(function (params) {
-            _this.productIDparam = params.get('productID');
-            if (_this.productID) {
-                _this.RemoveListeners(_this.productID.toString());
+            _this_1.productIDparam = params.get('productID');
+            if (_this_1.productID) {
+                _this_1.RemoveListeners(_this_1.productID.toString());
             }
-            if (_this.productIDparam) {
-                _this.productID = Number(_this.productIDparam);
+            if (_this_1.productIDparam) {
+                _this_1.productID = Number(_this_1.productIDparam);
             }
-            _this.GetProductsSlideByID(_this.productID);
+            _this_1.GetProductsSlideByID(_this_1.productID);
         });
         this._route.queryParams.subscribe(function (params) {
             var productID = params.productID;
             if (productID) {
-                _this.productID = productID;
-                _this.GetProductsSlideByID(productID);
+                _this_1.productID = productID;
+                _this_1.GetProductsSlideByID(productID);
             }
         });
     };
@@ -12890,6 +14125,12 @@ var SimilarsComponent = /** @class */ (function () {
             _this.lastScrollPos = 0;
         });
     };
+    SimilarsComponent.ctorParameters = function () { return [
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] },
+        { type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] },
+        { type: _services_similars_service__WEBPACK_IMPORTED_MODULE_2__["SimilarsService"] },
+        { type: _services_cart_service__WEBPACK_IMPORTED_MODULE_3__["CartService"] }
+    ]; };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Number)
@@ -12901,8 +14142,8 @@ var SimilarsComponent = /** @class */ (function () {
     SimilarsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-similars',
-            template: __webpack_require__(/*! ./similars.component.html */ "./src/app/similars/similars.component.html"),
-            styles: [__webpack_require__(/*! ./similars.component.css */ "./src/app/similars/similars.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./similars.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/similars/similars.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./similars.component.css */ "./src/app/similars/similars.component.css")).default]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
             _services_similars_service__WEBPACK_IMPORTED_MODULE_2__["SimilarsService"],
@@ -12919,21 +14160,12 @@ var SimilarsComponent = /** @class */ (function () {
 /*!***********************************************!*\
   !*** ./src/app/spinner/spinner.component.css ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ".spinner {\r\n    width: 80px;\r\n    background-color: transparent;\r\n    border: none;\r\n}\r\n.modal-tiny {\r\n    max-width: 100px;\r\n}"
-
-/***/ }),
-
-/***/ "./src/app/spinner/spinner.component.html":
-/*!************************************************!*\
-  !*** ./src/app/spinner/spinner.component.html ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"modal fade\" id=\"spinner\" tabindex=\"-2\" role=\"dialog\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-tiny modal-dialog-centered\">\n    <div class=\"modal-content spinner\">\n      <i class=\"fa fa-spinner fa-spin fa-5x\"></i>\n    </div>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".spinner {\r\n    width: 80px;\r\n    background-color: transparent;\r\n    border: none;\r\n}\r\n.modal-tiny {\r\n    max-width: 100px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3Bpbm5lci9zcGlubmVyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsNkJBQTZCO0lBQzdCLFlBQVk7QUFDaEI7QUFDQTtJQUNJLGdCQUFnQjtBQUNwQiIsImZpbGUiOiJzcmMvYXBwL3NwaW5uZXIvc3Bpbm5lci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNwaW5uZXIge1xyXG4gICAgd2lkdGg6IDgwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcclxuICAgIGJvcmRlcjogbm9uZTtcclxufVxyXG4ubW9kYWwtdGlueSB7XHJcbiAgICBtYXgtd2lkdGg6IDEwMHB4O1xyXG59Il19 */");
 
 /***/ }),
 
@@ -12957,6 +14189,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var SpinnerComponent = /** @class */ (function () {
     function SpinnerComponent() {
@@ -12966,8 +14201,8 @@ var SpinnerComponent = /** @class */ (function () {
     SpinnerComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-spinner',
-            template: __webpack_require__(/*! ./spinner.component.html */ "./src/app/spinner/spinner.component.html"),
-            styles: [__webpack_require__(/*! ./spinner.component.css */ "./src/app/spinner/spinner.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./spinner.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/spinner/spinner.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./spinner.component.css */ "./src/app/spinner/spinner.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], SpinnerComponent);
@@ -12994,6 +14229,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 var StripHtmlTagsPipe = /** @class */ (function () {
@@ -13034,21 +14272,12 @@ var StripHtmlTagsPipe = /** @class */ (function () {
 /*!*********************************************************!*\
   !*** ./src/app/terms-of-use/terms-of-use.component.css ***!
   \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = ""
-
-/***/ }),
-
-/***/ "./src/app/terms-of-use/terms-of-use.component.html":
-/*!**********************************************************!*\
-  !*** ./src/app/terms-of-use/terms-of-use.component.html ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<h2 class=\"pb-3\">Terms of Use</h2>\n\n<div class=\"font-em-10\">\n  <div class=\"col-12 col-lg-10 offset-lg-1\">\n    <p>Animegination provides website features and other products and services when you visit or shop using animegination.net, Animegination's mobile applications or other sites operated by Animegination (the \"Sites\").</p>\n    <p>By using the Sites, and any of its affiliated sites and/or subdomains, you agree to our Terms of Use & Privacy Policy as each are posted on this site.</p>\n    <p>Animegination reserves the right, at its sole discretion, to change, modify, alter or update the Terms of Use & Privacy Policy, in part or in whole, at any time. By using Animegination.net and/or its affiliated sites and/or subdomains after notice of such modifications, alterations or updates, you agree to be bound by the revised terms.</p>\n    <p>If you have any questions regarding the Terms of Use & Privacy Policy for this site, please contact our Customer Care Team by e-mail ( \n      <a href=\"mailto:info@animegination.net\">info@animegination.net</a> ), \n      mail or fax. Our contact information may be found by <a href=\"contact\" target=\"_blank\">clicking here</a>.</p>\n\n    <ul>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">SITE CONTENT AND INFORMATION. </span>\n        The Sites contain information, advice, text, and other materials that are provided for your convenience and enjoyment. You should be aware that the information might contain errors, omissions, inaccuracies, or outdated information. If a product offered by Animegination is not as described, you may return it according to our Return Policy\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">SITE POLICIES, MODIFICATION, AND SEVERABILITY. </span>\n        Animegination reserves the right to make changes to the Sites and these Conditions of Use and the Privacy Policy at any time. Each time you use the Sites, you should visit and review the then current Terms of Use and Privacy Policy that apply to your transactions and use. If you are dissatisfied with the Sites, their content, Terms of Use or Privacy Policy, you agree that your sole and exclusive remedy is to discontinue using the Sites. \n        If any of these Terms of Use are deemed to be illegal or unenforceable, the remainder of the Terms of Use shall be unaffected and shall continue to be fully valid, binding, and enforceable.</li>\n      <li class=\"bullets-circle\"><span class=\"bold\">YOUR ACCOUNT.</span></li>\n      <li class=\"bullets-circle pb-2\">\n        If you register on the Sites, you are responsible for maintaining the confidentiality of your account and password, restricting access to your computer, and you agree to accept responsibility for all activities that occur under your account or password.\n      </li>\n      <li class=\"bullets-circle pb-2\">\n        Animegination does sell products for children, but it sells them to adults who can purchase with a credit card or other permitted payment method. If you are under 18, you may use the Sites only with involvement of a parent or guardian. Animegination reserves the right to refuse service, terminate accounts, remove or edit content, or cancel orders in its sole discretion. \n        Animegination reserves the right to change, suspend, or discontinue all or any aspects of the Sites at any time without prior notice.\n      </li>\n      <li class=\"bullets-circle pb-2\">\n        Animegination does not knowingly collect information from children, including those less than thirteen years of age. If you are a child, do not submit any information to Animegination. If a parent, guardian, or other concerned person becomes aware that we have collected information from a child, including one less than 13 years of age, please contact us promptly and we will take steps to delete and remove any such information.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">NO UNLAWFUL OR PROHIBITED USE. </span>\n        As a condition of using the Sites, you agree that you will not use the Sites, or any of the content obtained from the Sites, for any purpose that is unlawful under applicable law or prohibited by these Conditions of Use, or to solicit or encourage the performance of any illegal activity or other activity which infringes the rights of Animegination, its affiliates or other individuals. \n        Furthermore, you may not, without limitation, copy, reproduce, distribute (including mirroring, data-mining or data scraping), transmit, publicly display, upload, perform, publish, license, modify, translate, adapt, create derivative works from, transfer, sell or otherwise exploit the Sites or any content, information, products or services obtained from the Sites, for any commercial purpose or enterprise without express written permission. \n        If you violate any of these Conditions of Use, your permission to use the Sites automatically terminates. Please report any violations of these Conditions of Use (except for claims of intellectual property infringement) to Animegination's Site director at legal@animegination.net.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">PROMOTIONAL PRICING. </span>\n        All promotional pricing percentages off are based on the original Retail Price or MSRP.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">ERRORS ON THE SITES. </span>\n        Prices and availability of products are subject to change without notice. In the event a product price is listed incorrectly due to typographical error or error in pricing information received from our vendors, Animegination shall have the right to refuse or cancel any orders placed for any product listed at the incorrect price, regardless of whether the order has been confirmed or your credit card has been charged. If your credit card has already been charged for the purchase and your order is canceled, animegination.net will promptly refund the amount charged to your credit card if applicable.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">DISTRIBUTING USER CONTENT. </span>\n        Animegination may allow users to the Sites to post reviews and comments (\"Content\") on products featured on the Sites. By submitting such Content, you automatically agree and promise that all Content is accurate and original and that, without any particular time limit, and without the payment of any fees, Animegination and anyone Animegination permits may reproduce, display, distribute and create new works of authorship in any media, based on and including the Content. Additionally, you grant Animegination the right to use the name you submit in connection with such Content.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">NO ENDORSEMENT OF USER CONTENT. </span>\n        Users to the Sites are prohibited from posting through the Sites any harmful, vulgar, obscene, profane, sexually explicit, abusive, threatening, privacy invading, libelous, racially, ethnically, or otherwise objectionable or unlawful content of any kind, or that infringes or may infringe on the intellectual or other rights of another. You acknowledge that Animegination does not endorse or pre-screen content, but that Animegination and its designees will have the right (but not the obligation) in their sole discretion to refuse, edit, move, or remove any content that is available via the Sites. You may not use a false e-mail address, impersonate any person or entity, or otherwise mislead as to the origin of any Content posted by you.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">APPLICABLE LAW. </span>\n        By using the Sites, you agree that the laws of the state of California, without regard to principles of conflict of laws, will govern these Conditions of Use and any dispute of any sort that might arise between you and Animegination.\n      </li>\n      <li class=\"bullets-circle pb-2\"><span class=\"bold\">COPYRIGHT AND TRADEMARK NOTICE. </span>\n        All screens appearing on the Sites including graphics, text, design, buttons, logos, images, and icons, as well as the selection, assembly, and arrangement, are the sole property of Animegination or its suppliers and/or licensors, and are protected by U.S. and international copyright laws. The content on the Sites is only for the purpose of shopping on the Sites or placing an order and for no other purpose. Any other use, including modification, reproduction, uploading, posting, transmission, or distribution in any form or by any means without Animegination's prior written permission, is strictly prohibited. All software used on the Sites is the sole property of Animegination or those supplying the software.\n      </li>\n      <p class=\"pb-3\">\n        ANIMEGINATION is a registered trademark of Animegination, Inc. In addition, graphics, logos, page headers, button icons, scripts, and service names included in or made available through the Sites are trademarks or trade dress of Animegination in the U.S. and other countries or are the property of their respective owners. All rights not expressly granted herein are reserved.\n      </p>\n    </ul>\n  </div>\n</div>\n"
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Rlcm1zLW9mLXVzZS90ZXJtcy1vZi11c2UuY29tcG9uZW50LmNzcyJ9 */");
 
 /***/ }),
 
@@ -13072,6 +14301,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 var TermsOfUseComponent = /** @class */ (function () {
     function TermsOfUseComponent() {
@@ -13081,8 +14313,8 @@ var TermsOfUseComponent = /** @class */ (function () {
     TermsOfUseComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-terms-of-use',
-            template: __webpack_require__(/*! ./terms-of-use.component.html */ "./src/app/terms-of-use/terms-of-use.component.html"),
-            styles: [__webpack_require__(/*! ./terms-of-use.component.css */ "./src/app/terms-of-use/terms-of-use.component.css")]
+            template: __importDefault(__webpack_require__(/*! raw-loader!./terms-of-use.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/terms-of-use/terms-of-use.component.html")).default,
+            styles: [__importDefault(__webpack_require__(/*! ./terms-of-use.component.css */ "./src/app/terms-of-use/terms-of-use.component.css")).default]
         }),
         __metadata("design:paramtypes", [])
     ], TermsOfUseComponent);
@@ -13115,6 +14347,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 
 
@@ -13182,6 +14417,9 @@ __webpack_require__.r(__webpack_exports__);
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 var environment = {
     useAzure: true,
     production: false,
@@ -13215,6 +14453,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
+  return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 
 
 

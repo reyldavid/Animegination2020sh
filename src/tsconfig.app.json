@@ -2,10 +2,24 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@src/*": [
+        "src/*.web",
+        "src/*"
+      ]
+    }
   },
   "exclude": [
     "test.ts",
     "**/*.spec.ts"
+  ],
+  "files": [
+    "main.ts",
+    "polyfills.ts"
+  ],
+  "aya_files": [
+    "src/main.ts",
+    "src/polyfills.ts"
   ]
 }

@@ -1,3 +1,7 @@
+# NativeScriptnode_modules/
+platforms/
+hooks/
+src/**/*.js
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

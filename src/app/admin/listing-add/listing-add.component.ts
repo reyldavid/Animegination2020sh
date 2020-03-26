@@ -19,7 +19,7 @@ import * as _ from 'lodash';
 })
 export class ListingAddComponent implements OnInit {
 
-  @ViewChild('effectiveDatePicker') effDatePicker: DatePickerComponent;
+  @ViewChild('effectiveDatePicker', {static: false}) effDatePicker: DatePickerComponent;
 
   open() { 
     this.effDatePicker.api.open();
