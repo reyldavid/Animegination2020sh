@@ -65,7 +65,8 @@
     "protractor": "~5.4.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "webpack": "^4.42.1"
   },
   "nativescript": {
     "id": "org.nativescript.ngsample",

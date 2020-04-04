@@ -10,6 +10,12 @@
       ]
     }
   },
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts",
+    "main.ts",
+    "polyfills.ts"
+  ],
   "exclude": [
     "test.ts",
     "**/*.spec.ts"

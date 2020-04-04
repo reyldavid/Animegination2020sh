@@ -30,6 +30,7 @@ module.exports = env => {
 
     const AngularCompilerPlugin = getAngularCompilerPlugin(platform);
     const projectRoot = __dirname;
+    // const projectRoot = "D:\\. RLD\\GitHub Repo\\Animegination2020sh\\src"
 
     // Default destination inside platforms/<platform>/...
     const dist = resolve(projectRoot, nsWebpack.getAppPath(platform, projectRoot));
@@ -37,6 +38,7 @@ module.exports = env => {
     const {
         // The 'appPath' and 'appResourcesPath' values are fetched from
         // the nsconfig.json configuration file.
+        // appPath = "src",
         appPath = "src",
         appResourcesPath = "App_Resources",
 
@@ -60,6 +62,7 @@ module.exports = env => {
     const isAnySourceMapEnabled = !!sourceMap || !!hiddenSourceMap;
     const externals = nsWebpack.getConvertedExternals(env.externals);
     const appFullPath = resolve(projectRoot, appPath);
+    // const appFullPath = "D:\\. RLD\\GitHub Repo\\Animegination2020sh\\src\\app"
     const tsConfigName = "tsconfig.tns.json";
     const tsConfigPath = join(__dirname, tsConfigName);
     const hasRootLevelScopedModules = nsWebpack.hasRootLevelScopedModules({ projectDir: projectRoot });

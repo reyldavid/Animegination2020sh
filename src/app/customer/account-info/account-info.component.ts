@@ -8,8 +8,8 @@ import { SessionService } from '../../services/session.service';
 import { MessageService } from '../../services/message.service';
 import { OrderService } from '../../services/orders.service';
 import { Subscription } from 'rxjs/Subscription';
-import { Order } from 'src/app/models/orderModel';
-import { CartType } from 'src/app/models/carttype';
+import { Order } from '../../../app/models/orderModel';
+import { CartType } from '../../../app/models/carttype';
 import * as _ from 'lodash';
 
 @Component({

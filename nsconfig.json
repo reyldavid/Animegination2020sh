@@ -1,0 +1,7 @@
+{
+    "appPath": "src", 
+    "appResourcesPath": "App_Resources", 
+    "webpackConfigPath": "webpack.config.js", 
+    "overridePods": false,
+    "shared": true
+}

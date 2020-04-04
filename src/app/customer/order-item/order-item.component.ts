@@ -4,7 +4,7 @@ import { Product, ApiProduct } from '../../models/product';
 import { OrderItem } from '../../models/orderItemModel';
 import { ProductsService } from '../../services/products.service';
 import { MessageService } from '../../services/message.service';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from '../../../app/services/cart.service';
 
 @Component({
   selector: 'app-order-item',

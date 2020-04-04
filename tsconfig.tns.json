@@ -11,7 +11,17 @@
       ]
     }
   },
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts",
+    "src/main.tns.ts",
+    "src/polyfills.ts"
+  ],
   "files": [
     "src/main.tns.ts"
   ]
+  , "aya_files": [
+    "src/main.tns.ts"
+  ]
+
 }

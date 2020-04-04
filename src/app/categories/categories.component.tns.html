@@ -1,0 +1,31 @@
+<StackLayout>
+  <Label text="categories works" textWrap="true"></Label>
+  <Label text="This is a migrated component" textWrap="true"></Label>
+  <Label text="Update it to provide the UI elements required in your mobile app" textWrap="true"></Label>
+</StackLayout>
+
+<!--
+Original Web template:
+
+<div class="bgc-gray">
+  <h2 class="child anime-orig-color">Shop by Category</h2>
+  <ul class="list-inline">
+      <li *ngFor="let category of categories" class="li-child"
+        [routerLink]="['/category-list']" [queryParams]="{ categoryID: category?.CategoryID }">
+          <a>
+              <div class="card frame card-max">
+                  <img class="card-img-top image-max" 
+                       src="https://reydavid.blob.core.windows.net/genres/{{category?.ImageFile}}"
+                       alt="{{category?.CategoryName}}" />
+                  <div class="card-body">
+                      <div class="card-title genre-title" 
+                        [class.smaller]="category?.Description.length > 20">{{category?.Description}}</div>
+                  </div>
+              </div>
+          </a>
+      </li>
+  </ul>
+</div>
+<!-- (click)="OnSelectCategory(category)"> ->
+
+-->

@@ -9,7 +9,7 @@ import { ListTypeService } from '../../services/listtypes.service';
 import { ListType } from '../../models/listtype';
 import { ListingType } from '../../models/listingTypes';
 import { ProductsService } from '../../services/products.service';
-import { Product, ApiProduct } from 'src/app/models/product';
+import { Product, ApiProduct } from '../../../app/models/product';
 import * as _ from 'lodash';
 
 @Component({

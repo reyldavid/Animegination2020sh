@@ -7,7 +7,7 @@ import { Product, ApiProduct } from '../../models/product';
 import { ProductsService } from '../../services/products.service';
 import { UserFeedbackModel } from '../../models/userFeedbackModel';
 import { FeedbackType } from '../../models/feedbackType';
-import { CartService } from 'src/app/services/cart.service';
+import { CartService } from '../../../app/services/cart.service';
 
 
 @Component({

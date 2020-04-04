@@ -11,7 +11,7 @@ import { ListingType } from '../../models/listingTypes';
 import { ProductsService } from '../../services/products.service';
 import { Router, ActivatedRoute, Route } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
-import { Product, ApiProduct } from 'src/app/models/product';
+import { Product, ApiProduct } from '../../../app/models/product';
 import { UtilityService } from '../../services/utilities.service';
 import * as _ from 'lodash';
 

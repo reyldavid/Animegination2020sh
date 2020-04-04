@@ -1,0 +1,118 @@
+<StackLayout>
+  <Label text="product works" textWrap="true"></Label>
+  <Label text="This is a migrated component" textWrap="true"></Label>
+  <Label text="Update it to provide the UI elements required in your mobile app" textWrap="true"></Label>
+</StackLayout>
+
+<!--
+Original Web template:
+
+<!-- <div [class.hidden]="!loaded" class="row"> ->
+<div *ngIf="product?.ProductCode" class="row">
+        <div class="child col-12 col-md-6 col-lg-5 offset-lg-1">
+        <div class="panel-body panel-default">
+            <img src="https://reydavid.blob.core.windows.net/anime/{{product?.ProductCode}}.jpg"
+                 alt="{{product?.ProductCode}}" class="image-feature img-responsive" />
+        </div>
+    </div>
+    <div class="child col-12 col-md-6 col-lg-6 pl-3">
+        <h3>{{product?.ProductTitle}}</h3>
+        <img src="https://reydavid.blob.core.windows.net/assets/Rating {{product?.RatingID}} Stars.png"
+             alt="{{product?.RatingID}} stars" class="img-responsive" />
+        <div class="pt-3"></div>
+        <table>
+            <tr>
+                <td>List Price: </td>
+                <td><s>{{product?.UnitPrice | currency: 'USD':true }} </s></td>
+            </tr>
+            <tr>
+                <td><strong>Your Price: </strong></td>
+                <td><strong><span class="text-danger font-em-10">{{product?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>
+            </tr>
+            <tr>
+                <td>You Save: </td>
+                <td><span class="text-danger">{{ (product?.UnitPrice - product?.YourPrice).toFixed(2) | currency:'USD':'symbol' }} </span></td>
+            </tr>
+        </table>
+        <div class="pt-3">
+            <div class="fine-print alert-content">In Stock</div>
+
+            <div>Quantity: 
+                <input type="number" min="1" max="10" step="1" 
+                    value={{quantity}} 
+                    (change)="updateQuantity($event.target.value)" 
+                >
+            </div>
+
+            <button class="btn btn-default bgc-light" (click)="AddToCart(product)">
+                <img src="https://reydavid.blob.core.windows.net/assets/shopping-cart.png"
+                        alt="Buy in website now" style="max-width: 130px;" />
+            </button>
+            <!-- <div>
+                <a href="http://www.animegination.net/Product/Details/{{product?.ProductCode}}" target="_blank">
+                    <img src="https://reydavid.blob.core.windows.net/assets/shopping-cart.png"
+                         alt="Buy in website now" style="max-width: 130px;" />
+                </a>
+            </div> ->
+            <div class="fine-print pt-3">Free US Economy Shipping at $49</div>
+            <div class="fine-print">Free Canadian Shipping at $249</div>
+            <div class="tiny-gray">Item: {{product?.ProductCode}}</div>
+        </div>
+        <div class="pt-3">
+            <div class="pb-2">Share your thoughts on this item with other customers</div>
+            <div>
+                <button type="button" class="btn btn-default btn-outline-anime bold" 
+                    (click)="WriteReview(product)">Write a Review</button>
+            </div>                    
+        </div>
+    </div>
+    <div class="child col-12 col-md-6">
+        <div class="col-md-10 offset-md-1 description">
+            <h4>Description</h4>
+            <p>
+                {{product?.ProductDescription}}
+            </p>
+        </div>
+    </div>
+    <div class="child col-12 col-md-6">
+        <div class="col-md-10">
+            <h4>Product Details</h4>
+            <table class="table table-bordered">
+                <tr>
+                    <td class="bg-lightgray">Rated: </td>
+                    <td>{{product?.ProductAgeRating}}</td>
+                </tr>
+                <tr>
+                    <td class="bg-lightgray">Run Time: </td>
+                    <td>{{product?.ProductLength}} minutes</td>
+                </tr>
+                <tr>
+                    <td class="bg-lightgray">Format: </td>
+                    <td>{{product?.MediumName}}</td>
+                </tr>
+                <tr>
+                    <td class="bg-lightgray">Category: </td>
+                    <td>{{product?.CategoryName}}</td>
+                </tr>
+                <tr>
+                    <td class="bg-lightgray">Released: </td>
+                    <td>{{product?.ProductYearCreated}}</td>
+                </tr>
+                <tr>
+                    <td class="bg-lightgray">Publisher: </td>
+                    <td>{{product?.PublisherName}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="product.ProductCode == undefined">
+    <h3>Product could {{product.ProductTitle}} not be found</h3>
+    <div class="pb-2"></div>
+</div>
+
+<app-similars [productID]="productID"></app-similars>
+
+<app-footer-product></app-footer-product>
+-->

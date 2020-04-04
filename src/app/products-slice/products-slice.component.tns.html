@@ -1,0 +1,49 @@
+<StackLayout>
+  <Label text="products-slice works" textWrap="true"></Label>
+  <Label text="This is a migrated component" textWrap="true"></Label>
+  <Label text="Update it to provide the UI elements required in your mobile app" textWrap="true"></Label>
+</StackLayout>
+
+<!--
+Original Web template:
+
+<h2 class="child">{{listType?.Description}}</h2>
+
+<div class="row flex-row">
+  <ng-container *ngFor="let prod of apiProducts">
+    <div class="child col-6 col-sm-4 col-md-3 col-lg-2">
+        <a (click)="OnSelectProduct(prod)">
+            <div class="card card-max">
+                <img src="https://reydavid.blob.core.windows.net/anime/{{prod?.ProductCode}}.jpg"
+                      class="card-img-top mx-auto image-max" alt="{{prod?.ProductCode}}" />
+                <div class="card-body">
+                    <div class="card-title blue">{{prod?.ProductTitle}}</div>
+                    <img src="https://reydavid.blob.core.windows.net/assets/Rating {{prod?.RatingID}} Stars.png"
+                          alt="{{prod?.RatingID}} stars" class="rating-max" />
+
+                    <div>
+                        <table>
+                            <tr>
+                                <td>List Price: </td>
+                                <td><s>{{prod?.UnitPrice | currency:'USD':'symbol' }} </s></td>
+                            </tr>
+                            <tr>
+                                <td>Your Price: </td>
+                                <td><strong><span class="text-danger">{{prod?.YourPrice | currency:'USD':'symbol' }} </span></strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </a>
+      </div>
+  </ng-container>
+</div>
+<!-- <ul class="list-inline">
+    <li *ngFor="let prod of apiProducts"
+        (click)="OnSelectProduct(prod)">
+    </li>
+</ul> ->
+
+
+-->
