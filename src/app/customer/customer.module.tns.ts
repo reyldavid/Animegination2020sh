@@ -1,4 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NativeScriptCommonModule } from 'nativescript-angular/common';
+import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { CustomerRouterModule } from './customer-router/customer-router.module';
+
 import { AccountInfoComponent } from '../customer/account-info/account-info.component';
 import { AccountSettingsComponent } from '../customer/account-settings/account-settings.component';
 import { ShoppingCartComponent } from '../customer/shopping-cart/shopping-cart.component';
@@ -24,6 +30,11 @@ import { HistoryComponent } from '../customer/history/history.component';
 
 @NgModule({
   imports: [
+    NativeScriptHttpClientModule,
+    NativeScriptCommonModule,
+    FormsModule, ReactiveFormsModule, 
+    AngularFontAwesomeModule,
+    CustomerRouterModule
   ],
   declarations: [
   AccountInfoComponent,
@@ -49,6 +60,30 @@ import { HistoryComponent } from '../customer/history/history.component';
   FeedbackComponent,
   HistoryComponent],
   exports: [
+    AccountInfoComponent,
+    AccountSettingsComponent,
+    ShoppingCartComponent,
+    ProfileSettingsComponent,
+    AddressSettingsComponent,
+    CartItemComponent,
+    WishListComponent,
+    BuyListComponent,
+    CheckoutAddressComponent,
+    SubtotalsComponent,
+    CheckoutReviewComponent,
+    CheckoutThankyouComponent,
+    OrdersDetailsComponent,
+    OrdersSummaryComponent,
+    OrderItemComponent,
+    OrdersListComponent,
+    ProductReviewComponent,
+    UserNoteComponent,
+    FooterProductComponent,
+    FeedbackComponent,
+    HistoryComponent
+  ],
+  schemas: [
+    NO_ERRORS_SCHEMA
   ]
 })
 export class CustomerModule { }

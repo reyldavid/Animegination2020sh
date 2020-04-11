@@ -5,13 +5,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { DpDatePickerModule } from 'ng2-date-picker';
+import { AdminRouterModule } from '../admin/admin-router/admin-router.module';
 
 import { AdminGuard } from '../guards/admin.guard';
 import { MediumComponent } from './medium/medium.component';
 import { GenreComponent } from './genre/genre.component';
 import { GenreEditComponent } from '../admin/genre-edit/genre-edit.component';
 import { GenreAddComponent } from '../admin/genre-add/genre-add.component';
-import { AdminRouterModule } from '../admin/admin-router/admin-router.module';
 import { MediumEditComponent } from './medium-edit/medium-edit.component';
 import { MediumAddComponent } from './medium-add/medium-add.component';
 import { PublisherComponent } from './publisher/publisher.component';
