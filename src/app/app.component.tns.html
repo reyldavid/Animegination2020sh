@@ -1,2 +1,82 @@
 <!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
-<page-router-outlet></page-router-outlet>
+<!-- <app-navigation></app-navigation> -->
+
+<GridLayout rows="auto,*,auto" columns="*" class="body-bg-white">
+
+    <GridLayout row="0" rows="auto,auto" columns="*,auto,auto" paddingRight="10">
+
+        <Image row="0" col="0" class="navbar-brand" 
+            horizontalAlignment="left" 
+            src="https://reydavid.blob.core.windows.net/assets/Animegination-brand.PNG"
+            (tap)="goHome()" alt="Animegination" height="25"></Image>
+
+        <Image row="0" col="1" class="image-link" 
+            horizontalAlignment="right" 
+            src="https://reydavid.blob.core.windows.net/assets/menu-cart.png"
+            (tap)="goCart()" width="46"></Image>
+        <!-- <Span class="badge badge-pill badge-anime">{{ order?.itemQuantity }}</Span> -->
+
+        <Image row="0" col="2" class="image-link" 
+            horizontalAlignment="right"  
+            src="https://reydavid.blob.core.windows.net/assets/User.png"
+            (tap)="login()" width="34"></Image>
+
+        <TextField row="1" col="0" colspan="2" class="input-group" 
+                hint="Search the Store" #inSearch></TextField>
+
+        <Image row="1" col="2" class="input-group-btn image-btn"
+                (tap)="onSearch(inSearch.value)" horizontalAlignment="right"
+                src="https://reydavid.blob.core.windows.net/assets/Search2.png" 
+                alt="Search" height="32"></Image>
+
+    </GridLayout>
+
+    <GridLayout row="1" rows="*" columns="*">
+        <page-router-outlet></page-router-outlet>
+    </GridLayout>>
+
+    <GridLayout class="navBottom" height="70" width="100%" row="2" rows="auto"
+        columns="auto,auto,auto,auto">
+
+        <GridLayout [class]="selectedTab==0?'nav active':'nav'" (tap)="goHome()"
+            rows="*,auto" cols="auto" col="0" row="0" width="25%">
+            <Image [class]="selectedTab==0?'navIcon active':'navIcon'" row="0" 
+                height="50" 
+                [src]="selectedTab==0?'https://reydavid.blob.core.windows.net/assets/Home-active.png':'https://reydavid.blob.core.windows.net/assets/Home.png'"></Image>
+            <Label row="1" *ngIf="selectedTab==0" text="Home" 
+                textAlignment="center"
+                class="navText"></Label>
+        </GridLayout>
+
+        <GridLayout [class]="selectedTab==1?'nav active':'nav'" (tap)="goFeatures()"
+            rows="*,auto" cols="auto" col="1" row="0" width="25%">
+            <Image [class]="selectedTab==1?'navIcon ':'navIcon'" row="0"
+                height="50" 
+                [src]="selectedTab==1?'https://reydavid.blob.core.windows.net/assets/Features-active.png':'https://reydavid.blob.core.windows.net/assets/Features.png'"></Image>
+            <Label row="1" *ngIf="selectedTab == 1" text="Features" 
+                textAlignment="center"
+                class="navText"></Label>
+        </GridLayout>
+
+        <GridLayout [class]="selectedTab==2?'nav active':'nav'" (tap)="goGenres()"
+            rows="*,auto" cols="auto" col="2" row="0" width="25%">
+            <Image [class]="selectedTab==2?'navIcon active':'navIcon'" row="0"
+                height="50"
+                [src]="selectedTab==2?'https://reydavid.blob.core.windows.net/assets/Genre-active.png':'https://reydavid.blob.core.windows.net/assets/Genre.png'"></Image>
+            <Label row="1" *ngIf="selectedTab == 2" text="Genres" 
+                textAlignment="center"
+                class="navText"></Label>
+        </GridLayout>
+
+        <GridLayout [class]="selectedTab==3?'nav active':'nav'" (tap)="goInfo()"
+            rows="*,auto" cols="auto" col="3" row="0" width="25%">
+            <Image [class]="selectedTab==3?'navIcon active':'navIcon'" row="0"
+                height="50"
+                [src]="selectedTab==3?'https://reydavid.blob.core.windows.net/assets/Info-active.jpg':'https://reydavid.blob.core.windows.net/assets/Info.jpg'"></Image>
+            <Label row="1" *ngIf="selectedTab == 3" text="Info" 
+                textAlignment="center"
+                class="navText"></Label>
+        </GridLayout>
+    </GridLayout>
+
+</GridLayout>

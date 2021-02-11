@@ -35,7 +35,7 @@ export class CartItemComponent implements OnInit {
     }
 
   ngOnInit() {
-    switch(this.cartType) {
+    switch (this.cartType) {
       case CartType.shoppingCart:
       {
         this.moveLabel = "Save for Later";

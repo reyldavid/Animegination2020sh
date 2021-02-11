@@ -9,7 +9,6 @@ import { Globals } from '../globals';
 import { Order } from '../models/orderModel';
 import { CartType } from '../models/carttype';
 import { ProductsService } from '../services/products.service';
-// import { $ } from 'protractor';
 import * as _ from 'lodash';
 declare var $: any;
 

@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit(): any {
         console.log('home init');
-        console.log('home href ' + window.location.href);
-        console.log('home path ' + window.location.pathname);
+        // console.log('home href ' + window.location.href);
+        // console.log('home path ' + window.location.pathname);
     }
 }
