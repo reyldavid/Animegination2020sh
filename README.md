@@ -29,3 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Version 1.1
 Version 1.2
 Version 1.3
+Version 2.1
+Version 2.2
+Version 2.3
