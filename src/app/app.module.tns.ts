@@ -67,6 +67,8 @@ import { StripHtmlTagsPipe } from '@src/app/strip-html-tags/strip-html-tags.pipe
 import { ReydavidComponent } from '@src/app/reydavid/reydavid.component';
 import { ReviewComponent } from '@src/app/review/review.component';
 import { EmploymentComponent } from '@src/app/employment/employment.component';
+import { FeaturesComponent } from '@src/app/features/features.component';
+import { CareMenuComponent } from '@src/app/care-menu/care-menu.component';
 
 
 @NgModule({
@@ -103,7 +105,9 @@ import { EmploymentComponent } from '@src/app/employment/employment.component';
     StripHtmlTagsPipe,
     ReydavidComponent,
     ReviewComponent,
-    EmploymentComponent
+    EmploymentComponent,
+    FeaturesComponent,
+    CareMenuComponent
   ],
   imports: [
     NativeScriptModule,
